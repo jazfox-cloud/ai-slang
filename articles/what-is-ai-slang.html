@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is AI Slang? A Field Guide to the Words Around LLMs</title>
+    <meta name="description" content="A concise guide to AI slang, GPT-ese, model memes, and the words people use around modern AI tools.">
+    <link rel="canonical" href="https://ai-slang.com/articles/what-is-ai-slang.html">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is AI Slang? A Field Guide to the Words Around LLMs","description":"A concise guide to AI slang, GPT-ese, model memes, and the words people use around modern AI tools.","datePublished":"2026-06-30","dateModified":"2026-06-30","author":{"@type":"Organization","name":"AI Slang Hub"},"mainEntityOfPage":"https://ai-slang.com/articles/what-is-ai-slang.html"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_GUIDE</p>
+        <h1>What Is AI Slang?</h1>
+        <p class="article-lead">AI slang is the fast-moving vocabulary people use to describe model behavior, AI-written text, coding agents, synthetic content, and the culture forming around large language models.</p>
+        <section><h2>Why AI slang moves fast</h2><p>AI tools change workflows quickly, and people invent shorthand before formal terminology catches up. Some words begin as research terms, some as product marketing, and some as jokes from developers trying to describe a new kind of annoyance.</p></section>
+<section><h2>The main categories</h2><p>The useful split is technical terms, cultural slang, and GPT-ese. Technical terms include RAG and context window. Cultural slang includes slop and vibe coding. GPT-ese covers words that make writing feel suspiciously machine-polished.</p></section>
+<section><h2>How to read this dictionary</h2><p>Treat each entry as an editorial definition, not legal or academic authority. When a term has a stable source, the entry links to it. When a term is community slang, the entry says so instead of pretending the origin is clean.</p></section>
+        <section>
+          <h2>Browse the dictionary</h2>
+          <div class="related-grid">
+            <a href="/terms/slop.html">Slop</a>
+<a href="/terms/vibe-coding.html">Vibe Coding</a>
+<a href="/terms/agentic.html">Agentic</a>
+<a href="/terms/delve.html">Delve</a>
+<a href="/terms/tapestry.html">Tapestry</a>
+<a href="/terms/stochastic-parrot.html">Stochastic Parrot</a>
+<a href="/terms/gpu-rich-gpu-poor.html">GPU Rich / GPU Poor</a>
+<a href="/terms/hallucination.html">Hallucination</a>
+<a href="/terms/rlhf-d-to-death.html">RLHF'd to Death</a>
+<a href="/terms/rag.html">RAG</a>
+<a href="/terms/context-window.html">Context Window</a>
+<a href="/terms/eval.html">Eval</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy.html">Privacy</a> / <a href="/terms.html">Terms</a> / <a href="/editorial-policy.html">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

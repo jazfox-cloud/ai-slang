@@ -1,0 +1,182 @@
+export const slangs = [
+  {
+    word: "Slop",
+    definition: "Low-effort synthetic content dumped onto the internet to farm clicks, keywords, impressions, or ad money. The industrial waste of the LLM era.",
+    origin: "Became mainstream shorthand as AI-generated posts, images, SEO pages, and social feeds started feeling mass-produced and disposable.",
+    examples: ["Google results are getting buried under AI slop.", "Stop posting this ChatGPT slop on my timeline, write the thought yourself."],
+    aiGrade: 5,
+    trend: "HIGH",
+    sourceNote: "Popular term in 2024-2026 AI discourse; exact origin varies across social platforms and media coverage.",
+    sourceUrl: "https://en.wikipedia.org/wiki/AI_slop"
+  },
+  {
+    word: "Vibe Coding",
+    definition: "Building software by steering an AI with intent, screenshots, and increasingly specific prompts instead of writing every line by hand.",
+    origin: "Popularized by Andrej Karpathy in early 2025, then adopted by indie hackers and coding-agent users as a half-joke, half-workflow.",
+    examples: ["I vibe coded the prototype, then spent Friday making it real.", "My app broke because the model's vibes changed after the last vendor update."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceNote: "Commonly attributed to Andrej Karpathy's 2025 usage; now used broadly for AI-assisted coding by feel.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Vibe_coding"
+  },
+  {
+    word: "Agentic",
+    definition: "The enterprise-safe way to say software can make decisions, call tools, and execute workflows without sounding too much like 'we gave the bot a credit card.'",
+    origin: "Spread through AI product launches and pitch decks describing tool-using models, workflow bots, and autonomous assistants.",
+    examples: ["The deck said agentic seven times and explained nothing.", "My agentic assistant spent the afternoon retrying the same broken API call."],
+    aiGrade: 5,
+    trend: "HIGH",
+    sourceNote: "Current AI product term; useful when tied to real tool use, vague when used as valuation perfume.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent"
+  },
+  {
+    word: "Delve",
+    definition: "A normal English verb turned into the fingerprint of GPT-flavored prose. When a paragraph wants to sound thoughtful without earning it, it delves.",
+    origin: "Flagged by writers, editors, and researchers after ChatGPT-era text made certain polished transition words suddenly feel suspiciously overused.",
+    examples: ["Let us delve into the intricate tapestry of productivity. Please do not.", "I edited the essay three times just to make sure it did not delve into anything."],
+    aiGrade: 5,
+    trend: "HIGH",
+    sourceNote: "Research and media have tracked post-ChatGPT shifts in word frequency; avoid repeating inflated viral numbers without context.",
+    sourceUrl: "https://arxiv.org/abs/2509.09596"
+  },
+  {
+    word: "Tapestry",
+    definition: "The poetic emergency exit for AI prose. If the model cannot explain a complex topic plainly, it may declare it a rich tapestry and hope nobody checks the weave.",
+    origin: "A recurring GPT-ese metaphor because models trained to sound harmless and polished often reach for soft literary filler.",
+    examples: ["The strategy creates a rich tapestry of synergies. Translation: nobody owns the metric.", "Once a paragraph says tapestry, I start looking for the prompt."],
+    aiGrade: 5,
+    trend: "HIGH",
+    sourceNote: "Useful as an editorial smell test rather than a formally sourced historical slang term.",
+    sourceUrl: ""
+  },
+  {
+    word: "Stochastic Parrot",
+    definition: "A skeptical label for LLMs: not a mind, not a thinker, just a statistical mirror repeating patterns from human text with expensive confidence.",
+    origin: "Comes from the 2021 paper 'On the Dangers of Stochastic Parrots' by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell.",
+    examples: ["Do not ask the stochastic parrot for legal advice.", "Me arguing with a stochastic parrot at 3 AM about whether it understands lunch."],
+    aiGrade: 1,
+    trend: "MID",
+    sourceNote: "Directly tied to a well-known 2021 AI ethics paper.",
+    sourceUrl: "https://dl.acm.org/doi/10.1145/3442188.3445922"
+  },
+  {
+    word: "GPU Rich / GPU Poor",
+    definition: "The class divide of modern AI: teams with warehouses of accelerators versus everyone else begging a quantized model to run on a hot laptop.",
+    origin: "Used by open-source AI builders and researchers to describe the compute gap between frontier labs, large platforms, academia, and indie developers.",
+    examples: ["They are training on a giant cluster? Must be nice to be GPU rich.", "I am running a 3B model at two tokens per second. GPU poor lifestyle."],
+    aiGrade: 2,
+    trend: "MID",
+    sourceNote: "Community slang around AI compute access; best treated as cultural shorthand, not a precise economic category.",
+    sourceUrl: ""
+  },
+  {
+    word: "Hallucination",
+    definition: "The polite industry word for an AI inventing a fact, source, quote, API endpoint, or court case while sounding absolutely certain.",
+    origin: "Adopted across AI research and product discussions for model outputs that are fluent but unsupported by reality.",
+    examples: ["The AI did not lie on my resume, it hallucinated my NASA internship.", "Always check the docs it cites; it loves to hallucinate endpoints."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceNote: "Standard term in AI evaluation and product discussions, though some critics argue it softens the severity of fabricated output.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
+  },
+  {
+    word: "RLHF'd to Death",
+    definition: "A complaint that a model has been tuned so hard for safety, politeness, and refusal behavior that it turns every normal request into a compliance seminar.",
+    origin: "Open-source LLM communities use it when comparing more permissive models with commercial assistants shaped by RLHF and policy layers.",
+    examples: ["This model has been RLHF'd to death; I asked for a spicy wing recipe and got a food-safety lecture.", "The refusal was technically safe and practically useless."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceNote: "Community phrase built around reinforcement learning from human feedback; the wording is slang, not a formal technical diagnosis.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback"
+  },
+  {
+    word: "RAG",
+    definition: "Retrieval-augmented generation: giving the model receipts before asking it to talk.",
+    origin: "A core architecture pattern for grounding LLM answers in external documents, databases, or search results.",
+    examples: ["Use RAG before asking the model about policy docs.", "Bad RAG is just search results wearing a chatbot costume."],
+    aiGrade: 2,
+    trend: "MID",
+    sourceNote: "Technical AI architecture pattern, not just slang.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+  },
+  {
+    word: "Context Window",
+    definition: "The amount of text a model can keep in its head before it starts acting like the beginning never happened.",
+    origin: "A technical LLM limit that became product marketing as context lengths grew.",
+    examples: ["The context window is huge, but your prompt is still a junk drawer.", "Long context does not replace structure."],
+    aiGrade: 2,
+    trend: "MID",
+    sourceNote: "Technical constraint used heavily in model marketing and documentation.",
+    sourceUrl: ""
+  },
+  {
+    word: "Eval",
+    definition: "A test for whether an AI system is getting better, getting worse, or merely getting more confident.",
+    origin: "Short for evaluation; now a default term in AI engineering and product teams.",
+    examples: ["Ship the eval before the model swap.", "Without evals, every demo is theater."],
+    aiGrade: 2,
+    trend: "MID",
+    sourceNote: "Engineering shorthand for model and system evaluation.",
+    sourceUrl: ""
+  },
+  {
+    word: "Prompt Engineer",
+    definition: "Someone paid to discover that precise words matter, then write them into a box with enough structure that the model stops freelancing.",
+    origin: "Emerged during the first mainstream wave of LLM adoption as teams learned prompt quality could change output quality dramatically.",
+    examples: ["The prompt engineer saved the launch by removing three adjectives.", "My prompt engineering degree is basically a certificate in talking politely to computers."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceNote: "Job title and skill label that peaked early in the LLM boom, then blurred into product, engineering, and ops work.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering"
+  },
+  {
+    word: "Model Collapse",
+    definition: "The fear that AI trained on AI output becomes a photocopy of a photocopy with venture funding.",
+    origin: "A research and internet discussion term about synthetic data feeding back into training loops.",
+    examples: ["Model collapse is what happens when the internet eats its own leftovers.", "Synthetic data needs taste and checks, not blind recycling."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceNote: "Research-adjacent term around synthetic data feedback loops.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Model_collapse"
+  },
+  {
+    word: "Synthetic Data",
+    definition: "Data generated instead of collected, useful when made carefully and suspicious when waved around as magic.",
+    origin: "Common in machine learning before LLMs, then rebranded as a scaling lever for AI systems.",
+    examples: ["Synthetic data fixed the rare-case gap.", "Synthetic data without validation is fan fiction."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceNote: "Longstanding machine learning concept with renewed attention in LLM training and evaluation.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Synthetic_data"
+  },
+  {
+    word: "CoT",
+    definition: "Chain-of-thought: the model's scratchpad, usually more useful as a training idea than as something to paste into your UI.",
+    origin: "Popularized by reasoning research and prompt patterns that ask models to think step by step.",
+    examples: ["The CoT prompt improved the benchmark but made the answer unreadable.", "Users want the result, not the entire inner monologue."],
+    aiGrade: 3,
+    trend: "LOW",
+    sourceNote: "Short for chain-of-thought prompting and reasoning traces.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering#Chain-of-thought"
+  },
+  {
+    word: "Alignment",
+    definition: "Making AI systems do what humans meant, not merely what the prompt technically allowed.",
+    origin: "A long-running AI safety term that became broader as LLMs entered consumer and enterprise products.",
+    examples: ["Alignment is not a checkbox at the end of launch week.", "The model followed instructions and still missed the point."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceNote: "AI safety and product term with both technical and cultural usage.",
+    sourceUrl: "https://en.wikipedia.org/wiki/AI_alignment"
+  },
+  {
+    word: "Copilot",
+    definition: "A feature that helps you fly the plane, unless marketing quietly replaced the plane with a chatbot.",
+    origin: "Popularized by developer tooling and then copied across every software category.",
+    examples: ["Every settings page now has a copilot.", "A useful copilot reduces clicks, not just morale."],
+    aiGrade: 4,
+    trend: "MID",
+    sourceNote: "Product naming pattern popularized by AI assistant features.",
+    sourceUrl: ""
+  }
+];

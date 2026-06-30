@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Slang & Humanizer Hub</title>
+    <meta name="description" content="A sharp dictionary for AI slang and a lightweight humanizer for stiff GPT-style prose.">
+    <link rel="canonical" href="https://ai-slang.com/">
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#dictionary" aria-label="AI Slang home"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <button class="tab is-active" data-view="dictionary" type="button"><span aria-hidden="true">⌂</span> Dictionary</button>
+          <button class="tab" data-view="humanizer" type="button"><span aria-hidden="true">✎</span> Humanizer</button>
+          <button class="tab" data-view="about" type="button"><span aria-hidden="true">?</span> About</button>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="dictionary" class="view is-active" data-panel="dictionary">
+        <div class="dictionary-shell">
+          <div class="dictionary-masthead">
+            <div>
+              <p class="eyebrow">AI_SLANG_DICTIONARY</p>
+              <h1>Define the words before the decks ruin them.</h1>
+              <p class="masthead-copy">A searchable slang dictionary for GPT-ese, model memes, AI product jargon, and the phrases that make launch decks sound expensive.</p>
+            </div>
+            <div class="search-band">
+              <label class="eyebrow" for="slang-search">SEARCH_TERM</label>
+              <div class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input id="slang-search" class="search-input" type="search" placeholder="slop, vibe coding, agentic..." autocomplete="off">
+              </div>
+              <div class="quick-picks" aria-label="Quick searches">
+                <button type="button" data-word="Slop">Slop</button>
+                <button type="button" data-word="Vibe Coding">Vibe Coding</button>
+                <button type="button" data-word="Delve">Delve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="alphabet-strip" aria-label="Browse alphabetically">
+            <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span><span>#</span>
+          </div>
+
+          <nav class="guide-strip" aria-label="AI slang guides">
+            <a href="./articles/what-is-ai-slang.html">WHAT_IS_AI_SLANG</a>
+            <a href="./articles/gpt-ese-words-to-avoid.html">GPT_ESE_WORDS</a>
+            <a href="./articles/ai-slang-for-indie-hackers.html">INDIE_HACKER_GUIDE</a>
+          </nav>
+
+          <div class="dictionary-grid">
+            <aside class="term-list" aria-label="AI slang terms">
+              <div class="list-header">
+                <span>WORD_OF_THE_DAY</span>
+                <span id="term-count">0_TERMS</span>
+              </div>
+              <div id="word-of-day" class="word-of-day"></div>
+              <div class="list-header muted">
+                <span>TRENDING</span>
+                <span>SIGNAL</span>
+              </div>
+              <div id="term-list" class="terms"></div>
+            </aside>
+
+            <article id="term-detail" class="term-detail" aria-live="polite"></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="humanizer" class="view" data-panel="humanizer">
+        <div class="humanizer-shell">
+          <section class="text-panel">
+            <div class="panel-top">
+              <label for="raw-text">RAW_TEXT</label>
+              <span id="raw-count">0_CHARS</span>
+            </div>
+            <textarea id="raw-text" spellcheck="true" placeholder="Paste the stiff AI paragraph here."></textarea>
+          </section>
+
+          <div class="execute-column">
+            <button id="humanize-btn" class="execute-button" type="button">EXECUTE_HUMANIZE</button>
+            <div id="score-box" class="score-box">SCORE: --</div>
+          </div>
+
+          <section class="text-panel">
+            <div class="panel-top">
+              <span>HUMAN_TEXT</span>
+              <button id="copy-btn" class="plain-button" type="button">COPY</button>
+            </div>
+            <output id="humanized-output" class="output-box">Awaiting input.</output>
+          </section>
+        </div>
+        <div id="detected-words" class="detected-bar">DETECTED: none</div>
+      </section>
+
+      <section id="about" class="view" data-panel="about">
+        <div class="about-layout">
+          <div>
+            <p class="eyebrow">MISSION</p>
+            <h1>Decode the words people use when they do not want to say what they mean.</h1>
+          </div>
+          <div class="about-copy">
+            <p>This MVP combines a focused AI slang dictionary with a prose cleaner for GPT-flavored writing. The dictionary is source-light by design for now: each term is editable content, not scraped automation.</p>
+            <p>The next serious upgrade is editorial provenance: where a term appeared, why it matters, and when it was last checked.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="./privacy.html">Privacy</a> / <a href="./terms.html">Terms</a> / <a href="./editorial-policy.html">Editorial</a></span>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

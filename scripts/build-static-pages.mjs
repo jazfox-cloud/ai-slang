@@ -1,0 +1,285 @@
+import { mkdirSync, writeFileSync } from "node:fs";
+import { slangs } from "../src/data/slangs.js";
+
+const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
+const today = "2026-06-30";
+
+function slugify(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function pageShell({ title, description, canonical, body, jsonLd = "" }) {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}">
+    <link rel="canonical" href="${canonical}">
+    <link rel="stylesheet" href="/src/styles.css">
+    ${jsonLd}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      ${body}
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy.html">Privacy</a> / <a href="/terms.html">Terms</a> / <a href="/editorial-policy.html">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
+`;
+}
+
+function gradeBlocks(value) {
+  return "█".repeat(value) + "░".repeat(5 - value);
+}
+
+function termPage(item) {
+  const slug = slugify(item.word);
+  const canonical = `${siteUrl}/terms/${slug}.html`;
+  const title = `${item.word} Meaning: AI Slang Definition, Origin, and Examples`;
+  const description = `${item.word} meaning in AI slang: ${item.definition}`;
+  const jsonLd = `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: item.word,
+    description: item.definition,
+    inDefinedTermSet: `${siteUrl}/`,
+    url: canonical
+  })}</script>`;
+
+  return pageShell({
+    title,
+    description,
+    canonical,
+    jsonLd,
+    body: `<article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>${escapeHtml(item.word)} Meaning</h1>
+        <p class="article-lead">${escapeHtml(item.definition)}</p>
+        <div class="vote-row">
+          <span>AI_TASTE=${item.aiGrade}/5</span>
+          <span>${gradeBlocks(item.aiGrade)}</span>
+          <span>TREND=${escapeHtml(item.trend)}</span>
+        </div>
+        <section>
+          <h2>What does ${escapeHtml(item.word)} mean?</h2>
+          <p>${escapeHtml(item.definition)}</p>
+          <p>In plain English, this term is useful when people are talking about AI culture, model behavior, GPT-style writing, or the weird social layer forming around new AI tools.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>${escapeHtml(item.origin)}</p>
+          <p>${escapeHtml(item.sourceNote)}</p>
+          ${item.sourceUrl ? `<p><a class="source-link" href="${escapeHtml(item.sourceUrl)}" rel="noreferrer">Primary reference</a></p>` : ""}
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            ${item.examples.map((example) => `<li>${escapeHtml(example)}</li>`).join("\n")}
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            ${slangs.filter((other) => other.word !== item.word).slice(0, 6).map((other) => `<a href="/terms/${slugify(other.word)}.html">${escapeHtml(other.word)}</a>`).join("\n")}
+          </div>
+        </section>
+      </article>`
+  });
+}
+
+const articlePages = [
+  {
+    file: "articles/what-is-ai-slang.html",
+    title: "What Is AI Slang? A Field Guide to the Words Around LLMs",
+    description: "A concise guide to AI slang, GPT-ese, model memes, and the words people use around modern AI tools.",
+    h1: "What Is AI Slang?",
+    lead: "AI slang is the fast-moving vocabulary people use to describe model behavior, AI-written text, coding agents, synthetic content, and the culture forming around large language models.",
+    sections: [
+      ["Why AI slang moves fast", "AI tools change workflows quickly, and people invent shorthand before formal terminology catches up. Some words begin as research terms, some as product marketing, and some as jokes from developers trying to describe a new kind of annoyance."],
+      ["The main categories", "The useful split is technical terms, cultural slang, and GPT-ese. Technical terms include RAG and context window. Cultural slang includes slop and vibe coding. GPT-ese covers words that make writing feel suspiciously machine-polished."],
+      ["How to read this dictionary", "Treat each entry as an editorial definition, not legal or academic authority. When a term has a stable source, the entry links to it. When a term is community slang, the entry says so instead of pretending the origin is clean."]
+    ]
+  },
+  {
+    file: "articles/gpt-ese-words-to-avoid.html",
+    title: "GPT-ese Words to Avoid: Delve, Tapestry, and Other AI Writing Tells",
+    description: "A practical guide to common GPT-ese words and how to rewrite stiff AI-flavored prose into sharper human text.",
+    h1: "GPT-ese Words to Avoid",
+    lead: "GPT-ese is not one forbidden word. It is a pattern: polished transitions, inflated metaphors, and corporate softness that makes writing feel generated even when the facts are fine.",
+    sections: [
+      ["Common tells", "Words like delve, tapestry, moreover, furthermore, and game-changer are not always wrong. They become suspicious when they appear in clusters and replace specific thinking."],
+      ["How to rewrite it", "Cut the ceremonial opening, name the concrete claim, and replace soft metaphors with plain verbs. If a sentence sounds like it is wearing a blazer to say nothing, make it shorter."],
+      ["Use the humanizer carefully", "A humanizer should help you edit, not launder weak writing. The best result still needs a point of view, real examples, and facts you can defend."]
+    ]
+  },
+  {
+    file: "articles/ai-slang-for-indie-hackers.html",
+    title: "AI Slang for Indie Hackers: Slop, Vibe Coding, RAG, and Agentic",
+    description: "A short guide to AI slang indie hackers are likely to see in product launches, social feeds, and developer communities.",
+    h1: "AI Slang for Indie Hackers",
+    lead: "Indie hackers meet AI slang earlier than most people because they live inside launch posts, model docs, developer forums, and half-broken prototypes.",
+    sections: [
+      ["The words that matter first", "Start with slop, vibe coding, RAG, hallucination, agentic, and prompt engineer. These words explain a lot of modern AI product discourse without requiring a full machine learning syllabus."],
+      ["Marketing words versus build words", "RAG and context window usually point to implementation details. Agentic and copilot may point to real features, but they are also easy to abuse in pitch copy."],
+      ["The practical filter", "When you see a term, ask what behavior it names. If nobody can explain the behavior, it is probably just smoke from the launch deck."]
+    ]
+  }
+];
+
+function articlePage(article) {
+  const canonical = `${siteUrl}/${article.file}`;
+  return pageShell({
+    title: article.title,
+    description: article.description,
+    canonical,
+    jsonLd: `<script type="application/ld+json">${JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.description,
+      datePublished: today,
+      dateModified: today,
+      author: { "@type": "Organization", name: "AI Slang Hub" },
+      mainEntityOfPage: canonical
+    })}</script>`,
+    body: `<article class="seo-article">
+        <p class="eyebrow">AI_SLANG_GUIDE</p>
+        <h1>${escapeHtml(article.h1)}</h1>
+        <p class="article-lead">${escapeHtml(article.lead)}</p>
+        ${article.sections.map(([heading, text]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(text)}</p></section>`).join("\n")}
+        <section>
+          <h2>Browse the dictionary</h2>
+          <div class="related-grid">
+            ${slangs.slice(0, 12).map((item) => `<a href="/terms/${slugify(item.word)}.html">${escapeHtml(item.word)}</a>`).join("\n")}
+          </div>
+        </section>
+      </article>`
+  });
+}
+
+const policyPages = [
+  {
+    file: "privacy.html",
+    title: "Privacy Policy",
+    description: "Privacy policy for AI Slang Hub.",
+    h1: "Privacy Policy",
+    lead: "AI Slang Hub is built as a lightweight dictionary and editing tool. The MVP is static-first and intentionally avoids account tracking.",
+    sections: [
+      ["Information we process", "If you use the Humanizer, the text you submit may be sent to the configured AI provider only to generate the requested response. Do not paste secrets, passwords, private documents, or sensitive personal data."],
+      ["Analytics", "The site may use basic privacy-conscious analytics in the future to understand page views and popular terms. We do not need user accounts for the dictionary MVP."],
+      ["Contact", "For privacy questions, contact the site operator through the repository or the contact method listed on the deployed site."]
+    ]
+  },
+  {
+    file: "terms.html",
+    title: "Terms of Use",
+    description: "Terms of use for AI Slang Hub.",
+    h1: "Terms of Use",
+    lead: "Use AI Slang Hub as an editorial reference and writing aid, not as legal, academic, hiring, or safety advice.",
+    sections: [
+      ["Editorial content", "Definitions are written in a sharp editorial style. They may summarize cultural usage and should not be treated as official definitions."],
+      ["Humanizer output", "Humanizer output may be inaccurate, awkward, or incomplete. You are responsible for reviewing text before publishing it."],
+      ["Acceptable use", "Do not use the tool to impersonate others, hide misconduct, submit deceptive academic work, or process data you are not allowed to share."]
+    ]
+  },
+  {
+    file: "editorial-policy.html",
+    title: "Editorial Policy",
+    description: "How AI Slang Hub writes, sources, and updates slang definitions.",
+    h1: "Editorial Policy",
+    lead: "AI Slang Hub mixes culture-aware writing with source-aware editing. The voice can be spicy; the claims still need guardrails.",
+    sections: [
+      ["Source handling", "When a term has a stable reference, we link it. When a term is community slang with no clean origin, we say so instead of inventing certainty."],
+      ["Update policy", "AI slang changes fast. Entries should be revisited when usage shifts, a better source appears, or a definition starts sounding stale."],
+      ["Corrections", "Corrections should prefer precise provenance over viral claims. A good correction explains what changed and why."]
+    ]
+  }
+];
+
+function policyPage(page) {
+  const canonical = `${siteUrl}/${page.file}`;
+  return pageShell({
+    title: page.title,
+    description: page.description,
+    canonical,
+    body: `<article class="seo-article">
+        <p class="eyebrow">SITE_POLICY</p>
+        <h1>${escapeHtml(page.h1)}</h1>
+        <p class="article-lead">${escapeHtml(page.lead)}</p>
+        ${page.sections.map(([heading, text]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(text)}</p></section>`).join("\n")}
+      </article>`
+  });
+}
+
+mkdirSync("terms", { recursive: true });
+mkdirSync("articles", { recursive: true });
+
+for (const item of slangs) {
+  writeFileSync(`terms/${slugify(item.word)}.html`, termPage(item));
+}
+
+for (const article of articlePages) {
+  writeFileSync(article.file, articlePage(article));
+}
+
+for (const page of policyPages) {
+  writeFileSync(page.file, policyPage(page));
+}
+
+const sitemapUrls = [
+  `${siteUrl}/`,
+  ...slangs.map((item) => `${siteUrl}/terms/${slugify(item.word)}.html`),
+  ...articlePages.map((article) => `${siteUrl}/${article.file}`),
+  ...policyPages.map((page) => `${siteUrl}/${page.file}`)
+];
+
+writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${today}</lastmod></url>`).join("\n")}
+</urlset>
+`);
+
+writeFileSync("robots.txt", `User-agent: *
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+`);
+
+console.log(`Generated ${slangs.length} term pages, ${articlePages.length} articles, ${policyPages.length} policy pages, robots.txt, and sitemap.xml.`);
