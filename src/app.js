@@ -55,6 +55,14 @@ function gradeStars(value) {
   return "█".repeat(value) + "░".repeat(5 - value);
 }
 
+function relatedTermsFor(item) {
+  const related = item.relatedTerms?.length ? item.relatedTerms : slangs.filter((other) => other.word !== item.word).slice(0, 6).map((other) => other.word);
+  return related
+    .map((word) => slangs.find((other) => other.word === word))
+    .filter(Boolean)
+    .slice(0, 6);
+}
+
 function filteredSlangs() {
   const q = state.query.trim().toLowerCase();
   if (!q) return slangs;
@@ -95,7 +103,8 @@ function renderDetail() {
     <h1>${item.word}</h1>
     <div class="entry-meta">
       <span>by <strong>AI Slang Hub</strong></span>
-      <span>updated Jun 30, 2026</span>
+      <span>checked ${item.lastChecked}</span>
+      <span>source ${item.sourceType}</span>
       <a href="/terms/${slugify(item.word)}.html">permalink</a>
     </div>
     <p class="definition">${item.definition}</p>
@@ -117,8 +126,15 @@ function renderDetail() {
     </section>
     <section>
       <h2>PROVENANCE</h2>
+      <p><strong>SOURCE_TYPE:</strong> ${item.sourceType || "unknown"} / <strong>LAST_CHECKED:</strong> ${item.lastChecked || "pending"}</p>
       <p>${item.sourceNote || "Editorial note pending."}</p>
       ${item.sourceUrl ? `<a class="source-link" href="${item.sourceUrl}" target="_blank" rel="noreferrer">OPEN_SOURCE</a>` : ""}
+    </section>
+    <section>
+      <h2>RELATED TERMS</h2>
+      <div class="related-grid">
+        ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}.html">${other.word}</a>`).join("")}
+      </div>
     </section>
     <div class="vote-row">
       <button class="vote-button vote-up" type="button" aria-label="Upvote"><span>▲</span><strong>Based</strong></button>

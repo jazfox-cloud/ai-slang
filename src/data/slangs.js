@@ -6,8 +6,10 @@ export const slangs = [
     examples: ["Google results are getting buried under AI slop.", "Stop posting this ChatGPT slop on my timeline, write the thought yourself."],
     aiGrade: 5,
     trend: "HIGH",
+    sourceType: "community",
     sourceNote: "Popular term in 2024-2026 AI discourse; exact origin varies across social platforms and media coverage.",
-    sourceUrl: "https://en.wikipedia.org/wiki/AI_slop"
+    sourceUrl: "https://en.wikipedia.org/wiki/AI_slop",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Vibe Coding",
@@ -16,8 +18,10 @@ export const slangs = [
     examples: ["I vibe coded the prototype, then spent Friday making it real.", "My app broke because the model's vibes changed after the last vendor update."],
     aiGrade: 2,
     trend: "HIGH",
+    sourceType: "community",
     sourceNote: "Commonly attributed to Andrej Karpathy's 2025 usage; now used broadly for AI-assisted coding by feel.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Vibe_coding"
+    sourceUrl: "https://en.wikipedia.org/wiki/Vibe_coding",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Agentic",
@@ -26,8 +30,10 @@ export const slangs = [
     examples: ["The deck said agentic seven times and explained nothing.", "My agentic assistant spent the afternoon retrying the same broken API call."],
     aiGrade: 5,
     trend: "HIGH",
+    sourceType: "product-term",
     sourceNote: "Current AI product term; useful when tied to real tool use, vague when used as valuation perfume.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent"
+    sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Delve",
@@ -36,8 +42,10 @@ export const slangs = [
     examples: ["Let us delve into the intricate tapestry of productivity. Please do not.", "I edited the essay three times just to make sure it did not delve into anything."],
     aiGrade: 5,
     trend: "HIGH",
+    sourceType: "community",
     sourceNote: "Research and media have tracked post-ChatGPT shifts in word frequency; avoid repeating inflated viral numbers without context.",
-    sourceUrl: "https://arxiv.org/abs/2509.09596"
+    sourceUrl: "https://arxiv.org/abs/2509.09596",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Tapestry",
@@ -46,8 +54,10 @@ export const slangs = [
     examples: ["The strategy creates a rich tapestry of synergies. Translation: nobody owns the metric.", "Once a paragraph says tapestry, I start looking for the prompt."],
     aiGrade: 5,
     trend: "HIGH",
+    sourceType: "editorial",
     sourceNote: "Useful as an editorial smell test rather than a formally sourced historical slang term.",
-    sourceUrl: ""
+    sourceUrl: "",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Stochastic Parrot",
@@ -56,8 +66,10 @@ export const slangs = [
     examples: ["Do not ask the stochastic parrot for legal advice.", "Me arguing with a stochastic parrot at 3 AM about whether it understands lunch."],
     aiGrade: 1,
     trend: "MID",
+    sourceType: "paper",
     sourceNote: "Directly tied to a well-known 2021 AI ethics paper.",
-    sourceUrl: "https://dl.acm.org/doi/10.1145/3442188.3445922"
+    sourceUrl: "https://dl.acm.org/doi/10.1145/3442188.3445922",
+    lastChecked: "2026-07-01"
   },
   {
     word: "GPU Rich / GPU Poor",
@@ -66,8 +78,10 @@ export const slangs = [
     examples: ["They are training on a giant cluster? Must be nice to be GPU rich.", "I am running a 3B model at two tokens per second. GPU poor lifestyle."],
     aiGrade: 2,
     trend: "MID",
+    sourceType: "community",
     sourceNote: "Community slang around AI compute access; best treated as cultural shorthand, not a precise economic category.",
-    sourceUrl: ""
+    sourceUrl: "",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Hallucination",
@@ -76,8 +90,10 @@ export const slangs = [
     examples: ["The AI did not lie on my resume, it hallucinated my NASA internship.", "Always check the docs it cites; it loves to hallucinate endpoints."],
     aiGrade: 4,
     trend: "HIGH",
+    sourceType: "technical-term",
     sourceNote: "Standard term in AI evaluation and product discussions, though some critics argue it softens the severity of fabricated output.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
+    sourceUrl: "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+    lastChecked: "2026-07-01"
   },
   {
     word: "RLHF'd to Death",
@@ -86,8 +102,10 @@ export const slangs = [
     examples: ["This model has been RLHF'd to death; I asked for a spicy wing recipe and got a food-safety lecture.", "The refusal was technically safe and practically useless."],
     aiGrade: 3,
     trend: "MID",
+    sourceType: "community",
     sourceNote: "Community phrase built around reinforcement learning from human feedback; the wording is slang, not a formal technical diagnosis.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback"
+    sourceUrl: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
+    lastChecked: "2026-07-01"
   },
   {
     word: "RAG",
@@ -96,8 +114,10 @@ export const slangs = [
     examples: ["Use RAG before asking the model about policy docs.", "Bad RAG is just search results wearing a chatbot costume."],
     aiGrade: 2,
     trend: "MID",
+    sourceType: "technical-term",
     sourceNote: "Technical AI architecture pattern, not just slang.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+    sourceUrl: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Context Window",
@@ -106,8 +126,10 @@ export const slangs = [
     examples: ["The context window is huge, but your prompt is still a junk drawer.", "Long context does not replace structure."],
     aiGrade: 2,
     trend: "MID",
+    sourceType: "technical-term",
     sourceNote: "Technical constraint used heavily in model marketing and documentation.",
-    sourceUrl: ""
+    sourceUrl: "",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Eval",
@@ -116,8 +138,10 @@ export const slangs = [
     examples: ["Ship the eval before the model swap.", "Without evals, every demo is theater."],
     aiGrade: 2,
     trend: "MID",
+    sourceType: "technical-term",
     sourceNote: "Engineering shorthand for model and system evaluation.",
-    sourceUrl: ""
+    sourceUrl: "",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Prompt Engineer",
@@ -126,8 +150,10 @@ export const slangs = [
     examples: ["The prompt engineer saved the launch by removing three adjectives.", "My prompt engineering degree is basically a certificate in talking politely to computers."],
     aiGrade: 3,
     trend: "MID",
+    sourceType: "product-term",
     sourceNote: "Job title and skill label that peaked early in the LLM boom, then blurred into product, engineering, and ops work.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering"
+    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Model Collapse",
@@ -136,8 +162,10 @@ export const slangs = [
     examples: ["Model collapse is what happens when the internet eats its own leftovers.", "Synthetic data needs taste and checks, not blind recycling."],
     aiGrade: 3,
     trend: "MID",
+    sourceType: "paper",
     sourceNote: "Research-adjacent term around synthetic data feedback loops.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Model_collapse"
+    sourceUrl: "https://en.wikipedia.org/wiki/Model_collapse",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Synthetic Data",
@@ -146,8 +174,10 @@ export const slangs = [
     examples: ["Synthetic data fixed the rare-case gap.", "Synthetic data without validation is fan fiction."],
     aiGrade: 3,
     trend: "MID",
+    sourceType: "technical-term",
     sourceNote: "Longstanding machine learning concept with renewed attention in LLM training and evaluation.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Synthetic_data"
+    sourceUrl: "https://en.wikipedia.org/wiki/Synthetic_data",
+    lastChecked: "2026-07-01"
   },
   {
     word: "CoT",
@@ -156,8 +186,10 @@ export const slangs = [
     examples: ["The CoT prompt improved the benchmark but made the answer unreadable.", "Users want the result, not the entire inner monologue."],
     aiGrade: 3,
     trend: "LOW",
+    sourceType: "technical-term",
     sourceNote: "Short for chain-of-thought prompting and reasoning traces.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering#Chain-of-thought"
+    sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering#Chain-of-thought",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Alignment",
@@ -166,8 +198,10 @@ export const slangs = [
     examples: ["Alignment is not a checkbox at the end of launch week.", "The model followed instructions and still missed the point."],
     aiGrade: 3,
     trend: "MID",
+    sourceType: "technical-term",
     sourceNote: "AI safety and product term with both technical and cultural usage.",
-    sourceUrl: "https://en.wikipedia.org/wiki/AI_alignment"
+    sourceUrl: "https://en.wikipedia.org/wiki/AI_alignment",
+    lastChecked: "2026-07-01"
   },
   {
     word: "Copilot",
@@ -176,7 +210,57 @@ export const slangs = [
     examples: ["Every settings page now has a copilot.", "A useful copilot reduces clicks, not just morale."],
     aiGrade: 4,
     trend: "MID",
+    sourceType: "product-term",
     sourceNote: "Product naming pattern popularized by AI assistant features.",
-    sourceUrl: ""
+    sourceUrl: "",
+    lastChecked: "2026-07-01"
+  },
+  {
+    word: "MCP",
+    definition: "Model Context Protocol: the AI builder acronym for giving assistants a standard way to reach tools, files, databases, and workflows without custom glue for every app.",
+    origin: "Introduced by Anthropic in November 2024 as an open standard for connecting AI assistants to external systems, then adopted across developer tools and agent platforms.",
+    examples: ["The demo worked after we replaced three brittle plugins with one MCP server.", "MCP is useful, but do not treat a random server as harmless just because the acronym sounds official."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Official protocol term with strong builder-community usage; the slang value is in how developers use MCP as shorthand for tool-connected AI workflows.",
+    sourceUrl: "https://modelcontextprotocol.io/docs/getting-started/intro",
+    lastChecked: "2026-07-01",
+    plainEnglish: "MCP is a shared connector pattern for AI apps. Instead of every assistant needing a custom integration for every tool, MCP gives builders a common client-server protocol.",
+    relatedTerms: ["Agentic", "Context Window", "RAG", "Context Engineering", "Hallucination"],
+    seoTitle: "MCP Meaning: Model Context Protocol in AI Slang",
+    seoDescription: "MCP meaning in AI slang and builder communities: what Model Context Protocol means, why developers use it, and how it relates to AI agents and tools."
+  },
+  {
+    word: "Context Engineering",
+    definition: "The practice of designing what an AI system sees before it answers: instructions, retrieved facts, tools, memory, examples, state, and the boring metadata that keeps the magic from falling apart.",
+    origin: "Gained traction in 2025 as builders argued that reliable AI apps need more than clever prompts; they need managed context systems.",
+    examples: ["The prompt was fine; the failure was context engineering.", "Context engineering is why the agent saw the right repo notes instead of guessing from stale memory."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "community",
+    sourceNote: "Practitioner term amplified by builders in 2025 and later discussed in survey literature; not a single-origin academic phrase.",
+    sourceUrl: "https://arxiv.org/abs/2507.13334",
+    lastChecked: "2026-07-01",
+    plainEnglish: "Context engineering means treating the context window like a product surface. You decide which information, tools, examples, and constraints the model gets for a task.",
+    relatedTerms: ["Prompt Engineer", "Context Window", "RAG", "MCP", "Context Rot"],
+    seoTitle: "Context Engineering Meaning in AI",
+    seoDescription: "Context engineering meaning: the AI builder term for managing prompts, tools, memory, retrieval, and state so LLM apps behave reliably."
+  },
+  {
+    word: "Context Rot",
+    definition: "What happens when the files, rules, memories, examples, or long conversation history feeding an AI assistant go stale and quietly start making the model worse.",
+    origin: "Borrowed from software rot and documentation drift, then applied to AI coding assistants, agent memory, and long-context workflows.",
+    examples: ["The agent kept following an old architecture note. Classic context rot.", "Long context is not free if half of it is context rot wearing a project badge."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceType: "paper",
+    sourceNote: "Recent research term for stale AI configuration artifacts and long-context degradation; still emerging rather than settled slang.",
+    sourceUrl: "https://arxiv.org/abs/2606.09090",
+    lastChecked: "2026-07-01",
+    plainEnglish: "Context rot is stale context. The model may have plenty of information, but some of it no longer matches the code, product, or task.",
+    relatedTerms: ["Context Engineering", "Context Window", "Eval", "Hallucination", "RAG"],
+    seoTitle: "Context Rot Meaning in AI",
+    seoDescription: "Context rot meaning in AI: stale prompts, memories, docs, or long-context artifacts that degrade model behavior in agents and coding assistants."
   }
 ];

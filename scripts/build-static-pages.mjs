@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { slangs } from "../src/data/slangs.js";
 
 const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
-const today = "2026-06-30";
+const today = "2026-07-01";
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -69,11 +69,19 @@ function gradeBlocks(value) {
   return "█".repeat(value) + "░".repeat(5 - value);
 }
 
+function relatedTermsFor(item) {
+  const related = item.relatedTerms?.length ? item.relatedTerms : slangs.filter((other) => other.word !== item.word).slice(0, 6).map((other) => other.word);
+  return related
+    .map((word) => slangs.find((other) => other.word === word))
+    .filter(Boolean)
+    .slice(0, 6);
+}
+
 function termPage(item) {
   const slug = slugify(item.word);
   const canonical = `${siteUrl}/terms/${slug}.html`;
-  const title = `${item.word} Meaning: AI Slang Definition, Origin, and Examples`;
-  const description = `${item.word} meaning in AI slang: ${item.definition}`;
+  const title = item.seoTitle || `${item.word} Meaning: AI Slang Definition, Origin, and Examples`;
+  const description = item.seoDescription || `${item.word} meaning in AI slang: ${item.definition}`;
   const jsonLd = `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
@@ -100,11 +108,12 @@ function termPage(item) {
         <section>
           <h2>What does ${escapeHtml(item.word)} mean?</h2>
           <p>${escapeHtml(item.definition)}</p>
-          <p>In plain English, this term is useful when people are talking about AI culture, model behavior, GPT-style writing, or the weird social layer forming around new AI tools.</p>
+          <p>${escapeHtml(item.plainEnglish || "In plain English, this term is useful when people are talking about AI culture, model behavior, GPT-style writing, or the weird social layer forming around new AI tools.")}</p>
         </section>
         <section>
           <h2>Origin and usage</h2>
           <p>${escapeHtml(item.origin)}</p>
+          <p><strong>Source type:</strong> ${escapeHtml(item.sourceType)}. <strong>Last checked:</strong> ${escapeHtml(item.lastChecked)}.</p>
           <p>${escapeHtml(item.sourceNote)}</p>
           ${item.sourceUrl ? `<p><a class="source-link" href="${escapeHtml(item.sourceUrl)}" rel="noreferrer">Primary reference</a></p>` : ""}
         </section>
@@ -117,7 +126,7 @@ function termPage(item) {
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            ${slangs.filter((other) => other.word !== item.word).slice(0, 6).map((other) => `<a href="/terms/${slugify(other.word)}.html">${escapeHtml(other.word)}</a>`).join("\n")}
+            ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}.html">${escapeHtml(other.word)}</a>`).join("\n")}
           </div>
         </section>
       </article>`
