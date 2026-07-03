@@ -262,5 +262,53 @@ export const slangs = [
     relatedTerms: ["Context Engineering", "Context Window", "Eval", "Hallucination", "RAG"],
     seoTitle: "Context Rot Meaning in AI",
     seoDescription: "Context rot meaning in AI: stale prompts, memories, docs, or long-context artifacts that degrade model behavior in agents and coding assistants."
+  },
+  {
+    word: "Prompt Injection",
+    definition: "The LLM-era security bug where hostile text sneaks into the model's context and starts acting like instructions instead of data.",
+    origin: "Named in early LLM security discussions around 2022, then formalized in AI security guidance as assistants began reading web pages, documents, emails, codebases, and tool outputs.",
+    examples: ["The support bot summarized the page and obeyed the prompt injection hidden in the footer.", "Treat retrieved text as untrusted; prompt injection loves a confident agent with too many tools."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Stable AI security term; OWASP lists prompt injection as a major LLM application risk, while community usage often uses it more broadly for instruction-smuggling attacks.",
+    sourceUrl: "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+    lastChecked: "2026-07-03",
+    plainEnglish: "Prompt injection is when text from a user, website, file, or tool output tricks an AI system into ignoring the instructions it was supposed to follow.",
+    relatedTerms: ["Hallucination", "Agentic", "MCP", "Tool Calling", "RAG", "Context Engineering"],
+    seoTitle: "Prompt Injection Meaning in AI Security",
+    seoDescription: "Prompt injection meaning in AI slang and security: how hostile text can hijack LLM instructions, agents, tools, and retrieved context."
+  },
+  {
+    word: "Tool Calling",
+    definition: "The moment an AI stops merely chatting and starts asking software to do things: search, fetch, write, calculate, schedule, or touch an API.",
+    origin: "Became everyday builder vocabulary as LLM APIs added structured ways for models to call developer-defined functions and external tools.",
+    examples: ["The demo looked smart because tool calling did the actual database lookup.", "Tool calling without permissions is how a chatbot graduates from annoying to expensive."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current AI API and developer-platform term; official model-provider documentation uses it for structured interactions between models and external tools or functions.",
+    sourceUrl: "https://platform.openai.com/docs/guides/function-calling",
+    lastChecked: "2026-07-03",
+    plainEnglish: "Tool calling lets a model choose a structured action for software to run. The model proposes the call; the application decides what actually executes.",
+    relatedTerms: ["MCP", "Agentic", "Context Engineering", "Prompt Injection", "RAG", "Copilot"],
+    seoTitle: "Tool Calling Meaning in AI Apps",
+    seoDescription: "Tool calling meaning in AI: how LLM apps use functions, APIs, and external tools, and why it matters for agents and AI product builders."
+  },
+  {
+    word: "Google Zero",
+    definition: "The nightmare scenario for publishers and SEO teams: Google answers the user directly, and the website that supplied the knowledge gets zero click.",
+    origin: "Popularized in media and tech commentary as AI Overviews and AI search pushed more answers onto the search results page itself.",
+    examples: ["The traffic chart after AI Overviews looked like a preview of Google Zero.", "Google Zero is why the newsletter suddenly matters more than the search snippet."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "community",
+    sourceNote: "Publisher and tech-media shorthand tied to AI search and zero-click behavior; useful as a community term, not a formal Google product name.",
+    sourceUrl: "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
+    lastChecked: "2026-07-03",
+    plainEnglish: "Google Zero means search traffic falling toward nothing because AI search gives users the answer before they visit the original site.",
+    relatedTerms: ["Slop", "RAG", "Hallucination", "Context Engineering", "Agentic"],
+    seoTitle: "Google Zero Meaning in AI Search",
+    seoDescription: "Google Zero meaning: the AI search and SEO phrase for a future where Google sends publishers little or no referral traffic."
   }
 ];
