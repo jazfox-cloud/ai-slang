@@ -30,9 +30,8 @@ npm run build:static
 
 It generates:
 
-- `/terms/*.html` dictionary article pages.
-- `/articles/*.html` SEO guide pages.
-- `/privacy.html`, `/terms.html`, and `/editorial-policy.html`.
+- Static `.html` files under `/terms/`, `/articles/`, and the root policy pages including `terms-of-use.html`.
+- Clean public URLs in canonical tags, internal links, and `/sitemap.xml`, such as `/terms/slop` rather than `/terms/slop.html`.
 - `/robots.txt` and `/sitemap.xml`.
 
 The default production domain is `https://ai-slang.com`. Set `SITE_URL=https://your-domain.com` before running the build if the production domain changes.

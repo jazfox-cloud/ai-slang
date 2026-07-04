@@ -42,7 +42,7 @@ function slugify(value) {
 }
 
 function getTermUrl(item) {
-  return `${location.origin}/terms/${slugify(item.word)}.html`;
+  return `${location.origin}/terms/${slugify(item.word)}`;
 }
 
 function setView(view) {
@@ -105,7 +105,7 @@ function renderDetail() {
       <span>by <strong>AI Slang Hub</strong></span>
       <span>checked ${item.lastChecked}</span>
       <span>source ${item.sourceType}</span>
-      <a href="/terms/${slugify(item.word)}.html">permalink</a>
+      <a href="/terms/${slugify(item.word)}">permalink</a>
     </div>
     <p class="definition">${item.definition}</p>
     <div class="entry-actions">
@@ -133,7 +133,7 @@ function renderDetail() {
     <section>
       <h2>RELATED TERMS</h2>
       <div class="related-grid">
-        ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}.html">${other.word}</a>`).join("")}
+        ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}">${other.word}</a>`).join("")}
       </div>
     </section>
     <div class="vote-row">

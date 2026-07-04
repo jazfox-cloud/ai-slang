@@ -16,6 +16,18 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function cleanPath(file) {
+  return `/${file.replace(/\.html$/, "")}`;
+}
+
+function termPath(item) {
+  return `/terms/${slugify(item.word)}`;
+}
+
+function canonicalUrl(path) {
+  return `${siteUrl}${path}`;
+}
+
 function pageShell({ title, description, canonical, body, jsonLd = "" }) {
   return `<!doctype html>
 <html lang="en">
@@ -47,7 +59,7 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/privacy.html">Privacy</a> / <a href="/terms.html">Terms</a> / <a href="/editorial-policy.html">Editorial</a></span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");
@@ -79,7 +91,7 @@ function relatedTermsFor(item) {
 
 function termPage(item) {
   const slug = slugify(item.word);
-  const canonical = `${siteUrl}/terms/${slug}.html`;
+  const canonical = canonicalUrl(`/terms/${slug}`);
   const title = item.seoTitle || `${item.word} Meaning: AI Slang Definition, Origin, and Examples`;
   const description = item.seoDescription || `${item.word} meaning in AI slang: ${item.definition}`;
   const jsonLd = `<script type="application/ld+json">${JSON.stringify({
@@ -126,7 +138,7 @@ function termPage(item) {
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}.html">${escapeHtml(other.word)}</a>`).join("\n")}
+            ${relatedTermsFor(item).map((other) => `<a href="${termPath(other)}">${escapeHtml(other.word)}</a>`).join("\n")}
           </div>
         </section>
       </article>`
@@ -173,7 +185,7 @@ const articlePages = [
 ];
 
 function articlePage(article) {
-  const canonical = `${siteUrl}/${article.file}`;
+  const canonical = canonicalUrl(cleanPath(article.file));
   return pageShell({
     title: article.title,
     description: article.description,
@@ -196,7 +208,7 @@ function articlePage(article) {
         <section>
           <h2>Browse the dictionary</h2>
           <div class="related-grid">
-            ${slangs.slice(0, 12).map((item) => `<a href="/terms/${slugify(item.word)}.html">${escapeHtml(item.word)}</a>`).join("\n")}
+            ${slangs.slice(0, 12).map((item) => `<a href="${termPath(item)}">${escapeHtml(item.word)}</a>`).join("\n")}
           </div>
         </section>
       </article>`
@@ -217,7 +229,7 @@ const policyPages = [
     ]
   },
   {
-    file: "terms.html",
+    file: "terms-of-use.html",
     title: "Terms of Use",
     description: "Terms of use for AI Slang Hub.",
     h1: "Terms of Use",
@@ -243,7 +255,7 @@ const policyPages = [
 ];
 
 function policyPage(page) {
-  const canonical = `${siteUrl}/${page.file}`;
+  const canonical = canonicalUrl(cleanPath(page.file));
   return pageShell({
     title: page.title,
     description: page.description,
@@ -274,9 +286,9 @@ for (const page of policyPages) {
 
 const sitemapUrls = [
   `${siteUrl}/`,
-  ...slangs.map((item) => `${siteUrl}/terms/${slugify(item.word)}.html`),
-  ...articlePages.map((article) => `${siteUrl}/${article.file}`),
-  ...policyPages.map((page) => `${siteUrl}/${page.file}`)
+  ...slangs.map((item) => canonicalUrl(termPath(item))),
+  ...articlePages.map((article) => canonicalUrl(cleanPath(article.file))),
+  ...policyPages.map((page) => canonicalUrl(cleanPath(page.file)))
 ];
 
 writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>

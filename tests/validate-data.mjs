@@ -1,4 +1,5 @@
 import { slangs } from "../src/data/slangs.js";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 
 const seen = new Set();
 const sourceTypes = new Set(["paper", "wiki", "community", "product-term", "technical-term", "editorial", "unknown"]);
@@ -26,6 +27,45 @@ for (const item of slangs) {
   if (item.aiGrade < 1 || item.aiGrade > 5) {
     throw new Error(`${item.word} has invalid aiGrade`);
   }
+}
+
+function read(path) {
+  return readFileSync(path, "utf8");
+}
+
+function assertNoPublicHtmlUrls(path, content) {
+  const patterns = [
+    /<loc>[^<]+\.html<\/loc>/,
+    /<link rel="canonical" href="[^"]+\.html">/,
+    /href="\/[^"]+\.html"/,
+    /href="\.\/[^"]+\.html"/,
+    /"url":"https:\/\/ai-slang\.com\/[^"]+\.html"/,
+    /"mainEntityOfPage":"https:\/\/ai-slang\.com\/[^"]+\.html"/
+  ];
+
+  for (const pattern of patterns) {
+    if (pattern.test(content)) {
+      throw new Error(`${path} contains a public .html URL that can trigger GSC Page with redirect issues`);
+    }
+  }
+}
+
+const generatedFiles = [
+  "index.html",
+  "privacy.html",
+  "terms-of-use.html",
+  "editorial-policy.html",
+  "sitemap.xml",
+  ...readdirSync("terms").map((file) => `terms/${file}`),
+  ...readdirSync("articles").map((file) => `articles/${file}`)
+].filter((file) => file.endsWith(".html") || file.endsWith(".xml"));
+
+if (existsSync("terms.html")) {
+  throw new Error("terms.html conflicts with the /terms/ dictionary directory; use terms-of-use.html instead");
+}
+
+for (const file of generatedFiles) {
+  assertNoPublicHtmlUrls(file, read(file));
 }
 
 console.log(`Validated ${slangs.length} slang entries.`);
