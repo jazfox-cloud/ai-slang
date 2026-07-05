@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jailbreak Meaning in AI Security</title>
+    <meta name="description" content="Jailbreak meaning in AI slang and security: prompts or tactics that try to bypass LLM safety rules, refusals, and model guardrails.">
+    <link rel="canonical" href="https://ai-slang.com/terms/jailbreak">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Jailbreak","description":"A prompt or interaction pattern that tries to push an AI model past its safety rules, policy boundaries, or refusal behavior.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/jailbreak"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Jailbreak Meaning</h1>
+        <p class="article-lead">A prompt or interaction pattern that tries to push an AI model past its safety rules, policy boundaries, or refusal behavior.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Jailbreak mean?</h2>
+          <p>A prompt or interaction pattern that tries to push an AI model past its safety rules, policy boundaries, or refusal behavior.</p>
+          <p>A jailbreak is an attempt to make an AI system do something its designers tried to prevent, usually by disguising or escalating the instruction inside a prompt.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Borrowed from older security and device-hacking language, then adopted by LLM users and security researchers for attempts to bypass model guardrails.</p>
+          <p><strong>Source type:</strong> technical-term. <strong>Last checked:</strong> 2026-07-05.</p>
+          <p>Established AI security term; OWASP and MITRE ATLAS both track jailbreak-style attacks, while community usage often uses the word more loosely for guardrail bypass prompts.</p>
+          <p><a class="source-link" href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The screenshot looked clever until you realized it was just another jailbreak prompt.</li>
+<li>Treat public jailbreaks as security signals, not party tricks for production agents.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/system-prompt">System Prompt</a>
+<a href="/terms/alignment">Alignment</a>
+<a href="/terms/rlhf-d-to-death">RLHF'd to Death</a>
+<a href="/terms/agentic">Agentic</a>
+<a href="/terms/hallucination">Hallucination</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

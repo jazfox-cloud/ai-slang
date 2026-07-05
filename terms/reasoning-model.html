@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reasoning Model Meaning in AI</title>
+    <meta name="description" content="Reasoning model meaning in AI slang and product docs: models that spend extra compute on multi-step tasks, coding, math, and planning.">
+    <link rel="canonical" href="https://ai-slang.com/terms/reasoning-model">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Reasoning Model","description":"A model marketed or designed to spend extra compute on hard problems before answering, especially math, coding, planning, and multi-step analysis.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/reasoning-model"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Reasoning Model Meaning</h1>
+        <p class="article-lead">A model marketed or designed to spend extra compute on hard problems before answering, especially math, coding, planning, and multi-step analysis.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=3/5</span>
+          <span>███░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Reasoning Model mean?</h2>
+          <p>A model marketed or designed to spend extra compute on hard problems before answering, especially math, coding, planning, and multi-step analysis.</p>
+          <p>A reasoning model is tuned to work longer on problems that need multiple steps. It can be slower or costlier, but useful when the answer needs planning or verification.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Became mainstream builder vocabulary after model providers started shipping dedicated reasoning models and controls for reasoning effort.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-05.</p>
+          <p>Current model-provider and developer-platform term; official API docs describe reasoning models and controls such as reasoning effort, while capabilities and naming vary by provider.</p>
+          <p><a class="source-link" href="https://platform.openai.com/docs/guides/reasoning" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>Use a reasoning model for the migration plan, not for rewriting a button label.</li>
+<li>The reasoning model solved the puzzle and spent half the budget narrating its caution.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/cot">CoT</a>
+<a href="/terms/eval">Eval</a>
+<a href="/terms/context-window">Context Window</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/synthetic-data">Synthetic Data</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

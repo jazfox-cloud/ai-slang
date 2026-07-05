@@ -310,5 +310,53 @@ export const slangs = [
     relatedTerms: ["Slop", "RAG", "Hallucination", "Context Engineering", "Agentic"],
     seoTitle: "Google Zero Meaning in AI Search",
     seoDescription: "Google Zero meaning: the AI search and SEO phrase for a future where Google sends publishers little or no referral traffic."
+  },
+  {
+    word: "Jailbreak",
+    definition: "A prompt or interaction pattern that tries to push an AI model past its safety rules, policy boundaries, or refusal behavior.",
+    origin: "Borrowed from older security and device-hacking language, then adopted by LLM users and security researchers for attempts to bypass model guardrails.",
+    examples: ["The screenshot looked clever until you realized it was just another jailbreak prompt.", "Treat public jailbreaks as security signals, not party tricks for production agents."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Established AI security term; OWASP and MITRE ATLAS both track jailbreak-style attacks, while community usage often uses the word more loosely for guardrail bypass prompts.",
+    sourceUrl: "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    lastChecked: "2026-07-05",
+    plainEnglish: "A jailbreak is an attempt to make an AI system do something its designers tried to prevent, usually by disguising or escalating the instruction inside a prompt.",
+    relatedTerms: ["Prompt Injection", "System Prompt", "Alignment", "RLHF'd to Death", "Agentic", "Hallucination"],
+    seoTitle: "Jailbreak Meaning in AI Security",
+    seoDescription: "Jailbreak meaning in AI slang and security: prompts or tactics that try to bypass LLM safety rules, refusals, and model guardrails."
+  },
+  {
+    word: "System Prompt",
+    definition: "The hidden or high-priority instruction layer that tells an AI assistant what it is, what rules matter, and how to behave before the user starts typing.",
+    origin: "Came from chat-model APIs and assistant products where messages have roles and different authority levels; builders turned it into shorthand for the model's backstage rulebook.",
+    examples: ["The chatbot sounded weird because the system prompt was doing three jobs at once.", "A leaked system prompt is not the whole product, but it explains a lot of the behavior."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Builder term grounded in role-based model APIs and model-behavior specs; exact implementation differs by provider, so the entry describes common usage rather than one universal standard.",
+    sourceUrl: "https://model-spec.openai.com/2025-09-12.html",
+    lastChecked: "2026-07-05",
+    plainEnglish: "A system prompt is the instruction layer the app sets before the conversation. It usually has more authority than ordinary user text.",
+    relatedTerms: ["Prompt Injection", "Jailbreak", "Context Engineering", "Tool Calling", "Alignment", "Context Window"],
+    seoTitle: "System Prompt Meaning in AI",
+    seoDescription: "System prompt meaning in AI: the high-priority instruction layer behind chatbots, agents, model behavior, and prompt injection risks."
+  },
+  {
+    word: "Reasoning Model",
+    definition: "A model marketed or designed to spend extra compute on hard problems before answering, especially math, coding, planning, and multi-step analysis.",
+    origin: "Became mainstream builder vocabulary after model providers started shipping dedicated reasoning models and controls for reasoning effort.",
+    examples: ["Use a reasoning model for the migration plan, not for rewriting a button label.", "The reasoning model solved the puzzle and spent half the budget narrating its caution."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current model-provider and developer-platform term; official API docs describe reasoning models and controls such as reasoning effort, while capabilities and naming vary by provider.",
+    sourceUrl: "https://platform.openai.com/docs/guides/reasoning",
+    lastChecked: "2026-07-05",
+    plainEnglish: "A reasoning model is tuned to work longer on problems that need multiple steps. It can be slower or costlier, but useful when the answer needs planning or verification.",
+    relatedTerms: ["CoT", "Eval", "Context Window", "Tool Calling", "Hallucination", "Synthetic Data"],
+    seoTitle: "Reasoning Model Meaning in AI",
+    seoDescription: "Reasoning model meaning in AI slang and product docs: models that spend extra compute on multi-step tasks, coding, math, and planning."
   }
 ];
