@@ -358,5 +358,53 @@ export const slangs = [
     relatedTerms: ["CoT", "Eval", "Context Window", "Tool Calling", "Hallucination", "Synthetic Data"],
     seoTitle: "Reasoning Model Meaning in AI",
     seoDescription: "Reasoning model meaning in AI slang and product docs: models that spend extra compute on multi-step tasks, coding, math, and planning."
+  },
+  {
+    word: "Deep Research",
+    definition: "The AI product mode that turns a chatbot into a slow, citation-hunting research assistant instead of a quick autocomplete with opinions.",
+    origin: "Became mainstream after AI products started shipping dedicated research agents that search, read, synthesize, and return sourced reports rather than short chat answers.",
+    examples: ["Use deep research for the market map, not for naming a button.", "The deep research report looked useful, but I still checked every citation before sending it to the client."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current AI product term grounded in official research-agent launches; usage varies by provider, so the entry describes the general product pattern rather than one universal feature.",
+    sourceUrl: "https://openai.com/index/introducing-deep-research/",
+    lastChecked: "2026-07-07",
+    plainEnglish: "Deep research means asking an AI system to investigate a topic across sources and produce a more structured report. It is slower than a normal chat answer because the value is in retrieval, synthesis, and citations.",
+    relatedTerms: ["Reasoning Model", "RAG", "Tool Calling", "Agentic", "Hallucination", "Context Engineering"],
+    seoTitle: "Deep Research Meaning in AI",
+    seoDescription: "Deep Research meaning in AI products: research-agent modes that search, synthesize sources, and produce cited reports instead of quick chat answers."
+  },
+  {
+    word: "Shadow AI",
+    definition: "Unauthorized AI use inside a company: employees pasting work into tools, installing assistants, or wiring model APIs around policy because the approved stack is too slow.",
+    origin: "Adapted from 'shadow IT' as generative AI tools spread through workplaces faster than security, legal, and procurement teams could govern them.",
+    examples: ["The official policy banned shadow AI, but half the team was summarizing sales calls in random browser extensions.", "Shadow AI is not always malicious; it is often a sign that the approved workflow is useless."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Enterprise AI governance term with roots in shadow IT; IBM and other security vendors use it for unsanctioned AI tools and workflows.",
+    sourceUrl: "https://www.ibm.com/think/topics/shadow-ai",
+    lastChecked: "2026-07-07",
+    plainEnglish: "Shadow AI is AI work happening outside official company controls. It can create privacy, security, compliance, and quality risks even when employees are only trying to move faster.",
+    relatedTerms: ["Tool Calling", "Prompt Injection", "Copilot", "Alignment", "Hallucination", "Agentic"],
+    seoTitle: "Shadow AI Meaning: Unsanctioned AI at Work",
+    seoDescription: "Shadow AI meaning in workplace and security slang: unauthorized AI tools, hidden chatbot use, and the governance risks behind unsanctioned AI workflows."
+  },
+  {
+    word: "Frontier Model",
+    definition: "A top-end AI model sitting near the edge of current capability, usually invoked when people want the conversation to sound like policy, safety, or trillion-token geopolitics.",
+    origin: "Moved from AI policy and safety discussions into mainstream product and builder language as labs, regulators, and researchers started distinguishing frontier systems from smaller deployed models.",
+    examples: ["The startup called its wrapper frontier AI because 'chatbot with a dashboard' did not raise enough money.", "Frontier model rules matter most when capability, access, and misuse risk all scale together."],
+    aiGrade: 3,
+    trend: "MID",
+    sourceType: "paper",
+    sourceNote: "Policy and safety term discussed in frontier AI regulation literature; exact thresholds shift as model capability improves.",
+    sourceUrl: "https://arxiv.org/abs/2307.03718",
+    lastChecked: "2026-07-07",
+    plainEnglish: "A frontier model is a model near the current capability ceiling. The phrase is usually used when discussing powerful general models, safety duties, deployment controls, and regulation.",
+    relatedTerms: ["Reasoning Model", "Alignment", "Eval", "Synthetic Data", "GPU Rich / GPU Poor", "Model Collapse"],
+    seoTitle: "Frontier Model Meaning in AI",
+    seoDescription: "Frontier model meaning in AI slang and policy: powerful models near the current capability edge, and why the term appears in safety and regulation debates."
   }
 ];
