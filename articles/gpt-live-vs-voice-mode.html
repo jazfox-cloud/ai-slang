@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Live vs Voice Mode: What the AI Product Term Means</title>
+    <meta name="description" content="A plain-English guide to GPT Live, live AI voice, full-duplex conversation, and how it differs from older turn-based voice assistants.">
+    <link rel="canonical" href="https://ai-slang.com/articles/gpt-live-vs-voice-mode">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GPT Live vs Voice Mode: What the AI Product Term Means","description":"A plain-English guide to GPT Live, live AI voice, full-duplex conversation, and how it differs from older turn-based voice assistants.","datePublished":"2026-07-09","dateModified":"2026-07-09","author":{"@type":"Organization","name":"AI Slang Hub"},"mainEntityOfPage":"https://ai-slang.com/articles/gpt-live-vs-voice-mode"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_GUIDE</p>
+        <h1>GPT Live vs Voice Mode</h1>
+        <p class="article-lead">GPT Live is the product-shaped phrase people use when AI voice starts acting less like turn-based dictation and more like a continuous assistant conversation.</p>
+        <section><h2>What changed</h2><p>Older voice assistants often waited for a clean pause before answering. GPT Live-style systems are discussed around full-duplex behavior: listening, acknowledging, speaking, translating, or working while the conversation continues.</p></section>
+<section><h2>Why builders care</h2><p>Live voice matters when the interface is the product. Translation, coaching, accessibility, support, and meeting workflows all feel different when the assistant can handle interruptions and recover from messy human timing.</p></section>
+<section><h2>What to compare it with</h2><p>Compare GPT Live with computer use, tool calling, agentic workflows, and reasoning models. The useful question is not whether the demo sounds human; it is what the system can reliably do while the user keeps talking.</p></section>
+        <section>
+          <h2>Browse the dictionary</h2>
+          <div class="related-grid">
+            <a href="/terms/slop">Slop</a>
+<a href="/terms/vibe-coding">Vibe Coding</a>
+<a href="/terms/agentic">Agentic</a>
+<a href="/terms/delve">Delve</a>
+<a href="/terms/tapestry">Tapestry</a>
+<a href="/terms/stochastic-parrot">Stochastic Parrot</a>
+<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
+<a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/rlhf-d-to-death">RLHF'd to Death</a>
+<a href="/terms/rag">RAG</a>
+<a href="/terms/context-window">Context Window</a>
+<a href="/terms/eval">Eval</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

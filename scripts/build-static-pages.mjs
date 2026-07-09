@@ -181,6 +181,30 @@ const articlePages = [
       ["Marketing words versus build words", "RAG and context window usually point to implementation details. Agentic and copilot may point to real features, but they are also easy to abuse in pitch copy."],
       ["The practical filter", "When you see a term, ask what behavior it names. If nobody can explain the behavior, it is probably just smoke from the launch deck."]
     ]
+  },
+  {
+    file: "articles/gpt-live-vs-voice-mode.html",
+    title: "GPT Live vs Voice Mode: What the AI Product Term Means",
+    description: "A plain-English guide to GPT Live, live AI voice, full-duplex conversation, and how it differs from older turn-based voice assistants.",
+    h1: "GPT Live vs Voice Mode",
+    lead: "GPT Live is the product-shaped phrase people use when AI voice starts acting less like turn-based dictation and more like a continuous assistant conversation.",
+    sections: [
+      ["What changed", "Older voice assistants often waited for a clean pause before answering. GPT Live-style systems are discussed around full-duplex behavior: listening, acknowledging, speaking, translating, or working while the conversation continues."],
+      ["Why builders care", "Live voice matters when the interface is the product. Translation, coaching, accessibility, support, and meeting workflows all feel different when the assistant can handle interruptions and recover from messy human timing."],
+      ["What to compare it with", "Compare GPT Live with computer use, tool calling, agentic workflows, and reasoning models. The useful question is not whether the demo sounds human; it is what the system can reliably do while the user keeps talking."]
+    ]
+  },
+  {
+    file: "articles/llm-burnout-ai-cost-fatigue.html",
+    title: "LLM Burnout: AI Bills, Tool Churn, and Model Fatigue",
+    description: "A short guide to LLM burnout, AI cost fatigue, prompt babysitting, unreliable outputs, and when a simpler workflow beats another model subscription.",
+    h1: "LLM Burnout",
+    lead: "LLM burnout is what happens when the AI stack meant to save time becomes a second workload made of subscriptions, prompts, evals, context cleanup, and trust checks.",
+    sections: [
+      ["The cost side", "AI bills create a concrete version of fatigue. Teams notice the subscription stack, API usage, premium model limits, and the cost of running evals before they know whether the workflow pays for itself."],
+      ["The work side", "The hidden work is prompt rewriting, checking hallucinations, switching tools, preserving context, and explaining why a demo failed in production. That overhead can turn enthusiasm into skepticism."],
+      ["The practical alternative", "The answer is not always a bigger model. Sometimes it is prompt caching, narrower tool calling, local workflows, better evals, or deciding that a normal script is the cheaper and calmer interface."]
+    ]
   }
 ];
 

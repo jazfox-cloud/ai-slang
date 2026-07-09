@@ -454,5 +454,37 @@ export const slangs = [
     relatedTerms: ["Eval", "Hallucination", "Reasoning Model", "Alignment", "Synthetic Data", "Model Collapse"],
     seoTitle: "LLM-as-a-Judge Meaning in AI Evals",
     seoDescription: "LLM-as-a-Judge meaning in AI evaluation: using language models to grade, compare, or critique model outputs, plus the reliability caveats."
+  },
+  {
+    word: "GPT Live",
+    definition: "The shorthand for live, full-duplex ChatGPT voice: an AI that can listen, speak, translate, and keep working while the conversation is still moving.",
+    origin: "Picked up around the July 2026 GPT-Live/GPT-Live-1 coverage, when AI product chatter shifted from text chatbots toward always-on voice, turn-taking, and real-time assistant behavior.",
+    examples: ["GPT Live sounds useful for translation, but I still do not want a meeting assistant interrupting every pause.", "The GPT Live demo made old push-to-talk voice mode feel like voicemail."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Media coverage describes GPT-Live-1 as a ChatGPT voice upgrade with more natural turn-taking and full-duplex behavior. GPT-5.6 anticipation is treated as surrounding community discussion, not a confirmed product fact.",
+    sourceUrl: "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live",
+    lastChecked: "2026-07-09",
+    plainEnglish: "GPT Live means the voice version of ChatGPT feels less like taking turns with a walkie-talkie. The assistant can handle pauses, acknowledgments, translation, and background work in a more continuous conversation.",
+    relatedTerms: ["Computer Use", "Agentic", "Tool Calling", "Reasoning Model", "Copilot", "Prompt Injection"],
+    seoTitle: "GPT Live Meaning: ChatGPT Voice and Live AI",
+    seoDescription: "GPT Live meaning in AI product slang: live ChatGPT voice, full-duplex AI conversation, real-time translation, and how it differs from older voice mode."
+  },
+  {
+    word: "LLM Burnout",
+    definition: "The drained feeling after too many model bills, flaky answers, prompt rewrites, tool switches, and ROI debates make AI feel like another job instead of leverage.",
+    origin: "Emerged as community shorthand for the fatigue side of heavy LLM use: not anti-AI, but tired of babysitting models, subscriptions, evals, and workflows that promised to save time.",
+    examples: ["After three subscriptions, two broken agents, and a weekend of evals, I hit LLM burnout.", "LLM burnout is when the cheaper alternative is closing the chat tab and doing the task yourself."],
+    aiGrade: 4,
+    trend: "MID",
+    sourceType: "community",
+    sourceNote: "Community and editorial phrase anchored by broader evidence that frustrating LLM interactions can create emotional strain for software workers; no single clean origin is claimed.",
+    sourceUrl: "https://arxiv.org/abs/2504.10050",
+    lastChecked: "2026-07-09",
+    plainEnglish: "LLM burnout is AI fatigue with a builder edge. It is the point where cost, context management, hallucinations, and tool churn make the AI workflow feel heavier than the original work.",
+    relatedTerms: ["Hallucination", "Eval", "Prompt Caching", "LLM-as-a-Judge", "GPU Rich / GPU Poor", "Vibe Coding"],
+    seoTitle: "LLM Burnout Meaning: AI Fatigue, Bills, and Tool Churn",
+    seoDescription: "LLM burnout meaning in AI slang: fatigue from model bills, unreliable outputs, prompt babysitting, and doubts about whether AI workflows are worth the overhead."
   }
 ];
