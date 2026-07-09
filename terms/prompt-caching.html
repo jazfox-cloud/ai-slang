@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Caching Meaning in AI Apps</title>
+    <meta name="description" content="Prompt caching meaning in AI builder slang: how repeated prompt context can reduce latency or cost in long-context LLM apps.">
+    <link rel="canonical" href="https://ai-slang.com/terms/prompt-caching">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Prompt Caching","description":"The builder trick of reusing repeated prompt context so long instructions, schemas, examples, or documents do not get billed and processed from scratch every time.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/prompt-caching"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Prompt Caching Meaning</h1>
+        <p class="article-lead">The builder trick of reusing repeated prompt context so long instructions, schemas, examples, or documents do not get billed and processed from scratch every time.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Prompt Caching mean?</h2>
+          <p>The builder trick of reusing repeated prompt context so long instructions, schemas, examples, or documents do not get billed and processed from scratch every time.</p>
+          <p>Prompt caching means the API can recognize reused context and process it more efficiently. It is useful for apps that send the same instructions, tools, or reference material across many requests.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Became everyday LLM API vocabulary as providers added caching for repeated prompt prefixes and developers started optimizing long-context apps around it.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-09.</p>
+          <p>Current model-provider and developer-platform term; official API docs describe prompt caching as an optimization for repeated prompt prefixes, with provider-specific behavior and pricing.</p>
+          <p><a class="source-link" href="https://platform.openai.com/docs/guides/prompt-caching" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>Prompt caching made the support agent cheap enough to keep the full policy manual in context.</li>
+<li>If every request starts with the same giant system prompt, check whether prompt caching is actually working.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/context-window">Context Window</a>
+<a href="/terms/context-engineering">Context Engineering</a>
+<a href="/terms/rag">RAG</a>
+<a href="/terms/system-prompt">System Prompt</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

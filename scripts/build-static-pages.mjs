@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { slangs } from "../src/data/slangs.js";
 
 const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
-const today = "2026-07-07";
+const today = "2026-07-09";
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");

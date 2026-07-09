@@ -406,5 +406,53 @@ export const slangs = [
     relatedTerms: ["Reasoning Model", "Alignment", "Eval", "Synthetic Data", "GPU Rich / GPU Poor", "Model Collapse"],
     seoTitle: "Frontier Model Meaning in AI",
     seoDescription: "Frontier model meaning in AI slang and policy: powerful models near the current capability edge, and why the term appears in safety and regulation debates."
+  },
+  {
+    word: "Prompt Caching",
+    definition: "The builder trick of reusing repeated prompt context so long instructions, schemas, examples, or documents do not get billed and processed from scratch every time.",
+    origin: "Became everyday LLM API vocabulary as providers added caching for repeated prompt prefixes and developers started optimizing long-context apps around it.",
+    examples: ["Prompt caching made the support agent cheap enough to keep the full policy manual in context.", "If every request starts with the same giant system prompt, check whether prompt caching is actually working."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current model-provider and developer-platform term; official API docs describe prompt caching as an optimization for repeated prompt prefixes, with provider-specific behavior and pricing.",
+    sourceUrl: "https://platform.openai.com/docs/guides/prompt-caching",
+    lastChecked: "2026-07-09",
+    plainEnglish: "Prompt caching means the API can recognize reused context and process it more efficiently. It is useful for apps that send the same instructions, tools, or reference material across many requests.",
+    relatedTerms: ["Context Window", "Context Engineering", "RAG", "System Prompt", "Tool Calling", "GPU Rich / GPU Poor"],
+    seoTitle: "Prompt Caching Meaning in AI Apps",
+    seoDescription: "Prompt caching meaning in AI builder slang: how repeated prompt context can reduce latency or cost in long-context LLM apps."
+  },
+  {
+    word: "Computer Use",
+    definition: "The AI-agent feature where a model operates a graphical interface through screenshots, clicks, typing, and scrolling instead of only calling neat little APIs.",
+    origin: "Moved into mainstream AI product language as model providers released computer-use capabilities for agents that need to work inside ordinary websites and desktop-style interfaces.",
+    examples: ["Computer use is powerful until the agent confidently clicks the wrong billing button.", "Use tool calling for clean APIs and computer use for the messy app that only has a browser UI."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current AI agent product term grounded in official model-provider documentation; implementations differ, so the entry describes the general UI-operating pattern rather than one universal standard.",
+    sourceUrl: "https://platform.openai.com/docs/guides/tools-computer-use",
+    lastChecked: "2026-07-09",
+    plainEnglish: "Computer use lets an AI system interact with software the way a person might: seeing the screen and choosing mouse or keyboard actions. It matters when a task has no clean API.",
+    relatedTerms: ["Agentic", "Tool Calling", "MCP", "Prompt Injection", "System Prompt", "Alignment"],
+    seoTitle: "Computer Use Meaning in AI Agents",
+    seoDescription: "Computer use meaning in AI: agents that can operate graphical interfaces with screenshots, clicks, typing, and scrolling."
+  },
+  {
+    word: "LLM-as-a-Judge",
+    definition: "Using one language model to grade, compare, or critique another model's output, which is handy until the judge starts sharing the same blind spots as the contestant.",
+    origin: "Grew from evaluation research and benchmark practice as teams needed scalable ways to score open-ended answers that are hard to check with exact-match tests.",
+    examples: ["The eval used LLM-as-a-judge for tone, then spot-checked the failures with humans.", "LLM-as-a-judge is not free truth; it still needs rubrics, calibration, and bias checks."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Research and evaluation term covered in survey literature; useful as shorthand for model-based grading, but not a replacement for human review on high-stakes decisions.",
+    sourceUrl: "https://arxiv.org/abs/2411.15594",
+    lastChecked: "2026-07-09",
+    plainEnglish: "LLM-as-a-judge means asking a model to evaluate answers instead of only generating them. It is common in AI evals because many good or bad answers cannot be scored with a simple string match.",
+    relatedTerms: ["Eval", "Hallucination", "Reasoning Model", "Alignment", "Synthetic Data", "Model Collapse"],
+    seoTitle: "LLM-as-a-Judge Meaning in AI Evals",
+    seoDescription: "LLM-as-a-Judge meaning in AI evaluation: using language models to grade, compare, or critique model outputs, plus the reliability caveats."
   }
 ];

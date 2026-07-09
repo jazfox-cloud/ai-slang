@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLM-as-a-Judge Meaning in AI Evals</title>
+    <meta name="description" content="LLM-as-a-Judge meaning in AI evaluation: using language models to grade, compare, or critique model outputs, plus the reliability caveats.">
+    <link rel="canonical" href="https://ai-slang.com/terms/llm-as-a-judge">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"LLM-as-a-Judge","description":"Using one language model to grade, compare, or critique another model's output, which is handy until the judge starts sharing the same blind spots as the contestant.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/llm-as-a-judge"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>LLM-as-a-Judge Meaning</h1>
+        <p class="article-lead">Using one language model to grade, compare, or critique another model's output, which is handy until the judge starts sharing the same blind spots as the contestant.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=3/5</span>
+          <span>███░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does LLM-as-a-Judge mean?</h2>
+          <p>Using one language model to grade, compare, or critique another model's output, which is handy until the judge starts sharing the same blind spots as the contestant.</p>
+          <p>LLM-as-a-judge means asking a model to evaluate answers instead of only generating them. It is common in AI evals because many good or bad answers cannot be scored with a simple string match.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Grew from evaluation research and benchmark practice as teams needed scalable ways to score open-ended answers that are hard to check with exact-match tests.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-09.</p>
+          <p>Research and evaluation term covered in survey literature; useful as shorthand for model-based grading, but not a replacement for human review on high-stakes decisions.</p>
+          <p><a class="source-link" href="https://arxiv.org/abs/2411.15594" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The eval used LLM-as-a-judge for tone, then spot-checked the failures with humans.</li>
+<li>LLM-as-a-judge is not free truth; it still needs rubrics, calibration, and bias checks.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/eval">Eval</a>
+<a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/alignment">Alignment</a>
+<a href="/terms/synthetic-data">Synthetic Data</a>
+<a href="/terms/model-collapse">Model Collapse</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

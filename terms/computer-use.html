@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Use Meaning in AI Agents</title>
+    <meta name="description" content="Computer use meaning in AI: agents that can operate graphical interfaces with screenshots, clicks, typing, and scrolling.">
+    <link rel="canonical" href="https://ai-slang.com/terms/computer-use">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Computer Use","description":"The AI-agent feature where a model operates a graphical interface through screenshots, clicks, typing, and scrolling instead of only calling neat little APIs.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/computer-use"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Computer Use Meaning</h1>
+        <p class="article-lead">The AI-agent feature where a model operates a graphical interface through screenshots, clicks, typing, and scrolling instead of only calling neat little APIs.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=3/5</span>
+          <span>███░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Computer Use mean?</h2>
+          <p>The AI-agent feature where a model operates a graphical interface through screenshots, clicks, typing, and scrolling instead of only calling neat little APIs.</p>
+          <p>Computer use lets an AI system interact with software the way a person might: seeing the screen and choosing mouse or keyboard actions. It matters when a task has no clean API.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Moved into mainstream AI product language as model providers released computer-use capabilities for agents that need to work inside ordinary websites and desktop-style interfaces.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-09.</p>
+          <p>Current AI agent product term grounded in official model-provider documentation; implementations differ, so the entry describes the general UI-operating pattern rather than one universal standard.</p>
+          <p><a class="source-link" href="https://platform.openai.com/docs/guides/tools-computer-use" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>Computer use is powerful until the agent confidently clicks the wrong billing button.</li>
+<li>Use tool calling for clean APIs and computer use for the messy app that only has a browser UI.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/agentic">Agentic</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/mcp">MCP</a>
+<a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/system-prompt">System Prompt</a>
+<a href="/terms/alignment">Alignment</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
