@@ -1,1 +1,9 @@
 # Domain redirects are handled in functions/_middleware.js.
+# Legacy public .html URLs must redirect before Pages' automatic clean-URL 308.
+/index.html / 301
+/terms.html /terms-of-use 301
+/privacy.html /privacy 301
+/terms-of-use.html /terms-of-use 301
+/editorial-policy.html /editorial-policy 301
+/articles/:slug.html /articles/:slug 301
+/terms/:slug.html /terms/:slug 301

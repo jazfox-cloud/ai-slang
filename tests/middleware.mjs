@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { onRequest } from "../functions/_middleware.js";
 
 async function run(url) {
@@ -22,5 +23,15 @@ assert.equal(oldHome.headers.get("location"), "https://ai-slang.com/");
 
 const canonical = await run("https://ai-slang.com/terms/agentic");
 assert.equal(canonical.status, 200);
+
+const redirects = readFileSync("_redirects", "utf8");
+for (const rule of [
+  "/index.html / 301",
+  "/terms.html /terms-of-use 301",
+  "/articles/:slug.html /articles/:slug 301",
+  "/terms/:slug.html /terms/:slug 301"
+]) {
+  assert.ok(redirects.split("\n").includes(rule), `Missing redirect rule: ${rule}`);
+}
 
 console.log("Validated canonical host and legacy .html redirects.");
