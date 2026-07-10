@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { onRequest } from "../functions/_middleware.js";
+
+async function run(url) {
+  return onRequest({
+    request: new Request(url),
+    next: () => new Response("next", { status: 200 })
+  });
+}
+
+const oldTerm = await run("https://ai-slang.com/terms/agentic.html?source=gsc");
+assert.equal(oldTerm.status, 301);
+assert.equal(oldTerm.headers.get("location"), "https://ai-slang.com/terms/agentic?source=gsc");
+
+const oldArticleOnWww = await run("https://www.ai-slang.com/articles/what-is-ai-slang.html");
+assert.equal(oldArticleOnWww.status, 301);
+assert.equal(oldArticleOnWww.headers.get("location"), "https://ai-slang.com/articles/what-is-ai-slang");
+
+const oldHome = await run("https://ai-slang.com/index.html");
+assert.equal(oldHome.status, 301);
+assert.equal(oldHome.headers.get("location"), "https://ai-slang.com/");
+
+const canonical = await run("https://ai-slang.com/terms/agentic");
+assert.equal(canonical.status, 200);
+
+console.log("Validated canonical host and legacy .html redirects.");
