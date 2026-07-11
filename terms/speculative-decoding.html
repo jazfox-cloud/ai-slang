@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speculative Decoding Meaning in LLM Apps</title>
+    <meta name="description" content="Speculative decoding meaning in AI builder slang: the draft-and-verify inference technique used to reduce LLM latency.">
+    <link rel="canonical" href="https://ai-slang.com/terms/speculative-decoding">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Speculative Decoding","description":"The LLM speed trick where a smaller draft model guesses upcoming tokens and a larger model checks them, like autocomplete with a quality inspector.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/speculative-decoding"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Speculative Decoding Meaning</h1>
+        <p class="article-lead">The LLM speed trick where a smaller draft model guesses upcoming tokens and a larger model checks them, like autocomplete with a quality inspector.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=MID</span>
+        </div>
+        <section>
+          <h2>What does Speculative Decoding mean?</h2>
+          <p>The LLM speed trick where a smaller draft model guesses upcoming tokens and a larger model checks them, like autocomplete with a quality inspector.</p>
+          <p>Speculative decoding speeds up generation by letting a cheap model draft several tokens while the main model verifies them in batches. The goal is lower latency without accepting lower-quality guesses.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Moved from inference research into builder vocabulary as teams looked for ways to reduce latency in large language model apps without changing the final output distribution.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-11.</p>
+          <p>Technical LLM inference term covered in survey and systems papers; slang value comes from builders using it as shorthand for draft-and-verify generation speedups.</p>
+          <p><a class="source-link" href="https://arxiv.org/abs/2401.07851" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>Speculative decoding made the chatbot feel faster without switching to a smaller model.</li>
+<li>Latency went down after we tuned the draft model for speculative decoding.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/prompt-caching">Prompt Caching</a>
+<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
+<a href="/terms/context-window">Context Window</a>
+<a href="/terms/eval">Eval</a>
+<a href="/terms/synthetic-data">Synthetic Data</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

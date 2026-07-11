@@ -486,5 +486,37 @@ export const slangs = [
     relatedTerms: ["Hallucination", "Eval", "Prompt Caching", "LLM-as-a-Judge", "GPU Rich / GPU Poor", "Vibe Coding"],
     seoTitle: "LLM Burnout Meaning: AI Fatigue, Bills, and Tool Churn",
     seoDescription: "LLM burnout meaning in AI slang: fatigue from model bills, unreliable outputs, prompt babysitting, and doubts about whether AI workflows are worth the overhead."
+  },
+  {
+    word: "Workslop",
+    definition: "AI-generated workplace output that looks polished enough to pass along but lacks the judgment, context, or substance needed to actually move the work forward.",
+    origin: "Popularized by a 2025 Harvard Business Review article from BetterUp and Stanford-linked researchers studying low-value AI output in the workplace.",
+    examples: ["The deck was formatted beautifully, but every recommendation was workslop.", "Workslop saves the sender ten minutes and costs the reviewer two hours."],
+    aiGrade: 5,
+    trend: "HIGH",
+    sourceType: "community",
+    sourceNote: "Workplace AI slang with a stable HBR reference; the term is useful as a cultural label, not a precise productivity metric for every AI-assisted document.",
+    sourceUrl: "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
+    lastChecked: "2026-07-11",
+    plainEnglish: "Workslop is sloppy AI work dressed up as finished work. It usually shifts the hard thinking, checking, or rewriting onto someone else.",
+    relatedTerms: ["Slop", "LLM Burnout", "Shadow AI", "Hallucination", "Eval", "Prompt Caching"],
+    seoTitle: "Workslop Meaning: AI Slang for Low-Value Work Output",
+    seoDescription: "Workslop meaning in AI slang: polished-looking AI-generated workplace output that lacks substance and creates cleanup work for other people."
+  },
+  {
+    word: "Speculative Decoding",
+    definition: "The LLM speed trick where a smaller draft model guesses upcoming tokens and a larger model checks them, like autocomplete with a quality inspector.",
+    origin: "Moved from inference research into builder vocabulary as teams looked for ways to reduce latency in large language model apps without changing the final output distribution.",
+    examples: ["Speculative decoding made the chatbot feel faster without switching to a smaller model.", "Latency went down after we tuned the draft model for speculative decoding."],
+    aiGrade: 2,
+    trend: "MID",
+    sourceType: "paper",
+    sourceNote: "Technical LLM inference term covered in survey and systems papers; slang value comes from builders using it as shorthand for draft-and-verify generation speedups.",
+    sourceUrl: "https://arxiv.org/abs/2401.07851",
+    lastChecked: "2026-07-11",
+    plainEnglish: "Speculative decoding speeds up generation by letting a cheap model draft several tokens while the main model verifies them in batches. The goal is lower latency without accepting lower-quality guesses.",
+    relatedTerms: ["Reasoning Model", "Prompt Caching", "GPU Rich / GPU Poor", "Context Window", "Eval", "Synthetic Data"],
+    seoTitle: "Speculative Decoding Meaning in LLM Apps",
+    seoDescription: "Speculative decoding meaning in AI builder slang: the draft-and-verify inference technique used to reduce LLM latency."
   }
 ];
