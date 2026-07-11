@@ -59,7 +59,7 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");
@@ -248,8 +248,34 @@ const policyPages = [
     lead: "AI Slang Hub is built as a lightweight dictionary and editing tool. The MVP is static-first and intentionally avoids account tracking.",
     sections: [
       ["Information we process", "If you use the Humanizer, the text you submit may be sent to the configured AI provider only to generate the requested response. Do not paste secrets, passwords, private documents, or sensitive personal data."],
-      ["Analytics", "The site may use basic privacy-conscious analytics in the future to understand page views and popular terms. We do not need user accounts for the dictionary MVP."],
-      ["Contact", "For privacy questions, contact the site operator through the repository or the contact method listed on the deployed site."]
+      ["Analytics and hosting", "Our hosting, analytics, and security providers may process IP addresses, browser or device information, requested pages, timestamps, and referral data to operate, protect, and improve the site."],
+      ["Advertising cookies", "AI Slang Hub may use third-party advertising services, including Google AdSense. Third-party vendors, including Google, may use cookies to serve and measure ads based on a visitor's prior visits to this website or other websites."],
+      ["Advertising choices", "You can control or opt out of personalized Google advertising at https://adssettings.google.com/. Additional industry opt-out choices are available at https://www.aboutads.info/choices/."],
+      ["Contact", "For privacy questions or deletion requests related to a message you sent, email hello@ai-slang.com."]
+    ]
+  },
+  {
+    file: "about.html",
+    title: "About AI Slang Hub",
+    description: "About AI Slang Hub, its editorial purpose, sourcing rules, and independent status.",
+    h1: "About AI Slang Hub",
+    lead: "AI Slang Hub is an independent dictionary and writing tool for the fast-moving language around AI products, research, developer culture, and generated text.",
+    sections: [
+      ["What we publish", "We explain technical terms, product language, community slang, and common AI writing tells in plain English. Entries include source type and last-checked information so readers can distinguish stable terminology from newer editorial or community usage."],
+      ["How corrections work", "Definitions are reviewed against primary product documentation, research papers, or clearly identified community evidence where available. Readers can send corrections with the page URL and a reliable source to hello@ai-slang.com."],
+      ["Independent status", "AI Slang Hub is independently operated and is not affiliated with, endorsed by, or sponsored by OpenAI, Google, Anthropic, Microsoft, or other companies mentioned in its entries."]
+    ]
+  },
+  {
+    file: "contact.html",
+    title: "Contact AI Slang Hub",
+    description: "Contact AI Slang Hub about definition corrections, sources, privacy, or accessibility.",
+    h1: "Contact AI Slang Hub",
+    lead: "Email hello@ai-slang.com for definition corrections, primary-source suggestions, privacy requests, accessibility reports, or general feedback.",
+    sections: [
+      ["Correction requests", "Include the page URL, the exact wording that needs review, and a primary or otherwise reliable source. Explain whether the issue concerns the definition, origin, example, category, or last-checked date."],
+      ["What we cannot provide", "AI Slang Hub does not provide legal, hiring, investment, academic, or security advice. We also cannot provide account support for companies or products mentioned in the dictionary."],
+      ["Response expectations", "Clear factual corrections and privacy or accessibility requests receive priority. Sending a suggestion does not guarantee that a term or submitted wording will be published."]
     ]
   },
   {
