@@ -29,7 +29,7 @@
         <h1>About AI Slang Hub</h1>
         <p class="article-lead">AI Slang Hub is an independent dictionary and writing tool for the fast-moving language around AI products, research, developer culture, and generated text.</p>
         <section><h2>What we publish</h2><p>We explain technical terms, product language, community slang, and common AI writing tells in plain English. Entries include source type and last-checked information so readers can distinguish stable terminology from newer editorial or community usage.</p></section>
-<section><h2>How corrections work</h2><p>Definitions are reviewed against primary product documentation, research papers, or clearly identified community evidence where available. Readers can send corrections with the page URL and a reliable source to hello@ai-slang.com.</p></section>
+<section><h2>How corrections work</h2><p>Definitions are reviewed against primary product documentation, research papers, or clearly identified community evidence where available. Readers can send corrections with the page URL and a reliable source to <a class="email-link" data-email-user="hello" data-email-domain="ai-slang.com" href="#contact-email">contact email</a>.</p></section>
 <section><h2>Independent status</h2><p>AI Slang Hub is independently operated and is not affiliated with, endorsed by, or sponsored by OpenAI, Google, Anthropic, Microsoft, or other companies mentioned in its entries.</p></section>
       </article>
     </main>
@@ -46,6 +46,11 @@
         document.body.dataset.theme = nextTheme;
         themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
         localStorage.setItem("theme", nextTheme);
+      });
+      document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+        const address = link.dataset.emailUser + "@" + link.dataset.emailDomain;
+        link.textContent = address;
+        link.href = "mailto:" + address;
       });
     </script>
   </body>

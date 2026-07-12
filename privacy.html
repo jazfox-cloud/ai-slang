@@ -32,7 +32,7 @@
 <section><h2>Analytics and hosting</h2><p>Our hosting, analytics, and security providers may process IP addresses, browser or device information, requested pages, timestamps, and referral data to operate, protect, and improve the site.</p></section>
 <section><h2>Advertising cookies</h2><p>AI Slang Hub may use third-party advertising services, including Google AdSense. Third-party vendors, including Google, may use cookies to serve and measure ads based on a visitor's prior visits to this website or other websites.</p></section>
 <section><h2>Advertising choices</h2><p>You can control or opt out of personalized Google advertising at https://adssettings.google.com/. Additional industry opt-out choices are available at https://www.aboutads.info/choices/.</p></section>
-<section><h2>Contact</h2><p>For privacy questions or deletion requests related to a message you sent, email hello@ai-slang.com.</p></section>
+<section><h2>Contact</h2><p>For privacy questions or deletion requests related to a message you sent, email <a class="email-link" data-email-user="hello" data-email-domain="ai-slang.com" href="#contact-email">contact email</a>.</p></section>
       </article>
     </main>
     <footer class="site-footer">
@@ -48,6 +48,11 @@
         document.body.dataset.theme = nextTheme;
         themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
         localStorage.setItem("theme", nextTheme);
+      });
+      document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+        const address = link.dataset.emailUser + "@" + link.dataset.emailDomain;
+        link.textContent = address;
+        link.href = "mailto:" + address;
       });
     </script>
   </body>

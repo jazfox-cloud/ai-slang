@@ -27,7 +27,7 @@
       <article class="seo-article">
         <p class="eyebrow">SITE_POLICY</p>
         <h1>Contact AI Slang Hub</h1>
-        <p class="article-lead">Email hello@ai-slang.com for definition corrections, primary-source suggestions, privacy requests, accessibility reports, or general feedback.</p>
+        <p class="article-lead">Email <a class="email-link" data-email-user="hello" data-email-domain="ai-slang.com" href="#contact-email">contact email</a> for definition corrections, primary-source suggestions, privacy requests, accessibility reports, or general feedback.</p>
         <section><h2>Correction requests</h2><p>Include the page URL, the exact wording that needs review, and a primary or otherwise reliable source. Explain whether the issue concerns the definition, origin, example, category, or last-checked date.</p></section>
 <section><h2>What we cannot provide</h2><p>AI Slang Hub does not provide legal, hiring, investment, academic, or security advice. We also cannot provide account support for companies or products mentioned in the dictionary.</p></section>
 <section><h2>Response expectations</h2><p>Clear factual corrections and privacy or accessibility requests receive priority. Sending a suggestion does not guarantee that a term or submitted wording will be published.</p></section>
@@ -46,6 +46,11 @@
         document.body.dataset.theme = nextTheme;
         themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
         localStorage.setItem("theme", nextTheme);
+      });
+      document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+        const address = link.dataset.emailUser + "@" + link.dataset.emailDomain;
+        link.textContent = address;
+        link.href = "mailto:" + address;
       });
     </script>
   </body>

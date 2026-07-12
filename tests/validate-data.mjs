@@ -51,10 +51,7 @@ function assertNoPublicHtmlUrls(path, content) {
 }
 
 const generatedFiles = [
-  "index.html",
-  "privacy.html",
-  "terms-of-use.html",
-  "editorial-policy.html",
+  ...readdirSync(".").filter((file) => file.endsWith(".html")),
   "sitemap.xml",
   ...readdirSync("terms").map((file) => `terms/${file}`),
   ...readdirSync("articles").map((file) => `articles/${file}`)
@@ -65,7 +62,11 @@ if (existsSync("terms.html")) {
 }
 
 for (const file of generatedFiles) {
-  assertNoPublicHtmlUrls(file, read(file));
+  const content = read(file);
+  assertNoPublicHtmlUrls(file, content);
+  if (/hello@ai-slang\.com|cdn-cgi\/l\/email-protection/.test(content)) {
+    throw new Error(`${file} exposes an email address to Cloudflare Email Protection`);
+  }
 }
 
 console.log(`Validated ${slangs.length} slang entries.`);

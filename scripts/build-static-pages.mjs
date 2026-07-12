@@ -16,6 +16,13 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function renderText(value) {
+  return escapeHtml(value).replaceAll(
+    "hello@ai-slang.com",
+    '<a class="email-link" data-email-user="hello" data-email-domain="ai-slang.com" href="#contact-email">contact email</a>'
+  );
+}
+
 function cleanPath(file) {
   return `/${file.replace(/\.html$/, "")}`;
 }
@@ -29,6 +36,13 @@ function canonicalUrl(path) {
 }
 
 function pageShell({ title, description, canonical, body, jsonLd = "" }) {
+  const emailScript = body.includes("data-email-user") ? `
+      document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+        const address = link.dataset.emailUser + "@" + link.dataset.emailDomain;
+        link.textContent = address;
+        link.href = "mailto:" + address;
+      });` : "";
+
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -70,7 +84,7 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
         document.body.dataset.theme = nextTheme;
         themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
         localStorage.setItem("theme", nextTheme);
-      });
+      });${emailScript}
     </script>
   </body>
 </html>
@@ -315,8 +329,8 @@ function policyPage(page) {
     body: `<article class="seo-article">
         <p class="eyebrow">SITE_POLICY</p>
         <h1>${escapeHtml(page.h1)}</h1>
-        <p class="article-lead">${escapeHtml(page.lead)}</p>
-        ${page.sections.map(([heading, text]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(text)}</p></section>`).join("\n")}
+        <p class="article-lead">${renderText(page.lead)}</p>
+        ${page.sections.map(([heading, text]) => `<section><h2>${escapeHtml(heading)}</h2><p>${renderText(text)}</p></section>`).join("\n")}
       </article>`
   });
 }
