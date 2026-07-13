@@ -21,6 +21,10 @@ const oldHome = await run("https://ai-slang.com/index.html");
 assert.equal(oldHome.status, 301);
 assert.equal(oldHome.headers.get("location"), "https://ai-slang.com/");
 
+const legacyTermsPage = await run("https://ai-slang.com/terms.html");
+assert.equal(legacyTermsPage.status, 301);
+assert.equal(legacyTermsPage.headers.get("location"), "https://ai-slang.com/terms-of-use");
+
 const canonical = await run("https://ai-slang.com/terms/agentic");
 assert.equal(canonical.status, 200);
 

@@ -8,10 +8,14 @@ export async function onRequest(context) {
     shouldRedirect = true;
   }
 
-  if (url.pathname.toLowerCase().endsWith(".html")) {
-    url.pathname = url.pathname.toLowerCase() === "/index.html"
+  const lowerPath = url.pathname.toLowerCase();
+  if (lowerPath === "/terms.html") {
+    url.pathname = "/terms-of-use";
+    shouldRedirect = true;
+  } else if (lowerPath.endsWith(".html")) {
+    url.pathname = lowerPath === "/index.html"
       ? "/"
-      : url.pathname.slice(0, -5);
+      : lowerPath.slice(0, -5);
     shouldRedirect = true;
   }
 
