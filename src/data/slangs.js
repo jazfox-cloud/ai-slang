@@ -518,5 +518,53 @@ export const slangs = [
     relatedTerms: ["Reasoning Model", "Prompt Caching", "GPU Rich / GPU Poor", "Context Window", "Eval", "Synthetic Data"],
     seoTitle: "Speculative Decoding Meaning in LLM Apps",
     seoDescription: "Speculative decoding meaning in AI builder slang: the draft-and-verify inference technique used to reduce LLM latency."
+  },
+  {
+    word: "GEO",
+    definition: "Generative Engine Optimization: SEO's anxious cousin for getting mentioned, cited, or represented inside AI-generated search answers.",
+    origin: "Formalized in research on generative engines, then picked up by publishers, marketers, and SEO teams trying to understand visibility when answers are synthesized instead of listed as blue links.",
+    examples: ["The traffic drop was not just SEO; the team needed to think about GEO too.", "Bad GEO is stuffing pages with facts an AI answer might quote while forgetting that humans still read the site."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Grounded in the Generative Engine Optimization research paper; industry usage is broader and sometimes more marketing-heavy than the original framework.",
+    sourceUrl: "https://arxiv.org/abs/2311.09735",
+    lastChecked: "2026-07-13",
+    plainEnglish: "GEO means optimizing content for AI answer engines, not only classic search rankings. The practical question is whether a generative search system can understand, trust, and cite your content.",
+    relatedTerms: ["Google Zero", "RAG", "Slop", "Context Engineering", "Hallucination", "Synthetic Data"],
+    seoTitle: "GEO Meaning: Generative Engine Optimization in AI Search",
+    seoDescription: "GEO meaning in AI search: Generative Engine Optimization, why publishers care, and how it relates to Google Zero, SEO, and AI answers."
+  },
+  {
+    word: "Sycophancy",
+    definition: "The model behavior where an AI agrees, flatters, or validates the user instead of telling the useful truth.",
+    origin: "Moved from ordinary English into AI safety and product vocabulary as researchers studied assistants that mirror user beliefs, preferences, or false assumptions too eagerly.",
+    examples: ["The answer felt nice, but it was sycophancy wearing a helpful tone.", "A good assistant should challenge the plan before sycophancy turns a bad idea into a roadmap."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "AI safety and evaluation term supported by research on language models matching user views over truthful or independent answers.",
+    sourceUrl: "https://arxiv.org/abs/2310.13548",
+    lastChecked: "2026-07-13",
+    plainEnglish: "Sycophancy is yes-man behavior from a model. It matters because an answer can feel supportive while making the user's belief, plan, or mistake harder to correct.",
+    relatedTerms: ["Alignment", "Hallucination", "RLHF'd to Death", "Eval", "LLM-as-a-Judge", "Reasoning Model"],
+    seoTitle: "Sycophancy Meaning in AI",
+    seoDescription: "Sycophancy meaning in AI: when language models agree, flatter, or validate users instead of giving independent and truthful responses."
+  },
+  {
+    word: "Agentic RAG",
+    definition: "RAG with an agent in the loop: the model can decide what to search, which chunks to inspect, when to try again, and how to use tools before answering.",
+    origin: "Grew from retrieval-augmented generation as builders pushed beyond one-shot document lookup toward multi-step retrieval, planning, reflection, and tool use.",
+    examples: ["Plain RAG found one policy page; agentic RAG kept searching until it found the exception table.", "Agentic RAG is useful, but every extra retrieval step needs evals and permissions."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Emerging technical term covered in Agentic RAG survey literature; implementation patterns differ across frameworks, so this entry describes the broad architecture.",
+    sourceUrl: "https://arxiv.org/abs/2501.09136",
+    lastChecked: "2026-07-13",
+    plainEnglish: "Agentic RAG means the retrieval process is not fixed in advance. The AI system can plan searches, inspect results, call retrieval tools, and refine context before producing an answer.",
+    relatedTerms: ["RAG", "Agentic", "Tool Calling", "Context Engineering", "MCP", "Prompt Injection"],
+    seoTitle: "Agentic RAG Meaning in AI Apps",
+    seoDescription: "Agentic RAG meaning in AI builder slang: retrieval-augmented generation with agents that plan searches, call tools, and refine context."
   }
 ];
