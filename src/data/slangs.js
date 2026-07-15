@@ -566,5 +566,53 @@ export const slangs = [
     relatedTerms: ["RAG", "Agentic", "Tool Calling", "Context Engineering", "MCP", "Prompt Injection"],
     seoTitle: "Agentic RAG Meaning in AI Apps",
     seoDescription: "Agentic RAG meaning in AI builder slang: retrieval-augmented generation with agents that plan searches, call tools, and refine context."
+  },
+  {
+    word: "Slopsquatting",
+    definition: "The supply-chain scam where attackers register package names that AI coding tools tend to hallucinate, hoping a developer or agent installs the fake dependency.",
+    origin: "Blends 'slop' with typosquatting. The term spread through software-security circles as researchers documented LLMs inventing plausible package names in generated code.",
+    examples: ["The model invented a helper library, and now security is worried about slopsquatting.", "Vibe coding gets riskier when the agent can install dependencies without checking the registry history."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "wiki",
+    sourceNote: "Software-supply-chain slang with security research behind it; the linked reference summarizes the term history and points to package-hallucination studies.",
+    sourceUrl: "https://en.wikipedia.org/wiki/Slopsquatting",
+    lastChecked: "2026-07-15",
+    plainEnglish: "Slopsquatting is typosquatting for AI-generated code. Instead of guessing what a human might mistype, an attacker guesses what a model might invent.",
+    relatedTerms: ["Hallucination", "Vibe Coding", "Slop", "Prompt Injection", "Tool Calling", "Shadow AI"],
+    seoTitle: "Slopsquatting Meaning in AI Coding",
+    seoDescription: "Slopsquatting meaning in AI coding and security: fake packages that exploit LLM package hallucinations, vibe coding, and unchecked dependency installs."
+  },
+  {
+    word: "Tool Poisoning",
+    definition: "An agent security attack where a tool's name, description, schema, or metadata carries hidden instructions that steer the model toward unsafe actions.",
+    origin: "Grew out of MCP and tool-using agent security research, where natural-language tool descriptions became part of the model's trusted context.",
+    examples: ["The MCP server looked harmless, but its description was doing tool poisoning.", "Tool poisoning is why agents need tool manifests, permission boundaries, and boring audit logs."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "MCP security research term; recent papers describe tool metadata poisoning, shadowing, and related attacks against tool-integrated agents.",
+    sourceUrl: "https://arxiv.org/abs/2512.06556",
+    lastChecked: "2026-07-15",
+    plainEnglish: "Tool poisoning means the model is tricked through the tool catalog itself. The dangerous instruction may live in metadata the user never reads, but the agent does.",
+    relatedTerms: ["MCP", "Tool Calling", "Prompt Injection", "Agentic", "System Prompt", "Computer Use"],
+    seoTitle: "Tool Poisoning Meaning in AI Agents",
+    seoDescription: "Tool poisoning meaning in AI agent security: malicious tool metadata, MCP risks, and why tool descriptions can become an attack surface."
+  },
+  {
+    word: "Memory Poisoning",
+    definition: "The long-game prompt injection where bad input gets stored as an agent memory, then quietly shapes future answers or actions after the original attack is gone.",
+    origin: "Moved into AI-agent security vocabulary as persistent memory became a default feature for assistants and researchers studied attacks that survive across sessions.",
+    examples: ["The support assistant kept trusting a fake preference because of memory poisoning.", "Prompt injection is bad today; memory poisoning is bad next month when the agent remembers it."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Emerging LLM-agent security term supported by 2026 research on poisoned persistent memories and cross-session attack effects.",
+    sourceUrl: "https://arxiv.org/abs/2606.04329",
+    lastChecked: "2026-07-15",
+    plainEnglish: "Memory poisoning happens when an attacker gets the assistant to save a false or malicious memory. Later, the agent retrieves that memory as if it were trusted context.",
+    relatedTerms: ["Context Rot", "Prompt Injection", "Agentic", "Context Engineering", "Hallucination", "Alignment"],
+    seoTitle: "Memory Poisoning Meaning in AI Agents",
+    seoDescription: "Memory poisoning meaning in AI agent security: poisoned persistent memories, delayed prompt injection, and why assistant memory changes the attack surface."
   }
 ];

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Poisoning Meaning in AI Agents</title>
+    <meta name="description" content="Memory poisoning meaning in AI agent security: poisoned persistent memories, delayed prompt injection, and why assistant memory changes the attack surface.">
+    <link rel="canonical" href="https://ai-slang.com/terms/memory-poisoning">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Memory Poisoning","description":"The long-game prompt injection where bad input gets stored as an agent memory, then quietly shapes future answers or actions after the original attack is gone.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/memory-poisoning"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Memory Poisoning Meaning</h1>
+        <p class="article-lead">The long-game prompt injection where bad input gets stored as an agent memory, then quietly shapes future answers or actions after the original attack is gone.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=3/5</span>
+          <span>███░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Memory Poisoning mean?</h2>
+          <p>The long-game prompt injection where bad input gets stored as an agent memory, then quietly shapes future answers or actions after the original attack is gone.</p>
+          <p>Memory poisoning happens when an attacker gets the assistant to save a false or malicious memory. Later, the agent retrieves that memory as if it were trusted context.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Moved into AI-agent security vocabulary as persistent memory became a default feature for assistants and researchers studied attacks that survive across sessions.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-15.</p>
+          <p>Emerging LLM-agent security term supported by 2026 research on poisoned persistent memories and cross-session attack effects.</p>
+          <p><a class="source-link" href="https://arxiv.org/abs/2606.04329" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The support assistant kept trusting a fake preference because of memory poisoning.</li>
+<li>Prompt injection is bad today; memory poisoning is bad next month when the agent remembers it.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/context-rot">Context Rot</a>
+<a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/agentic">Agentic</a>
+<a href="/terms/context-engineering">Context Engineering</a>
+<a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/alignment">Alignment</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

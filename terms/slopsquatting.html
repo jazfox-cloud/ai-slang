@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slopsquatting Meaning in AI Coding</title>
+    <meta name="description" content="Slopsquatting meaning in AI coding and security: fake packages that exploit LLM package hallucinations, vibe coding, and unchecked dependency installs.">
+    <link rel="canonical" href="https://ai-slang.com/terms/slopsquatting">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Slopsquatting","description":"The supply-chain scam where attackers register package names that AI coding tools tend to hallucinate, hoping a developer or agent installs the fake dependency.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/slopsquatting"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Slopsquatting Meaning</h1>
+        <p class="article-lead">The supply-chain scam where attackers register package names that AI coding tools tend to hallucinate, hoping a developer or agent installs the fake dependency.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=4/5</span>
+          <span>████░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Slopsquatting mean?</h2>
+          <p>The supply-chain scam where attackers register package names that AI coding tools tend to hallucinate, hoping a developer or agent installs the fake dependency.</p>
+          <p>Slopsquatting is typosquatting for AI-generated code. Instead of guessing what a human might mistype, an attacker guesses what a model might invent.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Blends 'slop' with typosquatting. The term spread through software-security circles as researchers documented LLMs inventing plausible package names in generated code.</p>
+          <p><strong>Source type:</strong> wiki. <strong>Last checked:</strong> 2026-07-15.</p>
+          <p>Software-supply-chain slang with security research behind it; the linked reference summarizes the term history and points to package-hallucination studies.</p>
+          <p><a class="source-link" href="https://en.wikipedia.org/wiki/Slopsquatting" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The model invented a helper library, and now security is worried about slopsquatting.</li>
+<li>Vibe coding gets riskier when the agent can install dependencies without checking the registry history.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/vibe-coding">Vibe Coding</a>
+<a href="/terms/slop">Slop</a>
+<a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/shadow-ai">Shadow AI</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
