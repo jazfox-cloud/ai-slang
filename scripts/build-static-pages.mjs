@@ -2,7 +2,8 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { slangs } from "../src/data/slangs.js";
 
 const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
-const today = "2026-07-15";
+const articleSchemaDate = "2026-07-15";
+const sitemapLastmodDate = new Date().toISOString().slice(0, 10);
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -108,14 +109,57 @@ function termPage(item) {
   const canonical = canonicalUrl(`/terms/${slug}`);
   const title = item.seoTitle || `${item.word} Meaning: AI Slang Definition, Origin, and Examples`;
   const description = item.seoDescription || `${item.word} meaning in AI slang: ${item.definition}`;
-  const jsonLd = `<script type="application/ld+json">${JSON.stringify({
+  const jsonLdObjects = [{
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
     name: item.word,
     description: item.definition,
     inDefinedTermSet: `${siteUrl}/`,
     url: canonical
-  })}</script>`;
+  }];
+
+  if (item.faqItems?.length) {
+    jsonLdObjects.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: item.faqItems.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer
+        }
+      }))
+    });
+  }
+
+  const jsonLd = jsonLdObjects.map((object) => `<script type="application/ld+json">${JSON.stringify(object)}</script>`).join("");
+  const extraSections = (item.extraSections || []).map((section) => {
+    const sectionBody = [
+      section.paragraphs?.length ? section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n") : "",
+      section.bullets?.length ? `<ul>
+            ${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("\n")}
+          </ul>` : ""
+    ].filter(Boolean).join("\n");
+
+    return `<section>
+          <h2>${escapeHtml(section.heading)}</h2>
+          ${sectionBody}
+        </section>`;
+  }).join("\n");
+  const faqSection = item.faqItems?.length ? `<section>
+          <h2>FAQ</h2>
+          ${item.faqItems.map((faq) => `<div class="faq-item">
+            <h3>${escapeHtml(faq.question)}</h3>
+            <p>${escapeHtml(faq.answer)}</p>
+          </div>`).join("\n")}
+        </section>` : "";
+  const furtherReadingSection = item.furtherReading?.length ? `<section>
+          <h2>Further reading</h2>
+          <ul>
+            ${item.furtherReading.map((source) => `<li><a class="source-link" href="${escapeHtml(source.url)}" rel="noreferrer">${escapeHtml(source.label)}</a></li>`).join("\n")}
+          </ul>
+        </section>` : "";
 
   return pageShell({
     title,
@@ -124,7 +168,7 @@ function termPage(item) {
     jsonLd,
     body: `<article class="seo-article">
         <p class="eyebrow">AI_SLANG_ENTRY</p>
-        <h1>${escapeHtml(item.word)} Meaning</h1>
+        <h1>${escapeHtml(item.pageHeading || `${item.word} Meaning`)}</h1>
         <p class="article-lead">${escapeHtml(item.definition)}</p>
         <div class="vote-row">
           <span>AI_TASTE=${item.aiGrade}/5</span>
@@ -142,13 +186,13 @@ function termPage(item) {
           <p><strong>Source type:</strong> ${escapeHtml(item.sourceType)}. <strong>Last checked:</strong> ${escapeHtml(item.lastChecked)}.</p>
           <p>${escapeHtml(item.sourceNote)}</p>
           ${item.sourceUrl ? `<p><a class="source-link" href="${escapeHtml(item.sourceUrl)}" rel="noreferrer">Primary reference</a></p>` : ""}
-        </section>
+        </section>${extraSections}
         <section>
           <h2>Examples</h2>
           <ul>
             ${item.examples.map((example) => `<li>${escapeHtml(example)}</li>`).join("\n")}
           </ul>
-        </section>
+        </section>${faqSection}${furtherReadingSection}
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
@@ -233,8 +277,8 @@ function articlePage(article) {
       "@type": "Article",
       headline: article.title,
       description: article.description,
-      datePublished: today,
-      dateModified: today,
+      datePublished: articleSchemaDate,
+      dateModified: articleSchemaDate,
       author: { "@type": "Organization", name: "AI Slang Hub" },
       mainEntityOfPage: canonical
     })}</script>`,
@@ -359,7 +403,7 @@ const sitemapUrls = [
 
 writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${today}</lastmod></url>`).join("\n")}
+${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${sitemapLastmodDate}</lastmod></url>`).join("\n")}
 </urlset>
 `);
 

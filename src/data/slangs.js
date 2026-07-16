@@ -614,5 +614,107 @@ export const slangs = [
     relatedTerms: ["Context Rot", "Prompt Injection", "Agentic", "Context Engineering", "Hallucination", "Alignment"],
     seoTitle: "Memory Poisoning Meaning in AI Agents",
     seoDescription: "Memory poisoning meaning in AI agent security: poisoned persistent memories, delayed prompt injection, and why assistant memory changes the attack surface."
+  },
+  {
+    word: "AI-Generated Content Disclosure",
+    definition: "A label or notice that tells viewers AI played a meaningful role in creating or materially altering a piece of content.",
+    origin: "Spread across creator platforms, marketplaces, and provenance systems as services started asking publishers to mark content that was generated or significantly changed with AI tools.",
+    examples: ["The post carried an AI-generated content disclosure because the images were made with a text-to-image model and then edited by hand.", "The game page had an AI-generated content disclosure, but the label did not explain whether every asset or only some marketing art used AI."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Platform and policy term, not a single universal standard. The exact wording and threshold vary by product, so this entry explains the common meaning rather than treating one platform's rule as the industry definition.",
+    sourceUrl: "https://contentcredentials.org/",
+    lastChecked: "2026-07-16",
+    plainEnglish: "An AI-generated content disclosure is a transparency label. It usually means AI touched the content in an important way, but it does not by itself tell you how much of the work was automated, how much a human edited later, or whether the result is accurate.",
+    relatedTerms: ["Slop", "Workslop", "Shadow AI", "Synthetic Data", "GEO", "Hallucination"],
+    seoTitle: "What Is AI-Generated Content Disclosure?",
+    seoDescription: "AI-generated content disclosure meaning: what the label signals, where you might see it, and how it differs from AI-assisted or synthetic media tags.",
+    pageHeading: "What Is AI-Generated Content Disclosure?",
+    extraSections: [
+      {
+        heading: "Why these labels exist",
+        paragraphs: [
+          "The main purpose is transparency. Readers, viewers, players, and customers may want to know whether a person made the content directly, whether AI helped shape it, or whether AI generated major pieces before a human reviewed them.",
+          "Platforms, publishers, and marketplaces also use these labels to explain how content was produced, satisfy their own posting rules, and reduce confusion around synthetic or heavily edited media."
+        ]
+      },
+      {
+        heading: "Related labels and what they usually mean",
+        bullets: [
+          "AI-generated usually means AI created a substantial part of the final output, such as text, images, audio, or video.",
+          "AI-assisted usually means a human created the work but used AI during drafting, editing, translation, cleanup, or ideation.",
+          "Human-reviewed usually means a person checked or edited the output after AI was used, not that the work was created without AI.",
+          "Synthetic media is the broader category for media that was generated or materially altered with software, including but not limited to generative AI."
+        ]
+      },
+      {
+        heading: "Where you might see an AI-generated content disclosure",
+        bullets: [
+          "Articles or blog posts",
+          "Images, illustrations, and design assets",
+          "Videos and short-form social clips",
+          "Social media posts and creator uploads",
+          "App, marketplace, or game listing content"
+        ]
+      },
+      {
+        heading: "What the label does not mean",
+        bullets: [
+          "It does not automatically mean the content is wrong.",
+          "It does not automatically mean the content was made entirely by AI without human input.",
+          "It does not automatically mean the content is a deepfake.",
+          "It does not automatically tell you how reliable a detection system or disclosure workflow is.",
+          "It does not guarantee every platform uses the same threshold or definition."
+        ]
+      },
+      {
+        heading: "Why it matters in practice",
+        paragraphs: [
+          "For readers and viewers, the label is context. It can help you judge how much independent verification, authorship, or editing may have gone into a piece of content before you trust it or reuse it.",
+          "For publishers and creators, the label is a disclosure tool. Used well, it signals honesty about process without pretending there is one universal standard for every platform or every type of media."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is AI-generated content disclosure?",
+        answer: "It is a label or notice that tells people AI played a meaningful role in creating or materially altering the content they are looking at."
+      },
+      {
+        question: "What does an AI-generated label mean?",
+        answer: "Usually it means AI created a substantial part of the final output, but the exact threshold depends on the platform or publisher using the label."
+      },
+      {
+        question: "Is AI-generated the same as AI-assisted?",
+        answer: "No. AI-generated usually points to more direct machine creation, while AI-assisted usually means a human made the work but used AI during drafting, editing, or production."
+      },
+      {
+        question: "Does an AI-generated content disclosure mean the content is fake?",
+        answer: "No. The label is a transparency signal about process, not an automatic judgment that the content is false, deceptive, or low quality."
+      },
+      {
+        question: "Does the label mean the content was fully made by AI?",
+        answer: "Not always. Some labels cover mixed workflows where AI generated or altered part of the output and a human later reviewed, edited, or combined it with other material."
+      },
+      {
+        question: "Is AI-generated content disclosure a universal industry standard?",
+        answer: "No. The phrase is widely understandable, but the exact wording, scope, and enforcement vary across platforms, publishers, and technical provenance systems."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Content Credentials overview",
+        url: "https://contentcredentials.org/"
+      },
+      {
+        label: "When Is Self-Disclosure Optimal? Incentives and Governance of AI-Generated Content",
+        url: "https://arxiv.org/abs/2601.18654"
+      },
+      {
+        label: "Art-ificial Intelligence: The Effect of AI Disclosure on Evaluations of Creative Content",
+        url: "https://arxiv.org/abs/2303.06217"
+      }
+    ]
   }
 ];
