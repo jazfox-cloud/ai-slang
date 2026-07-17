@@ -69,4 +69,43 @@ for (const file of generatedFiles) {
   }
 }
 
+const grokBuildTerm = slangs.find((item) => item.word === "Grok Build");
+if (!grokBuildTerm) {
+  throw new Error("Grok Build entry is missing");
+}
+
+const grokBuildPage = read("terms/grok-build.html");
+const grokBuildRequirements = [
+  "<title>What Is Grok Build? xAI's Coding Agent Explained</title>",
+  '<link rel="canonical" href="https://ai-slang.com/terms/grok-build">',
+  '"@type":"DefinedTerm"',
+  '"dateModified":"2026-07-17"',
+  '"@type":"FAQPage"',
+  "Grok Build is xAI's coding agent and terminal-based development tool",
+  "Grok Build versus the standard Grok assistant",
+  "Is Grok Build a model, CLI, or coding agent?",
+  "Agents are the running, tool-using sessions",
+  "Subagents are delegated agent sessions",
+  "Claude Code",
+  "OpenAI's Codex",
+  "Is Grok Build open source?",
+  "does not mean the entire Grok Build technology stack is open source",
+  "does not publish the weights of the hosted Grok models",
+  "Features, models, pricing, and access conditions may change as Grok Build evolves.",
+  "Verified facts and changing beta details",
+  "Further reading",
+  "Related AI slang"
+];
+
+for (const requirement of grokBuildRequirements) {
+  if (!grokBuildPage.includes(requirement)) {
+    throw new Error(`Grok Build page is missing: ${requirement}`);
+  }
+}
+
+const grokBuildSitemap = read("sitemap.xml");
+if (!grokBuildSitemap.includes("https://ai-slang.com/terms/grok-build")) {
+  throw new Error("Grok Build sitemap URL is missing");
+}
+
 console.log(`Validated ${slangs.length} slang entries.`);

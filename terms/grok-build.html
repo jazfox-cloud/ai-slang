@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is Grok Build? xAI's Coding Agent Explained</title>
+    <meta name="description" content="What Grok Build is, how xAI's coding agent differs from standard Grok, how its CLI, models and subagents work, and what is open source.">
+    <link rel="canonical" href="https://ai-slang.com/terms/grok-build">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Grok Build","description":"Grok Build is xAI's coding agent and terminal-based development tool for software-development workflows. It can inspect a codebase, plan work, edit files, run commands, and delegate tasks to subagents.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/grok-build","dateModified":"2026-07-17"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Grok Build?","acceptedAnswer":{"@type":"Answer","text":"Grok Build is xAI's coding agent for software-development workflows. It can inspect repositories, plan changes, edit files, run commands, and coordinate subagents through a terminal-first workflow."}},{"@type":"Question","name":"Is Grok Build the same as the standard Grok assistant?","acceptedAnswer":{"@type":"Answer","text":"No. Standard Grok is a general-purpose assistant, while Grok Build adds a coding-agent harness, repository context, development tools, permissions, plans, diffs, and terminal workflows for working on software."}},{"@type":"Question","name":"Is Grok Build a model or a CLI?","acceptedAnswer":{"@type":"Answer","text":"Grok Build is primarily a coding agent and harness. Its grok CLI and terminal UI are interfaces to that agent, while a selected coding-capable model provides inference behind it."}},{"@type":"Question","name":"What model does Grok Build use?","acceptedAnswer":{"@type":"Answer","text":"As last checked on July 17, 2026, xAI's current documentation says Grok 4.5 powers Grok Build and supports custom models. Earlier xAI material referred to grok-build-0.1, so model names and defaults should be treated as changeable."}},{"@type":"Question","name":"Is Grok Build open source?","acceptedAnswer":{"@type":"Answer","text":"xAI publishes the Grok Build agent harness, CLI/TUI, tools, and extension-system code in an official GitHub repository under Apache License 2.0. That public code repository does not mean the entire technology stack is open source, and it does not publish the weights of the hosted Grok models that may power the agent."}},{"@type":"Question","name":"How is Grok Build similar to Claude Code or Codex?","acceptedAnswer":{"@type":"Answer","text":"They are in the same broad category of agentic coding tools and can assist with understanding and modifying code. Their models, interfaces, execution flows, and permission mechanisms differ and may evolve."}}]}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>What Is Grok Build?</h1>
+        <p class="article-lead">Grok Build is xAI's coding agent and terminal-based development tool for software-development workflows. It can inspect a codebase, plan work, edit files, run commands, and delegate tasks to subagents.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Grok Build mean?</h2>
+          <p>Grok Build is xAI's coding agent and terminal-based development tool for software-development workflows. It can inspect a codebase, plan work, edit files, run commands, and delegate tasks to subagents.</p>
+          <p>It is not just the standard Grok chat assistant and not just a model. Grok Build is an agent system built for working on software, with a CLI and terminal interface that connect a coding-capable model to files, shell commands, tools, plans, and other agents.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>xAI introduced Grok Build in May 2026 as an early-beta coding agent and CLI for professional software engineering and complex coding work, then published the agent harness and terminal UI source in July 2026.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-17.</p>
+          <p>Verified against xAI's launch post, current documentation, and official GitHub repository. Product access, default models, commands, and beta behavior can change quickly; model names in older xAI announcements may not match the current default.</p>
+          <p><a class="source-link" href="https://docs.x.ai/build/overview" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>Grok Build versus the standard Grok assistant</h2>
+          <p>The standard Grok assistant is a general-purpose conversational product for questions, research, writing, media, and other everyday tasks. Grok Build is the software-development agent: it starts inside a project, reads repository context, edits files, executes shell commands, reviews diffs, and can keep multi-step work moving.</p>
+<p>They belong to the same xAI product family and may use related Grok models, but the surrounding agent harness is the important difference. A model produces responses; Grok Build adds the loop, tools, permissions, context assembly, terminal interface, and workflow state needed to act on a codebase.</p>
+        </section>
+<section>
+          <h2>Is Grok Build a model, CLI, or coding agent?</h2>
+          <ul>
+            <li>Grok Build is primarily the name of xAI's coding agent and agent harness.</li>
+<li>The Grok Build CLI is the grok command used to start the agent interactively, run it headlessly in scripts or CI, or connect it to other apps through the Agent Client Protocol.</li>
+<li>The coding model is the inference engine selected inside the agent. It is a replaceable layer, not the whole product. xAI's current documentation says Grok 4.5 powers Grok Build and also documents custom-model support.</li>
+<li>Agents are the running, tool-using sessions that turn a request into steps and actions. Subagents are delegated agent sessions that can investigate or work on parts of a larger task in parallel, including in separate worktrees.</li>
+<li>The terminal workflow is where these pieces meet: the model reasons, the agent loop assembles context and dispatches tools, the CLI/TUI shows plans and diffs, and permission controls let the user review or approve actions.</li>
+          </ul>
+        </section>
+<section>
+          <h2>How Grok Build relates to other coding agents</h2>
+          <p>Grok Build sits in the same broad category of agentic coding tools as Anthropic's Claude Code, OpenAI's Codex, and other coding agents. These tools can assist developers with understanding and modifying code and carrying out multi-step software work.</p>
+<p>That category match does not make the products interchangeable. Their models, interfaces, execution flows, and permission mechanisms differ. Features, models, pricing, and access conditions may change as Grok Build evolves.</p>
+        </section>
+<section>
+          <h2>Is Grok Build open source?</h2>
+          <p>xAI maintains an official public GitHub repository for the Grok Build agent harness and terminal tool. The repository publishes first-party code for the Rust CLI/TUI, tools, and extension system under Apache License 2.0.</p>
+<p>The public repository does not mean the entire Grok Build technology stack is open source. In particular, publishing the agent harness and CLI does not publish the weights of the hosted Grok models that may power it; open-source agent code and open model weights are separate questions.</p>
+        </section>
+<section>
+          <h2>Verified facts and changing beta details</h2>
+          <ul>
+            <li>Verified: xAI describes Grok Build as a coding agent that works through an interactive terminal UI, headless commands, or ACP integrations.</li>
+<li>Verified: it can read and edit code, execute commands, use extensions such as skills and MCP servers, and delegate work to subagents.</li>
+<li>Verified: xAI published the Grok Build harness and TUI source under an Apache-2.0 license in July 2026.</li>
+<li>Changing: the default or promoted model. Earlier xAI material named grok-build-0.1, while current documentation says Grok 4.5 powers Grok Build and supports custom models.</li>
+<li>Changing: subscription eligibility, free access, command names, platform support, and individual beta features. Check xAI's current docs and changelog before relying on any of these operational details.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>I used Grok Build to trace the bug, propose a plan, edit the repo, and run the tests from one terminal session.</li>
+<li>Grok Build is the coding agent; the grok command is its CLI, and the selected model is the engine behind the agent.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is Grok Build?</h3>
+            <p>Grok Build is xAI's coding agent for software-development workflows. It can inspect repositories, plan changes, edit files, run commands, and coordinate subagents through a terminal-first workflow.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is Grok Build the same as the standard Grok assistant?</h3>
+            <p>No. Standard Grok is a general-purpose assistant, while Grok Build adds a coding-agent harness, repository context, development tools, permissions, plans, diffs, and terminal workflows for working on software.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is Grok Build a model or a CLI?</h3>
+            <p>Grok Build is primarily a coding agent and harness. Its grok CLI and terminal UI are interfaces to that agent, while a selected coding-capable model provides inference behind it.</p>
+          </div>
+<div class="faq-item">
+            <h3>What model does Grok Build use?</h3>
+            <p>As last checked on July 17, 2026, xAI's current documentation says Grok 4.5 powers Grok Build and supports custom models. Earlier xAI material referred to grok-build-0.1, so model names and defaults should be treated as changeable.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is Grok Build open source?</h3>
+            <p>xAI publishes the Grok Build agent harness, CLI/TUI, tools, and extension-system code in an official GitHub repository under Apache License 2.0. That public code repository does not mean the entire technology stack is open source, and it does not publish the weights of the hosted Grok models that may power the agent.</p>
+          </div>
+<div class="faq-item">
+            <h3>How is Grok Build similar to Claude Code or Codex?</h3>
+            <p>They are in the same broad category of agentic coding tools and can assist with understanding and modifying code. Their models, interfaces, execution flows, and permission mechanisms differ and may evolve.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://docs.x.ai/build/overview" rel="noreferrer">xAI Docs: Grok Build overview</a></li>
+<li><a class="source-link" href="https://x.ai/news/grok-build-cli" rel="noreferrer">xAI: Introducing Grok Build</a></li>
+<li><a class="source-link" href="https://x.ai/news/grok-build-open-source" rel="noreferrer">xAI: Grok Build is now open source</a></li>
+<li><a class="source-link" href="https://github.com/xai-org/grok-build" rel="noreferrer">xAI official GitHub: Grok Build source</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/agentic">Agentic</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/computer-use">Computer Use</a>
+<a href="/terms/vibe-coding">Vibe Coding</a>
+<a href="/terms/mcp">MCP</a>
+<a href="/terms/agent-observability">Agent Observability</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
