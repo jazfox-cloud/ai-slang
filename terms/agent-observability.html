@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agent Observability Meaning in AI</title>
+    <meta name="description" content="Agent observability meaning in AI operations: tracing model calls, tool calls, retrieval, token usage, and failures in production AI agents.">
+    <link rel="canonical" href="https://ai-slang.com/terms/agent-observability">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Agent Observability","description":"The practice of tracing what an AI agent actually did: model calls, tool calls, retrieval steps, token usage, retries, failures, and the suspiciously confident shortcut it took at 2:13 PM.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/agent-observability"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Agent Observability Meaning</h1>
+        <p class="article-lead">The practice of tracing what an AI agent actually did: model calls, tool calls, retrieval steps, token usage, retries, failures, and the suspiciously confident shortcut it took at 2:13 PM.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Agent Observability mean?</h2>
+          <p>The practice of tracing what an AI agent actually did: model calls, tool calls, retrieval steps, token usage, retries, failures, and the suspiciously confident shortcut it took at 2:13 PM.</p>
+          <p>Agent observability means instrumenting AI agents so engineers can inspect their steps. It helps debug latency, cost, tool misuse, prompt problems, retrieval errors, and quality regressions.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Became a production AI term as teams moved from demos to deployed agents and needed telemetry for multi-step, tool-using, nondeterministic workflows.</p>
+          <p><strong>Source type:</strong> technical-term. <strong>Last checked:</strong> 2026-07-17.</p>
+          <p>Technical AI operations term supported by OpenTelemetry GenAI semantic conventions and vendor tooling. The wording is broader than one product, so the entry describes the general tracing and monitoring practice.</p>
+          <p><a class="source-link" href="https://opentelemetry.io/blog/2026/genai-observability/" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The agent looked smart in chat, but agent observability showed it was looping through the same broken tool call.</li>
+<li>Ship agent observability before you let the assistant spend money or update records.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/agentic">Agentic</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/eval">Eval</a>
+<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+<a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/context-engineering">Context Engineering</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

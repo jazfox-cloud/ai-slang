@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A2A Meaning: Agent2Agent Protocol in AI</title>
+    <meta name="description" content="A2A meaning in AI builder slang: Agent2Agent protocol, why agent interoperability matters, and how A2A relates to MCP and tool calling.">
+    <link rel="canonical" href="https://ai-slang.com/terms/a2a">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"A2A","description":"Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/a2a"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>A2A Meaning</h1>
+        <p class="article-lead">Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does A2A mean?</h2>
+          <p>Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.</p>
+          <p>A2A is a communication pattern for AI agents. It gives agents a common way to discover capabilities, exchange task information, and coordinate without sharing all of their private internals.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Introduced by Google as Agent2Agent, then donated to the Linux Foundation and adopted in agent interoperability discussions alongside MCP.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-17.</p>
+          <p>Official open protocol term with strong builder-community usage. The entry treats A2A as shorthand for agent-to-agent interoperability rather than a guarantee that two arbitrary agents will cooperate safely.</p>
+          <p><a class="source-link" href="https://a2a-protocol.org/v1.0.0/" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>Use MCP for the tools and A2A when the workflow needs another agent to take a task.</li>
+<li>The demo said A2A, but the hard part was still deciding which agent was allowed to touch customer data.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/mcp">MCP</a>
+<a href="/terms/agentic">Agentic</a>
+<a href="/terms/tool-calling">Tool Calling</a>
+<a href="/terms/computer-use">Computer Use</a>
+<a href="/terms/prompt-injection">Prompt Injection</a>
+<a href="/terms/agentic-rag">Agentic RAG</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

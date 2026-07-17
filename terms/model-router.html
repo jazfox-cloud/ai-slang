@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Model Router Meaning in AI Apps</title>
+    <meta name="description" content="Model router meaning in AI builder slang: routing prompts to different LLMs by cost, quality, latency, reasoning needs, or policy constraints.">
+    <link rel="canonical" href="https://ai-slang.com/terms/model-router">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Model Router","description":"The cost-control layer that decides which model should answer a request, so a tiny classification job does not always ride first class on the most expensive reasoning model.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/model-router"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Model Router Meaning</h1>
+        <p class="article-lead">The cost-control layer that decides which model should answer a request, so a tiny classification job does not always ride first class on the most expensive reasoning model.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Model Router mean?</h2>
+          <p>The cost-control layer that decides which model should answer a request, so a tiny classification job does not always ride first class on the most expensive reasoning model.</p>
+          <p>A model router chooses which model handles a request. Teams use it to balance cost, latency, capability, policy, and fallback behavior across several available models.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Grew from LLM orchestration patterns and became more concrete as AI platforms shipped model-router features that choose among underlying models by cost, quality, latency, or task fit.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-17.</p>
+          <p>Current AI platform and architecture term. Microsoft Foundry documents model router as a deployable model that selects an underlying LLM in real time; broader builder usage also covers custom routing layers.</p>
+          <p><a class="source-link" href="https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/model-router" rel="noreferrer">Primary reference</a></p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The model router sent quick summaries to the cheap model and escalated gnarly planning tasks to the reasoning model.</li>
+<li>A bad model router is just vibes with a billing dashboard.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/prompt-caching">Prompt Caching</a>
+<a href="/terms/eval">Eval</a>
+<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
+<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+<a href="/terms/context-window">Context Window</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
