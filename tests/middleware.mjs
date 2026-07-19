@@ -21,6 +21,16 @@ const oldHome = await run("https://ai-slang.com/index.html");
 assert.equal(oldHome.status, 301);
 assert.equal(oldHome.headers.get("location"), "https://ai-slang.com/");
 
+for (const legacyDisclosure of [
+  "https://ai-slang.com/terms/ai-generated-content-disclosure",
+  "https://ai-slang.com/terms/ai-generated-content-disclosure.html",
+  "https://ai-slang.com/terms/ai-content-disclosure.html"
+]) {
+  const response = await run(legacyDisclosure);
+  assert.equal(response.status, 301);
+  assert.equal(response.headers.get("location"), "https://ai-slang.com/terms/ai-content-disclosure");
+}
+
 const legacyTermsPage = await run("https://ai-slang.com/terms.html");
 assert.equal(legacyTermsPage.status, 301);
 assert.equal(legacyTermsPage.headers.get("location"), "https://ai-slang.com/terms-of-use");

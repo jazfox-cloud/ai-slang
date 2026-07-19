@@ -9,7 +9,12 @@ export async function onRequest(context) {
   }
 
   const lowerPath = url.pathname.toLowerCase();
-  if (lowerPath === "/terms.html") {
+  if (lowerPath === "/terms/ai-generated-content-disclosure" ||
+      lowerPath === "/terms/ai-generated-content-disclosure.html" ||
+      lowerPath === "/terms/ai-content-disclosure.html") {
+    url.pathname = "/terms/ai-content-disclosure";
+    shouldRedirect = true;
+  } else if (lowerPath === "/terms.html") {
     url.pathname = "/terms-of-use";
     shouldRedirect = true;
   } else if (lowerPath.endsWith(".html")) {
