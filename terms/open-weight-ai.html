@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is Open-Weight AI? Meaning, Licenses, and Limits</title>
+    <meta name="description" content="Open-weight AI meaning: what open weights are, how they differ from open-source and closed models, and what weights alone do not guarantee.">
+    <link rel="canonical" href="https://ai-slang.com/terms/open-weight-ai">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Open-Weight AI","description":"Open-weight AI usually means AI models whose trained weights are publicly released, so users can download the parameters instead of relying only on the original vendor's hosted API.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/open-weight-ai"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is open-weight AI?","acceptedAnswer":{"@type":"Answer","text":"Open-weight AI usually refers to AI models whose trained weights are publicly released so users can download the parameters instead of relying only on the original vendor's hosted API."}},{"@type":"Question","name":"Is open-weight AI the same as open-source AI?","acceptedAnswer":{"@type":"Answer","text":"No. Open-weight means the trained parameters are available. It does not automatically mean the training data, training code, reproducibility material, or the whole system meets an open-source standard."}},{"@type":"Question","name":"Does open-weight mean I can freely fine-tune, deploy, or sell the model?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. Rights to modify, fine-tune, redistribute, self-host, or use the model commercially depend on the specific license and release terms, not the phrase open-weight by itself."}},{"@type":"Question","name":"What is the difference between open-weight and source-available?","acceptedAnswer":{"@type":"Answer","text":"Open-weight describes the availability of trained weights. Source-available usually means some underlying materials are published but important rights or components may still be restricted."}},{"@type":"Question","name":"Can an open-weight model still be part of a proprietary product?","acceptedAnswer":{"@type":"Answer","text":"Yes. A company can release model weights while keeping parts of the surrounding tooling, hosting, interfaces, guardrails, or operations proprietary."}}]}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>What Is Open-Weight AI?</h1>
+        <p class="article-lead">Open-weight AI usually means AI models whose trained weights are publicly released, so users can download the parameters instead of relying only on the original vendor's hosted API.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Open-Weight AI mean?</h2>
+          <p>Open-weight AI usually means AI models whose trained weights are publicly released, so users can download the parameters instead of relying only on the original vendor's hosted API.</p>
+          <p>If a model is open-weight, you can get the trained parameters instead of only calling a hosted API. That usually improves deployment control, but it does not by itself tell you what else is public or what the license allows.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>The phrase spread as labs, policymakers, and developers needed a cleaner distinction between closed hosted models, open-weight releases, source-available releases, and fully open-source AI systems. In practice, people often say 'open-weight AI' when the more precise object is an open-weight model.</p>
+          <p><strong>Source type:</strong> technical-term. <strong>Last checked:</strong> 2026-07-19.</p>
+          <p>Stable cross-vendor term used in policy, research, and product documentation. Stanford HAI defines open-weight models as downloadable AI models, NTIA uses 'open-weight' for models with widely available weights, OpenAI's current gpt-oss documentation uses the label for a specific model family, and OSI's Open Source AI Definition explains the much stricter standard for calling an AI system open source. The important boundary is that open-weight does not automatically mean training data, training code, reproducibility material, or open-source licensing.</p>
+          <p><a class="source-link" href="https://hai.stanford.edu/ai-definitions/what-is-an-open-weight-model" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>What open-weight actually gives you</h2>
+          <ul>
+            <li>The trained model weights are available for download instead of being locked behind one hosted API.</li>
+<li>You may be able to run the model on your own hardware, private cloud, or a hosting provider you choose, assuming the license and practical hardware requirements allow it.</li>
+<li>You may be able to fine-tune, quantize, adapt, or wrap the model with your own tooling, but those rights depend on the specific license and release terms.</li>
+<li>You are responsible for the runtime, cost, maintenance, safety controls, and operational setup.</li>
+          </ul>
+        </section>
+<section>
+          <h2>What open-weight does not automatically include</h2>
+          <p>Open-weight usually means the trained parameters are available. It does not automatically mean the training data, complete training code, data-cleaning pipeline, full model architecture details, training recipe, or the information needed to reproduce the system are public.</p>
+<p>That boundary matters because many people hear 'open' and assume full transparency. Open-weight is a narrower claim about the availability of weights, not a blanket statement that everything behind the model is inspectable or reproducible.</p>
+        </section>
+<section>
+          <h2>Open-weight, open-source, source-available, and closed models</h2>
+          <ul>
+            <li>An open-weight model makes trained weights available for download, but does not by itself prove that code, data, or reuse rights are equally open.</li>
+<li>An open-source AI system meets a stricter standard: the information and permissions needed to use, study, modify, and share the system must be available in the preferred form for making changes.</li>
+<li>A source-available model may publish some code, weights, or documentation while still keeping important restrictions on use, redistribution, modification, or commercial deployment.</li>
+<li>A proprietary or closed model is usually accessed through a hosted service or controlled distribution, with the provider keeping core internals and deployment rights under tighter control.</li>
+          </ul>
+        </section>
+<section>
+          <h2>Why licenses matter more than the headline</h2>
+          <p>Whether a model can be used commercially, modified, fine-tuned, redistributed, or deployed in a product depends on its actual license and release terms. You cannot infer those rights from 'open-weight' alone.</p>
+<p>That is also why gpt-oss should be treated as one example rather than the rule for all open-weight releases. Some open-weight models are permissively licensed, some are source-available with restrictions, and some sit somewhere in between.</p>
+        </section>
+<section>
+          <h2>Why teams choose open-weight AI</h2>
+          <p>Teams often look at open-weight models for concrete operational reasons: more control over runtime, easier local or private-cloud deployment, better data-residency posture, and in some cases more predictable infrastructure economics than per-call hosted APIs.</p>
+<p>Those advantages come with tradeoffs. Hardware cost, ops burden, safety controls, model upkeep, and license constraints still matter, so the decision is not automatically cheaper, freer, or more private in every deployment.</p>
+        </section>
+<section>
+          <h2>Why the phrase is usually about models</h2>
+          <p>People say open-weight AI as shorthand, but the precise thing being released is normally the model weights. The surrounding product can still include proprietary interfaces, hosted services, guardrail layers, eval systems, or commercial support.</p>
+<p>In other words, an open-weight model can sit inside a broader product stack that is only partly open.</p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>We picked open-weight AI because the compliance team wanted the model running inside our own cloud.</li>
+<li>Open-weight AI sounds open, but you still have to read the license before assuming the model is fully open source.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is open-weight AI?</h3>
+            <p>Open-weight AI usually refers to AI models whose trained weights are publicly released so users can download the parameters instead of relying only on the original vendor's hosted API.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is open-weight AI the same as open-source AI?</h3>
+            <p>No. Open-weight means the trained parameters are available. It does not automatically mean the training data, training code, reproducibility material, or the whole system meets an open-source standard.</p>
+          </div>
+<div class="faq-item">
+            <h3>Does open-weight mean I can freely fine-tune, deploy, or sell the model?</h3>
+            <p>Not automatically. Rights to modify, fine-tune, redistribute, self-host, or use the model commercially depend on the specific license and release terms, not the phrase open-weight by itself.</p>
+          </div>
+<div class="faq-item">
+            <h3>What is the difference between open-weight and source-available?</h3>
+            <p>Open-weight describes the availability of trained weights. Source-available usually means some underlying materials are published but important rights or components may still be restricted.</p>
+          </div>
+<div class="faq-item">
+            <h3>Can an open-weight model still be part of a proprietary product?</h3>
+            <p>Yes. A company can release model weights while keeping parts of the surrounding tooling, hosting, interfaces, guardrails, or operations proprietary.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://hai.stanford.edu/ai-definitions/what-is-an-open-weight-model" rel="noreferrer">Stanford HAI: What is an Open-Weight Model?</a></li>
+<li><a class="source-link" href="https://help.openai.com/en/articles/11870455-openai-open-weight-models-gpt-oss" rel="noreferrer">OpenAI Help: OpenAI open-weight models (gpt-oss)</a></li>
+<li><a class="source-link" href="https://www.ntia.gov/press-release/2024/ntia-solicits-comments-open-weight-ai-models" rel="noreferrer">NTIA: Solicits Comments on Open-Weight AI Models</a></li>
+<li><a class="source-link" href="https://opensource.org/ai/open-source-ai-definition" rel="noreferrer">Open Source Initiative: Open Source AI Definition</a></li>
+<li><a class="source-link" href="https://openweight.org/" rel="noreferrer">Open Weight Definition</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/frontier-model">Frontier Model</a>
+<a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
+<a href="/terms/model-router">Model Router</a>
+<a href="/terms/synthetic-data">Synthetic Data</a>
+<a href="/terms/agentic">Agentic</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
