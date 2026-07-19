@@ -769,104 +769,295 @@ export const slangs = [
     ]
   },
   {
-    word: "AI-Generated Content Disclosure",
-    definition: "A label or notice that tells viewers AI played a meaningful role in creating or materially altering a piece of content.",
-    origin: "Spread across creator platforms, marketplaces, and provenance systems as services started asking publishers to mark content that was generated or significantly changed with AI tools.",
-    examples: ["The post carried an AI-generated content disclosure because the images were made with a text-to-image model and then edited by hand.", "The game page had an AI-generated content disclosure, but the label did not explain whether every asset or only some marketing art used AI."],
-    aiGrade: 2,
+    word: "Clanker",
+    definition: "A jokingly hostile nickname for an AI bot, robot, agent, or automated system that feels obviously machine-made.",
+    origin: "Comes from older science-fiction and Star Wars robot slang, then resurfaced in 2025 meme culture as people applied it to AI chatbots, delivery robots, customer-support bots, and agentic systems.",
+    examples: ["The support line transferred me to a clanker before I could talk to a person.", "That reply was so stiff I had to check whether I was arguing with a clanker."],
+    aiGrade: 4,
     trend: "HIGH",
-    sourceType: "product-term",
-    sourceNote: "Platform and policy term, not a single universal standard. The exact wording and threshold vary by product, so this entry explains the common meaning rather than treating one platform's rule as the industry definition.",
-    sourceUrl: "https://contentcredentials.org/",
-    lastChecked: "2026-07-16",
-    plainEnglish: "An AI-generated content disclosure is a transparency label. It usually means AI touched the content in an important way, but it does not by itself tell you how much of the work was automated, how much a human edited later, or whether the result is accurate.",
-    relatedTerms: ["Slop", "Workslop", "Shadow AI", "Synthetic Data", "GEO", "Hallucination"],
-    seoTitle: "What Is AI-Generated Content Disclosure?",
-    seoDescription: "AI-generated content disclosure meaning: what the label signals, where you might see it, and how it differs from AI-assisted or synthetic media tags.",
-    pageHeading: "What Is AI-Generated Content Disclosure?",
+    sourceType: "community",
+    sourceNote: "Community meme term with older science-fiction roots and renewed 2025-2026 AI usage. Merriam-Webster and Know Your Meme document the broad robot/AI meaning, but no single clean AI-era origin is claimed here.",
+    sourceUrl: "https://www.merriam-webster.com/slang/clanker",
+    lastChecked: "2026-07-19",
+    plainEnglish: "Calling something a clanker is usually a joke, not a technical label. It points to AI or automation that feels impersonal, clumsy, too robotic, or awkwardly inserted where people expected a human touch.",
+    relatedTerms: ["Slop", "Agentic", "Grok Build", "Computer Use", "Tool Calling", "Vibe Coding"],
+    seoTitle: "Clanker Meaning in AI Slang",
+    seoDescription: "Clanker meaning in AI slang: the robot and AI meme term for bots, agents, support automation, and machine-like replies.",
     extraSections: [
       {
-        heading: "Why these labels exist",
+        heading: "How clanker is used around AI",
         paragraphs: [
-          "The main purpose is transparency. Readers, viewers, players, and customers may want to know whether a person made the content directly, whether AI helped shape it, or whether AI generated major pieces before a human reviewed them.",
-          "Platforms, publishers, and marketplaces also use these labels to explain how content was produced, satisfy their own posting rules, and reduce confusion around synthetic or heavily edited media."
+          "In AI conversations, clanker usually names the feeling of meeting a machine where a human interaction used to be. People use it for chatbots, voice agents, delivery robots, coding agents, moderation bots, and generic automation that sounds too mechanical.",
+          "The word is often playful, but the complaint underneath can be real: bad automation makes people feel routed, ignored, or handled by a system that cannot understand the situation."
         ]
       },
       {
-        heading: "Related labels and what they usually mean",
+        heading: "What clanker does not mean",
         bullets: [
-          "AI-generated usually means AI created a substantial part of the final output, such as text, images, audio, or video.",
-          "AI-assisted usually means a human created the work but used AI during drafting, editing, translation, cleanup, or ideation.",
-          "Human-reviewed usually means a person checked or edited the output after AI was used, not that the work was created without AI.",
-          "Synthetic media is the broader category for media that was generated or materially altered with software, including but not limited to generative AI."
-        ]
-      },
-      {
-        heading: "Where you might see an AI-generated content disclosure",
-        bullets: [
-          "Articles or blog posts",
-          "Images, illustrations, and design assets",
-          "Videos and short-form social clips",
-          "Social media posts and creator uploads",
-          "App, marketplace, or game listing content"
-        ]
-      },
-      {
-        heading: "What the label does not mean",
-        bullets: [
-          "It does not automatically mean the content is wrong.",
-          "It does not automatically mean the content was made entirely by AI without human input.",
-          "It does not automatically mean the content is a deepfake.",
-          "It does not automatically tell you how reliable a detection system or disclosure workflow is.",
-          "It does not guarantee every platform uses the same threshold or definition."
-        ]
-      },
-      {
-        heading: "Why it matters in practice",
-        paragraphs: [
-          "For readers and viewers, the label is context. It can help you judge how much independent verification, authorship, or editing may have gone into a piece of content before you trust it or reuse it.",
-          "For publishers and creators, the label is a disclosure tool. Used well, it signals honesty about process without pretending there is one universal standard for every platform or every type of media."
+          "It is not a formal AI architecture term.",
+          "It does not mean every AI agent is bad or useless.",
+          "It should not be treated as a precise safety, labor, or product category.",
+          "It can be used affectionately or insultingly depending on context."
         ]
       }
     ],
     faqItems: [
       {
-        question: "What is AI-generated content disclosure?",
-        answer: "It is a label or notice that tells people AI played a meaningful role in creating or materially altering the content they are looking at."
+        question: "What does clanker mean in AI slang?",
+        answer: "Clanker is a meme term for a robot, bot, AI system, or automated agent that feels visibly machine-like."
       },
       {
-        question: "What does an AI-generated label mean?",
-        answer: "Usually it means AI created a substantial part of the final output, but the exact threshold depends on the platform or publisher using the label."
+        question: "Is clanker an official AI term?",
+        answer: "No. It is community slang with older robot-science-fiction roots and a newer AI-era meme usage."
       },
       {
-        question: "Is AI-generated the same as AI-assisted?",
-        answer: "No. AI-generated usually points to more direct machine creation, while AI-assisted usually means a human made the work but used AI during drafting, editing, or production."
-      },
-      {
-        question: "Does an AI-generated content disclosure mean the content is fake?",
-        answer: "No. The label is a transparency signal about process, not an automatic judgment that the content is false, deceptive, or low quality."
-      },
-      {
-        question: "Does the label mean the content was fully made by AI?",
-        answer: "Not always. Some labels cover mixed workflows where AI generated or altered part of the output and a human later reviewed, edited, or combined it with other material."
-      },
-      {
-        question: "Is AI-generated content disclosure a universal industry standard?",
-        answer: "No. The phrase is widely understandable, but the exact wording, scope, and enforcement vary across platforms, publishers, and technical provenance systems."
+        question: "Where did clanker come from?",
+        answer: "The word has older science-fiction and Star Wars robot usage, then spread again online as people used it for AI systems and automation."
       }
     ],
     furtherReading: [
       {
-        label: "Content Credentials overview",
-        url: "https://contentcredentials.org/"
+        label: "Merriam-Webster: clanker slang meaning",
+        url: "https://www.merriam-webster.com/slang/clanker"
       },
       {
-        label: "When Is Self-Disclosure Optimal? Incentives and Governance of AI-Generated Content",
-        url: "https://arxiv.org/abs/2601.18654"
+        label: "Know Your Meme: Clanker",
+        url: "https://knowyourmeme.com/memes/clanker"
+      }
+    ]
+  },
+  {
+    word: "Synthetic Users",
+    definition: "AI-generated research participants or personas used to simulate user feedback before or alongside interviews with real people.",
+    origin: "Gained attention in product, UX, and market-research circles as teams began using LLM-based personas to test concepts, messaging, workflows, and early product ideas faster than traditional recruiting allows.",
+    examples: ["We used synthetic users to pressure-test the onboarding copy, then recruited real customers to validate the scary parts.", "The synthetic users all loved the feature, which was exactly why the researcher refused to treat the output as evidence."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Research and product-discovery term with active debate among UX researchers. User Interviews' 2026 report documents current terminology and practitioner sentiment; this entry treats synthetic users as exploratory input, not a replacement for real research.",
+    sourceUrl: "https://www.userinterviews.com/state-of-synthetic-users-report",
+    lastChecked: "2026-07-19",
+    plainEnglish: "Synthetic users are fake users generated by AI. They can help teams brainstorm likely reactions and find weak spots early, but they are not customers, cannot consent, and should not be used as a substitute for real user evidence when stakes are high.",
+    relatedTerms: ["Synthetic Data", "Sycophancy", "Eval", "LLM-as-a-Judge", "Hallucination", "Workslop"],
+    seoTitle: "Synthetic Users Meaning in AI Product Research",
+    seoDescription: "Synthetic users meaning: AI-generated personas used in UX and product research, where they help, and why they cannot replace real users.",
+    extraSections: [
+      {
+        heading: "Where synthetic users can help",
+        bullets: [
+          "Early concept exploration before a team spends money on recruiting.",
+          "Stress-testing interview guides, survey questions, and product positioning.",
+          "Generating hypotheses about user pain points that real research can later check.",
+          "Comparing likely reactions across several draft flows or messages."
+        ]
       },
       {
-        label: "Art-ificial Intelligence: The Effect of AI Disclosure on Evaluations of Creative Content",
-        url: "https://arxiv.org/abs/2303.06217"
+        heading: "Where synthetic users become risky",
+        paragraphs: [
+          "The danger is circular validation. A model can confidently echo the assumptions inside the prompt, flatten minority behavior, or produce plausible quotes that look like research artifacts but are not evidence from actual people.",
+          "A useful synthetic-user workflow keeps the label visible, records assumptions, and treats the output as a planning aid. It does not pretend simulated participants are the same as recruited users."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What are synthetic users?",
+        answer: "Synthetic users are AI-generated personas or simulated research participants used to explore possible user reactions."
+      },
+      {
+        question: "Can synthetic users replace user research?",
+        answer: "No. They can help with early exploration and preparation, but real users are still needed for validation, nuance, consented evidence, and high-stakes decisions."
+      },
+      {
+        question: "Why are synthetic users controversial?",
+        answer: "They can produce plausible but unsupported feedback, mirror a team's assumptions, and make simulated evidence look more reliable than it is."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "User Interviews: State of Synthetic Users",
+        url: "https://www.userinterviews.com/state-of-synthetic-users-report"
+      },
+      {
+        label: "PNAS: LLMs and online survey research",
+        url: "https://doi.org/10.1073/pnas.2518075122"
+      }
+    ]
+  },
+  {
+    word: "Workspace Agent",
+    definition: "A shared AI agent built for repeatable team workflows, usually connected to workplace tools, permissions, handoffs, and approval steps.",
+    origin: "Became a concrete product term as AI platforms moved beyond one-off chat into agents that organizations can build, share, govern, and run across business processes.",
+    examples: ["The workspace agent drafts the weekly customer summary, but a human still approves the account notes before they go out.", "A useful workspace agent needs permissions, source context, and a clear handoff, not just a prompt with a job title."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current product and workplace-automation term. OpenAI's workspace-agents documentation describes agents around triggers, repeatable process, skills, and connected tools; broader usage may vary by vendor.",
+    sourceUrl: "https://openai.com/academy/workspace-agents/",
+    lastChecked: "2026-07-19",
+    plainEnglish: "A workspace agent is an AI worker for a recurring process. The useful version has a trigger, instructions, context, tool access, and boundaries for what it can do without approval.",
+    relatedTerms: ["Agentic", "Tool Calling", "Agent Observability", "Computer Use", "MCP", "Context Engineering"],
+    seoTitle: "Workspace Agent Meaning in AI",
+    seoDescription: "Workspace agent meaning: shared AI agents for repeatable team workflows, workplace tools, permissions, approvals, and handoffs.",
+    extraSections: [
+      {
+        heading: "How workspace agents differ from chatbots",
+        paragraphs: [
+          "A chatbot usually starts with a person asking a one-off question. A workspace agent is designed around a repeatable job: a trigger starts it, a process guides it, and connected tools let it gather context or take approved actions.",
+          "That makes workspace agents closer to governed workflows than casual chat. The quality question is not whether the agent sounds helpful; it is whether the workflow is scoped, observable, reversible, and worth delegating."
+        ]
+      },
+      {
+        heading: "What a workspace agent needs",
+        bullets: [
+          "A clear trigger, such as a schedule, event, or manual run.",
+          "A repeatable process with expected outputs and review points.",
+          "Approved access to the documents, apps, or systems it needs.",
+          "Permissions and approval boundaries for any action that changes external state.",
+          "Observability so the team can see what the agent read, decided, and did."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is a workspace agent?",
+        answer: "A workspace agent is an AI agent configured for repeatable team work, often with tool access, shared instructions, permissions, and review steps."
+      },
+      {
+        question: "Is a workspace agent the same as a chatbot?",
+        answer: "No. A chatbot is usually a one-off conversational interface, while a workspace agent is built around a recurring workflow and may run from a trigger."
+      },
+      {
+        question: "What makes a workspace agent safe to use?",
+        answer: "Clear scope, least-privilege tool access, approval boundaries, logging, and human review for sensitive or irreversible actions."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI Academy: Workspace agents",
+        url: "https://openai.com/academy/workspace-agents/"
+      },
+      {
+        label: "OpenAI: Introducing workspace agents in ChatGPT",
+        url: "https://openai.com/index/introducing-workspace-agents-in-chatgpt/"
+      }
+    ]
+  },
+  {
+    word: "AI Content Disclosure",
+    definition: "An AI content disclosure is a label or notice telling an audience that artificial intelligence was used to create or meaningfully modify content.",
+    origin: "Became common as generative AI made realistic text, images, audio, and video easier to produce, while platforms and creators looked for simple ways to give audiences context about how media was made.",
+    examples: ["The creator added an AI content disclosure because the final video combined recorded footage with AI-generated backgrounds.", "I saw the “AI-generated content” label, so I checked the caption to learn which parts of the post used AI.", "Her disclosure said the cover art was made with AI and then retouched by a human designer.", "The game page carried an AI content disclosure, but the label did not say whether AI was used for the game itself or only its marketing art."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "This is a cross-platform transparency term, not one universal rule. Platforms use different labels and thresholds, so this entry describes the shared idea and uses platform-specific examples only as examples.",
+    sourceUrl: "https://support.google.com/youtube/answer/14328491",
+    lastChecked: "2026-07-17",
+    plainEnglish: "It is a heads-up about the production process. A disclosure might be supplied by the creator, added automatically from provenance signals, or applied by a platform. By itself, it does not say the content is false, fully automated, or low quality.",
+    relatedTerms: ["Slop", "Synthetic Data", "Hallucination", "Deep Research", "Shadow AI", "Workslop"],
+    seoTitle: "What Is AI Content Disclosure? Meaning and Labels",
+    seoDescription: "AI content disclosure means a label saying content was created or modified with AI. Learn about common labels, detection, watermarks, and Content Credentials.",
+    pageHeading: "What Is AI Content Disclosure?",
+    extraSections: [
+      {
+        heading: "Why AI content disclosure is becoming common",
+        paragraphs: [
+          "Generative tools can now produce convincing text, images, voices, music, and video at large scale. A short disclosure gives audiences useful context when the production process may not be obvious from the finished work.",
+          "Creators may disclose voluntarily, while some platforms ask for a disclosure in particular situations or add a label from technical signals. Those situations are not identical: for example, one service may focus on realistic altered video while another labels a broader range of generated media."
+        ]
+      },
+      {
+        heading: "Common AI disclosure labels",
+        bullets: [
+          "“Made with AI” generally signals that AI had a substantial role in creating the result. Meta previously used this exact wording before changing the visible label to “AI info,” illustrating how platform language can evolve.",
+          "“AI-generated content” usually means a model generated some or all of the material, but the label alone may not show how much a person later selected, edited, or combined.",
+          "“Altered or synthetic content” is wording used for media that was generated or meaningfully changed; a platform may limit it to realistic media or other defined cases.",
+          "“AI-assisted” usually describes a human-led workflow that used AI for a narrower task such as drafting, cleanup, translation, or ideation. The boundary between assisted and generated is not standardized.",
+          "“Human-reviewed” says a person checked or edited the output after AI was used; it does not mean the work was created without AI."
+        ]
+      },
+      {
+        heading: "Where you might see an AI content disclosure",
+        bullets: [
+          "Articles, newsletters, and blog posts",
+          "Images, illustrations, and design assets",
+          "Videos, audio, music, and short-form social clips",
+          "Social posts and creator uploads",
+          "App, marketplace, and game listings"
+        ]
+      },
+      {
+        heading: "Disclosure is not the same as AI detection",
+        paragraphs: [
+          "Disclosure communicates information about how content was made. It can come from the creator, a platform workflow, or reliable provenance data. AI detection is an attempt to infer whether content came from AI by analyzing the finished text or media.",
+          "A disclosure does not need a detector, and a detector's prediction is not proof that a creator disclosed anything. Detection systems can be uncertain or wrong, especially after content has been edited, compressed, translated, or mixed with human work."
+        ]
+      },
+      {
+        heading: "AI watermarks and Content Credentials",
+        paragraphs: [
+          "An AI watermark is a machine-readable signal embedded in generated content. Some are invisible to people and require a compatible tool to check them. Watermarks can help identify output from participating AI systems, but they are not a universal registry or a foolproof test for every piece of content.",
+          "Content Credentials are signed provenance records based on the C2PA standard. They can carry information about a file's source and editing history and may work with watermarking or fingerprinting so the record is easier to recover. They provide evidence about provenance; they do not decide whether the content is truthful."
+        ]
+      },
+      {
+        heading: "How to read an AI disclosure",
+        bullets: [
+          "Treat it as context about process, not an automatic verdict on truth, quality, or intent.",
+          "Do not assume the content was entirely made by AI or is automatically a deepfake.",
+          "Look for details about what was generated or altered and whether a person reviewed the result.",
+          "Remember that label wording and disclosure thresholds vary by creator, publisher, platform, and media type.",
+          "Verify important claims with dependable sources even when content has a disclosure or provenance record."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is AI content disclosure?",
+        answer: "It is a label or notice telling an audience that AI was used to create or meaningfully modify content."
+      },
+      {
+        question: "What do “Made with AI” and “AI-generated content” mean?",
+        answer: "They generally signal that AI had a substantial role in creating the content. The exact scope depends on who applied the label, and it may include mixed human-and-AI workflows."
+      },
+      {
+        question: "Is disclosure the same as AI detection?",
+        answer: "No. Disclosure provides information about the production process, while detection analyzes content and predicts whether AI was involved. A detector's result can be uncertain and is not the same as a creator's disclosure."
+      },
+      {
+        question: "Does an AI content disclosure mean the content is fake?",
+        answer: "No. The label is a transparency signal about process, not an automatic judgment that the content is false, deceptive, or low quality."
+      },
+      {
+        question: "Are AI watermarks the same as visible labels?",
+        answer: "Not necessarily. An AI watermark can be an invisible, machine-readable signal embedded in content, while a visible label is the notice shown to an audience. A platform may use a watermark as one signal for applying a label."
+      },
+      {
+        question: "Are AI disclosure rules the same on every platform?",
+        answer: "No. Platforms can define covered content, label wording, placement, and enforcement differently. Check the current guidance for the service where you publish."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "YouTube: Disclosing altered or synthetic content",
+        url: "https://support.google.com/youtube/answer/14328491"
+      },
+      {
+        label: "Meta: Approach to labeling AI-generated content",
+        url: "https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/"
+      },
+      {
+        label: "Content Credentials: How provenance works",
+        url: "https://contentcredentials.org/about/"
+      },
+      {
+        label: "Google DeepMind: SynthID watermarks",
+        url: "https://deepmind.google/models/synthid/"
+      },
+      {
+        label: "NIST: Technical approaches to synthetic-content transparency",
+        url: "https://www.nist.gov/publications/reducing-risks-posed-synthetic-content-overview-technical-approaches-digital-content"
       }
     ]
   }

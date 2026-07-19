@@ -5,5 +5,8 @@
 /privacy.html /privacy 301
 /terms-of-use.html /terms-of-use 301
 /editorial-policy.html /editorial-policy 301
+/terms/ai-content-disclosure.html /terms/ai-content-disclosure 301
+/terms/ai-generated-content-disclosure.html /terms/ai-content-disclosure 301
+/terms/ai-generated-content-disclosure /terms/ai-content-disclosure 301
 /articles/:slug.html /articles/:slug 301
 /terms/:slug.html /terms/:slug 301

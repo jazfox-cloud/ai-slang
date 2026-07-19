@@ -69,6 +69,47 @@ for (const file of generatedFiles) {
   }
 }
 
+const disclosureTerms = slangs.filter((item) => /ai(?:-generated)? content disclosure/i.test(item.word));
+if (disclosureTerms.length !== 1 || disclosureTerms[0].word !== "AI Content Disclosure") {
+  throw new Error(`Expected exactly one canonical AI content disclosure data entry, found ${disclosureTerms.length}`);
+}
+
+const disclosureFiles = readdirSync("terms").filter((file) => /ai(?:-generated)?-content-disclosure\.html$/.test(file));
+if (disclosureFiles.length !== 1 || disclosureFiles[0] !== "ai-content-disclosure.html") {
+  throw new Error(`Expected exactly one indexable AI content disclosure page, found: ${disclosureFiles.join(", ") || "none"}`);
+}
+
+const disclosurePage = read("terms/ai-content-disclosure.html");
+const disclosureRequirements = [
+  '<link rel="canonical" href="https://ai-slang.com/terms/ai-content-disclosure">',
+  '"@type":"DefinedTerm"',
+  '"@type":"FAQPage"',
+  "Made with AI",
+  "AI-generated content",
+  "Disclosure is not the same as AI detection",
+  "AI watermarks and Content Credentials",
+  "Further reading",
+  "Related AI slang"
+];
+
+for (const requirement of disclosureRequirements) {
+  if (!disclosurePage.includes(requirement)) {
+    throw new Error(`AI Content Disclosure page is missing: ${requirement}`);
+  }
+}
+
+const sitemap = read("sitemap.xml");
+const disclosureSitemapUrls = sitemap.match(/<loc>https:\/\/ai-slang\.com\/terms\/ai(?:-generated)?-content-disclosure<\/loc>/g) || [];
+if (disclosureSitemapUrls.length !== 1 || !disclosureSitemapUrls[0].includes("/terms/ai-content-disclosure")) {
+  throw new Error("AI Content Disclosure sitemap URL is incorrect");
+}
+
+for (const file of generatedFiles.filter((file) => file.endsWith(".html"))) {
+  if (read(file).includes('href="/terms/ai-generated-content-disclosure"')) {
+    throw new Error(`${file} links internally to the obsolete AI content disclosure URL`);
+  }
+}
+
 const grokBuildTerm = slangs.find((item) => item.word === "Grok Build");
 if (!grokBuildTerm) {
   throw new Error("Grok Build entry is missing");
@@ -103,9 +144,15 @@ for (const requirement of grokBuildRequirements) {
   }
 }
 
-const grokBuildSitemap = read("sitemap.xml");
-if (!grokBuildSitemap.includes("https://ai-slang.com/terms/grok-build")) {
+if (!sitemap.includes("https://ai-slang.com/terms/grok-build")) {
   throw new Error("Grok Build sitemap URL is missing");
+}
+
+const redirects = read("_redirects");
+if (!redirects.includes("/terms/ai-generated-content-disclosure /terms/ai-content-disclosure 301") ||
+    !redirects.includes("/terms/ai-generated-content-disclosure.html /terms/ai-content-disclosure 301") ||
+    !redirects.includes("/terms/ai-content-disclosure.html /terms/ai-content-disclosure 301")) {
+  throw new Error("Legacy AI content disclosure URL redirect is missing");
 }
 
 console.log(`Validated ${slangs.length} slang entries.`);
