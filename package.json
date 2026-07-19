@@ -6,7 +6,7 @@
   "scripts": {
     "build:static": "node scripts/build-static-pages.mjs",
     "dev": "python3 -m http.server 8788",
-    "validate": "node tests/validate-data.mjs && node tests/middleware.mjs"
+    "validate": "node tests/validate-data.mjs && node tests/middleware.mjs && node tests/seo.mjs"
   },
   "engines": {
     "node": ">=18"

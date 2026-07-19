@@ -1,7 +1,8 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { slangs } from "../src/data/slangs.js";
 
 const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
+const defaultSocialImage = `${siteUrl}/assets/ai-slang-social.png`;
 const articleSchemaDate = "2026-07-19";
 const sitemapLastmodDate = new Date().toISOString().slice(0, 10);
 
@@ -52,6 +53,15 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${canonical}">
+    <meta property="og:title" content="${escapeHtml(title)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="${defaultSocialImage}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(title)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${defaultSocialImage}">
     <link rel="stylesheet" href="/src/styles.css">
     ${jsonLd}
   </head>
@@ -208,7 +218,7 @@ const articlePages = [
   {
     file: "articles/what-is-ai-slang.html",
     title: "What Is AI Slang? A Field Guide to the Words Around LLMs",
-    description: "A concise guide to AI slang, GPT-ese, model memes, and the words people use around modern AI tools.",
+    description: "Learn what AI slang means, where terms like GPT-ese and model memes come from, and how to use this source-aware dictionary of modern AI language.",
     h1: "What Is AI Slang?",
     lead: "AI slang is the fast-moving vocabulary people use to describe model behavior, AI-written text, coding agents, synthetic content, and the culture forming around large language models.",
     sections: [
@@ -301,8 +311,8 @@ function articlePage(article) {
 const policyPages = [
   {
     file: "privacy.html",
-    title: "Privacy Policy",
-    description: "Privacy policy for AI Slang Hub.",
+    title: "Privacy Policy | AI Slang Hub",
+    description: "Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how hosting, analytics, and advertising providers may handle data.",
     h1: "Privacy Policy",
     lead: "AI Slang Hub is built as a lightweight dictionary and editing tool. The MVP is static-first and intentionally avoids account tracking.",
     sections: [
@@ -316,7 +326,7 @@ const policyPages = [
   {
     file: "about.html",
     title: "About AI Slang Hub",
-    description: "About AI Slang Hub, its editorial purpose, sourcing rules, and independent status.",
+    description: "Learn about AI Slang Hub, its independent editorial purpose, sourcing and correction standards, and approach to explaining fast-moving AI language.",
     h1: "About AI Slang Hub",
     lead: "AI Slang Hub is an independent dictionary and writing tool for the fast-moving language around AI products, research, developer culture, and generated text.",
     sections: [
@@ -328,7 +338,7 @@ const policyPages = [
   {
     file: "contact.html",
     title: "Contact AI Slang Hub",
-    description: "Contact AI Slang Hub about definition corrections, sources, privacy, or accessibility.",
+    description: "Contact AI Slang Hub with definition corrections, primary-source suggestions, privacy requests, accessibility reports, or general editorial feedback.",
     h1: "Contact AI Slang Hub",
     lead: "Email hello@ai-slang.com for definition corrections, primary-source suggestions, privacy requests, accessibility reports, or general feedback.",
     sections: [
@@ -339,8 +349,8 @@ const policyPages = [
   },
   {
     file: "terms-of-use.html",
-    title: "Terms of Use",
-    description: "Terms of use for AI Slang Hub.",
+    title: "Terms of Use | AI Slang Hub",
+    description: "Read the AI Slang Hub terms of use for editorial definitions and Humanizer output, including accuracy limits, user responsibility, and acceptable-use rules.",
     h1: "Terms of Use",
     lead: "Use AI Slang Hub as an editorial reference and writing aid, not as legal, academic, hiring, or safety advice.",
     sections: [
@@ -352,7 +362,7 @@ const policyPages = [
   {
     file: "editorial-policy.html",
     title: "Editorial Policy",
-    description: "How AI Slang Hub writes, sources, and updates slang definitions.",
+    description: "See how AI Slang Hub writes, sources, reviews, corrects, and updates definitions while distinguishing technical, product, community, and editorial terms.",
     h1: "Editorial Policy",
     lead: "AI Slang Hub mixes culture-aware writing with source-aware editing. The voice can be spicy; the claims still need guardrails.",
     sections: [
@@ -394,6 +404,23 @@ for (const article of articlePages) {
 for (const page of policyPages) {
   writeFileSync(page.file, policyPage(page));
 }
+
+const homepage = readFileSync("index.html", "utf8");
+const homepageTermLinksPattern = /(?<=<!-- GENERATED_TERM_LINKS_START -->)[\s\S]*?(?=<!-- GENERATED_TERM_LINKS_END -->)/;
+if (!homepageTermLinksPattern.test(homepage)) {
+  throw new Error("Homepage term-link markers are missing");
+}
+const homepageTermLinks = slangs.map((item, index) => `                <a class="term-card" href="${termPath(item)}" data-word="${escapeHtml(item.word)}">
+                  <b>${String(index + 1).padStart(2, "0")}</b>
+                  <span>${escapeHtml(item.word)}</span>
+                  <small>${escapeHtml(item.trend)} / AI_GRADE ${item.aiGrade}</small>
+                </a>`).join("\n");
+const homepageWithTerms = homepage.replace(
+  homepageTermLinksPattern,
+  `\n${homepageTermLinks}\n              `
+);
+
+writeFileSync("index.html", homepageWithTerms);
 
 const sitemapUrls = [
   `${siteUrl}/`,

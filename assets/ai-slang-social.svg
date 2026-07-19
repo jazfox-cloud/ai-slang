@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI Slang and Humanizer Hub</title>
+  <desc id="desc">AI Slang wordmark on a dark editorial card.</desc>
+  <rect width="1200" height="630" fill="#101114"/>
+  <rect x="54" y="54" width="1092" height="522" rx="24" fill="#f4efe3" stroke="#101114" stroke-width="8"/>
+  <rect x="94" y="94" width="190" height="96" rx="12" fill="#101114"/>
+  <text x="189" y="160" fill="#f4cf55" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800" text-anchor="middle">AI</text>
+  <text x="94" y="328" fill="#101114" font-family="Arial, Helvetica, sans-serif" font-size="132" font-weight="800">Slang</text>
+  <text x="100" y="420" fill="#5a43d6" font-family="Courier New, monospace" font-size="42" font-weight="700">DEFINE THE WORDS.</text>
+  <text x="100" y="482" fill="#101114" font-family="Arial, Helvetica, sans-serif" font-size="30">AI culture, model jargon, and GPT writing tells.</text>
+  <circle cx="1056" cy="146" r="38" fill="#45b36b" stroke="#101114" stroke-width="6"/>
+</svg>

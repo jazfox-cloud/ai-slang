@@ -126,6 +126,7 @@ textarea {
   color: var(--text);
   cursor: pointer;
   border-radius: var(--radius);
+  text-decoration: none;
 }
 
 .tab,

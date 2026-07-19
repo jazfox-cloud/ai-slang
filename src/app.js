@@ -82,11 +82,11 @@ function renderList() {
     </button>
   `;
   termList.innerHTML = items.map((item, index) => `
-    <button class="term-card ${state.selected.word === item.word ? "is-selected" : ""}" type="button" data-word="${item.word}">
+    <a class="term-card ${state.selected.word === item.word ? "is-selected" : ""}" href="/terms/${slugify(item.word)}" data-word="${item.word}">
       <b>${String(index + 1).padStart(2, "0")}</b>
       <span>${item.word}</span>
       <small>${item.trend} / AI_GRADE ${item.aiGrade}</small>
-    </button>
+    </a>
   `).join("");
 }
 
@@ -232,7 +232,10 @@ document.addEventListener("click", (event) => {
   }
 
   const card = event.target.closest("[data-word]");
-  if (card) selectTerm(card.dataset.word);
+  if (card) {
+    event.preventDefault();
+    selectTerm(card.dataset.word);
+  }
 });
 rawText.addEventListener("input", () => {
   rawCount.textContent = `${rawText.value.length}_CHARS`;

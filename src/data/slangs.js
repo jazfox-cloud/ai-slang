@@ -9,7 +9,9 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Popular term in 2024-2026 AI discourse; exact origin varies across social platforms and media coverage.",
     sourceUrl: "https://en.wikipedia.org/wiki/AI_slop",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    relatedTerms: ["Vibe Coding", "Clanker", "AI Content Disclosure", "Workslop", "Delve", "Tapestry"],
+    seoDescription: "Slop meaning in AI slang: low-effort AI-generated text, images, and posts mass-produced for clicks, reach, or ad revenue."
   },
   {
     word: "Vibe Coding",
@@ -21,7 +23,9 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Commonly attributed to Andrej Karpathy's 2025 usage; now used broadly for AI-assisted coding by feel.",
     sourceUrl: "https://en.wikipedia.org/wiki/Vibe_coding",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    relatedTerms: ["Slop", "Slopsquatting", "Agentic", "Grok Build", "Copilot", "Prompt Engineer"],
+    seoDescription: "Vibe coding meaning in AI slang: building software by steering an AI with prompts and intent instead of writing every line by hand."
   },
   {
     word: "Agentic",
@@ -33,7 +37,9 @@ export const slangs = [
     sourceType: "product-term",
     sourceNote: "Current AI product term; useful when tied to real tool use, vague when used as valuation perfume.",
     sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    relatedTerms: ["Workspace Agent", "A2A", "Tool Calling", "MCP", "Computer Use", "Agent Observability"],
+    seoDescription: "Agentic meaning in AI: software that can plan, make decisions, call tools, and carry out multi-step workflows with limited supervision."
   },
   {
     word: "Delve",
@@ -45,7 +51,8 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Research and media have tracked post-ChatGPT shifts in word frequency; avoid repeating inflated viral numbers without context.",
     sourceUrl: "https://arxiv.org/abs/2509.09596",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "Delve meaning in AI slang: an ordinary verb that became a common tell for polished, generic, or overly formal GPT-style writing."
   },
   {
     word: "Tapestry",
@@ -57,7 +64,8 @@ export const slangs = [
     sourceType: "editorial",
     sourceNote: "Useful as an editorial smell test rather than a formally sourced historical slang term.",
     sourceUrl: "",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "Tapestry meaning in AI slang: an overused GPT-style metaphor that often replaces a clear explanation of a complex topic."
   },
   {
     word: "Stochastic Parrot",
@@ -69,7 +77,8 @@ export const slangs = [
     sourceType: "paper",
     sourceNote: "Directly tied to a well-known 2021 AI ethics paper.",
     sourceUrl: "https://dl.acm.org/doi/10.1145/3442188.3445922",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "Stochastic parrot meaning: the critique that language models reproduce statistical patterns in text without human-like understanding."
   },
   {
     word: "GPU Rich / GPU Poor",
@@ -81,7 +90,8 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Community slang around AI compute access; best treated as cultural shorthand, not a precise economic category.",
     sourceUrl: "",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "GPU rich and GPU poor describe the compute gap between AI labs with large accelerator clusters and builders with limited hardware."
   },
   {
     word: "Hallucination",
@@ -93,7 +103,8 @@ export const slangs = [
     sourceType: "technical-term",
     sourceNote: "Standard term in AI evaluation and product discussions, though some critics argue it softens the severity of fabricated output.",
     sourceUrl: "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "Hallucination meaning in AI: a fluent model response that invents or misstates facts, sources, quotes, code, or other details."
   },
   {
     word: "RLHF'd to Death",
@@ -105,7 +116,8 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Community phrase built around reinforcement learning from human feedback; the wording is slang, not a formal technical diagnosis.",
     sourceUrl: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "RLHF'd to death means a model has been tuned so heavily for safety and politeness that normal requests trigger excessive refusals."
   },
   {
     word: "RAG",
@@ -153,7 +165,8 @@ export const slangs = [
     sourceType: "product-term",
     sourceNote: "Job title and skill label that peaked early in the LLM boom, then blurred into product, engineering, and ops work.",
     sourceUrl: "https://en.wikipedia.org/wiki/Prompt_engineering",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    seoDescription: "Prompt engineer meaning in AI: a person who designs and tests instructions, context, and examples to improve model output."
   },
   {
     word: "Model Collapse",
@@ -177,7 +190,8 @@ export const slangs = [
     sourceType: "technical-term",
     sourceNote: "Longstanding machine learning concept with renewed attention in LLM training and evaluation.",
     sourceUrl: "https://en.wikipedia.org/wiki/Synthetic_data",
-    lastChecked: "2026-07-01"
+    lastChecked: "2026-07-01",
+    relatedTerms: ["Model Collapse", "Synthetic Users", "AI Content Disclosure", "Eval", "Open-Weight AI", "Reasoning Model"]
   },
   {
     word: "CoT",
@@ -227,7 +241,7 @@ export const slangs = [
     sourceUrl: "https://modelcontextprotocol.io/docs/getting-started/intro",
     lastChecked: "2026-07-01",
     plainEnglish: "MCP is a shared connector pattern for AI apps. Instead of every assistant needing a custom integration for every tool, MCP gives builders a common client-server protocol.",
-    relatedTerms: ["Agentic", "Context Window", "RAG", "Context Engineering", "Hallucination"],
+    relatedTerms: ["Agentic", "A2A", "Tool Poisoning", "RAG", "Context Engineering", "Tool Calling"],
     seoTitle: "MCP Meaning: Model Context Protocol in AI Slang",
     seoDescription: "MCP meaning in AI slang and builder communities: what Model Context Protocol means, why developers use it, and how it relates to AI agents and tools."
   },
@@ -259,7 +273,7 @@ export const slangs = [
     sourceUrl: "https://arxiv.org/abs/2606.09090",
     lastChecked: "2026-07-01",
     plainEnglish: "Context rot is stale context. The model may have plenty of information, but some of it no longer matches the code, product, or task.",
-    relatedTerms: ["Context Engineering", "Context Window", "Eval", "Hallucination", "RAG"],
+    relatedTerms: ["Context Engineering", "Context Window", "Memory Poisoning", "Hallucination", "RAG"],
     seoTitle: "Context Rot Meaning in AI",
     seoDescription: "Context rot meaning in AI: stale prompts, memories, docs, or long-context artifacts that degrade model behavior in agents and coding assistants."
   },
@@ -275,7 +289,7 @@ export const slangs = [
     sourceUrl: "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
     lastChecked: "2026-07-03",
     plainEnglish: "Prompt injection is when text from a user, website, file, or tool output tricks an AI system into ignoring the instructions it was supposed to follow.",
-    relatedTerms: ["Hallucination", "Agentic", "MCP", "Tool Calling", "RAG", "Context Engineering"],
+    relatedTerms: ["Tool Poisoning", "Memory Poisoning", "MCP", "Tool Calling", "Agentic", "Context Engineering"],
     seoTitle: "Prompt Injection Meaning in AI Security",
     seoDescription: "Prompt injection meaning in AI slang and security: how hostile text can hijack LLM instructions, agents, tools, and retrieved context."
   },
@@ -307,7 +321,7 @@ export const slangs = [
     sourceUrl: "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
     lastChecked: "2026-07-03",
     plainEnglish: "Google Zero means search traffic falling toward nothing because AI search gives users the answer before they visit the original site.",
-    relatedTerms: ["Slop", "RAG", "Hallucination", "Context Engineering", "Agentic"],
+    relatedTerms: ["GEO", "Slop", "RAG", "Hallucination", "Context Engineering", "Agentic"],
     seoTitle: "Google Zero Meaning in AI Search",
     seoDescription: "Google Zero meaning: the AI search and SEO phrase for a future where Google sends publishers little or no referral traffic."
   },
@@ -403,7 +417,7 @@ export const slangs = [
     sourceUrl: "https://arxiv.org/abs/2307.03718",
     lastChecked: "2026-07-07",
     plainEnglish: "A frontier model is a model near the current capability ceiling. The phrase is usually used when discussing powerful general models, safety duties, deployment controls, and regulation.",
-    relatedTerms: ["Reasoning Model", "Alignment", "Eval", "Synthetic Data", "GPU Rich / GPU Poor", "Model Collapse"],
+    relatedTerms: ["Open-Weight AI", "Reasoning Model", "Alignment", "Eval", "Synthetic Data", "GPU Rich / GPU Poor"],
     seoTitle: "Frontier Model Meaning in AI",
     seoDescription: "Frontier model meaning in AI slang and policy: powerful models near the current capability edge, and why the term appears in safety and regulation debates."
   },
@@ -419,7 +433,7 @@ export const slangs = [
     sourceUrl: "https://platform.openai.com/docs/guides/prompt-caching",
     lastChecked: "2026-07-09",
     plainEnglish: "Prompt caching means the API can recognize reused context and process it more efficiently. It is useful for apps that send the same instructions, tools, or reference material across many requests.",
-    relatedTerms: ["Context Window", "Context Engineering", "RAG", "System Prompt", "Tool Calling", "GPU Rich / GPU Poor"],
+    relatedTerms: ["Speculative Decoding", "Context Window", "Context Engineering", "RAG", "System Prompt", "Tool Calling"],
     seoTitle: "Prompt Caching Meaning in AI Apps",
     seoDescription: "Prompt caching meaning in AI builder slang: how repeated prompt context can reduce latency or cost in long-context LLM apps."
   },
@@ -435,7 +449,7 @@ export const slangs = [
     sourceUrl: "https://platform.openai.com/docs/guides/tools-computer-use",
     lastChecked: "2026-07-09",
     plainEnglish: "Computer use lets an AI system interact with software the way a person might: seeing the screen and choosing mouse or keyboard actions. It matters when a task has no clean API.",
-    relatedTerms: ["Agentic", "Tool Calling", "MCP", "Prompt Injection", "System Prompt", "Alignment"],
+    relatedTerms: ["GPT Live", "Agentic", "Tool Calling", "MCP", "Prompt Injection", "System Prompt"],
     seoTitle: "Computer Use Meaning in AI Agents",
     seoDescription: "Computer use meaning in AI: agents that can operate graphical interfaces with screenshots, clicks, typing, and scrolling."
   },
@@ -643,7 +657,7 @@ export const slangs = [
     sourceUrl: "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/model-router",
     lastChecked: "2026-07-17",
     plainEnglish: "A model router chooses which model handles a request. Teams use it to balance cost, latency, capability, policy, and fallback behavior across several available models.",
-    relatedTerms: ["Reasoning Model", "Prompt Caching", "Eval", "GPU Rich / GPU Poor", "LLM-as-a-Judge", "Context Window"],
+    relatedTerms: ["Open-Weight AI", "Speculative Decoding", "Reasoning Model", "Prompt Caching", "Eval", "Context Window"],
     seoTitle: "Model Router Meaning in AI Apps",
     seoDescription: "Model router meaning in AI builder slang: routing prompts to different LLMs by cost, quality, latency, reasoning needs, or policy constraints."
   },
