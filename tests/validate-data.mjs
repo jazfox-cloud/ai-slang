@@ -86,8 +86,14 @@ const disclosureRequirements = [
   '"@type":"FAQPage"',
   "Made with AI",
   "AI-generated content",
+  "Flag, label, and disclosure do not always mean the same thing",
+  "A moderation flag or report is a signal sent for review",
   "Disclosure is not the same as AI detection",
-  "AI watermarks and Content Credentials",
+  "How machine-readable signals can become visible labels",
+  "creator declaration / provenance signal / platform detection → policy decision → visible disclosure",
+  "c2pa.ai-disclosure",
+  "TrainedAlgorithmicMedia",
+  "Is “AI-generated flag” a standard metadata field?",
   "Further reading",
   "Related AI slang"
 ];
@@ -96,6 +102,10 @@ for (const requirement of disclosureRequirements) {
   if (!disclosurePage.includes(requirement)) {
     throw new Error(`AI Content Disclosure page is missing: ${requirement}`);
   }
+}
+
+if (disclosurePage.includes("usually means the same basic thing as an AI-generated label")) {
+  throw new Error("AI-generated content flag is incorrectly defined as equivalent to an AI-generated label");
 }
 
 const sitemap = read("sitemap.xml");
