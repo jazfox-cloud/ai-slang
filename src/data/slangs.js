@@ -38,7 +38,7 @@ export const slangs = [
     sourceNote: "Current AI product term; useful when tied to real tool use, vague when used as valuation perfume.",
     sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent",
     lastChecked: "2026-07-01",
-    relatedTerms: ["Workspace Agent", "A2A", "Tool Calling", "MCP", "Computer Use", "Agent Observability"],
+    relatedTerms: ["Workspace Agent", "Agent Washing", "A2A", "Tool Calling", "MCP", "Agent Observability"],
     seoDescription: "Agentic meaning in AI: software that can plan, make decisions, call tools, and carry out multi-step workflows with limited supervision."
   },
   {
@@ -910,7 +910,7 @@ export const slangs = [
     sourceUrl: "https://openai.com/academy/workspace-agents/",
     lastChecked: "2026-07-19",
     plainEnglish: "A workspace agent is an AI worker for a recurring process. The useful version has a trigger, instructions, context, tool access, and boundaries for what it can do without approval.",
-    relatedTerms: ["Agentic", "Tool Calling", "Agent Observability", "Computer Use", "MCP", "Context Engineering"],
+    relatedTerms: ["Agentic", "Subagent", "Agent Skills", "Tool Calling", "Agent Observability", "Context Engineering"],
     seoTitle: "Workspace Agent Meaning in AI",
     seoDescription: "Workspace agent meaning: shared AI agents for repeatable team workflows, workplace tools, permissions, approvals, and handoffs.",
     extraSections: [
@@ -1186,6 +1186,187 @@ export const slangs = [
       {
         label: "Open Weight Definition",
         url: "https://openweight.org/"
+      }
+    ]
+  },
+  {
+    word: "Agent Washing",
+    definition: "Calling an assistant, workflow button, chatbot, or RPA wrapper an AI agent even when it has little real autonomy, planning, memory, or tool-using judgment.",
+    origin: "Popularized in enterprise AI commentary as agentic AI became a procurement and investor keyword. Gartner used the phrase for vendors rebranding existing products as agents without substantial agentic capabilities.",
+    examples: ["The demo was mostly a chatbot with three buttons, but the deck sold it as an agent platform.", "Agent washing is how a workflow macro gets promoted to autonomous AI before it can handle one messy exception."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "community",
+    sourceNote: "Business and analyst term around agentic AI hype. Gartner is the strongest stable reference found for the phrase, but the entry avoids treating one analyst note as the only community usage.",
+    sourceUrl: "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+    lastChecked: "2026-07-21",
+    plainEnglish: "It is AI washing narrowed to agents. The term is useful when a vendor says 'agent' because the market likes the word, but the product still behaves like ordinary automation with a language-model interface.",
+    relatedTerms: ["Agentic", "Workspace Agent", "Tool Calling", "A2A", "Shadow AI", "Workslop"],
+    seoTitle: "Agent Washing Meaning in AI",
+    seoDescription: "Agent washing meaning in AI: rebranding chatbots, assistants, or automation as AI agents without real autonomy, planning, or tool-using capability.",
+    pageHeading: "Agent Washing Meaning",
+    extraSections: [
+      {
+        heading: "How to spot agent washing",
+        bullets: [
+          "The product is called an agent, but it cannot plan beyond a fixed workflow.",
+          "It executes one narrow action and still needs a person to repair every exception.",
+          "The marketing talks about autonomy, while the docs describe a chatbot, assistant, or scripted automation.",
+          "There is no clear account of tool permissions, memory, evaluation, failure handling, or human review."
+        ]
+      },
+      {
+        heading: "Why the term matters",
+        paragraphs: [
+          "Agent washing is not just a vocabulary complaint. Teams may buy or deploy systems under the assumption that they can safely take on more responsibility than they actually can.",
+          "The practical question is what the system can observe, decide, do, and recover from. If those behaviors are missing, 'agent' is probably branding rather than architecture."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is agent washing?",
+        answer: "Agent washing is the practice of describing ordinary AI assistants, chatbots, RPA, or scripted automation as autonomous AI agents without substantial agentic capability."
+      },
+      {
+        question: "Is agent washing the same as AI washing?",
+        answer: "It is a more specific version. AI washing overstates AI use or capability in general; agent washing overstates whether a system is really agentic."
+      },
+      {
+        question: "How can you tell whether an AI product is really an agent?",
+        answer: "Look for concrete behavior: planning, tool use, state or memory, exception handling, permissions, evaluation, and a clear boundary for when humans review or approve actions."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Gartner: Agentic AI project forecast and agent washing",
+        url: "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027"
+      },
+      {
+        label: "Debevoise: Agent washing disclosure risks",
+        url: "https://www.debevoise.com/insights/publications/2026/03/agent-washing-disclosure-risks-in-the-emerging"
+      }
+    ]
+  },
+  {
+    word: "Subagent",
+    definition: "A specialized AI assistant that a main agent delegates work to, usually so research, testing, review, or another bounded task can happen in a separate context.",
+    origin: "Moved from multi-agent research language into everyday AI builder vocabulary through coding-agent tools and SDKs that let a primary agent spawn or hand off to specialist agents.",
+    examples: ["I sent the log crawl to a subagent so the main thread would not drown in stack traces.", "The reviewer subagent found the risky auth change and returned a short summary."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current coding-agent product term. Anthropic's Claude Code docs provide a clear official reference; OpenAI Agents SDK docs use closely related patterns such as agents as tools and handoffs.",
+    sourceUrl: "https://code.claude.com/docs/en/sub-agents",
+    lastChecked: "2026-07-21",
+    plainEnglish: "A subagent is a helper agent with a narrower job. It keeps focused work out of the main conversation, often with its own prompt, tools, context window, and permission boundaries.",
+    relatedTerms: ["Workspace Agent", "Agent Skills", "Agentic", "Context Window", "Tool Calling", "MCP"],
+    seoTitle: "Subagent Meaning in AI Agents",
+    seoDescription: "Subagent meaning in AI: a specialized helper agent delegated by a main agent to handle focused work in a separate context or tool boundary.",
+    pageHeading: "Subagent Meaning",
+    extraSections: [
+      {
+        heading: "Why builders use subagents",
+        bullets: [
+          "To keep large searches, logs, or codebase scans out of the main context.",
+          "To give a specialist prompt and tool set to a repeatable task.",
+          "To run review, testing, research, or cleanup as a bounded piece of work.",
+          "To return a compact answer instead of every intermediate file read or command output."
+        ]
+      },
+      {
+        heading: "Subagent versus another chat",
+        paragraphs: [
+          "A subagent is usually part of one orchestrated workflow. The user may not talk to it directly; the main agent delegates work and receives a result.",
+          "A separate agent session or teammate is more independent. It may have its own task, user-visible thread, or coordination channel instead of acting as a hidden helper."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is a subagent?",
+        answer: "A subagent is a specialized AI assistant delegated by a main agent to handle a focused task, often in its own context window with its own instructions and tool access."
+      },
+      {
+        question: "Why use subagents?",
+        answer: "They reduce context clutter, let teams specialize agent behavior, and make repeated tasks such as research, review, or validation easier to route."
+      },
+      {
+        question: "Is a subagent always autonomous?",
+        answer: "No. A subagent may work independently on a bounded task, but it is usually scoped by the parent agent's instructions, tools, and permission model."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Claude Code docs: Create custom subagents",
+        url: "https://code.claude.com/docs/en/sub-agents"
+      },
+      {
+        label: "OpenAI Agents SDK: Agents and handoffs",
+        url: "https://openai.github.io/openai-agents-python/agents/"
+      }
+    ]
+  },
+  {
+    word: "Agent Skills",
+    definition: "Reusable instructions, scripts, references, and assets that teach an AI agent how to perform a specific workflow more consistently.",
+    origin: "Spread as agent products moved from one-off prompting toward packaged capabilities. OpenAI and other agent platforms describe skills as portable workflow units an agent can load when relevant.",
+    examples: ["We shipped an agent skill for invoice cleanup instead of pasting the same prompt every week.", "The spreadsheet skill worked because it came with scripts, not just vibes in a Markdown file."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current product and ecosystem term. OpenAI Help describes Skills in ChatGPT, Codex, and the API; the Open Agent Skills documentation describes the cross-platform skill package shape.",
+    sourceUrl: "https://help.openai.com/en/articles/20001066",
+    lastChecked: "2026-07-21",
+    plainEnglish: "Agent skills are packaged know-how. Instead of relying on a user to remember a long prompt, a skill gives the agent task-specific instructions and optional files it can use when the job appears.",
+    relatedTerms: ["Subagent", "Workspace Agent", "MCP", "Context Engineering", "Tool Calling", "Agentic"],
+    seoTitle: "Agent Skills Meaning in AI",
+    seoDescription: "Agent Skills meaning in AI: reusable workflow packages with instructions, scripts, references, and assets that help agents perform specific tasks.",
+    pageHeading: "Agent Skills Meaning",
+    extraSections: [
+      {
+        heading: "What goes inside an agent skill",
+        bullets: [
+          "A main instruction file that explains when and how to use the skill.",
+          "Optional scripts for repeatable data handling, file generation, checks, or API work.",
+          "Optional reference files, templates, examples, and assets.",
+          "Metadata that lets an agent or product decide when the skill is relevant."
+        ]
+      },
+      {
+        heading: "Skills versus prompts and tools",
+        paragraphs: [
+          "A prompt is usually a one-off instruction. A tool gives the agent an action it can call. A skill is the reusable procedure that tells the agent how to approach a type of work and may include tools, scripts, or reference material.",
+          "That makes skills especially useful for teams that want repeatable workflows rather than a different improvised prompt every time."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What are Agent Skills?",
+        answer: "Agent Skills are reusable workflow packages that can include instructions, examples, scripts, references, and assets for an AI agent to use on a specific kind of task."
+      },
+      {
+        question: "Are skills the same as MCP tools?",
+        answer: "No. MCP connects an agent to external tools or data. Skills provide procedural knowledge about how to do work, and they may tell the agent how to use available tools well."
+      },
+      {
+        question: "Why are Agent Skills useful?",
+        answer: "They make recurring work more consistent, easier to share, and easier to audit than long prompts pasted by memory."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI Help: Skills in ChatGPT",
+        url: "https://help.openai.com/en/articles/20001066"
+      },
+      {
+        label: "Open Agent Skills: Introduction",
+        url: "https://openagentskills.dev/docs/introduction"
+      },
+      {
+        label: "OpenAI GitHub: Agent Skills catalog",
+        url: "https://github.com/openai/skills"
       }
     ]
   }

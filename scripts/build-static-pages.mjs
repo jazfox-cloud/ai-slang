@@ -3,7 +3,7 @@ import { slangs } from "../src/data/slangs.js";
 
 const siteUrl = process.env.SITE_URL || "https://ai-slang.com";
 const defaultSocialImage = `${siteUrl}/assets/ai-slang-social.png`;
-const articleSchemaDate = "2026-07-19";
+const articleSchemaDate = "2026-07-21";
 const sitemapLastmodDate = new Date().toISOString().slice(0, 10);
 
 function slugify(value) {
@@ -366,7 +366,7 @@ const policyPages = [
     h1: "Editorial Policy",
     lead: "AI Slang Hub mixes culture-aware writing with source-aware editing. The voice can be spicy; the claims still need guardrails.",
     sections: [
-      ["Review status", "Last reviewed July 19, 2026. Each entry labels its source type and last-checked date so readers can separate stable technical terms, product language, community slang, and editorial shorthand."],
+      ["Review status", "Last reviewed July 21, 2026. Each entry labels its source type and last-checked date so readers can separate stable technical terms, product language, community slang, and editorial shorthand."],
       ["Source handling", "When a term has a stable reference, we link it. When a term is community slang with no clean origin, we say so instead of inventing certainty."],
       ["Verification labels", "Product-term and technical-term entries should point to primary documentation when available. Community entries may use credible reporting or research, but they must not turn a disputed origin into a confirmed fact. Editorial entries are interpretation, not historical claims."],
       ["Update policy", "AI slang changes fast. Entries should be revisited when usage shifts, a better source appears, or a definition starts sounding stale."],
