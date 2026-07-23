@@ -321,7 +321,7 @@ export const slangs = [
     sourceUrl: "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
     lastChecked: "2026-07-03",
     plainEnglish: "Google Zero means search traffic falling toward nothing because AI search gives users the answer before they visit the original site.",
-    relatedTerms: ["GEO", "Slop", "RAG", "Hallucination", "Context Engineering", "Agentic"],
+    relatedTerms: ["GEO", "AEO", "AI Crawler", "RAG", "Context Engineering", "ChatGPT Ads"],
     seoTitle: "Google Zero Meaning in AI Search",
     seoDescription: "Google Zero meaning: the AI search and SEO phrase for a future where Google sends publishers little or no referral traffic."
   },
@@ -535,19 +535,320 @@ export const slangs = [
   },
   {
     word: "GEO",
-    definition: "Generative Engine Optimization: SEO's anxious cousin for getting mentioned, cited, or represented inside AI-generated search answers.",
-    origin: "Formalized in research on generative engines, then picked up by publishers, marketers, and SEO teams trying to understand visibility when answers are synthesized instead of listed as blue links.",
-    examples: ["The traffic drop was not just SEO; the team needed to think about GEO too.", "Bad GEO is stuffing pages with facts an AI answer might quote while forgetting that humans still read the site."],
+    definition: "Generative Engine Optimization (GEO) is the emerging practice of improving how information is found, represented, or cited in answers produced by generative AI systems.",
+    origin: "Researchers introduced the name and a formal optimization framework in the 2023 paper “GEO: Generative Engine Optimization,” later published at KDD 2024. Marketers, publishers, and communications teams have since adopted the acronym more broadly.",
+    examples: ["The publisher treated clear sourcing and an accessible comparison table as GEO work, then measured whether answer engines cited the page.", "The team called the project GEO, but it kept ordinary SEO checks because the source pages still had to be crawlable and useful."],
     aiGrade: 4,
     trend: "HIGH",
     sourceType: "paper",
-    sourceNote: "Grounded in the Generative Engine Optimization research paper; industry usage is broader and sometimes more marketing-heavy than the original framework.",
+    sourceNote: "The research paper gives GEO a real academic origin, but current industry usage is broader and sometimes marketing-heavy. There is no universal GEO standard or reliable recipe that guarantees inclusion in an AI answer.",
     sourceUrl: "https://arxiv.org/abs/2311.09735",
-    lastChecked: "2026-07-13",
-    plainEnglish: "GEO means optimizing content for AI answer engines, not only classic search rankings. The practical question is whether a generative search system can understand, trust, and cite your content.",
-    relatedTerms: ["Google Zero", "RAG", "Slop", "Context Engineering", "Hallucination", "Synthetic Data"],
-    seoTitle: "GEO Meaning: Generative Engine Optimization in AI Search",
-    seoDescription: "GEO meaning in AI search: Generative Engine Optimization, why publishers care, and how it relates to Google Zero, SEO, and AI answers."
+    lastChecked: "2026-07-23",
+    dateModified: "2026-07-23",
+    plainEnglish: "GEO is the label people use for work intended to make a source legible and useful to AI systems that synthesize answers. Depending on the speaker, that may include content quality, source clarity, technical discoverability, measurement of citations, or brand representation.",
+    relatedTerms: ["AEO", "Google Zero", "AI Crawler", "RAG", "Context Engineering", "ChatGPT Ads"],
+    seoTitle: "GEO Meaning: Generative Engine Optimization Explained",
+    seoDescription: "GEO means Generative Engine Optimization. Learn its research origin, how it differs from SEO and AEO, and why AI visibility is never guaranteed.",
+    pageHeading: "What Is Generative Engine Optimization (GEO)?",
+    extraSections: [
+      {
+        heading: "Why the term GEO appeared",
+        paragraphs: [
+          "Traditional search usually presents ranked links. Generative engines can instead combine information from several sources into one response, so visibility may mean being cited, quoted, summarized, or accurately represented rather than simply holding a ranking position.",
+          "The original GEO paper studied ways to measure and improve source visibility in generated responses. The commercial use of GEO now covers a wider and less consistent set of practices, from technical discoverability to content structure and brand monitoring."
+        ]
+      },
+      {
+        heading: "How GEO is used in practice",
+        bullets: [
+          "Making important information available in crawlable, understandable text.",
+          "Supporting factual claims with clear primary sources and useful context.",
+          "Publishing original definitions, data, comparisons, or examples that add information instead of repeating a generic summary.",
+          "Checking how different answer systems cite or describe a source while accounting for model and platform changes.",
+          "Keeping ordinary technical SEO, accessibility, and people-first quality work in place."
+        ]
+      },
+      {
+        heading: "GEO versus SEO",
+        paragraphs: [
+          "SEO usually describes work intended to improve discovery and ranking in conventional search results. GEO focuses on visibility or representation inside generated answers. The outputs differ, but the foundations overlap: an inaccessible, untrustworthy, or thin page is not rescued by calling the work GEO.",
+          "GEO does not replace SEO. Google, for example, says its AI search features use the same foundational SEO practices and do not require special AI files or dedicated schema. Eligibility, indexing, citation, and traffic are still not guaranteed."
+        ]
+      },
+      {
+        heading: "GEO versus AEO",
+        paragraphs: [
+          "AEO, or Answer Engine Optimization, usually emphasizes making information suitable for direct answers across search features, voice assistants, and AI systems. GEO explicitly names generative systems and often includes broader questions of source visibility, citation, and brand representation.",
+          "That distinction is useful but not standardized. Many practitioners use AEO, GEO, AI SEO, and related labels for overlapping work, so the speaker's definition matters more than the acronym alone."
+        ]
+      },
+      {
+        heading: "Where AI referral traffic fits",
+        paragraphs: [
+          "AI referral traffic is a measurement outcome, not a synonym for GEO. It means visits that arrive after someone clicks a link from an AI assistant or answer surface. A source can appear in an answer without receiving a click, and referral analytics may not capture every AI-assisted visit.",
+          "A responsible GEO review separates citations, mentions, referral sessions, engagement, and business outcomes instead of treating one traffic spike as proof that a tactic worked."
+        ]
+      },
+      {
+        heading: "Common misconceptions",
+        bullets: [
+          "GEO is not a guaranteed way to make ChatGPT or another system recommend a brand.",
+          "Adding FAQ schema, an llms.txt file, or more keywords does not create automatic inclusion.",
+          "The original research results do not prove that every technique works across current commercial systems.",
+          "A citation is not the same as a click, endorsement, or conversion.",
+          "GEO has a research origin, but much of today's surrounding advice is still vendor marketing."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does GEO stand for in AI search?",
+        answer: "GEO stands for Generative Engine Optimization, an emerging practice concerned with how sources are found, represented, or cited in generative AI answers."
+      },
+      {
+        question: "Who coined Generative Engine Optimization?",
+        answer: "The name and formal framework were introduced in the 2023 research paper “GEO: Generative Engine Optimization,” which was later published at KDD 2024."
+      },
+      {
+        question: "Is GEO the same as SEO?",
+        answer: "No. SEO focuses on discovery and rankings in search results, while GEO focuses on representation in generated answers. They overlap heavily, and GEO still depends on many SEO and content-quality foundations."
+      },
+      {
+        question: "Is GEO the same as AEO?",
+        answer: "Not exactly, although industry usage overlaps. AEO usually emphasizes direct answers across answer systems; GEO explicitly focuses on generative engines and may include broader citation and representation goals."
+      },
+      {
+        question: "Can GEO guarantee an AI citation or recommendation?",
+        answer: "No. Generative systems, retrieval sources, rankings, and response formats change, and no content technique guarantees a citation, mention, recommendation, or click."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Research paper: GEO: Generative Engine Optimization",
+        url: "https://arxiv.org/abs/2311.09735"
+      },
+      {
+        label: "ACM Digital Library: GEO at KDD 2024",
+        url: "https://dl.acm.org/doi/10.1145/3637528.3671900"
+      },
+      {
+        label: "Google Search Central: AI features and your website",
+        url: "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        label: "Cambridge Dictionary: Generative engine optimization",
+        url: "https://dictionary.cambridge.org/dictionary/english/generative-engine-optimization"
+      }
+    ]
+  },
+  {
+    word: "AEO",
+    definition: "Answer Engine Optimization (AEO) is the emerging practice of making information easy for search features, voice assistants, and AI systems to use when they produce direct answers.",
+    origin: "The label grew from search marketing around featured snippets, knowledge panels, and voice assistants, then broadened as ChatGPT, AI Overviews, and other generative answer systems became common.",
+    examples: ["The support team used AEO as shorthand for publishing one clear answer followed by evidence and limitations.", "They measured AEO with citations and referral sessions, but did not claim the rewrite caused every increase."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "AEO has stable industry usage but no single standards-body definition. Current sources use it for overlapping mixes of classic answer boxes, voice results, and generative AI answers, so this entry preserves that ambiguity.",
+    sourceUrl: "https://arxiv.org/abs/2606.04362",
+    lastChecked: "2026-07-23",
+    dateModified: "2026-07-23",
+    plainEnglish: "AEO is a name for presenting accurate, well-supported information so an answer system can understand and use it directly. It is an optimization goal, not a special markup or a promise that an assistant will quote you.",
+    relatedTerms: ["GEO", "Google Zero", "AI Crawler", "RAG", "Context Engineering", "ChatGPT Ads"],
+    seoTitle: "AEO Meaning: Answer Engine Optimization Explained",
+    seoDescription: "AEO means Answer Engine Optimization. Learn how the term relates to SEO and GEO, where definitions overlap, and why direct-answer visibility is not guaranteed.",
+    pageHeading: "What Is Answer Engine Optimization (AEO)?",
+    extraSections: [
+      {
+        heading: "Why the term AEO appeared",
+        paragraphs: [
+          "Search products increasingly answer questions on the results page through featured snippets, knowledge features, voice responses, and generated summaries. AEO names the effort to make a source useful in those direct-answer settings.",
+          "As generative AI became part of search and standalone assistants, many marketers expanded AEO to include citations and mentions in ChatGPT, Perplexity, Google AI features, and similar systems."
+        ]
+      },
+      {
+        heading: "How AEO is used in practice",
+        bullets: [
+          "Answering a real question clearly before adding nuance and supporting detail.",
+          "Using descriptive headings and readable text that people and machines can navigate.",
+          "Backing claims with primary evidence, dates, definitions, and appropriate limitations.",
+          "Keeping pages crawlable, internally linked, accessible, and useful outside an answer snippet.",
+          "Measuring citations, mentions, referrals, and user outcomes separately."
+        ]
+      },
+      {
+        heading: "AEO versus SEO",
+        paragraphs: [
+          "SEO is usually measured through search visibility, rankings, impressions, and clicks. AEO focuses on whether an answer system can use or cite the information in a direct response. A page can support both goals, and answer systems often depend on the same crawlability, indexing, authority, and people-first content foundations.",
+          "There is no universal AEO switch. Google says no special optimization, AI file, or schema is required for its AI search features, and meeting its requirements does not guarantee indexing or inclusion."
+        ]
+      },
+      {
+        heading: "AEO versus GEO",
+        paragraphs: [
+          "AEO is the broader historical label when the target includes featured snippets, voice assistants, or any system that returns a direct answer. GEO specifically names generative engines and often emphasizes visibility inside synthesized responses.",
+          "In current marketing language, the two are frequently used as synonyms. Treat any neat boundary as an editorial convention, not an agreed technical standard."
+        ]
+      },
+      {
+        heading: "AI referral traffic is an outcome, not the definition",
+        paragraphs: [
+          "When someone clicks a cited link from an answer system, the visit may appear as AI referral traffic. That is one measurable outcome of answer visibility, but an answer can mention a source without sending a click, and analytics attribution can be incomplete.",
+          "A 2026 field study found that platform-wide ChatGPT growth explained much of a site's raw referral increase and described the measured AEO effect as suggestive rather than conclusive. That is a useful warning against turning correlation into a guaranteed playbook."
+        ]
+      },
+      {
+        heading: "Common misconceptions",
+        bullets: [
+          "AEO is not a standards-defined replacement for SEO.",
+          "Short answers and structured data do not guarantee selection by an answer engine.",
+          "A mention, citation, click, and conversion are different outcomes.",
+          "Public growth case studies may mix optimization effects with growth of the underlying AI platform.",
+          "Clear writing helps readers even when no answer engine uses the page."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does AEO stand for?",
+        answer: "AEO stands for Answer Engine Optimization, the emerging practice of making information useful to systems that return direct answers."
+      },
+      {
+        question: "Is AEO only for generative AI?",
+        answer: "No. The term has also been used for featured snippets, knowledge features, and voice assistants, although current usage often includes generative AI answers."
+      },
+      {
+        question: "What is the difference between AEO and GEO?",
+        answer: "AEO usually covers direct-answer systems broadly, while GEO explicitly focuses on generative engines. In practice, many sources use the labels for overlapping work."
+      },
+      {
+        question: "Does AEO replace SEO?",
+        answer: "No. Answer systems still depend on discoverable, accessible, trustworthy information, so many SEO and content-quality fundamentals remain relevant."
+      },
+      {
+        question: "Can AEO guarantee that ChatGPT or Google cites a page?",
+        answer: "No. AEO describes an optimization goal; it cannot guarantee a citation, mention, ranking, referral visit, or conversion."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Research: A log-based study of AEO and ChatGPT referral traffic",
+        url: "https://arxiv.org/abs/2606.04362"
+      },
+      {
+        label: "Google Search Central: AI features and your website",
+        url: "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        label: "Ahrefs: Answer Engine Optimization",
+        url: "https://ahrefs.com/blog/answer-engine-optimization/"
+      }
+    ]
+  },
+  {
+    word: "ChatGPT Ads",
+    definition: "ChatGPT Ads are clearly labeled paid placements that OpenAI delivers separately from ChatGPT's answers through its advertising platform.",
+    origin: "OpenAI began testing ads in ChatGPT in February 2026 and expanded advertiser access through partners and a beta self-serve Ads Manager in May 2026.",
+    examples: ["The retailer bought ChatGPT Ads through Ads Manager, while its GEO work remained an unpaid visibility effort.", "The ad appeared below the conversation as a labeled placement rather than inside ChatGPT's answer."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "ChatGPT Ads is now an official OpenAI product term, not a prediction. Availability, eligible users, formats, policies, bidding guidance, and beta features remain changeable and should be checked in current OpenAI documentation.",
+    sourceUrl: "https://ads.openai.com/",
+    lastChecked: "2026-07-23",
+    dateModified: "2026-07-23",
+    plainEnglish: "These are advertisements shown in ChatGPT. They are paid, labeled, and kept distinct from the assistant's response. They are not organic recommendations and do not let an advertiser buy or alter an answer.",
+    relatedTerms: ["GEO", "AEO", "AI Content Disclosure", "Google Zero", "AI Crawler", "Copilot"],
+    seoTitle: "What Are ChatGPT Ads? Official Product Meaning",
+    seoDescription: "ChatGPT Ads are paid placements delivered separately from answers. Learn what OpenAI officially confirms about formats, buying, pricing, and availability.",
+    pageHeading: "What Are ChatGPT Ads?",
+    extraSections: [
+      {
+        heading: "Why the term is now a stable product label",
+        paragraphs: [
+          "ChatGPT advertising moved beyond leaks and predictions in 2026. OpenAI now operates an official advertising site, publishes advertiser documentation and policies, and provides access through partners and a beta self-serve Ads Manager.",
+          "The product is real, but it is still evolving. Statements about who can buy or see ads, supported countries, formats, policies, and campaign tools need a date and an official source."
+        ]
+      },
+      {
+        heading: "What OpenAI currently confirms",
+        bullets: [
+          "Ads are clearly labeled and kept separate from ChatGPT's answers.",
+          "Advertisers can create campaigns, supply creative and landing pages, set budgets and bids, and review performance in Ads Manager.",
+          "OpenAI supports impression-based and click-based buying options.",
+          "Ad delivery can use the intent and context of the current conversation, while OpenAI says conversations remain private from advertisers.",
+          "Availability and eligibility vary by plan, age, region, advertiser, and policy category."
+        ]
+      },
+      {
+        heading: "ChatGPT Ads versus GEO or AEO",
+        paragraphs: [
+          "ChatGPT Ads are paid media. GEO and AEO describe attempts to improve unpaid visibility or usefulness inside generated and direct answers. Buying an ad does not buy a citation, recommendation, or change to the assistant's answer.",
+          "The distinction matters because an ad impression, an organic mention, a cited source, and referral traffic are separate events with different measurement and disclosure."
+        ]
+      },
+      {
+        heading: "How ChatGPT ads pricing works",
+        paragraphs: [
+          "OpenAI currently documents CPM buying for impressions and CPC buying for clicks, with maximum bids set at the ad-group level and a relevance-weighted auction. That describes the pricing mechanism, not one universal public price for every advertiser or conversation.",
+          "Bid guidance, auction conditions, account thresholds, currency, and actual costs can change during the beta. This entry therefore does not publish a fixed “ChatGPT ads price” or repeat speculative rates from older reporting."
+        ]
+      },
+      {
+        heading: "Common misconceptions",
+        bullets: [
+          "ChatGPT Ads are not sponsored answers and do not let advertisers edit ChatGPT's response.",
+          "An advertiser account does not guarantee delivery in a particular conversation.",
+          "A CPM or CPC buying model is not the same as a fixed public rate card.",
+          "Availability in one country, plan, or account does not imply global availability.",
+          "Screenshots, leaked code, and agency claims are not substitutes for current OpenAI documentation."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Are ChatGPT Ads officially available?",
+        answer: "Yes. OpenAI operates an official ads site and beta Ads Manager, but advertiser and user availability continues to vary and expand."
+      },
+      {
+        question: "Do ChatGPT Ads influence ChatGPT's answers?",
+        answer: "OpenAI says no. Ads are clearly labeled and separate from answers, and advertisers do not buy control over the assistant's response."
+      },
+      {
+        question: "How are ChatGPT Ads priced?",
+        answer: "OpenAI currently supports CPM buying for impressions and CPC buying for clicks through an auction. There is no single fixed price that applies to every campaign."
+      },
+      {
+        question: "Who sees ads in ChatGPT?",
+        answer: "Eligibility varies by plan, age, region, and current testing rules. OpenAI's current help documentation is the authoritative source because those conditions may change."
+      },
+      {
+        question: "Are ChatGPT Ads the same as GEO or AEO?",
+        answer: "No. ChatGPT Ads are paid placements; GEO and AEO concern unpaid visibility or usefulness in generative and direct answers."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI Ads: Advertise in ChatGPT",
+        url: "https://ads.openai.com/"
+      },
+      {
+        label: "OpenAI Help Center: Ads in ChatGPT",
+        url: "https://help.openai.com/en/articles/20001047-ads-in-chatgpt"
+      },
+      {
+        label: "OpenAI Help Center: Ads in ChatGPT — The Basics",
+        url: "https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics"
+      },
+      {
+        label: "OpenAI: New ways to buy ChatGPT ads",
+        url: "https://openai.com/index/new-ways-to-buy-chatgpt-ads/"
+      },
+      {
+        label: "OpenAI: Ad policies",
+        url: "https://openai.com/policies/ad-policies/"
+      }
+    ]
   },
   {
     word: "Sycophancy",
@@ -1420,7 +1721,7 @@ export const slangs = [
     sourceUrl: "https://developers.cloudflare.com/ai-crawl-control/features/manage-ai-crawlers/",
     lastChecked: "2026-07-23",
     plainEnglish: "An AI crawler is a web crawler with an AI-related purpose. The important distinction is not just that it downloads pages, but whether it is doing so for model training, AI search answers, assistant retrieval, or another AI system.",
-    relatedTerms: ["Google Zero", "AI Content Disclosure", "Slop", "GEO", "Synthetic Data", "RAG"],
+    relatedTerms: ["Google Zero", "GEO", "AEO", "ChatGPT Ads", "Synthetic Data", "RAG"],
     seoTitle: "AI Crawler Meaning",
     seoDescription: "AI crawler meaning: a bot that accesses websites for AI training, search answers, assistants, retrieval, or other AI systems.",
     pageHeading: "AI Crawler Meaning",

@@ -4,7 +4,9 @@ import { slangs } from "../src/data/slangs.js";
 const siteUrl = "https://ai-slang.com";
 const targetOrphans = [
   "/terms/a2a",
+  "/terms/aeo",
   "/terms/ai-content-disclosure",
+  "/terms/chatgpt-ads",
   "/terms/clanker",
   "/terms/geo",
   "/terms/gpt-live",
@@ -123,4 +125,4 @@ for (const line of redirects) {
   }
 }
 
-console.log(`Validated SEO metadata and link graph for ${pages.size} indexable HTML pages; all 12 target pages have at least two inbound sources.`);
+console.log(`Validated SEO metadata and link graph for ${pages.size} indexable HTML pages; all ${targetOrphans.length} target pages have at least two inbound sources.`);

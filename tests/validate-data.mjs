@@ -2,6 +2,7 @@ import { slangs } from "../src/data/slangs.js";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 
 const seen = new Set();
+const seenSlugs = new Map();
 const sourceTypes = new Set(["paper", "wiki", "community", "product-term", "technical-term", "editorial", "unknown"]);
 
 for (const item of slangs) {
@@ -21,11 +22,21 @@ for (const item of slangs) {
     throw new Error(`Duplicate word: ${item.word}`);
   }
   seen.add(item.word.toLowerCase());
+  const slug = item.word.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  if (seenSlugs.has(slug)) {
+    throw new Error(`Duplicate slug: ${item.word} and ${seenSlugs.get(slug)} both produce ${slug}`);
+  }
+  seenSlugs.set(slug, item.word);
   if (!Array.isArray(item.examples) || item.examples.length < 2) {
     throw new Error(`${item.word} needs at least two examples`);
   }
   if (item.aiGrade < 1 || item.aiGrade > 5) {
     throw new Error(`${item.word} has invalid aiGrade`);
+  }
+  for (const relatedTerm of item.relatedTerms || []) {
+    if (!slangs.some((candidate) => candidate.word === relatedTerm)) {
+      throw new Error(`${item.word} links to missing related term: ${relatedTerm}`);
+    }
   }
 }
 
@@ -156,6 +167,68 @@ for (const requirement of grokBuildRequirements) {
 
 if (!sitemap.includes("https://ai-slang.com/terms/grok-build")) {
   throw new Error("Grok Build sitemap URL is missing");
+}
+
+const opportunityTerms = [
+  {
+    word: "GEO",
+    file: "terms/geo.html",
+    requirements: [
+      "What Is Generative Engine Optimization (GEO)?",
+      "GEO versus SEO",
+      "GEO versus AEO",
+      "Where AI referral traffic fits",
+      "Common misconceptions",
+      "no universal GEO standard",
+      "Can GEO guarantee an AI citation or recommendation?"
+    ]
+  },
+  {
+    word: "AEO",
+    file: "terms/aeo.html",
+    requirements: [
+      "What Is Answer Engine Optimization (AEO)?",
+      "AEO versus SEO",
+      "AEO versus GEO",
+      "AI referral traffic is an outcome, not the definition",
+      "no single standards-body definition",
+      "Can AEO guarantee that ChatGPT or Google cites a page?"
+    ]
+  },
+  {
+    word: "ChatGPT Ads",
+    file: "terms/chatgpt-ads.html",
+    requirements: [
+      "What Are ChatGPT Ads?",
+      "ChatGPT Ads versus GEO or AEO",
+      "How ChatGPT ads pricing works",
+      "paid placements",
+      "not one universal public price",
+      "Do ChatGPT Ads influence ChatGPT's answers?"
+    ]
+  }
+];
+
+for (const term of opportunityTerms) {
+  if (slangs.filter((item) => item.word === term.word).length !== 1) {
+    throw new Error(`Expected exactly one ${term.word} data entry`);
+  }
+  const page = read(term.file);
+  for (const requirement of [
+    `"@type":"DefinedTerm"`,
+    `"@type":"FAQPage"`,
+    "Further reading",
+    "Related AI slang",
+    ...term.requirements
+  ]) {
+    if (!page.includes(requirement)) {
+      throw new Error(`${term.word} page is missing: ${requirement}`);
+    }
+  }
+  const slug = term.file.replace(/^terms\//, "").replace(/\.html$/, "");
+  if (!sitemap.includes(`https://ai-slang.com/terms/${slug}`)) {
+    throw new Error(`${term.word} sitemap URL is missing`);
+  }
 }
 
 const redirects = read("_redirects");
