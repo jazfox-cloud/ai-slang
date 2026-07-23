@@ -1407,5 +1407,194 @@ export const slangs = [
         url: "https://github.com/openai/skills"
       }
     ]
+  },
+  {
+    word: "AI Crawler",
+    definition: "A bot that visits websites so an AI company, search product, or assistant can train models, build indexes, fetch answers, or inspect content for agent workflows.",
+    origin: "Moved from web-ops vocabulary into AI publisher discourse as site owners started separating ordinary search crawlers from bots used for training, AI answers, assistants, and paid-content negotiation.",
+    examples: ["The AI crawler hit the archive thousands of times and sent almost no readers back.", "We allow search indexing, but block AI crawlers that ignore robots.txt."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Current web and AI infrastructure term. Cloudflare provides the strongest stable operational references; the entry treats it as a class of bot behavior, not one company's product label.",
+    sourceUrl: "https://developers.cloudflare.com/ai-crawl-control/features/manage-ai-crawlers/",
+    lastChecked: "2026-07-23",
+    plainEnglish: "An AI crawler is a web crawler with an AI-related purpose. The important distinction is not just that it downloads pages, but whether it is doing so for model training, AI search answers, assistant retrieval, or another AI system.",
+    relatedTerms: ["Google Zero", "AI Content Disclosure", "Slop", "GEO", "Synthetic Data", "RAG"],
+    seoTitle: "AI Crawler Meaning",
+    seoDescription: "AI crawler meaning: a bot that accesses websites for AI training, search answers, assistants, retrieval, or other AI systems.",
+    pageHeading: "AI Crawler Meaning",
+    extraSections: [
+      {
+        heading: "Why publishers care about AI crawlers",
+        bullets: [
+          "They can consume large amounts of content without sending traditional search referral traffic.",
+          "Their purpose may be training, AI search, assistant retrieval, scraping, archiving, or mixed use.",
+          "Some site owners want crawler-by-crawler choices instead of a single allow-or-block rule.",
+          "Crawler behavior can affect bandwidth, licensing strategy, content visibility, and robots.txt policy."
+        ]
+      },
+      {
+        heading: "AI crawler versus search crawler",
+        paragraphs: [
+          "A search crawler traditionally indexes pages so users can find and click through to websites. An AI crawler may still support discovery, but it may also feed model training, answer generation, or agent retrieval where the user never visits the source page.",
+          "That is why the phrase often appears in the same conversations as AI search, publisher traffic, content licensing, robots.txt, and pay-per-crawl experiments."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is an AI crawler?",
+        answer: "An AI crawler is a web bot that accesses pages for AI-related uses such as model training, retrieval, AI search answers, assistant browsing, or content indexing."
+      },
+      {
+        question: "Is an AI crawler the same as a search crawler?",
+        answer: "Not always. Some AI crawlers support search-like discovery, but others are used for training data, AI answer generation, assistant retrieval, or agent workflows."
+      },
+      {
+        question: "Why do websites block AI crawlers?",
+        answer: "Sites may block them to protect licensing rights, reduce scraping load, enforce robots.txt preferences, or avoid giving content to systems that do not send meaningful referral traffic."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Cloudflare docs: Manage AI crawlers",
+        url: "https://developers.cloudflare.com/ai-crawl-control/features/manage-ai-crawlers/"
+      },
+      {
+        label: "Cloudflare Learning Center: How to block AI crawlers",
+        url: "https://www.cloudflare.com/learning/ai/how-to-block-ai-crawlers/"
+      },
+      {
+        label: "Cloudflare Blog: Introducing AI Crawl Control",
+        url: "https://blog.cloudflare.com/introducing-ai-crawl-control/"
+      }
+    ]
+  },
+  {
+    word: "Browser Agent",
+    definition: "An AI agent that can use a web browser: reading pages, clicking buttons, filling forms, navigating flows, and sometimes handing control back before risky actions.",
+    origin: "Became common builder shorthand as browser-use frameworks, OpenAI Operator and ChatGPT agent, Brave AI browsing, and other agentic browsing products made web automation a visible AI product category.",
+    examples: ["The browser agent booked the appointment but stopped before payment approval.", "A browser agent is powerful until a hidden prompt on a web page tells it to leak the cart."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Current product and builder term for agentic browser automation. OpenAI and Brave provide stable product references; the entry avoids claiming a single origin because several vendors use related naming.",
+    sourceUrl: "https://help.openai.com/en/articles/11794368",
+    lastChecked: "2026-07-23",
+    plainEnglish: "A browser agent is an AI system with browser access. Instead of only answering in chat, it can observe a web page and choose actions such as clicking, typing, scrolling, searching, and completing multi-step tasks.",
+    relatedTerms: ["Computer Use", "Workspace Agent", "Agentic", "Prompt Injection", "Tool Calling", "Subagent"],
+    seoTitle: "Browser Agent Meaning in AI",
+    seoDescription: "Browser agent meaning in AI: an agent that can operate a web browser, navigate sites, fill forms, and complete web tasks with human oversight.",
+    pageHeading: "Browser Agent Meaning",
+    extraSections: [
+      {
+        heading: "What browser agents can do",
+        bullets: [
+          "Open pages, read visible content, and follow links.",
+          "Click buttons, fill forms, search, scroll, and download or upload files when allowed.",
+          "Use logged-in sessions or connected tools when the product supports that access.",
+          "Pause for human review before payments, purchases, sensitive messages, or other high-impact actions."
+        ]
+      },
+      {
+        heading: "Why browser agents are risky",
+        paragraphs: [
+          "The browser is full of untrusted content, including hidden instructions, misleading UI, ads, forms, and pages that may be trying to influence the agent. That makes indirect prompt injection a core security problem.",
+          "Good browser-agent design needs isolation, permission boundaries, audit trails, and clear handoff moments instead of treating web browsing as a harmless chat feature."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is a browser agent?",
+        answer: "A browser agent is an AI agent that can operate a web browser by reading page content and taking actions such as clicking, typing, scrolling, and navigating multi-step workflows."
+      },
+      {
+        question: "Is a browser agent the same as an AI browser?",
+        answer: "Not exactly. An AI browser may be a consumer browser with AI features, while a browser agent specifically means the AI can act through a browser interface to complete tasks."
+      },
+      {
+        question: "What is the main security risk with browser agents?",
+        answer: "A major risk is indirect prompt injection, where instructions hidden in web content influence the agent while it is acting inside a user's browsing session."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI Help: ChatGPT agent release notes",
+        url: "https://help.openai.com/en/articles/11794368"
+      },
+      {
+        label: "Brave: AI browsing now available for early testing",
+        url: "https://brave.com/blog/ai-browsing/"
+      },
+      {
+        label: "Brave: Security and privacy in agentic browsing",
+        url: "https://brave.com/series/security-privacy-in-agentic-browsing/"
+      }
+    ]
+  },
+  {
+    word: "Agent Sprawl",
+    definition: "The enterprise mess that appears when teams create or buy AI agents faster than the organization can inventory, govern, secure, monitor, or retire them.",
+    origin: "Adapted from SaaS sprawl and shadow IT language as companies started deploying agentic AI across departments without a shared operating model.",
+    examples: ["We do not have an agent strategy; we have agent sprawl with Slack notifications.", "Agent sprawl is when nobody knows which bot touched the customer record."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Enterprise AI governance term with multiple stable industry references. IBM gives the cleanest general definition; AWS and Okta discuss the same risk pattern from governance and identity angles.",
+    sourceUrl: "https://www.ibm.com/think/topics/ai-agent-sprawl",
+    lastChecked: "2026-07-23",
+    plainEnglish: "Agent sprawl means an organization has too many disconnected AI agents and not enough visibility. The risk is not only duplication; it is unclear ownership, permissions, cost, data access, and incident response.",
+    relatedTerms: ["Agent Washing", "Shadow AI", "Workspace Agent", "Agent Observability", "A2A", "Agent Skills"],
+    seoTitle: "Agent Sprawl Meaning in AI",
+    seoDescription: "Agent sprawl meaning in AI: uncontrolled growth of disconnected AI agents across teams without inventory, governance, security, or clear ownership.",
+    pageHeading: "Agent Sprawl Meaning",
+    extraSections: [
+      {
+        heading: "Signs of agent sprawl",
+        bullets: [
+          "Different teams build agents for similar workflows without shared inventory.",
+          "Agents have unclear owners, permissions, logs, or retirement plans.",
+          "Costs are split across teams, making total usage hard to see.",
+          "Incidents are hard to investigate because no one knows which agent had access or took an action."
+        ]
+      },
+      {
+        heading: "Agent sprawl versus shadow AI",
+        paragraphs: [
+          "Shadow AI is unauthorized AI use. Agent sprawl can include authorized agents too; the problem is that the agent estate grows faster than governance, coordination, and observability.",
+          "That distinction matters because blocking only unsanctioned tools does not fix a sanctioned but fragmented agent ecosystem."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is agent sprawl?",
+        answer: "Agent sprawl is the uncontrolled spread of AI agents across an organization without centralized inventory, governance, ownership, security controls, or lifecycle management."
+      },
+      {
+        question: "How is agent sprawl different from shadow AI?",
+        answer: "Shadow AI focuses on unauthorized AI use. Agent sprawl includes the broader operational problem of many disconnected agents, even when some are officially approved."
+      },
+      {
+        question: "Why is agent sprawl risky?",
+        answer: "It can create duplicated work, hidden costs, overbroad permissions, conflicting actions, unclear accountability, and slower incident response."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "IBM Think: What is AI agent sprawl?",
+        url: "https://www.ibm.com/think/topics/ai-agent-sprawl"
+      },
+      {
+        label: "AWS: Managing AI agent sprawl across business units",
+        url: "https://aws.amazon.com/blogs/industries/managing-ai-agent-sprawl-across-business-units/"
+      },
+      {
+        label: "Okta: What is agent sprawl?",
+        url: "https://www.okta.com/en-au/identity-101/what-is-agent-sprawl/"
+      }
+    ]
   }
 ];
