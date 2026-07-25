@@ -1898,4 +1898,229 @@ export const slangs = [
       }
     ]
   }
+,
+  {
+    word: "Mixture of Experts (MoE)",
+    definition: "A neural network architecture that splits computation across many specialized sub-models (experts) and routes each input to only a subset of them, so total parameter count can grow without making every forward pass equally expensive.",
+    origin: "Grew out of the original Jacobs, Jordan, Nowlan and Hinton adaptive mixtures of local experts idea and was scaled into modern language models by Shazeer's sparsely-gated MoE work and Google's Switch Transformer. Today the pattern sits behind several well-known frontier and open-weight models.",
+    examples: ["The new flagship is a mixture of experts with eight active experts per token.", "MoE lets a model have hundreds of billions of parameters without paying for all of them on every step."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Architectural pattern with multiple stable paper references. Google's Switch Transformer (Fedus, Zoph, Shazeer) is the clearest canonical citation for modern sparsely-gated MoE language models; Shazeer's sparsely-gated mixture-of-experts layer paper is the earlier conceptual reference.",
+    sourceUrl: "https://arxiv.org/abs/2101.03961",
+    lastChecked: "2026-07-25",
+    plainEnglish: "Instead of one giant network doing all the work, the model is split into many smaller specialist networks, and only a few of them run on any given input. That lets the total model be much larger while keeping the per-step compute cost closer to a smaller model.",
+    relatedTerms: ["Frontier Model", "Open-Weight AI", "Reasoning Model", "GPU Rich / GPU Poor", "Speculative Decoding", "Synthetic Data"],
+    seoTitle: "Mixture of Experts (MoE) Meaning in Modern LLMs",
+    seoDescription: "Mixture of Experts meaning in AI: an architecture that routes inputs to a subset of specialized sub-models so large LLMs stay cheaper per token.",
+    pageHeading: "Mixture of Experts (MoE) Meaning",
+    extraSections: [
+      {
+        heading: "How a mixture of experts works",
+        bullets: [
+          "The model has many expert sub-networks, but only a few are activated for any given token.",
+          "A learned router scores each token and decides which experts should handle it.",
+          "Active experts produce the output, and a combine step merges their predictions.",
+          "Training has to balance load across experts so the router does not collapse onto a few favorites."
+        ]
+      },
+      {
+        heading: "Why MoE matters for builders",
+        paragraphs: [
+          "MoE is one of the main reasons a modern frontier model can advertise a very large parameter count while still running at usable speeds. The hardware cost is closer to the active parameter count than the total parameter count, even though the full model is what gets loaded into memory.",
+          "For builders, the practical question is what the model exposes: the hosted API usually only shows total parameter count, active parameter count, and context window, not the routing behavior. Open-weight MoE releases also require enough VRAM to hold every expert even if only a few run per token."
+        ]
+      },
+      {
+        heading: "MoE versus a dense model",
+        paragraphs: [
+          "A dense model uses every parameter on every token. A mixture of experts keeps a large parameter pool in memory but only spends compute on a small subset per token. The trade is memory footprint versus per-step cost, and the result usually shows up as higher total parameter counts with similar or faster inference latency.",
+          "It is not a free lunch: MoE models are harder to fine-tune, can be less stable during training, and may behave unevenly on niche tasks if some experts are underused."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is a Mixture of Experts model?",
+        answer: "A Mixture of Experts (MoE) model is a neural network that splits its capacity into many specialist sub-models and routes each input to a small subset of them, so the total parameter count can be very large without paying for every parameter on every token."
+      },
+      {
+        question: "Why do modern LLMs use mixture of experts?",
+        answer: "MoE lets a model scale parameter count without scaling per-token compute cost the same way, which is why several frontier and open-weight LLMs use the pattern to balance quality with inference cost."
+      },
+      {
+        question: "Is MoE the same as an ensemble?",
+        answer: "No. Ensembles usually run several full models and average their outputs. MoE routes each input through only a few expert sub-networks inside one trained model, and the routing is learned rather than fixed."
+      },
+      {
+        question: "Does MoE save memory?",
+        answer: "Not necessarily. MoE saves per-token compute, but all experts still need to be loaded, so total memory footprint can be much higher than for a similarly priced dense model."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "arxiv: Switch Transformers (Fedus, Zoph, Shazeer, 2021)",
+        url: "https://arxiv.org/abs/2101.03961"
+      },
+      {
+        label: "arxiv: Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer (Shazeer et al., 2017)",
+        url: "https://arxiv.org/abs/1701.06538"
+      },
+      {
+        label: "Google Research blog: Switch Transformer",
+        url: "https://research.google/blog/switch-transformer-scaling-trillion-parameter-models-with-google/"
+      }
+    ]
+  },
+  {
+    word: "Constitutional AI",
+    definition: "Constitutional AI is a training method that uses a written set of principles (a constitution) to have one AI model critique and revise another model's outputs, then applies reinforcement learning from AI feedback rather than from human feedback alone.",
+    origin: "Introduced in Anthropic's 2022 Constitutional AI paper. The framing aimed to scale helpful-harmless training beyond costly human-labelled preference data by letting the model judge its own drafts against explicit principles, then learning from AI-generated preference rankings.",
+    examples: ["The lab trained its assistant with constitutional AI so the model could revise harmful responses using a written ruleset.", "Constitutional AI does not remove the need for red teaming; it changes what the red team is checking."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Originated as an Anthropic research project. The 2022 Constitutional AI paper (Bai et al.) is the canonical reference; Anthropic's later public material discusses the approach as part of how Claude is trained.",
+    sourceUrl: "https://arxiv.org/abs/2212.08073",
+    lastChecked: "2026-07-25",
+    plainEnglish: "The model is given a list of principles, then asked to rewrite its own draft so the draft follows the principles. Once enough of that self-revision has happened, the team trains on AI-generated feedback rankings so the rule-following behavior sticks.",
+    relatedTerms: ["RLHF'd to Death", "Alignment", "System Prompt", "Reasoning Model", "Hallucination", "Agent Skills"],
+    seoTitle: "Constitutional AI Meaning: Training With a Written Ruleset",
+    seoDescription: "Constitutional AI meaning: Anthropic's training method that uses a written principles list, model self-critique, and reinforcement learning from AI feedback.",
+    pageHeading: "Constitutional AI Meaning",
+    extraSections: [
+      {
+        heading: "How constitutional AI works",
+        bullets: [
+          "A constitution is written: a list of principles the model is supposed to follow.",
+          "The model is asked to critique its own draft against the constitution and produce a revised response.",
+          "The critiques and revisions are used to create AI-generated preference data.",
+          "Reinforcement learning from AI feedback (RLAIF) trains the model on those preferences."
+        ]
+      },
+      {
+        heading: "Constitutional AI versus RLHF",
+        paragraphs: [
+          "Classical RLHF depends on humans writing preference labels for many model outputs. Constitutional AI swaps part of that human-labelling step for AI-generated feedback guided by a written principles list.",
+          "The trade is scale versus trust in the principles: AI feedback is cheaper to produce, but the principles themselves are still chosen by people, and the model can only critique what it is able to articulate."
+        ]
+      },
+      {
+        heading: "What constitutional AI is not",
+        bullets: [
+          "It is not a single universal constitution; Anthropic's constitution is one example of how such a principles list can be written.",
+          "It is not a substitute for red teaming, safety evaluation, or content policy review.",
+          "It is not the same as asking for a system prompt at inference time; the constitution shapes training behavior, not just one conversation.",
+          "It does not by itself guarantee value alignment, only that the model is more consistent with the listed principles during training."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is Constitutional AI?",
+        answer: "Constitutional AI is a training method introduced by Anthropic in which a model critiques and revises its own outputs against a written set of principles, then is fine-tuned with reinforcement learning from AI feedback."
+      },
+      {
+        question: "How is Constitutional AI different from RLHF?",
+        answer: "Both shape model behavior from preference data, but RLHF uses human-written preference labels, while Constitutional AI uses AI-generated preferences guided by a written principles list."
+      },
+      {
+        question: "Does Constitutional AI remove the need for human feedback?",
+        answer: "No. It reduces the volume of preference labels humans must write, but people still choose the constitution, the training pipeline, and the safety evaluations."
+      },
+      {
+        question: "Is Constitutional AI only used by Anthropic?",
+        answer: "The original paper is from Anthropic, but the broader idea of model self-critique guided by explicit rules has influenced other alignment research and product systems."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "arxiv: Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)",
+        url: "https://arxiv.org/abs/2212.08073"
+      },
+      {
+        label: "Anthropic: Core Views on AI Safety",
+        url: "https://www.anthropic.com/news/core-views-on-ai-safety"
+      },
+      {
+        label: "Anthropic: Claude's Character",
+        url: "https://www.anthropic.com/news/claudes-character"
+      }
+    ]
+  },
+  {
+    word: "Direct Preference Optimization (DPO)",
+    definition: "Direct Preference Optimization, or DPO, is a fine-tuning method that trains a language model to prefer one response over another using paired-preference data, without first training a separate reward model.",
+    origin: "Proposed by Stanford researchers Rafailov et al. in 2023 as a simpler alternative to the typical RLHF pipeline. Instead of fitting a separate reward model and then running PPO against it, DPO optimizes the policy directly from pairwise human-preference data using a closed-form objective.",
+    examples: ["We swapped the RLHF step for DPO and kept the preference dataset we already had.", "DPO works well when you have ranked pairs and want to skip the separate reward-model stage."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "paper",
+    sourceNote: "Active research and engineering area. The 2023 Rafailov et al. paper is the canonical reference; open implementations and follow-up variants have made DPO a standard alternative to PPO-based RLHF in many fine-tuning pipelines.",
+    sourceUrl: "https://arxiv.org/abs/2305.18290",
+    lastChecked: "2026-07-25",
+    plainEnglish: "DPO is a shortcut around the usual RLHF pipeline. You give the model pairs of responses marked good or bad, and it learns directly from that ranking instead of going through a separate reward model and a reinforcement-learning loop.",
+    relatedTerms: ["RLHF'd to Death", "Alignment", "Reasoning Model", "Constitutional AI", "Synthetic Data", "LLM-as-a-Judge"],
+    seoTitle: "Direct Preference Optimization (DPO) Meaning",
+    seoDescription: "Direct Preference Optimization (DPO) meaning in AI: a fine-tuning method that trains on preference pairs without a separate reward model.",
+    pageHeading: "Direct Preference Optimization (DPO) Meaning",
+    extraSections: [
+      {
+        heading: "How DPO works",
+        bullets: [
+          "Start with a paired-preference dataset: for each prompt, two model responses plus a label saying which one humans preferred.",
+          "Define a single objective that pulls the policy toward the preferred response and away from the rejected response.",
+          "Optimize that objective directly on the policy instead of training a separate reward model.",
+          "Skip the PPO reinforcement-learning loop that classic RLHF pipelines depend on."
+        ]
+      },
+      {
+        heading: "DPO versus RLHF",
+        paragraphs: [
+          "Classical RLHF fits a reward model on the preference data, then runs reinforcement learning (often PPO) against that reward model. DPO argues that the same preference signal can update the policy directly with a simpler objective.",
+          "In practice that means fewer moving parts: one training stage instead of two, no separate reward model to maintain, and less infrastructure for sampling and KL control. The trade is flexibility, because DPO bakes the preference objective directly into the policy update."
+        ]
+      },
+      {
+        heading: "Where DPO shows up",
+        paragraphs: [
+          "Open-source fine-tuning pipelines use DPO for chat-style alignment, tone and style tuning, safety rewrites, and refusal shaping. It is also used to teach a model to prefer one tool call or reasoning style over another when builders have a small set of ranked examples.",
+          "Several follow-up methods (such as IPO, KTO, and ORPO) try to fix edge cases where DPO overfits to the preference pairs or struggles with very imbalanced data, so DPO is best read as the starting point of a family rather than the only option."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is Direct Preference Optimization (DPO)?",
+        answer: "Direct Preference Optimization is a fine-tuning method introduced by Rafailov et al. in 2023 that trains a language model on paired-preference data without first training a separate reward model."
+      },
+      {
+        question: "How is DPO different from RLHF?",
+        answer: "RLHF trains a separate reward model on preference data and then runs PPO against it. DPO skips the separate reward model and optimizes the policy directly from the same preference signal."
+      },
+      {
+        question: "What data does DPO need?",
+        answer: "DPO needs paired-preference data: for each prompt, two responses with a label saying which one is preferred."
+      },
+      {
+        question: "When is DPO a good choice?",
+        answer: "DPO is a good choice when you have ranked preference pairs and want a simpler fine-tuning pipeline than full RLHF, especially for chat-style alignment, tone, or refusal shaping."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "arxiv: Direct Preference Optimization (Rafailov et al., 2023)",
+        url: "https://arxiv.org/abs/2305.18290"
+      },
+      {
+        label: "Stanford CRFM: DPO project page",
+        url: "https://crfm.stanford.edu/2023/05/05/dpo.html"
+      },
+      {
+        label: "Hugging Face TRL: DPO Trainer documentation",
+        url: "https://huggingface.co/docs/trl/main/en/dpo_trainer"
+      }
+    ]
+  }
 ];

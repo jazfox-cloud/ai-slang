@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Constitutional AI Meaning: Training With a Written Ruleset</title>
+    <meta name="description" content="Constitutional AI meaning: Anthropic's training method that uses a written principles list, model self-critique, and reinforcement learning from AI feedback.">
+    <link rel="canonical" href="https://ai-slang.com/terms/constitutional-ai">
+    <meta property="og:title" content="Constitutional AI Meaning: Training With a Written Ruleset">
+    <meta property="og:description" content="Constitutional AI meaning: Anthropic's training method that uses a written principles list, model self-critique, and reinforcement learning from AI feedback.">
+    <meta property="og:url" content="https://ai-slang.com/terms/constitutional-ai">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Constitutional AI Meaning: Training With a Written Ruleset">
+    <meta name="twitter:description" content="Constitutional AI meaning: Anthropic's training method that uses a written principles list, model self-critique, and reinforcement learning from AI feedback.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Constitutional AI","description":"Constitutional AI is a training method that uses a written set of principles (a constitution) to have one AI model critique and revise another model's outputs, then applies reinforcement learning from AI feedback rather than from human feedback alone.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/constitutional-ai"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Constitutional AI?","acceptedAnswer":{"@type":"Answer","text":"Constitutional AI is a training method introduced by Anthropic in which a model critiques and revises its own outputs against a written set of principles, then is fine-tuned with reinforcement learning from AI feedback."}},{"@type":"Question","name":"How is Constitutional AI different from RLHF?","acceptedAnswer":{"@type":"Answer","text":"Both shape model behavior from preference data, but RLHF uses human-written preference labels, while Constitutional AI uses AI-generated preferences guided by a written principles list."}},{"@type":"Question","name":"Does Constitutional AI remove the need for human feedback?","acceptedAnswer":{"@type":"Answer","text":"No. It reduces the volume of preference labels humans must write, but people still choose the constitution, the training pipeline, and the safety evaluations."}},{"@type":"Question","name":"Is Constitutional AI only used by Anthropic?","acceptedAnswer":{"@type":"Answer","text":"The original paper is from Anthropic, but the broader idea of model self-critique guided by explicit rules has influenced other alignment research and product systems."}}]}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Constitutional AI Meaning</h1>
+        <p class="article-lead">Constitutional AI is a training method that uses a written set of principles (a constitution) to have one AI model critique and revise another model's outputs, then applies reinforcement learning from AI feedback rather than from human feedback alone.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Constitutional AI mean?</h2>
+          <p>Constitutional AI is a training method that uses a written set of principles (a constitution) to have one AI model critique and revise another model's outputs, then applies reinforcement learning from AI feedback rather than from human feedback alone.</p>
+          <p>The model is given a list of principles, then asked to rewrite its own draft so the draft follows the principles. Once enough of that self-revision has happened, the team trains on AI-generated feedback rankings so the rule-following behavior sticks.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Introduced in Anthropic's 2022 Constitutional AI paper. The framing aimed to scale helpful-harmless training beyond costly human-labelled preference data by letting the model judge its own drafts against explicit principles, then learning from AI-generated preference rankings.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-25.</p>
+          <p>Originated as an Anthropic research project. The 2022 Constitutional AI paper (Bai et al.) is the canonical reference; Anthropic's later public material discusses the approach as part of how Claude is trained.</p>
+          <p><a class="source-link" href="https://arxiv.org/abs/2212.08073" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>How constitutional AI works</h2>
+          <ul>
+            <li>A constitution is written: a list of principles the model is supposed to follow.</li>
+<li>The model is asked to critique its own draft against the constitution and produce a revised response.</li>
+<li>The critiques and revisions are used to create AI-generated preference data.</li>
+<li>Reinforcement learning from AI feedback (RLAIF) trains the model on those preferences.</li>
+          </ul>
+        </section>
+<section>
+          <h2>Constitutional AI versus RLHF</h2>
+          <p>Classical RLHF depends on humans writing preference labels for many model outputs. Constitutional AI swaps part of that human-labelling step for AI-generated feedback guided by a written principles list.</p>
+<p>The trade is scale versus trust in the principles: AI feedback is cheaper to produce, but the principles themselves are still chosen by people, and the model can only critique what it is able to articulate.</p>
+        </section>
+<section>
+          <h2>What constitutional AI is not</h2>
+          <ul>
+            <li>It is not a single universal constitution; Anthropic's constitution is one example of how such a principles list can be written.</li>
+<li>It is not a substitute for red teaming, safety evaluation, or content policy review.</li>
+<li>It is not the same as asking for a system prompt at inference time; the constitution shapes training behavior, not just one conversation.</li>
+<li>It does not by itself guarantee value alignment, only that the model is more consistent with the listed principles during training.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The lab trained its assistant with constitutional AI so the model could revise harmful responses using a written ruleset.</li>
+<li>Constitutional AI does not remove the need for red teaming; it changes what the red team is checking.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is Constitutional AI?</h3>
+            <p>Constitutional AI is a training method introduced by Anthropic in which a model critiques and revises its own outputs against a written set of principles, then is fine-tuned with reinforcement learning from AI feedback.</p>
+          </div>
+<div class="faq-item">
+            <h3>How is Constitutional AI different from RLHF?</h3>
+            <p>Both shape model behavior from preference data, but RLHF uses human-written preference labels, while Constitutional AI uses AI-generated preferences guided by a written principles list.</p>
+          </div>
+<div class="faq-item">
+            <h3>Does Constitutional AI remove the need for human feedback?</h3>
+            <p>No. It reduces the volume of preference labels humans must write, but people still choose the constitution, the training pipeline, and the safety evaluations.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is Constitutional AI only used by Anthropic?</h3>
+            <p>The original paper is from Anthropic, but the broader idea of model self-critique guided by explicit rules has influenced other alignment research and product systems.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://arxiv.org/abs/2212.08073" rel="noreferrer">arxiv: Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)</a></li>
+<li><a class="source-link" href="https://www.anthropic.com/news/core-views-on-ai-safety" rel="noreferrer">Anthropic: Core Views on AI Safety</a></li>
+<li><a class="source-link" href="https://www.anthropic.com/news/claudes-character" rel="noreferrer">Anthropic: Claude's Character</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/rlhf-d-to-death">RLHF'd to Death</a>
+<a href="/terms/alignment">Alignment</a>
+<a href="/terms/system-prompt">System Prompt</a>
+<a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/hallucination">Hallucination</a>
+<a href="/terms/agent-skills">Agent Skills</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
