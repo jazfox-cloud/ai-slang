@@ -546,7 +546,7 @@ export const slangs = [
     lastChecked: "2026-07-23",
     dateModified: "2026-07-23",
     plainEnglish: "GEO is the label people use for work intended to make a source legible and useful to AI systems that synthesize answers. Depending on the speaker, that may include content quality, source clarity, technical discoverability, measurement of citations, or brand representation.",
-    relatedTerms: ["AEO", "Google Zero", "AI Crawler", "RAG", "Context Engineering", "ChatGPT Ads"],
+    relatedTerms: ["AEO", "LLM Discoverability", "Google Zero", "AI Crawler", "RAG", "Context Engineering"],
     seoTitle: "GEO Meaning: Generative Engine Optimization Explained",
     seoDescription: "GEO means Generative Engine Optimization. Learn its research origin, how it differs from SEO and AEO, and why AI visibility is never guaranteed.",
     pageHeading: "What Is Generative Engine Optimization (GEO)?",
@@ -654,7 +654,7 @@ export const slangs = [
     lastChecked: "2026-07-23",
     dateModified: "2026-07-23",
     plainEnglish: "AEO is a name for presenting accurate, well-supported information so an answer system can understand and use it directly. It is an optimization goal, not a special markup or a promise that an assistant will quote you.",
-    relatedTerms: ["GEO", "Google Zero", "AI Crawler", "RAG", "Context Engineering", "ChatGPT Ads"],
+    relatedTerms: ["GEO", "LLM Discoverability", "Google Zero", "AI Crawler", "RAG", "Context Engineering"],
     seoTitle: "AEO Meaning: Answer Engine Optimization Explained",
     seoDescription: "AEO means Answer Engine Optimization. Learn how the term relates to SEO and GEO, where definitions overlap, and why direct-answer visibility is not guaranteed.",
     pageHeading: "What Is Answer Engine Optimization (AEO)?",
@@ -847,6 +847,199 @@ export const slangs = [
       {
         label: "OpenAI: Ad policies",
         url: "https://openai.com/policies/ad-policies/"
+      }
+    ]
+  },
+  {
+    word: "Claude Opus 5",
+    definition: "Claude Opus 5 is Anthropic's Opus-class Claude model released on July 24, 2026, used for complex agentic coding, enterprise work, and other high-difficulty AI tasks.",
+    origin: "Anthropic announced Claude Opus 5 on July 24, 2026. The name entered industry discussion immediately because teams comparing Claude model versions had to distinguish the new Opus-class model from Claude the product, older Opus releases, and other frontier models.",
+    examples: ["We are testing Claude Opus 5 for the gnarly migration, but keeping Sonnet for cheaper everyday drafting.", "When someone says Opus 5 in this thread, they mean the model, not the Claude subscription plan."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Official Anthropic product term. Pricing, availability, safeguards, and model IDs are dynamic product facts, so this entry uses Anthropic's July 24, 2026 announcement and current Claude Platform documentation as the baseline.",
+    sourceUrl: "https://www.anthropic.com/news/claude-opus-5",
+    lastChecked: "2026-07-26",
+    dateModified: "2026-07-26",
+    plainEnglish: "Claude Opus 5 is the model name people use when they are talking about Anthropic's high-capability Opus tier in the Claude family. It is not a separate Claude app plan, not a pricing calculator, and not proof that one model wins every possible benchmark.",
+    relatedTerms: ["Frontier Model", "Reasoning Model", "Agentic", "Context Engineering", "Tool Calling", "Eval"],
+    seoTitle: "What Is Claude Opus 5? Anthropic's Opus Model Explained",
+    seoDescription: "What is Claude Opus 5? A plain-English explanation of Anthropic's Opus-class model, release date, API availability, pricing context, and naming.",
+    pageHeading: "What Is Claude Opus 5?",
+    extraSections: [
+      {
+        heading: "Why the name is being discussed",
+        paragraphs: [
+          "New model releases create migration questions: whether a team should move from an older Opus model, which model ID belongs in an API call, and whether the price-performance tradeoff fits the workload.",
+          "Searches around Claude Opus 5 often include pricing, API, coding, comparison, and availability intent. Those are reasonable questions, but the useful definition starts with the name: Claude is the product and model family, Opus is the higher-capability model class, and 5 is the current generation label."
+        ]
+      },
+      {
+        heading: "Opus, Sonnet, Haiku, Fable, and Mythos",
+        paragraphs: [
+          "Anthropic uses model-family names to signal different positions in the Claude lineup. Opus 5 is described in current Claude Platform documentation as suited for complex agentic coding and enterprise work. Sonnet 5 is positioned as a faster speed-and-intelligence balance, while Haiku 4.5 is the fastest listed model with near-frontier intelligence.",
+          "Fable 5 and Mythos 5 sit above Opus in Anthropic's current model hierarchy. Fable is generally available, while Mythos is limited availability. That naming tells you product positioning, not a public map of internal architecture."
+        ]
+      },
+      {
+        heading: "Claude Opus 5 versus Opus 4.8",
+        paragraphs: [
+          "Anthropic says Opus 5 provides improved performance for the same base API price as Opus 4.8 and highlights gains in coding, knowledge work, scientific research, visual outputs, alignment, and cost-effectiveness. The company also says Opus 5 remains behind Mythos 5 on some risky dual-use areas such as offensive cybersecurity.",
+          "That does not mean Opus 5 is automatically better for every prompt, product, latency target, budget, or safety policy. Comparisons depend on the task, effort setting, version, harness, refusal behavior, and cost model."
+        ]
+      },
+      {
+        heading: "Pricing and availability",
+        paragraphs: [
+          "Last checked: 2026-07-26. Anthropic's launch page and Claude Platform documentation list Claude Opus 5 at $5 per million input tokens and $25 per million output tokens. The documented Claude API ID is claude-opus-5.",
+          "Anthropic says Opus 5 is available on Claude surfaces including Claude.ai, Claude Code, Claude Cowork, and the Claude Platform. Current documentation also lists availability through the Claude API, Amazon Bedrock, Claude Platform on AWS, Google Cloud, and Microsoft Foundry. Availability can vary by account, region, platform, and policy setting, so Anthropic's docs remain the source of truth."
+        ]
+      },
+      {
+        heading: "Common usage",
+        bullets: [
+          "Claude Opus 5 usually means the specific Anthropic model.",
+          "Opus 5 is a shorter informal form of the same model name.",
+          "Claude Opus can mean the Opus model class generally, so add the version number when precision matters.",
+          "Claude 5 is looser and can be ambiguous because Anthropic has multiple Claude 5-era model names."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Is Claude Opus 5 a new model?",
+        answer: "Yes. Anthropic officially announced Claude Opus 5 on July 24, 2026."
+      },
+      {
+        question: "Is Claude Opus 5 the same as Claude 5?",
+        answer: "Not exactly. Claude Opus 5 is a specific Opus-class model. Claude 5 is an informal phrase that may refer broadly to the Claude 5 generation and can be ambiguous."
+      },
+      {
+        question: "Is Claude Opus 5 available through the API?",
+        answer: "Yes. Anthropic's current Claude Platform documentation lists the Claude API ID as claude-opus-5."
+      },
+      {
+        question: "Is Opus 5 replacing Opus 4.8?",
+        answer: "It is the newer Opus model for many current uses, but replacement depends on the surface, account, migration plan, safeguards, and any provider deprecation schedule."
+      },
+      {
+        question: "Is Claude Opus 5 better than GPT-5?",
+        answer: "There is no single neutral answer for all work. Results depend on the task, model version, evaluation method, cost, latency, tool setup, and safety behavior, so treat absolute winner claims skeptically."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Anthropic: Introducing Claude Opus 5",
+        url: "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+        label: "Claude Platform Docs: Models overview",
+        url: "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      {
+        label: "Claude Platform Docs: Pricing",
+        url: "https://platform.claude.com/docs/en/about-claude/pricing"
+      }
+    ]
+  },
+  {
+    word: "LLM Discoverability",
+    definition: "LLM discoverability is the industry phrase for whether a website, brand, product, or piece of content can be found, understood, and possibly cited by large language models and AI search systems.",
+    origin: "The phrase grew out of overlapping SEO, GEO, AEO, AI visibility, and ChatGPT citation discussions as companies started asking whether answer systems could see and represent their public information.",
+    examples: ["The founder framed the problem as LLM discoverability: do AI assistants even know the product exists?", "The content team improved crawlable documentation, but did not promise that LLM discoverability would turn into ChatGPT citations."],
+    aiGrade: 3,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Industry usage, not a standards-body term. Different practitioners use LLM discoverability broadly, so this entry keeps a firm boundary between crawlability, indexing, model training data, retrieval, citations, and recommendations.",
+    sourceUrl: "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    lastChecked: "2026-07-26",
+    dateModified: "2026-07-26",
+    plainEnglish: "LLM discoverability asks whether an AI system can find and make sense of your information. It does not mean the system will quote you, rank you, recommend you, or send traffic.",
+    relatedTerms: ["GEO", "AEO", "AI Crawler", "Google Zero", "RAG", "Context Engineering"],
+    seoTitle: "What Is LLM Discoverability?",
+    seoDescription: "LLM discoverability meaning: how brands and pages may be found, understood, or cited by AI search and answer systems without guaranteed inclusion.",
+    pageHeading: "What Is LLM Discoverability?",
+    extraSections: [
+      {
+        heading: "Why the phrase started spreading",
+        paragraphs: [
+          "As people began using ChatGPT, Perplexity, Google AI features, and other answer systems for research, brands noticed that ordinary search rankings did not always translate into AI mentions or citations.",
+          "LLM discoverability became a convenient umbrella for that anxiety. It is useful language, but it is still industry usage rather than a unified technical standard."
+        ]
+      },
+      {
+        heading: "How it relates to SEO, GEO, and AEO",
+        paragraphs: [
+          "SEO is still about being crawlable, indexable, relevant, and useful in conventional search. GEO focuses on representation inside generated answers. AEO focuses on being useful to systems that produce direct answers. LLM discoverability overlaps with all three, but it usually starts one step earlier: can the AI system or its retrieval layer find and understand the source at all?",
+          "AI visibility and ChatGPT citations are outcomes people may measure after discovery. Visibility can mean a mention, summary, source panel, referral visit, or citation, while a ChatGPT citation is specifically a source link shown in a response that used search."
+        ]
+      },
+      {
+        heading: "Important boundaries",
+        bullets: [
+          "LLM discoverability is not a formal standard with one agreed checklist.",
+          "Being discoverable does not guarantee being cited, recommended, ranked, or clicked.",
+          "Being indexed by a search engine does not guarantee inclusion in ChatGPT or another AI product's answer.",
+          "A model's training data, a search partner's index, a live retrieval result, and a cited source are different mechanisms.",
+          "No public directory lets every site submit itself directly to ChatGPT answers."
+        ]
+      },
+      {
+        heading: "Common use cases",
+        bullets: [
+          "A startup checking whether AI assistants know its brand, category, and positioning.",
+          "A content team making docs, comparison pages, and help content easier for AI search systems to parse.",
+          "A marketing team separating mentions, citations, rankings, referral traffic, and conversions instead of treating them as one metric.",
+          "An editorial team adding dates, primary sources, and clear definitions so answer systems have less ambiguity to compress."
+        ]
+      },
+      {
+        heading: "What get listed by ChatGPT really means",
+        paragraphs: [
+          "Get listed by ChatGPT is a fuzzy marketing phrase. ChatGPT search can use web search and show citations, and OpenAI says inclusion depends partly on allowing OAI-Searchbot to crawl the site. But that is not the same as submitting to a universal ChatGPT directory.",
+          "A page may be discoverable through public web indexing, third-party search data, training data, or live retrieval. Those paths differ, change over time, and do not create a promise that a checklist will place a site into an answer."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does LLM discoverability mean?",
+        answer: "LLM discoverability means whether an AI model or AI search system can find, understand, and potentially use information about a site, brand, product, or topic."
+      },
+      {
+        question: "Is LLM discoverability the same as GEO?",
+        answer: "No. GEO focuses on visibility or representation in generated answers. LLM discoverability is broader and can include the earlier question of whether the source can be found and interpreted at all."
+      },
+      {
+        question: "Can a website submit itself directly to ChatGPT?",
+        answer: "There is no universal public ChatGPT submission directory for guaranteed inclusion in answers. OpenAI says sites should allow OAI-Searchbot crawling for ChatGPT Search eligibility, but ranking and inclusion are not guaranteed."
+      },
+      {
+        question: "Does ranking on Google guarantee ChatGPT citations?",
+        answer: "No. Search ranking, indexing, retrieval, citation display, and answer generation are separate systems. A strong Google ranking can help discovery, but it does not guarantee a ChatGPT citation."
+      },
+      {
+        question: "How is LLM discoverability measured?",
+        answer: "It is usually measured with a mix of crawlability checks, AI answer testing, brand mentions, citations, referral traffic, source accuracy, and share of answer visibility. Those are proxy metrics, not a single official score."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI Help Center: ChatGPT Search",
+        url: "https://help.openai.com/en/articles/9237897-chatgpt-search"
+      },
+      {
+        label: "OpenAI: How ChatGPT and foundation models are developed",
+        url: "https://openai.com/policies/how-chatgpt-and-our-foundation-models-are-developed/"
+      },
+      {
+        label: "Google Search Central: AI features and your website",
+        url: "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        label: "Research paper: GEO: Generative Engine Optimization",
+        url: "https://arxiv.org/abs/2311.09735"
       }
     ]
   },

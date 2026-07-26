@@ -206,6 +206,34 @@ const opportunityTerms = [
       "not one universal public price",
       "Do ChatGPT Ads influence ChatGPT's answers?"
     ]
+  },
+  {
+    word: "Claude Opus 5",
+    file: "terms/claude-opus-5.html",
+    requirements: [
+      "What Is Claude Opus 5?",
+      "officially announced Claude Opus 5 on July 24, 2026",
+      "Claude Opus 5 versus Opus 4.8",
+      "Pricing and availability",
+      "Last checked: 2026-07-26",
+      "$5 per million input tokens and $25 per million output tokens",
+      "claude-opus-5",
+      "Is Claude Opus 5 the same as Claude 5?",
+      "Is Claude Opus 5 better than GPT-5?"
+    ]
+  },
+  {
+    word: "LLM Discoverability",
+    file: "terms/llm-discoverability.html",
+    requirements: [
+      "What Is LLM Discoverability?",
+      "industry usage rather than a unified technical standard",
+      "How it relates to SEO, GEO, and AEO",
+      "get listed by ChatGPT",
+      "There is no universal public ChatGPT submission directory",
+      "Being discoverable does not guarantee being cited",
+      "Does ranking on Google guarantee ChatGPT citations?"
+    ]
   }
 ];
 
