@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test-Time Compute Meaning in AI</title>
+    <meta name="description" content="Test-time compute meaning in AI: extra inference-time reasoning, sampling, search, or verification budget used to improve model answers.">
+    <link rel="canonical" href="https://ai-slang.com/terms/test-time-compute">
+    <meta property="og:title" content="Test-Time Compute Meaning in AI">
+    <meta property="og:description" content="Test-time compute meaning in AI: extra inference-time reasoning, sampling, search, or verification budget used to improve model answers.">
+    <meta property="og:url" content="https://ai-slang.com/terms/test-time-compute">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Test-Time Compute Meaning in AI">
+    <meta name="twitter:description" content="Test-time compute meaning in AI: extra inference-time reasoning, sampling, search, or verification budget used to improve model answers.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Test-Time Compute","description":"The extra thinking budget an AI system spends after the prompt arrives: more reasoning steps, search, sampling, verification, or tool use before it commits to an answer.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/test-time-compute"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is test-time compute?","acceptedAnswer":{"@type":"Answer","text":"Test-time compute is the compute an AI system spends during inference, after receiving a prompt, to reason, sample, verify, search, or call tools before returning an answer."}},{"@type":"Question","name":"Is test-time compute the same as training compute?","acceptedAnswer":{"@type":"Answer","text":"No. Training compute is used to create or fine-tune the model. Test-time compute is spent when the model is already deployed and working on a specific request."}},{"@type":"Question","name":"Why do reasoning models use more test-time compute?","acceptedAnswer":{"@type":"Answer","text":"Reasoning models often spend additional inference steps on hard tasks, which can improve answers but usually increases latency and cost."}}]}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Test-Time Compute Meaning</h1>
+        <p class="article-lead">The extra thinking budget an AI system spends after the prompt arrives: more reasoning steps, search, sampling, verification, or tool use before it commits to an answer.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Test-Time Compute mean?</h2>
+          <p>The extra thinking budget an AI system spends after the prompt arrives: more reasoning steps, search, sampling, verification, or tool use before it commits to an answer.</p>
+          <p>Test-time compute is the work a model or AI system does while answering, not while training. More budget can mean longer reasoning, multiple candidate answers, verification passes, or tool calls before the final response.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Moved from inference and reasoning research into builder vocabulary as teams learned that scaling compute during inference can improve hard-task performance without changing the model weights.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-27.</p>
+          <p>Research-backed inference-scaling term. The Snell et al. paper is a clean reference for the idea that extra compute at test time can be traded against model size on some tasks; current product usage is broader and provider-specific.</p>
+          <p><a class="source-link" href="https://arxiv.org/abs/2408.03314" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>Why test-time compute matters</h2>
+          <p>Training compute makes the model. Test-time compute is spent later, each time the model handles a task. That distinction matters because a system can sometimes improve reliability by working longer on the same prompt instead of requiring a larger model.</p>
+<p>For product builders, the trade is visible in latency and cost. More reasoning budget may improve math, coding, planning, or verification, but it can also slow the response and burn more tokens or tool calls.</p>
+        </section>
+<section>
+          <h2>Common forms</h2>
+          <ul>
+            <li>Generating several candidate answers and choosing the best one.</li>
+<li>Running a verifier, judge, or critic over a draft.</li>
+<li>Letting a reasoning model spend more steps before answering.</li>
+<li>Searching, calling tools, or retrieving evidence before final output.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The small model looked weak until we gave it more test-time compute and a verifier.</li>
+<li>Reasoning models are basically selling test-time compute as a product knob.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is test-time compute?</h3>
+            <p>Test-time compute is the compute an AI system spends during inference, after receiving a prompt, to reason, sample, verify, search, or call tools before returning an answer.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is test-time compute the same as training compute?</h3>
+            <p>No. Training compute is used to create or fine-tune the model. Test-time compute is spent when the model is already deployed and working on a specific request.</p>
+          </div>
+<div class="faq-item">
+            <h3>Why do reasoning models use more test-time compute?</h3>
+            <p>Reasoning models often spend additional inference steps on hard tasks, which can improve answers but usually increases latency and cost.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://arxiv.org/abs/2408.03314" rel="noreferrer">arxiv: Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a></li>
+<li><a class="source-link" href="https://openai.com/index/learning-to-reason-with-llms/" rel="noreferrer">OpenAI: Learning to reason with LLMs</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/cot">CoT</a>
+<a href="/terms/speculative-decoding">Speculative Decoding</a>
+<a href="/terms/prompt-caching">Prompt Caching</a>
+<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+<a href="/terms/eval">Eval</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

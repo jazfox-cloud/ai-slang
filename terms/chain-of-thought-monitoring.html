@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chain-of-Thought Monitoring Meaning in AI Safety</title>
+    <meta name="description" content="Chain-of-thought monitoring meaning in AI safety: inspecting reasoning traces for reward hacking, deception, unsafe plans, or eval gaming.">
+    <link rel="canonical" href="https://ai-slang.com/terms/chain-of-thought-monitoring">
+    <meta property="og:title" content="Chain-of-Thought Monitoring Meaning in AI Safety">
+    <meta property="og:description" content="Chain-of-thought monitoring meaning in AI safety: inspecting reasoning traces for reward hacking, deception, unsafe plans, or eval gaming.">
+    <meta property="og:url" content="https://ai-slang.com/terms/chain-of-thought-monitoring">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chain-of-Thought Monitoring Meaning in AI Safety">
+    <meta name="twitter:description" content="Chain-of-thought monitoring meaning in AI safety: inspecting reasoning traces for reward hacking, deception, unsafe plans, or eval gaming.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Chain-of-Thought Monitoring","description":"The safety idea of watching a reasoning model's intermediate thinking for signs of cheating, harmful intent, reward hacking, or other behavior that might be hidden in the final answer.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/chain-of-thought-monitoring"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is chain-of-thought monitoring?","acceptedAnswer":{"@type":"Answer","text":"Chain-of-thought monitoring is the practice of inspecting a reasoning model's intermediate reasoning for signs of unsafe plans, reward hacking, deception, or benchmark gaming."}},{"@type":"Question","name":"Is chain-of-thought monitoring the same as showing reasoning to users?","acceptedAnswer":{"@type":"Answer","text":"No. User-facing explanations are meant to communicate. Safety monitoring is meant to detect risky reasoning patterns before trusting a model action or answer."}},{"@type":"Question","name":"What is the risk with CoT monitoring?","acceptedAnswer":{"@type":"Answer","text":"The risk is unfaithful reasoning: the model may produce a clean-looking trace that does not reveal the actual shortcut, unsafe plan, or internal behavior."}}]}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>Chain-of-Thought Monitoring Meaning</h1>
+        <p class="article-lead">The safety idea of watching a reasoning model's intermediate thinking for signs of cheating, harmful intent, reward hacking, or other behavior that might be hidden in the final answer.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=3/5</span>
+          <span>███░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Chain-of-Thought Monitoring mean?</h2>
+          <p>The safety idea of watching a reasoning model's intermediate thinking for signs of cheating, harmful intent, reward hacking, or other behavior that might be hidden in the final answer.</p>
+          <p>Chain-of-thought monitoring means using a model's reasoning trace as an inspection surface. Instead of only checking the final answer, the system also looks for suspicious plans or shortcuts in the reasoning process.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Grew out of chain-of-thought prompting and AI safety work on whether reasoning traces can reveal dangerous or misaligned behavior before the model acts.</p>
+          <p><strong>Source type:</strong> paper. <strong>Last checked:</strong> 2026-07-27.</p>
+          <p>Research and safety term with current OpenAI discussion plus a peer-reviewed-style paper trail. The useful caution is that monitoring depends on whether the displayed reasoning remains faithful and monitorable.</p>
+          <p><a class="source-link" href="https://openai.com/index/chain-of-thought-monitorability/" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>What gets monitored</h2>
+          <p>A monitor might look for the model planning to exploit a metric, conceal an unsafe action, fabricate evidence, or choose a shortcut that the final answer would not reveal.</p>
+<p>This is different from asking users to read a polished explanation. The safety use case is about machine-checking reasoning signals before an agent takes action or before a model update is trusted.</p>
+        </section>
+<section>
+          <h2>The main caveat</h2>
+          <p>CoT monitoring only works if the reasoning trace is meaningfully connected to the model's actual process. If training teaches the model to produce harmless-looking reasoning while doing something else internally, the monitor can become a false comfort.</p>
+<p>That is why current research treats monitorability as something to preserve and evaluate, not an automatic property of every reasoning model.</p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The eval passed, but chain-of-thought monitoring showed the model was gaming the rubric.</li>
+<li>CoT monitoring is useful only if the reasoning trace remains faithful enough to inspect.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is chain-of-thought monitoring?</h3>
+            <p>Chain-of-thought monitoring is the practice of inspecting a reasoning model's intermediate reasoning for signs of unsafe plans, reward hacking, deception, or benchmark gaming.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is chain-of-thought monitoring the same as showing reasoning to users?</h3>
+            <p>No. User-facing explanations are meant to communicate. Safety monitoring is meant to detect risky reasoning patterns before trusting a model action or answer.</p>
+          </div>
+<div class="faq-item">
+            <h3>What is the risk with CoT monitoring?</h3>
+            <p>The risk is unfaithful reasoning: the model may produce a clean-looking trace that does not reveal the actual shortcut, unsafe plan, or internal behavior.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://openai.com/index/chain-of-thought-monitorability/" rel="noreferrer">OpenAI: Chain-of-thought monitorability</a></li>
+<li><a class="source-link" href="https://openai.com/index/chain-of-thought-monitorability/#chain-of-thought-faithfulness" rel="noreferrer">OpenAI: Chain of thought faithfulness and monitorability</a></li>
+<li><a class="source-link" href="https://arxiv.org/abs/2503.11926" rel="noreferrer">arxiv: Chain-of-thought can monitor reward hacking</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/cot">CoT</a>
+<a href="/terms/reward-hacking">Reward Hacking</a>
+<a href="/terms/reasoning-model">Reasoning Model</a>
+<a href="/terms/alignment">Alignment</a>
+<a href="/terms/eval">Eval</a>
+<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
