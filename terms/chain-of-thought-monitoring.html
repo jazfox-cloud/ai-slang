@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Chain-of-Thought Monitoring","description":"The safety idea of watching a reasoning model's intermediate thinking for signs of cheating, harmful intent, reward hacking, or other behavior that might be hidden in the final answer.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/chain-of-thought-monitoring"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is chain-of-thought monitoring?","acceptedAnswer":{"@type":"Answer","text":"Chain-of-thought monitoring is the practice of inspecting a reasoning model's intermediate reasoning for signs of unsafe plans, reward hacking, deception, or benchmark gaming."}},{"@type":"Question","name":"Is chain-of-thought monitoring the same as showing reasoning to users?","acceptedAnswer":{"@type":"Answer","text":"No. User-facing explanations are meant to communicate. Safety monitoring is meant to detect risky reasoning patterns before trusting a model action or answer."}},{"@type":"Question","name":"What is the risk with CoT monitoring?","acceptedAnswer":{"@type":"Answer","text":"The risk is unfaithful reasoning: the model may produce a clean-looking trace that does not reveal the actual shortcut, unsafe plan, or internal behavior."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -94,19 +95,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/cot">CoT</a>
-<a href="/terms/reward-hacking">Reward Hacking</a>
-<a href="/terms/reasoning-model">Reasoning Model</a>
-<a href="/terms/alignment">Alignment</a>
-<a href="/terms/eval">Eval</a>
-<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+            <a href="/terms/cot" data-slug="cot" data-analytics-placement="related_terms">CoT</a>
+<a href="/terms/reward-hacking" data-slug="reward-hacking" data-analytics-placement="related_terms">Reward Hacking</a>
+<a href="/terms/reasoning-model" data-slug="reasoning-model" data-analytics-placement="related_terms">Reasoning Model</a>
+<a href="/terms/alignment" data-slug="alignment" data-analytics-placement="related_terms">Alignment</a>
+<a href="/terms/eval" data-slug="eval" data-analytics-placement="related_terms">Eval</a>
+<a href="/terms/llm-as-a-judge" data-slug="llm-as-a-judge" data-analytics-placement="related_terms">LLM-as-a-Judge</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

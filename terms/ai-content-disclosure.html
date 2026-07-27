@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"AI Content Disclosure","description":"An AI content disclosure is a label or notice telling an audience that artificial intelligence was used to create or meaningfully modify content.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/ai-content-disclosure","dateModified":"2026-07-21"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI content disclosure?","acceptedAnswer":{"@type":"Answer","text":"It is a label or notice telling an audience that AI was used to create or meaningfully modify content."}},{"@type":"Question","name":"What do “Made with AI” and “AI-generated content” mean?","acceptedAnswer":{"@type":"Answer","text":"They generally signal that AI had a substantial role in creating the content. The exact scope depends on who applied the label, and it may include mixed human-and-AI workflows."}},{"@type":"Question","name":"Is “flag as AI” the same as adding an AI label?","acceptedAnswer":{"@type":"Answer","text":"No. Flagging usually sends a suspicion or policy concern for moderation, while adding an AI label creates a notice that viewers can see. A platform may connect the two processes, but they are not inherently the same."}},{"@type":"Question","name":"Does an AI flag prove that content was AI-generated?","acceptedAnswer":{"@type":"Answer","text":"No. A user flag is an allegation or review signal, and an automated detector can also be wrong. Confirmation requires stronger evidence or a platform decision based on its own policy and signals."}},{"@type":"Question","name":"Can metadata trigger a visible AI label?","acceptedAnswer":{"@type":"Answer","text":"Yes. A platform can read supported provenance metadata such as C2PA Content Credentials and use it as one input when applying a visible label, but metadata and the label remain different things."}},{"@type":"Question","name":"Is “AI-generated flag” a standard metadata field?","acceptedAnswer":{"@type":"Answer","text":"No. It is ambiguous informal wording. Stable technical names include C2PA Content Credentials, the “c2pa.ai-disclosure” assertion, and IPTC Digital Source Type values such as “TrainedAlgorithmicMedia”."}},{"@type":"Question","name":"Is disclosure the same as AI detection?","acceptedAnswer":{"@type":"Answer","text":"No. Disclosure provides information about the production process, while detection analyzes content and predicts whether AI was involved. A detector's result can be uncertain and is not the same as a creator's disclosure."}},{"@type":"Question","name":"Does an AI content disclosure mean the content is fake?","acceptedAnswer":{"@type":"Answer","text":"No. The label is a transparency signal about process, not an automatic judgment that the content is false, deceptive, or low quality."}},{"@type":"Question","name":"Are AI disclosure rules the same on every platform?","acceptedAnswer":{"@type":"Answer","text":"No. Platforms can define covered content, label wording, placement, and enforcement differently. Check the current guidance for the service where you publish."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -176,19 +177,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/slop">Slop</a>
-<a href="/terms/workslop">Workslop</a>
-<a href="/terms/synthetic-data">Synthetic Data</a>
-<a href="/terms/model-collapse">Model Collapse</a>
-<a href="/terms/hallucination">Hallucination</a>
-<a href="/terms/shadow-ai">Shadow AI</a>
+            <a href="/terms/slop" data-slug="slop" data-analytics-placement="related_terms">Slop</a>
+<a href="/terms/workslop" data-slug="workslop" data-analytics-placement="related_terms">Workslop</a>
+<a href="/terms/synthetic-data" data-slug="synthetic-data" data-analytics-placement="related_terms">Synthetic Data</a>
+<a href="/terms/model-collapse" data-slug="model-collapse" data-analytics-placement="related_terms">Model Collapse</a>
+<a href="/terms/hallucination" data-slug="hallucination" data-analytics-placement="related_terms">Hallucination</a>
+<a href="/terms/shadow-ai" data-slug="shadow-ai" data-analytics-placement="related_terms">Shadow AI</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

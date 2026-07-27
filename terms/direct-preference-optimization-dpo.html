@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Direct Preference Optimization (DPO)","description":"Direct Preference Optimization, or DPO, is a fine-tuning method that trains a language model to prefer one response over another using paired-preference data, without first training a separate reward model.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/direct-preference-optimization-dpo"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Direct Preference Optimization (DPO)?","acceptedAnswer":{"@type":"Answer","text":"Direct Preference Optimization is a fine-tuning method introduced by Rafailov et al. in 2023 that trains a language model on paired-preference data without first training a separate reward model."}},{"@type":"Question","name":"How is DPO different from RLHF?","acceptedAnswer":{"@type":"Answer","text":"RLHF trains a separate reward model on preference data and then runs PPO against it. DPO skips the separate reward model and optimizes the policy directly from the same preference signal."}},{"@type":"Question","name":"What data does DPO need?","acceptedAnswer":{"@type":"Answer","text":"DPO needs paired-preference data: for each prompt, two responses with a label saying which one is preferred."}},{"@type":"Question","name":"When is DPO a good choice?","acceptedAnswer":{"@type":"Answer","text":"DPO is a good choice when you have ranked preference pairs and want a simpler fine-tuning pipeline than full RLHF, especially for chat-style alignment, tone, or refusal shaping."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -107,19 +108,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/rlhf-d-to-death">RLHF'd to Death</a>
-<a href="/terms/alignment">Alignment</a>
-<a href="/terms/reasoning-model">Reasoning Model</a>
-<a href="/terms/constitutional-ai">Constitutional AI</a>
-<a href="/terms/synthetic-data">Synthetic Data</a>
-<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
+            <a href="/terms/rlhf-d-to-death" data-slug="rlhf-d-to-death" data-analytics-placement="related_terms">RLHF'd to Death</a>
+<a href="/terms/alignment" data-slug="alignment" data-analytics-placement="related_terms">Alignment</a>
+<a href="/terms/reasoning-model" data-slug="reasoning-model" data-analytics-placement="related_terms">Reasoning Model</a>
+<a href="/terms/constitutional-ai" data-slug="constitutional-ai" data-analytics-placement="related_terms">Constitutional AI</a>
+<a href="/terms/synthetic-data" data-slug="synthetic-data" data-analytics-placement="related_terms">Synthetic Data</a>
+<a href="/terms/llm-as-a-judge" data-slug="llm-as-a-judge" data-analytics-placement="related_terms">LLM-as-a-Judge</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

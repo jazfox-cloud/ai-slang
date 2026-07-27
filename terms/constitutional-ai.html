@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Constitutional AI","description":"Constitutional AI is a training method that uses a written set of principles (a constitution) to have one AI model critique and revise another model's outputs, then applies reinforcement learning from AI feedback rather than from human feedback alone.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/constitutional-ai"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Constitutional AI?","acceptedAnswer":{"@type":"Answer","text":"Constitutional AI is a training method introduced by Anthropic in which a model critiques and revises its own outputs against a written set of principles, then is fine-tuned with reinforcement learning from AI feedback."}},{"@type":"Question","name":"How is Constitutional AI different from RLHF?","acceptedAnswer":{"@type":"Answer","text":"Both shape model behavior from preference data, but RLHF uses human-written preference labels, while Constitutional AI uses AI-generated preferences guided by a written principles list."}},{"@type":"Question","name":"Does Constitutional AI remove the need for human feedback?","acceptedAnswer":{"@type":"Answer","text":"No. It reduces the volume of preference labels humans must write, but people still choose the constitution, the training pipeline, and the safety evaluations."}},{"@type":"Question","name":"Is Constitutional AI only used by Anthropic?","acceptedAnswer":{"@type":"Answer","text":"The original paper is from Anthropic, but the broader idea of model self-critique guided by explicit rules has influenced other alignment research and product systems."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -111,19 +112,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/rlhf-d-to-death">RLHF'd to Death</a>
-<a href="/terms/alignment">Alignment</a>
-<a href="/terms/system-prompt">System Prompt</a>
-<a href="/terms/reasoning-model">Reasoning Model</a>
-<a href="/terms/hallucination">Hallucination</a>
-<a href="/terms/agent-skills">Agent Skills</a>
+            <a href="/terms/rlhf-d-to-death" data-slug="rlhf-d-to-death" data-analytics-placement="related_terms">RLHF'd to Death</a>
+<a href="/terms/alignment" data-slug="alignment" data-analytics-placement="related_terms">Alignment</a>
+<a href="/terms/system-prompt" data-slug="system-prompt" data-analytics-placement="related_terms">System Prompt</a>
+<a href="/terms/reasoning-model" data-slug="reasoning-model" data-analytics-placement="related_terms">Reasoning Model</a>
+<a href="/terms/hallucination" data-slug="hallucination" data-analytics-placement="related_terms">Hallucination</a>
+<a href="/terms/agent-skills" data-slug="agent-skills" data-analytics-placement="related_terms">Agent Skills</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

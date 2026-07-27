@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Mixture of Experts (MoE)","description":"A neural network architecture that splits computation across many specialized sub-models (experts) and routes each input to only a subset of them, so total parameter count can grow without making every forward pass equally expensive.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/mixture-of-experts-moe"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Mixture of Experts model?","acceptedAnswer":{"@type":"Answer","text":"A Mixture of Experts (MoE) model is a neural network that splits its capacity into many specialist sub-models and routes each input to a small subset of them, so the total parameter count can be very large without paying for every parameter on every token."}},{"@type":"Question","name":"Why do modern LLMs use mixture of experts?","acceptedAnswer":{"@type":"Answer","text":"MoE lets a model scale parameter count without scaling per-token compute cost the same way, which is why several frontier and open-weight LLMs use the pattern to balance quality with inference cost."}},{"@type":"Question","name":"Is MoE the same as an ensemble?","acceptedAnswer":{"@type":"Answer","text":"No. Ensembles usually run several full models and average their outputs. MoE routes each input through only a few expert sub-networks inside one trained model, and the routing is learned rather than fixed."}},{"@type":"Question","name":"Does MoE save memory?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. MoE saves per-token compute, but all experts still need to be loaded, so total memory footprint can be much higher than for a similarly priced dense model."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -107,19 +108,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/frontier-model">Frontier Model</a>
-<a href="/terms/open-weight-ai">Open-Weight AI</a>
-<a href="/terms/reasoning-model">Reasoning Model</a>
-<a href="/terms/gpu-rich-gpu-poor">GPU Rich / GPU Poor</a>
-<a href="/terms/speculative-decoding">Speculative Decoding</a>
-<a href="/terms/synthetic-data">Synthetic Data</a>
+            <a href="/terms/frontier-model" data-slug="frontier-model" data-analytics-placement="related_terms">Frontier Model</a>
+<a href="/terms/open-weight-ai" data-slug="open-weight-ai" data-analytics-placement="related_terms">Open-Weight AI</a>
+<a href="/terms/reasoning-model" data-slug="reasoning-model" data-analytics-placement="related_terms">Reasoning Model</a>
+<a href="/terms/gpu-rich-gpu-poor" data-slug="gpu-rich-gpu-poor" data-analytics-placement="related_terms">GPU Rich / GPU Poor</a>
+<a href="/terms/speculative-decoding" data-slug="speculative-decoding" data-analytics-placement="related_terms">Speculative Decoding</a>
+<a href="/terms/synthetic-data" data-slug="synthetic-data" data-analytics-placement="related_terms">Synthetic Data</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Agent Skills","description":"Reusable instructions, scripts, references, and assets that teach an AI agent how to perform a specific workflow more consistently.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/agent-skills"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Agent Skills?","acceptedAnswer":{"@type":"Answer","text":"Agent Skills are reusable workflow packages that can include instructions, examples, scripts, references, and assets for an AI agent to use on a specific kind of task."}},{"@type":"Question","name":"Are skills the same as MCP tools?","acceptedAnswer":{"@type":"Answer","text":"No. MCP connects an agent to external tools or data. Skills provide procedural knowledge about how to do work, and they may tell the agent how to use available tools well."}},{"@type":"Question","name":"Why are Agent Skills useful?","acceptedAnswer":{"@type":"Answer","text":"They make recurring work more consistent, easier to share, and easier to audit than long prompts pasted by memory."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -98,19 +99,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/subagent">Subagent</a>
-<a href="/terms/workspace-agent">Workspace Agent</a>
-<a href="/terms/mcp">MCP</a>
-<a href="/terms/context-engineering">Context Engineering</a>
-<a href="/terms/tool-calling">Tool Calling</a>
-<a href="/terms/agentic">Agentic</a>
+            <a href="/terms/subagent" data-slug="subagent" data-analytics-placement="related_terms">Subagent</a>
+<a href="/terms/workspace-agent" data-slug="workspace-agent" data-analytics-placement="related_terms">Workspace Agent</a>
+<a href="/terms/mcp" data-slug="mcp" data-analytics-placement="related_terms">MCP</a>
+<a href="/terms/context-engineering" data-slug="context-engineering" data-analytics-placement="related_terms">Context Engineering</a>
+<a href="/terms/tool-calling" data-slug="tool-calling" data-analytics-placement="related_terms">Tool Calling</a>
+<a href="/terms/agentic" data-slug="agentic" data-analytics-placement="related_terms">Agentic</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

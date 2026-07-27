@@ -64,6 +64,7 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
     <meta name="twitter:image" content="${defaultSocialImage}">
     <link rel="stylesheet" href="/src/styles.css">
     ${jsonLd}
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -84,7 +85,7 @@ function pageShell({ title, description, canonical, body, jsonLd = "" }) {
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");
@@ -207,7 +208,7 @@ function termPage(item) {
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            ${relatedTermsFor(item).map((other) => `<a href="${termPath(other)}">${escapeHtml(other.word)}</a>`).join("\n")}
+            ${relatedTermsFor(item).map((other) => `<a href="${termPath(other)}" data-slug="${slugify(other.word)}" data-analytics-placement="related_terms">${escapeHtml(other.word)}</a>`).join("\n")}
           </div>
         </section>
       </article>`
@@ -301,7 +302,7 @@ function articlePage(article) {
         <section>
           <h2>Browse the dictionary</h2>
           <div class="related-grid">
-            ${slangs.slice(0, 12).map((item) => `<a href="${termPath(item)}">${escapeHtml(item.word)}</a>`).join("\n")}
+            ${slangs.slice(0, 12).map((item) => `<a href="${termPath(item)}" data-slug="${slugify(item.word)}" data-analytics-placement="article_dictionary">${escapeHtml(item.word)}</a>`).join("\n")}
           </div>
         </section>
       </article>`
@@ -312,14 +313,15 @@ const policyPages = [
   {
     file: "privacy.html",
     title: "Privacy Policy | AI Slang Hub",
-    description: "Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how hosting, analytics, and advertising providers may handle data.",
+    description: "Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how privacy choices control optional analytics.",
     h1: "Privacy Policy",
     lead: "AI Slang Hub is built as a lightweight dictionary and editing tool. The MVP is static-first and intentionally avoids account tracking.",
     sections: [
       ["Information we process", "If you use the Humanizer, the text you submit may be sent to the configured AI provider only to generate the requested response. Do not paste secrets, passwords, private documents, or sensitive personal data."],
-      ["Analytics and hosting", "Our hosting, analytics, and security providers may process IP addresses, browser or device information, requested pages, timestamps, and referral data to operate, protect, and improve the site."],
-      ["Advertising cookies", "AI Slang Hub may use third-party advertising services, including Google AdSense. Third-party vendors, including Google, may use cookies to serve and measure ads based on a visitor's prior visits to this website or other websites."],
-      ["Advertising choices", "You can control or opt out of personalized Google advertising at https://adssettings.google.com/. Additional industry opt-out choices are available at https://www.aboutads.info/choices/."],
+      ["Analytics and hosting", "AI Slang Hub uses Cloudflare hosting and optional Google Analytics 4 measurement for aggregate page visits, term navigation, outbound source clicks, and site improvements. GA4 loads only after you accept analytics where consent is required, and you can reject or withdraw that choice from the Privacy Choices link in the footer."],
+      ["Analytics data boundaries", "We do not send term definitions, article body text, Humanizer text, names, email addresses, or other free-form personal data to GA4. Custom analytics events use low-cardinality values such as a term slug, placement, result state, or share method."],
+      ["Advertising cookies", "AI Slang Hub does not currently load Google AdSense ads or a Google-certified advertising CMP. If advertising is added later, this policy and the consent controls will be updated before ad cookies or advertising consent are used."],
+      ["Privacy choices", "Use the Privacy Choices link in the footer to accept, reject, or change optional analytics consent. Accepting analytics grants analytics storage only; ad storage, ad user data, and ad personalization remain denied."],
       ["Contact", "For privacy questions or deletion requests related to a message you sent, email hello@ai-slang.com."]
     ]
   },
@@ -356,6 +358,7 @@ const policyPages = [
     sections: [
       ["Editorial content", "Definitions are written in a sharp editorial style. They may summarize cultural usage and should not be treated as official definitions."],
       ["Humanizer output", "Humanizer output may be inaccurate, awkward, or incomplete. You are responsible for reviewing text before publishing it."],
+      ["Analytics and ads", "Optional GA4 analytics may measure aggregate visits, term navigation, outbound source clicks, and site performance after analytics consent. The site does not currently load AdSense ads or a Google-certified advertising CMP."],
       ["Acceptable use", "Do not use the tool to impersonate others, hide misconduct, submit deceptive academic work, or process data you are not allowed to share."]
     ]
   },
@@ -410,7 +413,7 @@ const homepageTermLinksPattern = /(?<=<!-- GENERATED_TERM_LINKS_START -->)[\s\S]
 if (!homepageTermLinksPattern.test(homepage)) {
   throw new Error("Homepage term-link markers are missing");
 }
-const homepageTermLinks = slangs.map((item, index) => `                <a class="term-card" href="${termPath(item)}" data-word="${escapeHtml(item.word)}">
+const homepageTermLinks = slangs.map((item, index) => `                <a class="term-card" href="${termPath(item)}" data-word="${escapeHtml(item.word)}" data-slug="${slugify(item.word)}" data-analytics-placement="home_index">
                   <b>${String(index + 1).padStart(2, "0")}</b>
                   <span>${escapeHtml(item.word)}</span>
                   <small>${escapeHtml(item.trend)} / AI_GRADE ${item.aiGrade}</small>

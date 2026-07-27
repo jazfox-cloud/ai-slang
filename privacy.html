@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | AI Slang Hub</title>
-    <meta name="description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how hosting, analytics, and advertising providers may handle data.">
+    <meta name="description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how privacy choices control optional analytics.">
     <link rel="canonical" href="https://ai-slang.com/privacy">
     <meta property="og:title" content="Privacy Policy | AI Slang Hub">
-    <meta property="og:description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how hosting, analytics, and advertising providers may handle data.">
+    <meta property="og:description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how privacy choices control optional analytics.">
     <meta property="og:url" content="https://ai-slang.com/privacy">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy | AI Slang Hub">
-    <meta name="twitter:description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how hosting, analytics, and advertising providers may handle data.">
+    <meta name="twitter:description" content="Read the AI Slang Hub privacy policy, including how the Humanizer processes text and how privacy choices control optional analytics.">
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -38,15 +39,16 @@
         <h1>Privacy Policy</h1>
         <p class="article-lead">AI Slang Hub is built as a lightweight dictionary and editing tool. The MVP is static-first and intentionally avoids account tracking.</p>
         <section><h2>Information we process</h2><p>If you use the Humanizer, the text you submit may be sent to the configured AI provider only to generate the requested response. Do not paste secrets, passwords, private documents, or sensitive personal data.</p></section>
-<section><h2>Analytics and hosting</h2><p>Our hosting, analytics, and security providers may process IP addresses, browser or device information, requested pages, timestamps, and referral data to operate, protect, and improve the site.</p></section>
-<section><h2>Advertising cookies</h2><p>AI Slang Hub may use third-party advertising services, including Google AdSense. Third-party vendors, including Google, may use cookies to serve and measure ads based on a visitor's prior visits to this website or other websites.</p></section>
-<section><h2>Advertising choices</h2><p>You can control or opt out of personalized Google advertising at https://adssettings.google.com/. Additional industry opt-out choices are available at https://www.aboutads.info/choices/.</p></section>
+<section><h2>Analytics and hosting</h2><p>AI Slang Hub uses Cloudflare hosting and optional Google Analytics 4 measurement for aggregate page visits, term navigation, outbound source clicks, and site improvements. GA4 loads only after you accept analytics where consent is required, and you can reject or withdraw that choice from the Privacy Choices link in the footer.</p></section>
+<section><h2>Analytics data boundaries</h2><p>We do not send term definitions, article body text, Humanizer text, names, email addresses, or other free-form personal data to GA4. Custom analytics events use low-cardinality values such as a term slug, placement, result state, or share method.</p></section>
+<section><h2>Advertising cookies</h2><p>AI Slang Hub does not currently load Google AdSense ads or a Google-certified advertising CMP. If advertising is added later, this policy and the consent controls will be updated before ad cookies or advertising consent are used.</p></section>
+<section><h2>Privacy choices</h2><p>Use the Privacy Choices link in the footer to accept, reject, or change optional analytics consent. Accepting analytics grants analytics storage only; ad storage, ad user data, and ad personalization remain denied.</p></section>
 <section><h2>Contact</h2><p>For privacy questions or deletion requests related to a message you sent, email <a class="email-link" data-email-user="hello" data-email-domain="ai-slang.com" href="#contact-email">contact email</a>.</p></section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

@@ -16,6 +16,7 @@
     <meta name="twitter:description" content="Explore a sharp dictionary of AI slang, model jargon, and GPT writing tells, plus a lightweight humanizer for editing stiff AI-generated prose.">
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="./src/styles.css">
+    <script type="module" src="./src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -48,10 +49,10 @@
                 <input id="slang-search" class="search-input" type="search" placeholder="slop, vibe coding, agentic..." autocomplete="off">
               </div>
               <div class="quick-picks" aria-label="Quick searches">
-                <button type="button" data-word="Slop">Slop</button>
-                <button type="button" data-word="Vibe Coding">Vibe Coding</button>
-                <button type="button" data-word="Test-Time Compute">Test-Time Compute</button>
-                <button type="button" data-word="Reward Hacking">Reward Hacking</button>
+                <button type="button" data-word="Slop" data-slug="slop" data-analytics-placement="quick_pick">Slop</button>
+                <button type="button" data-word="Vibe Coding" data-slug="vibe-coding" data-analytics-placement="quick_pick">Vibe Coding</button>
+                <button type="button" data-word="Test-Time Compute" data-slug="test-time-compute" data-analytics-placement="quick_pick">Test-Time Compute</button>
+                <button type="button" data-word="Reward Hacking" data-slug="reward-hacking" data-analytics-placement="quick_pick">Reward Hacking</button>
               </div>
             </div>
           </div>
@@ -81,342 +82,342 @@
               </div>
               <div id="term-list" class="terms">
                 <!-- GENERATED_TERM_LINKS_START -->
-                <a class="term-card" href="/terms/slop" data-word="Slop">
+                <a class="term-card" href="/terms/slop" data-word="Slop" data-slug="slop" data-analytics-placement="home_index">
                   <b>01</b>
                   <span>Slop</span>
                   <small>HIGH / AI_GRADE 5</small>
                 </a>
-                <a class="term-card" href="/terms/vibe-coding" data-word="Vibe Coding">
+                <a class="term-card" href="/terms/vibe-coding" data-word="Vibe Coding" data-slug="vibe-coding" data-analytics-placement="home_index">
                   <b>02</b>
                   <span>Vibe Coding</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/agentic" data-word="Agentic">
+                <a class="term-card" href="/terms/agentic" data-word="Agentic" data-slug="agentic" data-analytics-placement="home_index">
                   <b>03</b>
                   <span>Agentic</span>
                   <small>HIGH / AI_GRADE 5</small>
                 </a>
-                <a class="term-card" href="/terms/delve" data-word="Delve">
+                <a class="term-card" href="/terms/delve" data-word="Delve" data-slug="delve" data-analytics-placement="home_index">
                   <b>04</b>
                   <span>Delve</span>
                   <small>HIGH / AI_GRADE 5</small>
                 </a>
-                <a class="term-card" href="/terms/tapestry" data-word="Tapestry">
+                <a class="term-card" href="/terms/tapestry" data-word="Tapestry" data-slug="tapestry" data-analytics-placement="home_index">
                   <b>05</b>
                   <span>Tapestry</span>
                   <small>HIGH / AI_GRADE 5</small>
                 </a>
-                <a class="term-card" href="/terms/stochastic-parrot" data-word="Stochastic Parrot">
+                <a class="term-card" href="/terms/stochastic-parrot" data-word="Stochastic Parrot" data-slug="stochastic-parrot" data-analytics-placement="home_index">
                   <b>06</b>
                   <span>Stochastic Parrot</span>
                   <small>MID / AI_GRADE 1</small>
                 </a>
-                <a class="term-card" href="/terms/gpu-rich-gpu-poor" data-word="GPU Rich / GPU Poor">
+                <a class="term-card" href="/terms/gpu-rich-gpu-poor" data-word="GPU Rich / GPU Poor" data-slug="gpu-rich-gpu-poor" data-analytics-placement="home_index">
                   <b>07</b>
                   <span>GPU Rich / GPU Poor</span>
                   <small>MID / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/hallucination" data-word="Hallucination">
+                <a class="term-card" href="/terms/hallucination" data-word="Hallucination" data-slug="hallucination" data-analytics-placement="home_index">
                   <b>08</b>
                   <span>Hallucination</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/rlhf-d-to-death" data-word="RLHF'd to Death">
+                <a class="term-card" href="/terms/rlhf-d-to-death" data-word="RLHF'd to Death" data-slug="rlhf-d-to-death" data-analytics-placement="home_index">
                   <b>09</b>
                   <span>RLHF'd to Death</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/rag" data-word="RAG">
+                <a class="term-card" href="/terms/rag" data-word="RAG" data-slug="rag" data-analytics-placement="home_index">
                   <b>10</b>
                   <span>RAG</span>
                   <small>MID / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/context-window" data-word="Context Window">
+                <a class="term-card" href="/terms/context-window" data-word="Context Window" data-slug="context-window" data-analytics-placement="home_index">
                   <b>11</b>
                   <span>Context Window</span>
                   <small>MID / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/eval" data-word="Eval">
+                <a class="term-card" href="/terms/eval" data-word="Eval" data-slug="eval" data-analytics-placement="home_index">
                   <b>12</b>
                   <span>Eval</span>
                   <small>MID / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/prompt-engineer" data-word="Prompt Engineer">
+                <a class="term-card" href="/terms/prompt-engineer" data-word="Prompt Engineer" data-slug="prompt-engineer" data-analytics-placement="home_index">
                   <b>13</b>
                   <span>Prompt Engineer</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/model-collapse" data-word="Model Collapse">
+                <a class="term-card" href="/terms/model-collapse" data-word="Model Collapse" data-slug="model-collapse" data-analytics-placement="home_index">
                   <b>14</b>
                   <span>Model Collapse</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/synthetic-data" data-word="Synthetic Data">
+                <a class="term-card" href="/terms/synthetic-data" data-word="Synthetic Data" data-slug="synthetic-data" data-analytics-placement="home_index">
                   <b>15</b>
                   <span>Synthetic Data</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/cot" data-word="CoT">
+                <a class="term-card" href="/terms/cot" data-word="CoT" data-slug="cot" data-analytics-placement="home_index">
                   <b>16</b>
                   <span>CoT</span>
                   <small>LOW / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/alignment" data-word="Alignment">
+                <a class="term-card" href="/terms/alignment" data-word="Alignment" data-slug="alignment" data-analytics-placement="home_index">
                   <b>17</b>
                   <span>Alignment</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/copilot" data-word="Copilot">
+                <a class="term-card" href="/terms/copilot" data-word="Copilot" data-slug="copilot" data-analytics-placement="home_index">
                   <b>18</b>
                   <span>Copilot</span>
                   <small>MID / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/mcp" data-word="MCP">
+                <a class="term-card" href="/terms/mcp" data-word="MCP" data-slug="mcp" data-analytics-placement="home_index">
                   <b>19</b>
                   <span>MCP</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/context-engineering" data-word="Context Engineering">
+                <a class="term-card" href="/terms/context-engineering" data-word="Context Engineering" data-slug="context-engineering" data-analytics-placement="home_index">
                   <b>20</b>
                   <span>Context Engineering</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/context-rot" data-word="Context Rot">
+                <a class="term-card" href="/terms/context-rot" data-word="Context Rot" data-slug="context-rot" data-analytics-placement="home_index">
                   <b>21</b>
                   <span>Context Rot</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/prompt-injection" data-word="Prompt Injection">
+                <a class="term-card" href="/terms/prompt-injection" data-word="Prompt Injection" data-slug="prompt-injection" data-analytics-placement="home_index">
                   <b>22</b>
                   <span>Prompt Injection</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/tool-calling" data-word="Tool Calling">
+                <a class="term-card" href="/terms/tool-calling" data-word="Tool Calling" data-slug="tool-calling" data-analytics-placement="home_index">
                   <b>23</b>
                   <span>Tool Calling</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/google-zero" data-word="Google Zero">
+                <a class="term-card" href="/terms/google-zero" data-word="Google Zero" data-slug="google-zero" data-analytics-placement="home_index">
                   <b>24</b>
                   <span>Google Zero</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/jailbreak" data-word="Jailbreak">
+                <a class="term-card" href="/terms/jailbreak" data-word="Jailbreak" data-slug="jailbreak" data-analytics-placement="home_index">
                   <b>25</b>
                   <span>Jailbreak</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/system-prompt" data-word="System Prompt">
+                <a class="term-card" href="/terms/system-prompt" data-word="System Prompt" data-slug="system-prompt" data-analytics-placement="home_index">
                   <b>26</b>
                   <span>System Prompt</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/reasoning-model" data-word="Reasoning Model">
+                <a class="term-card" href="/terms/reasoning-model" data-word="Reasoning Model" data-slug="reasoning-model" data-analytics-placement="home_index">
                   <b>27</b>
                   <span>Reasoning Model</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/deep-research" data-word="Deep Research">
+                <a class="term-card" href="/terms/deep-research" data-word="Deep Research" data-slug="deep-research" data-analytics-placement="home_index">
                   <b>28</b>
                   <span>Deep Research</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/shadow-ai" data-word="Shadow AI">
+                <a class="term-card" href="/terms/shadow-ai" data-word="Shadow AI" data-slug="shadow-ai" data-analytics-placement="home_index">
                   <b>29</b>
                   <span>Shadow AI</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/frontier-model" data-word="Frontier Model">
+                <a class="term-card" href="/terms/frontier-model" data-word="Frontier Model" data-slug="frontier-model" data-analytics-placement="home_index">
                   <b>30</b>
                   <span>Frontier Model</span>
                   <small>MID / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/prompt-caching" data-word="Prompt Caching">
+                <a class="term-card" href="/terms/prompt-caching" data-word="Prompt Caching" data-slug="prompt-caching" data-analytics-placement="home_index">
                   <b>31</b>
                   <span>Prompt Caching</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/computer-use" data-word="Computer Use">
+                <a class="term-card" href="/terms/computer-use" data-word="Computer Use" data-slug="computer-use" data-analytics-placement="home_index">
                   <b>32</b>
                   <span>Computer Use</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/llm-as-a-judge" data-word="LLM-as-a-Judge">
+                <a class="term-card" href="/terms/llm-as-a-judge" data-word="LLM-as-a-Judge" data-slug="llm-as-a-judge" data-analytics-placement="home_index">
                   <b>33</b>
                   <span>LLM-as-a-Judge</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/gpt-live" data-word="GPT Live">
+                <a class="term-card" href="/terms/gpt-live" data-word="GPT Live" data-slug="gpt-live" data-analytics-placement="home_index">
                   <b>34</b>
                   <span>GPT Live</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/llm-burnout" data-word="LLM Burnout">
+                <a class="term-card" href="/terms/llm-burnout" data-word="LLM Burnout" data-slug="llm-burnout" data-analytics-placement="home_index">
                   <b>35</b>
                   <span>LLM Burnout</span>
                   <small>MID / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/workslop" data-word="Workslop">
+                <a class="term-card" href="/terms/workslop" data-word="Workslop" data-slug="workslop" data-analytics-placement="home_index">
                   <b>36</b>
                   <span>Workslop</span>
                   <small>HIGH / AI_GRADE 5</small>
                 </a>
-                <a class="term-card" href="/terms/speculative-decoding" data-word="Speculative Decoding">
+                <a class="term-card" href="/terms/speculative-decoding" data-word="Speculative Decoding" data-slug="speculative-decoding" data-analytics-placement="home_index">
                   <b>37</b>
                   <span>Speculative Decoding</span>
                   <small>MID / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/geo" data-word="GEO">
+                <a class="term-card" href="/terms/geo" data-word="GEO" data-slug="geo" data-analytics-placement="home_index">
                   <b>38</b>
                   <span>GEO</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/aeo" data-word="AEO">
+                <a class="term-card" href="/terms/aeo" data-word="AEO" data-slug="aeo" data-analytics-placement="home_index">
                   <b>39</b>
                   <span>AEO</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/chatgpt-ads" data-word="ChatGPT Ads">
+                <a class="term-card" href="/terms/chatgpt-ads" data-word="ChatGPT Ads" data-slug="chatgpt-ads" data-analytics-placement="home_index">
                   <b>40</b>
                   <span>ChatGPT Ads</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/claude-opus-5" data-word="Claude Opus 5">
+                <a class="term-card" href="/terms/claude-opus-5" data-word="Claude Opus 5" data-slug="claude-opus-5" data-analytics-placement="home_index">
                   <b>41</b>
                   <span>Claude Opus 5</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/llm-discoverability" data-word="LLM Discoverability">
+                <a class="term-card" href="/terms/llm-discoverability" data-word="LLM Discoverability" data-slug="llm-discoverability" data-analytics-placement="home_index">
                   <b>42</b>
                   <span>LLM Discoverability</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/sycophancy" data-word="Sycophancy">
+                <a class="term-card" href="/terms/sycophancy" data-word="Sycophancy" data-slug="sycophancy" data-analytics-placement="home_index">
                   <b>43</b>
                   <span>Sycophancy</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/agentic-rag" data-word="Agentic RAG">
+                <a class="term-card" href="/terms/agentic-rag" data-word="Agentic RAG" data-slug="agentic-rag" data-analytics-placement="home_index">
                   <b>44</b>
                   <span>Agentic RAG</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/slopsquatting" data-word="Slopsquatting">
+                <a class="term-card" href="/terms/slopsquatting" data-word="Slopsquatting" data-slug="slopsquatting" data-analytics-placement="home_index">
                   <b>45</b>
                   <span>Slopsquatting</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/tool-poisoning" data-word="Tool Poisoning">
+                <a class="term-card" href="/terms/tool-poisoning" data-word="Tool Poisoning" data-slug="tool-poisoning" data-analytics-placement="home_index">
                   <b>46</b>
                   <span>Tool Poisoning</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/memory-poisoning" data-word="Memory Poisoning">
+                <a class="term-card" href="/terms/memory-poisoning" data-word="Memory Poisoning" data-slug="memory-poisoning" data-analytics-placement="home_index">
                   <b>47</b>
                   <span>Memory Poisoning</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/a2a" data-word="A2A">
+                <a class="term-card" href="/terms/a2a" data-word="A2A" data-slug="a2a" data-analytics-placement="home_index">
                   <b>48</b>
                   <span>A2A</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/model-router" data-word="Model Router">
+                <a class="term-card" href="/terms/model-router" data-word="Model Router" data-slug="model-router" data-analytics-placement="home_index">
                   <b>49</b>
                   <span>Model Router</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/agent-observability" data-word="Agent Observability">
+                <a class="term-card" href="/terms/agent-observability" data-word="Agent Observability" data-slug="agent-observability" data-analytics-placement="home_index">
                   <b>50</b>
                   <span>Agent Observability</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/grok-build" data-word="Grok Build">
+                <a class="term-card" href="/terms/grok-build" data-word="Grok Build" data-slug="grok-build" data-analytics-placement="home_index">
                   <b>51</b>
                   <span>Grok Build</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/clanker" data-word="Clanker">
+                <a class="term-card" href="/terms/clanker" data-word="Clanker" data-slug="clanker" data-analytics-placement="home_index">
                   <b>52</b>
                   <span>Clanker</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/synthetic-users" data-word="Synthetic Users">
+                <a class="term-card" href="/terms/synthetic-users" data-word="Synthetic Users" data-slug="synthetic-users" data-analytics-placement="home_index">
                   <b>53</b>
                   <span>Synthetic Users</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/workspace-agent" data-word="Workspace Agent">
+                <a class="term-card" href="/terms/workspace-agent" data-word="Workspace Agent" data-slug="workspace-agent" data-analytics-placement="home_index">
                   <b>54</b>
                   <span>Workspace Agent</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/ai-content-disclosure" data-word="AI Content Disclosure">
+                <a class="term-card" href="/terms/ai-content-disclosure" data-word="AI Content Disclosure" data-slug="ai-content-disclosure" data-analytics-placement="home_index">
                   <b>55</b>
                   <span>AI Content Disclosure</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/open-weight-ai" data-word="Open-Weight AI">
+                <a class="term-card" href="/terms/open-weight-ai" data-word="Open-Weight AI" data-slug="open-weight-ai" data-analytics-placement="home_index">
                   <b>56</b>
                   <span>Open-Weight AI</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/agent-washing" data-word="Agent Washing">
+                <a class="term-card" href="/terms/agent-washing" data-word="Agent Washing" data-slug="agent-washing" data-analytics-placement="home_index">
                   <b>57</b>
                   <span>Agent Washing</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/subagent" data-word="Subagent">
+                <a class="term-card" href="/terms/subagent" data-word="Subagent" data-slug="subagent" data-analytics-placement="home_index">
                   <b>58</b>
                   <span>Subagent</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/agent-skills" data-word="Agent Skills">
+                <a class="term-card" href="/terms/agent-skills" data-word="Agent Skills" data-slug="agent-skills" data-analytics-placement="home_index">
                   <b>59</b>
                   <span>Agent Skills</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/ai-crawler" data-word="AI Crawler">
+                <a class="term-card" href="/terms/ai-crawler" data-word="AI Crawler" data-slug="ai-crawler" data-analytics-placement="home_index">
                   <b>60</b>
                   <span>AI Crawler</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/browser-agent" data-word="Browser Agent">
+                <a class="term-card" href="/terms/browser-agent" data-word="Browser Agent" data-slug="browser-agent" data-analytics-placement="home_index">
                   <b>61</b>
                   <span>Browser Agent</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/agent-sprawl" data-word="Agent Sprawl">
+                <a class="term-card" href="/terms/agent-sprawl" data-word="Agent Sprawl" data-slug="agent-sprawl" data-analytics-placement="home_index">
                   <b>62</b>
                   <span>Agent Sprawl</span>
                   <small>HIGH / AI_GRADE 4</small>
                 </a>
-                <a class="term-card" href="/terms/mixture-of-experts-moe" data-word="Mixture of Experts (MoE)">
+                <a class="term-card" href="/terms/mixture-of-experts-moe" data-word="Mixture of Experts (MoE)" data-slug="mixture-of-experts-moe" data-analytics-placement="home_index">
                   <b>63</b>
                   <span>Mixture of Experts (MoE)</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/constitutional-ai" data-word="Constitutional AI">
+                <a class="term-card" href="/terms/constitutional-ai" data-word="Constitutional AI" data-slug="constitutional-ai" data-analytics-placement="home_index">
                   <b>64</b>
                   <span>Constitutional AI</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/direct-preference-optimization-dpo" data-word="Direct Preference Optimization (DPO)">
+                <a class="term-card" href="/terms/direct-preference-optimization-dpo" data-word="Direct Preference Optimization (DPO)" data-slug="direct-preference-optimization-dpo" data-analytics-placement="home_index">
                   <b>65</b>
                   <span>Direct Preference Optimization (DPO)</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/test-time-compute" data-word="Test-Time Compute">
+                <a class="term-card" href="/terms/test-time-compute" data-word="Test-Time Compute" data-slug="test-time-compute" data-analytics-placement="home_index">
                   <b>66</b>
                   <span>Test-Time Compute</span>
                   <small>HIGH / AI_GRADE 2</small>
                 </a>
-                <a class="term-card" href="/terms/reward-hacking" data-word="Reward Hacking">
+                <a class="term-card" href="/terms/reward-hacking" data-word="Reward Hacking" data-slug="reward-hacking" data-analytics-placement="home_index">
                   <b>67</b>
                   <span>Reward Hacking</span>
                   <small>HIGH / AI_GRADE 3</small>
                 </a>
-                <a class="term-card" href="/terms/chain-of-thought-monitoring" data-word="Chain-of-Thought Monitoring">
+                <a class="term-card" href="/terms/chain-of-thought-monitoring" data-word="Chain-of-Thought Monitoring" data-slug="chain-of-thought-monitoring" data-analytics-placement="home_index">
                   <b>68</b>
                   <span>Chain-of-Thought Monitoring</span>
                   <small>HIGH / AI_GRADE 3</small>
@@ -472,7 +473,7 @@
 
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
 
     <script type="module" src="./src/app.js"></script>

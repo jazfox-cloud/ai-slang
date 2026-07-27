@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Test-Time Compute","description":"The extra thinking budget an AI system spends after the prompt arrives: more reasoning steps, search, sampling, verification, or tool use before it commits to an answer.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/test-time-compute"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is test-time compute?","acceptedAnswer":{"@type":"Answer","text":"Test-time compute is the compute an AI system spends during inference, after receiving a prompt, to reason, sample, verify, search, or call tools before returning an answer."}},{"@type":"Question","name":"Is test-time compute the same as training compute?","acceptedAnswer":{"@type":"Answer","text":"No. Training compute is used to create or fine-tune the model. Test-time compute is spent when the model is already deployed and working on a specific request."}},{"@type":"Question","name":"Why do reasoning models use more test-time compute?","acceptedAnswer":{"@type":"Answer","text":"Reasoning models often spend additional inference steps on hard tasks, which can improve answers but usually increases latency and cost."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -97,19 +98,19 @@
         <section>
           <h2>Related AI slang</h2>
           <div class="related-grid">
-            <a href="/terms/reasoning-model">Reasoning Model</a>
-<a href="/terms/cot">CoT</a>
-<a href="/terms/speculative-decoding">Speculative Decoding</a>
-<a href="/terms/prompt-caching">Prompt Caching</a>
-<a href="/terms/llm-as-a-judge">LLM-as-a-Judge</a>
-<a href="/terms/eval">Eval</a>
+            <a href="/terms/reasoning-model" data-slug="reasoning-model" data-analytics-placement="related_terms">Reasoning Model</a>
+<a href="/terms/cot" data-slug="cot" data-analytics-placement="related_terms">CoT</a>
+<a href="/terms/speculative-decoding" data-slug="speculative-decoding" data-analytics-placement="related_terms">Speculative Decoding</a>
+<a href="/terms/prompt-caching" data-slug="prompt-caching" data-analytics-placement="related_terms">Prompt Caching</a>
+<a href="/terms/llm-as-a-judge" data-slug="llm-as-a-judge" data-analytics-placement="related_terms">LLM-as-a-Judge</a>
+<a href="/terms/eval" data-slug="eval" data-analytics-placement="related_terms">Eval</a>
           </div>
         </section>
       </article>
     </main>
     <footer class="site-footer">
       <span>No legal, hiring, or investment advice. Just sharper words.</span>
-      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
     </footer>
     <script>
       const themeToggle = document.querySelector("#theme-toggle");

@@ -178,6 +178,52 @@ textarea {
   border-radius: 50%;
 }
 
+.consent-banner {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  max-width: min(720px, calc(100vw - 36px));
+  padding: 16px;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.consent-banner[hidden] {
+  display: none;
+}
+
+.consent-banner strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.consent-banner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--step-0);
+  line-height: 1.45;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.consent-primary {
+  background: var(--text);
+  color: var(--bg);
+}
+
 body[data-theme="dark"] .theme-swatch {
   background: #fff;
   border-color: #fff;
@@ -826,5 +872,21 @@ textarea,
   .execute-button {
     min-height: 56px;
     writing-mode: horizontal-tb;
+  }
+
+  .consent-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .consent-actions {
+    justify-content: stretch;
+  }
+
+  .consent-actions .plain-button {
+    flex: 1 1 150px;
   }
 }

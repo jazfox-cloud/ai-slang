@@ -75,14 +75,14 @@ function renderList() {
   const items = filteredSlangs();
   termCount.textContent = `${items.length}_TERMS`;
   wordOfDay.innerHTML = `
-    <button class="term-card featured" type="button" data-word="${slangs[0].word}">
+    <button class="term-card featured" type="button" data-word="${slangs[0].word}" data-slug="${slugify(slangs[0].word)}" data-analytics-placement="home_featured">
       <b>★</b>
       <span>${slangs[0].word}</span>
       <small>${slangs[0].definition}</small>
     </button>
   `;
   termList.innerHTML = items.map((item, index) => `
-    <a class="term-card ${state.selected.word === item.word ? "is-selected" : ""}" href="/terms/${slugify(item.word)}" data-word="${item.word}">
+    <a class="term-card ${state.selected.word === item.word ? "is-selected" : ""}" href="/terms/${slugify(item.word)}" data-word="${item.word}" data-slug="${slugify(item.word)}" data-analytics-placement="home_index">
       <b>${String(index + 1).padStart(2, "0")}</b>
       <span>${item.word}</span>
       <small>${item.trend} / AI_GRADE ${item.aiGrade}</small>
@@ -110,8 +110,8 @@ function renderDetail() {
     <p class="definition">${item.definition}</p>
     <div class="entry-actions">
       <button class="mini-action icon-action" type="button" data-share-link="${termUrl}" aria-label="Copy link"><span aria-hidden="true">↗</span><em>Copy</em></button>
-      <a class="mini-action icon-action" href="https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}" target="_blank" rel="noreferrer" aria-label="Share on X"><span aria-hidden="true">𝕏</span><em>X</em></a>
-      <a class="mini-action icon-action" href="https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}" target="_blank" rel="noreferrer" aria-label="Share on Reddit"><span aria-hidden="true">r/</span><em>Reddit</em></a>
+      <a class="mini-action icon-action" href="https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}" target="_blank" rel="noreferrer" aria-label="Share on X" data-share-method="x"><span aria-hidden="true">𝕏</span><em>X</em></a>
+      <a class="mini-action icon-action" href="https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}" target="_blank" rel="noreferrer" aria-label="Share on Reddit" data-share-method="reddit"><span aria-hidden="true">r/</span><em>Reddit</em></a>
       <button class="mini-action icon-action" type="button" aria-label="Flag entry"><span aria-hidden="true">!</span><em>Flag</em></button>
     </div>
     <section>
@@ -133,7 +133,7 @@ function renderDetail() {
     <section>
       <h2>RELATED TERMS</h2>
       <div class="related-grid">
-        ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}">${other.word}</a>`).join("")}
+        ${relatedTermsFor(item).map((other) => `<a href="/terms/${slugify(other.word)}" data-slug="${slugify(other.word)}" data-analytics-placement="related_terms">${other.word}</a>`).join("")}
       </div>
     </section>
     <div class="vote-row">
@@ -222,12 +222,29 @@ searchInput.addEventListener("input", (event) => {
   renderList();
   renderDetail();
 });
+searchInput.addEventListener("search", () => {
+  if (state.query.trim()) {
+    window.aiSlangAnalytics?.trackSearch(Boolean(filteredSlangs().length));
+  }
+});
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && state.query.trim()) {
+    window.aiSlangAnalytics?.trackSearch(Boolean(filteredSlangs().length));
+  }
+});
 document.addEventListener("click", (event) => {
   const shareButton = event.target.closest("[data-share-link]");
   if (shareButton) {
     navigator.clipboard.writeText(shareButton.dataset.shareLink);
+    window.aiSlangAnalytics?.trackShare("copy_link");
     shareButton.textContent = "COPIED";
     setTimeout(() => { shareButton.textContent = "COPY_LINK"; }, 900);
+    return;
+  }
+
+  const shareLink = event.target.closest("[data-share-method]");
+  if (shareLink) {
+    window.aiSlangAnalytics?.trackShare(shareLink.dataset.shareMethod);
     return;
   }
 
