@@ -801,6 +801,12 @@ textarea,
   line-height: 1.6;
 }
 
+.last-checked {
+  margin: 14px 22px 0;
+  color: var(--muted);
+  font-size: var(--step-0);
+}
+
 .seo-article section {
   margin-top: 0;
   padding-top: 20px;
@@ -817,6 +823,55 @@ textarea,
 .seo-article li {
   font-size: var(--step-1);
   line-height: 1.75;
+}
+
+.seo-article code {
+  font-family: var(--mono);
+  font-size: 0.95em;
+  overflow-wrap: anywhere;
+}
+
+.comparison-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: var(--step-0);
+}
+
+.comparison-table th,
+.comparison-table td {
+  min-width: 140px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.comparison-table th {
+  background: var(--panel-2);
+  font-weight: 800;
+}
+
+.source-link {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.faq-item + .faq-item {
+  margin-top: 16px;
+}
+
+.faq-item h3 {
+  margin: 0 0 6px;
+  font-size: var(--step-1);
 }
 
 .related-grid {

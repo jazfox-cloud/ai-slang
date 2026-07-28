@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lovable vs Bolt: Code Export, GitHub and Ownership Compared</title>
+    <meta name="description" content="Compare Lovable and Bolt on code export, GitHub sync, deployment, databases, authentication, environment variables, lock-in, and cancellation risk.">
+    <link rel="canonical" href="https://ai-slang.com/articles/lovable-vs-bolt-code-export">
+    <meta property="og:title" content="Lovable vs Bolt: Code Export, GitHub and Ownership Compared">
+    <meta property="og:description" content="Compare Lovable and Bolt on code export, GitHub sync, deployment, databases, authentication, environment variables, lock-in, and cancellation risk.">
+    <meta property="og:url" content="https://ai-slang.com/articles/lovable-vs-bolt-code-export">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lovable vs Bolt: Code Export, GitHub and Ownership Compared">
+    <meta name="twitter:description" content="Compare Lovable and Bolt on code export, GitHub sync, deployment, databases, authentication, environment variables, lock-in, and cancellation risk.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Lovable vs Bolt: Code Export, GitHub and Ownership Compared","description":"Compare Lovable and Bolt on code export, GitHub sync, deployment, databases, authentication, environment variables, lock-in, and cancellation risk.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Organization","name":"AI Slang Hub"},"mainEntityOfPage":"https://ai-slang.com/articles/lovable-vs-bolt-code-export"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can Lovable export code?","acceptedAnswer":{"@type":"Answer","text":"Yes. Lovable's FAQ says all project code can be exported by transferring it to GitHub, and its GitHub integration page explains sync and disconnect behavior."}},{"@type":"Question","name":"Can Bolt export code?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bolt's help center documents downloading a zipped copy of project files and opening projects in StackBlitz, plus a GitHub integration for repositories."}},{"@type":"Question","name":"Which is better for ownership, Lovable or Bolt?","acceptedAnswer":{"@type":"Answer","text":"Both can support source-code ownership. Lovable's docs are especially explicit about GitHub transfer/sync from Lovable; Bolt's docs are strong around download, StackBlitz, and GitHub project workflows. Neither removes the need to migrate data, auth, secrets, and deployment."}},{"@type":"Question","name":"Does either tool make Supabase or auth portable automatically?","acceptedAnswer":{"@type":"Answer","text":"Not clearly documented as automatic. Treat database and authentication portability as a separate migration task."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_GUIDE</p>
+        <h1>Lovable vs Bolt Code Export</h1>
+        <p class="article-lead">Short answer: Lovable is clearer when your goal is to push a Lovable project into a GitHub repo and keep syncing on `main`; Bolt is clearer when you want a code-project workflow that can download files, open in StackBlitz, or connect to GitHub. In both cases, code ownership does not automatically migrate your database, auth, secrets, or deployment setup.</p>
+        <p class="last-checked"><strong>Last checked:</strong> July 28, 2026</p><section><h2>What this comparison covers</h2>
+<p>This page compares Lovable and Bolt as AI builder tools for people who care about exit paths. It does not rank their prompting quality or design taste. It focuses on what official docs say you can keep, move, or continue without the original platform.</p>
+</section>
+<section><h2>Definitions</h2>
+<ul><li>Export means obtaining project files or source code outside the AI builder.</li>
+<li>Ownership means you can keep editing and deploying the code without relying on the builder for every change.</li>
+<li>Portability means the surrounding services move too: database, auth, secrets, forms, storage, and deploy configuration.</li>
+<li>Lock-in means a feature only works while the project remains attached to the original platform or its managed services.</li></ul>
+</section>
+<section><h2>Lovable vs Bolt matrix</h2>
+<div class="comparison-table-wrap" role="region" aria-label="Lovable vs Bolt matrix table" tabindex="0">
+            <table class="comparison-table">
+              <thead><tr><th>Area</th><th>Lovable</th><th>Bolt</th></tr></thead>
+              <tbody>
+                <tr><td>Full source-code export</td><td>Official FAQ says you can export all project code by transferring it to GitHub; code mode docs also mention full ZIP download on paid plans.</td><td>Official help documents Export &gt; Download for a zipped project and Export &gt; Open in StackBlitz.</td></tr>
+<tr><td>GitHub sync/export</td><td>Connects a project to GitHub for backup, collaboration, local work, and deployment. Docs describe two-way sync on the default branch, usually <code>main</code>.</td><td>GitHub integration can create a new private repo from a Bolt project, import an existing repo, create branches, and auto-commit working changes.</td></tr>
+<tr><td>Independent deployment</td><td>Docs say GitHub enables self-hosting or deployment to alternatives such as Vercel/Netlify; Lovable Cloud usage is separate if used.</td><td>Docs say code in GitHub can be published with other services, not only Bolt hosting or Bolt/Netlify.</td></tr>
+<tr><td>Database portability</td><td>Not automatically guaranteed. Supabase or other backend data must be handled separately.</td><td>Not automatically guaranteed. Bolt docs mention version history and database restores, but external database migration depends on the project.</td></tr>
+<tr><td>Authentication portability</td><td>Unknown unless the project uses portable auth you control. Lovable code export alone does not prove user accounts migrate.</td><td>Unknown unless the app uses portable auth you control. GitHub/download does not prove account data migrates.</td></tr>
+<tr><td>Environment variables/secrets</td><td>Must be reviewed separately for each project and deployment target.</td><td>Must be reviewed separately for each project and deployment target.</td></tr>
+<tr><td>Forms and integrations</td><td>Project-specific; integrations may require new credentials or replacement services outside Lovable.</td><td>Project-specific; integrations may require new credentials or replacement services outside Bolt.</td></tr>
+<tr><td>Free/paid limitations</td><td>Code editing is documented as paid-plan only; GitHub docs do not remove the need to check current plan limits.</td><td>Bolt is account/plan based; exact token, project, privacy, and hosting limits should be checked on current pricing/docs.</td></tr>
+<tr><td>After disconnect/cancellation</td><td>When GitHub disconnects, the repository stays on GitHub and Lovable keeps future changes inside Lovable. Cancellation details beyond exported code are not fully documented in the cited pages.</td><td>Downloaded files or GitHub repos remain under your control; account/project behavior after cancellation is not fully documented in the cited pages.</td></tr>
+<tr><td>Platform dependency</td><td>Lower for source code once in GitHub; still possible for Lovable Cloud, Supabase setup, secrets, and platform-specific workflows.</td><td>Lower for source code once downloaded or in GitHub; still possible for Bolt hosting, StackBlitz workflow, secrets, and project services.</td></tr>
+              </tbody>
+            </table>
+          </div>
+</section>
+<section><h2>Practical recommendation</h2>
+<ul><li>Pick Lovable if the official GitHub handoff and <code>main</code> branch sync match your team workflow, especially for client handoff into a repo.</li>
+<li>Pick Bolt if you want a StackBlitz-centered code workspace with documented download, GitHub creation/import, and branch workflows.</li>
+<li>For either tool, write an exit checklist before building: repo access, package manager, env vars, database export, auth provider, storage, forms, deployment target, domain, and logs.</li></ul>
+</section>
+<section><h2>Limits and unknowns</h2>
+<p>This is an official-doc comparison, not a fresh paid-account export test. It does not claim that an identical prompt was run in both products. The unknowns are important: cancellation behavior, plan-specific limits, generated stack differences, and database/auth portability can change by project.</p>
+<p>For the broader buying matrix, see <a class="source-link" href="/articles/ai-website-builder-code-export" rel="noreferrer">Best AI Website Builders With Code Export</a>. For hosted-site builders with very different export limits, see <a class="source-link" href="/articles/webflow-framer-wix-squarespace-code-export" rel="noreferrer">Webflow vs Framer vs Wix vs Squarespace</a>. The cultural wrapper for this whole category is <a class="source-link" href="/terms/vibe-coding" rel="noreferrer">vibe coding</a>, and indie builders may also want <a class="source-link" href="/articles/ai-slang-for-indie-hackers" rel="noreferrer">AI Slang for Indie Hackers</a>.</p>
+</section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item"><h3>Can Lovable export code?</h3><p>Yes. Lovable's FAQ says all project code can be exported by transferring it to GitHub, and its GitHub integration page explains sync and disconnect behavior.</p></div>
+<div class="faq-item"><h3>Can Bolt export code?</h3><p>Yes. Bolt's help center documents downloading a zipped copy of project files and opening projects in StackBlitz, plus a GitHub integration for repositories.</p></div>
+<div class="faq-item"><h3>Which is better for ownership, Lovable or Bolt?</h3><p>Both can support source-code ownership. Lovable's docs are especially explicit about GitHub transfer/sync from Lovable; Bolt's docs are strong around download, StackBlitz, and GitHub project workflows. Neither removes the need to migrate data, auth, secrets, and deployment.</p></div>
+<div class="faq-item"><h3>Does either tool make Supabase or auth portable automatically?</h3><p>Not clearly documented as automatic. Treat database and authentication portability as a separate migration task.</p></div>
+        </section><section>
+          <h2>Official sources</h2>
+          <ul>
+            <li><a class="source-link" href="https://docs.lovable.dev/integrations/github" rel="noreferrer">Lovable GitHub integration</a></li>
+<li><a class="source-link" href="https://docs.lovable.dev/introduction/faq" rel="noreferrer">Lovable FAQ</a></li>
+<li><a class="source-link" href="https://docs.lovable.dev/features/code-mode" rel="noreferrer">Lovable code mode</a></li>
+<li><a class="source-link" href="https://support.bolt.new/building/using-bolt/projects-files" rel="noreferrer">Bolt project files</a></li>
+<li><a class="source-link" href="https://support.bolt.new/building/using-bolt/rollback-backup" rel="noreferrer">Bolt backup/export download</a></li>
+<li><a class="source-link" href="https://support.bolt.new/integrations/git" rel="noreferrer">Bolt GitHub integration</a></li>
+<li><a class="source-link" href="https://support.bolt.new/concepts/version-history-github" rel="noreferrer">Bolt GitHub concepts</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Browse the dictionary</h2>
+          <div class="related-grid">
+            <a href="/terms/vibe-coding" data-slug="vibe-coding" data-analytics-placement="article_dictionary">Vibe Coding</a>
+<a href="/terms/grok-build" data-slug="grok-build" data-analytics-placement="article_dictionary">Grok Build</a>
+<a href="/terms/tool-calling" data-slug="tool-calling" data-analytics-placement="article_dictionary">Tool Calling</a>
+<a href="/terms/subagent" data-slug="subagent" data-analytics-placement="article_dictionary">Subagent</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
