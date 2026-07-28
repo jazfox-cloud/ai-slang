@@ -126,8 +126,7 @@ function termPage(item) {
     name: item.word,
     description: item.definition,
     inDefinedTermSet: `${siteUrl}/`,
-    url: canonical,
-    ...(item.dateModified ? { dateModified: item.dateModified } : {})
+    url: canonical
   }];
 
   if (item.faqItems?.length) {

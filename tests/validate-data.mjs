@@ -44,6 +44,28 @@ function read(path) {
   return readFileSync(path, "utf8");
 }
 
+function jsonLdObjects(path) {
+  const content = read(path);
+  return [...content.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
+    .map((match, index) => {
+      try {
+        return JSON.parse(match[1]);
+      } catch (error) {
+        throw new Error(`${path} has invalid JSON-LD script ${index}: ${error.message}`);
+      }
+    });
+}
+
+function assertDefinedTermHasNoDateModified(path) {
+  const definedTerm = jsonLdObjects(path).find((object) => object["@type"] === "DefinedTerm");
+  if (!definedTerm) {
+    throw new Error(`${path} is missing DefinedTerm JSON-LD`);
+  }
+  if (Object.hasOwn(definedTerm, "dateModified")) {
+    throw new Error(`${path} DefinedTerm JSON-LD must not include dateModified`);
+  }
+}
+
 function assertNoPublicHtmlUrls(path, content) {
   const patterns = [
     /<loc>[^<]+\.html<\/loc>/,
@@ -141,7 +163,6 @@ const grokBuildRequirements = [
   "<title>What Is Grok Build? xAI's Coding Agent Explained</title>",
   '<link rel="canonical" href="https://ai-slang.com/terms/grok-build">',
   '"@type":"DefinedTerm"',
-  '"dateModified":"2026-07-17"',
   '"@type":"FAQPage"',
   "Grok Build is xAI's coding agent and terminal-based development tool",
   "Grok Build versus the standard Grok assistant",
@@ -162,6 +183,21 @@ const grokBuildRequirements = [
 for (const requirement of grokBuildRequirements) {
   if (!grokBuildPage.includes(requirement)) {
     throw new Error(`Grok Build page is missing: ${requirement}`);
+  }
+}
+
+for (const file of [
+  "terms/geo.html",
+  "terms/aeo.html",
+  "terms/chatgpt-ads.html",
+  "terms/claude-opus-5.html",
+  "terms/llm-discoverability.html",
+  "terms/grok-build.html",
+  "terms/ai-content-disclosure.html"
+]) {
+  assertDefinedTermHasNoDateModified(file);
+  if (!read(file).includes("<strong>Last checked:</strong>")) {
+    throw new Error(`${file} is missing its visible Last checked date`);
   }
 }
 
