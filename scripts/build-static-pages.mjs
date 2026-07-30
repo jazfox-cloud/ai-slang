@@ -239,8 +239,13 @@ const articlePages = [
     sections: [
       ["Why AI slang moves fast", "AI tools change workflows quickly, and people invent shorthand before formal terminology catches up. Some words begin as research terms, some as product marketing, and some as jokes from developers trying to describe a new kind of annoyance."],
       ["The main categories", "The useful split is technical terms, cultural slang, and GPT-ese. Technical terms include RAG and context window. Cultural slang includes slop and vibe coding. GPT-ese covers words that make writing feel suspiciously machine-polished."],
+      { heading: "Start with the glossary hub", paragraphs: [
+        "If you are new to AI slang, begin with the entries that already have search signal and clear intent: [GPU Rich / GPU Poor](/terms/gpu-rich-gpu-poor), [Jailbreak](/terms/jailbreak), [MCP](/terms/mcp), [Computer Use](/terms/computer-use), [Alignment](/terms/alignment), [Context Rot](/terms/context-rot), [Copilot](/terms/copilot), [CoT](/terms/cot), [Eval](/terms/eval), [Prompt Injection](/terms/prompt-injection), and [Reasoning Model](/terms/reasoning-model).",
+        "For GPT-ese specifically, use the dedicated [GPT-ese words to avoid](/articles/gpt-ese-words-to-avoid) guide. There is no separate `/terms/gptese` glossary entry in this cluster; legacy requests should resolve to the GPT-ese article instead."
+      ] },
       ["How to read this dictionary", "Treat each entry as an editorial definition, not legal or academic authority. When a term has a stable source, the entry links to it. When a term is community slang, the entry says so instead of pretending the origin is clean."]
-    ]
+    ],
+    related: ["GPU Rich / GPU Poor", "Jailbreak", "MCP", "Computer Use", "Alignment", "Context Rot", "Copilot", "CoT", "Eval", "Prompt Injection", "Reasoning Model", "Tapestry"]
   },
   {
     file: "articles/gpt-ese-words-to-avoid.html",
