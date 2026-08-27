@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 
 const build = spawnSync("npm", ["run", "build:deploy"], {
@@ -15,6 +15,7 @@ assert.equal(
 
 for (const file of [
   "dist/index.html",
+  "dist/404.html",
   "dist/robots.txt",
   "dist/sitemap.xml",
   "dist/_headers",
@@ -46,6 +47,12 @@ assert.equal(
   readdirSync("dist/terms").filter((file) => file.endsWith(".html")).length,
   70,
   "Deploy artifact should contain all 70 generated term pages"
+);
+
+assert.match(
+  readFileSync("dist/404.html", "utf8"),
+  /<meta name="robots" content="noindex, follow">/,
+  "The 404 page must not be indexable"
 );
 
 console.log("Validated the public dist artifact and private-path exclusions.");

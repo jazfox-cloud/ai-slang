@@ -4,6 +4,7 @@ const outputDir = "dist";
 const rootFiles = [
   "_headers",
   "_redirects",
+  "404.html",
   "about.html",
   "contact.html",
   "editorial-policy.html",
