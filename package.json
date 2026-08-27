@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "build:static": "node scripts/build-static-pages.mjs",
+    "build:deploy": "node scripts/build-deploy.mjs",
     "dev": "python3 -m http.server 8788",
-    "validate": "node tests/validate-data.mjs && node tests/middleware.mjs && node tests/seo.mjs && node tests/analytics.mjs"
+    "validate": "node tests/validate-data.mjs && node tests/middleware.mjs && node tests/seo.mjs && node tests/analytics.mjs && node tests/deploy-artifact.mjs"
   },
   "engines": {
     "node": ">=18"

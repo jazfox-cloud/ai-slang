@@ -13,6 +13,7 @@ Minimal MVP for an AI slang dictionary and AI-text humanizer.
 
 ```bash
 npm run build:static
+npm run build:deploy
 npm run dev
 ```
 
@@ -39,14 +40,16 @@ The default production domain is `https://ai-slang.com`. Set `SITE_URL=https://y
 ## Cloudflare setup notes
 
 1. Deploy this repo as a Cloudflare Pages project.
-2. Build command: `npm run build:static`.
-3. Build output directory: `/` (repository root).
+2. Build command: `npm run build:deploy`.
+3. Build output directory: `dist`.
 4. Production branch: `main`.
 5. Add custom domain: `ai-slang.com`.
 6. Optional redirect domain: add `aislanghub.com` and keep `_redirects` so it points to `ai-slang.com`.
 7. Set `DEEPSEEK_API_KEY` as an encrypted environment variable before enabling the live Humanizer API.
 8. Optional later step: create a D1 database and apply `schema.sql`.
 9. Optional later step: add KV binding `RATE_LIMIT` for durable daily limits.
+
+The deploy build uses an explicit public-file allowlist. Repository-only material under `docs/` and `reports/`, source data, tests, scripts, and configuration files are not copied into `dist/` and are not published as static assets.
 
 ## MVP scope
 
