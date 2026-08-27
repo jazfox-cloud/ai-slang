@@ -1,31 +1,152 @@
 export const slangs = [
   {
     word: "Slop",
-    definition: "Low-effort synthetic content dumped onto the internet to farm clicks, keywords, impressions, or ad money. The industrial waste of the LLM era.",
-    origin: "Became mainstream shorthand as AI-generated posts, images, SEO pages, and social feeds started feeling mass-produced and disposable.",
+    definition: "Low-quality digital content produced at scale, especially with generative AI, and published with little care for accuracy, usefulness, or originality.",
+    origin: "Slop already meant something messy or low-value. The internet meaning became mainstream as people needed a dismissive label for mass-produced AI images, videos, posts, books, and search content.",
     examples: ["Google results are getting buried under AI slop.", "Stop posting this ChatGPT slop on my timeline, write the thought yourself."],
     aiGrade: 5,
     trend: "HIGH",
     sourceType: "community",
-    sourceNote: "Popular term in 2024-2026 AI discourse; exact origin varies across social platforms and media coverage.",
-    sourceUrl: "https://en.wikipedia.org/wiki/AI_slop",
-    lastChecked: "2026-07-01",
+    sourceNote: "Cambridge Dictionary records AI slop as an informal, disapproving term for low-quality digital content created by AI. It is a cultural judgment, not a technical label or a reliable method for detecting how content was made.",
+    sourceUrl: "https://dictionary.cambridge.org/dictionary/english/ai-slop",
+    lastChecked: "2026-08-26",
+    dateModified: "2026-08-26",
+    plainEnglish: "Slop is the junk-content label people use when AI makes it cheap to publish more material than anyone meaningfully checked, shaped, or needed.",
     relatedTerms: ["Vibe Coding", "Clanker", "AI Content Disclosure", "Workslop", "Delve", "Tapestry"],
-    seoDescription: "Slop meaning in AI slang: low-effort AI-generated text, images, and posts mass-produced for clicks, reach, or ad revenue."
+    seoTitle: "Slop Meaning: What AI Slop Means Online",
+    seoDescription: "Slop meaning in AI slang: low-quality AI-generated text, images, videos, and posts produced at scale with little care or review.",
+    pageHeading: "What Does Slop Mean in AI?",
+    extraSections: [
+      {
+        heading: "AI slop versus the older meaning of slop",
+        paragraphs: [
+          "Slop has long described spilled liquid, unappetizing food, or something careless and low in value. Online communities reused that blunt image for digital material that feels mass-produced and disposable.",
+          "AI slop is the more specific phrase. It usually points to synthetic text, images, audio, or video published in volume without enough editing, fact-checking, or creative intent."
+        ]
+      },
+      {
+        heading: "What people call AI slop",
+        bullets: [
+          "Search pages assembled from generic AI summaries without original reporting or useful evidence.",
+          "Social posts, images, or videos generated in bulk to capture attention or advertising revenue.",
+          "Books, product listings, comments, or messages published without checking basic facts or coherence.",
+          "Content that imitates a useful format but gives the reader little trustworthy information in return."
+        ]
+      },
+      {
+        heading: "Slop versus Workslop",
+        paragraphs: [
+          "Slop is the broad internet label. Workslop is the workplace version: polished-looking AI output that shifts the checking, rewriting, or decision-making burden onto a coworker.",
+          "Neither term means that every use of AI is automatically bad. The criticism is about low-value output, missing judgment, and publication at a scale that transfers the cleanup cost to other people."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does slop mean in internet slang?",
+        answer: "Slop means low-quality online content that feels careless, disposable, or mass-produced. In current AI discussions, it often refers to synthetic content published at scale with little human review."
+      },
+      {
+        question: "Is slop always made by AI?",
+        answer: "No. People can call any low-value mass-produced content slop. AI slop is the specific label for material created or multiplied with generative AI."
+      },
+      {
+        question: "Is every AI-generated post slop?",
+        answer: "No. The term criticizes quality, care, usefulness, and scale rather than proving that AI was involved. AI-assisted work can still be edited, sourced, original, and useful."
+      },
+      {
+        question: "What is the difference between slop and Workslop?",
+        answer: "Slop is the broad label for low-value digital content. Workslop describes AI-generated workplace output that creates extra cleanup or decision work for colleagues."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Cambridge Dictionary: AI slop",
+        url: "https://dictionary.cambridge.org/dictionary/english/ai-slop"
+      },
+      {
+        label: "Merriam-Webster: Slop",
+        url: "https://www.merriam-webster.com/dictionary/slop"
+      }
+    ]
   },
   {
     word: "Vibe Coding",
-    definition: "Building software by steering an AI with intent, screenshots, and increasingly specific prompts instead of writing every line by hand.",
-    origin: "Popularized by Andrej Karpathy in early 2025, then adopted by indie hackers and coding-agent users as a half-joke, half-workflow.",
+    definition: "A loose style of AI-assisted programming where a person describes what they want, lets the model write most of the code, and judges progress mainly by running or seeing the result rather than understanding every line.",
+    origin: "Andrej Karpathy coined the phrase in a February 2025 post describing a workflow of speaking or typing requests, accepting model-written changes, running the result, and often ignoring the underlying code.",
     examples: ["I vibe coded the prototype, then spent Friday making it real.", "My app broke because the model's vibes changed after the last vendor update."],
     aiGrade: 2,
     trend: "HIGH",
     sourceType: "community",
-    sourceNote: "Commonly attributed to Andrej Karpathy's 2025 usage; now used broadly for AI-assisted coding by feel.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Vibe_coding",
-    lastChecked: "2026-07-01",
+    sourceNote: "Karpathy's original post described an intentionally code-light, result-driven workflow for casual projects. Current usage is broader, so this entry distinguishes vibe coding from any careful use of an AI coding assistant.",
+    sourceUrl: "https://x.com/karpathy/status/1886192184808149383",
+    lastChecked: "2026-08-26",
+    dateModified: "2026-08-26",
+    plainEnglish: "Vibe coding is prompting an AI to build the software, trying what it produces, and steering by whether the result feels right instead of reviewing every implementation detail.",
     relatedTerms: ["Slop", "Slopsquatting", "Agentic", "Grok Build", "Copilot", "Prompt Engineer"],
-    seoDescription: "Vibe coding meaning in AI slang: building software by steering an AI with prompts and intent instead of writing every line by hand."
+    seoTitle: "Vibe Coding Meaning: Definition, Origin, and Risks",
+    seoDescription: "Vibe coding means steering an AI to build software through prompts and results instead of writing or reviewing every line yourself.",
+    pageHeading: "What Does Vibe Coding Mean?",
+    extraSections: [
+      {
+        heading: "Where the term vibe coding came from",
+        paragraphs: [
+          "Karpathy used the phrase for a workflow in which the model handled almost all of the code while he supplied requests, ran the program, pasted errors back, and evaluated what appeared on screen.",
+          "The phrase spread because it captured both the speed and the deliberate looseness of building by feel. It was not originally a formal software-engineering method or a claim that review no longer matters."
+        ]
+      },
+      {
+        heading: "Vibe coding versus ordinary AI-assisted coding",
+        paragraphs: [
+          "Using autocomplete, asking for a test, or reviewing a model-generated patch is AI-assisted coding. It becomes vibe coding when the developer mostly steers outcomes and stops treating understanding the code as a requirement.",
+          "The boundary is cultural rather than standardized. One person may use the term proudly for rapid prototyping while another uses it critically for unreviewed production code."
+        ]
+      },
+      {
+        heading: "Where vibe coding fits",
+        bullets: [
+          "Fast prototypes, experiments, personal tools, and disposable weekend projects.",
+          "Interfaces where a person can quickly see whether the generated result matches the request.",
+          "Early exploration before maintainability, security, accessibility, and operational requirements are fully known.",
+          "Work that will later receive normal tests, review, ownership, and production hardening if it becomes important."
+        ]
+      },
+      {
+        heading: "The production risk",
+        paragraphs: [
+          "A result that looks correct can still contain insecure dependencies, broken edge cases, inaccessible UI, invented APIs, or code nobody on the team can maintain. Prompting faster does not remove those obligations.",
+          "For production software, keep the speed but restore the engineering loop: inspect the diff, run relevant tests, verify security boundaries, document ownership, and make sure someone understands how the system fails."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is the definition of vibe coding?",
+        answer: "Vibe coding is an informal style of AI-assisted development where a person prompts for changes, runs the result, and steers by the outcome while reading or understanding little of the generated code."
+      },
+      {
+        question: "Who coined the term vibe coding?",
+        answer: "AI researcher Andrej Karpathy coined the phrase in a February 2025 post about letting an AI model handle most of the code for casual projects."
+      },
+      {
+        question: "Is using an AI coding assistant always vibe coding?",
+        answer: "No. Developers can use AI while still reviewing every change, writing tests, understanding the architecture, and owning the result. Vibe coding specifically emphasizes steering by outcomes rather than code comprehension."
+      },
+      {
+        question: "Is vibe coding safe for production software?",
+        answer: "Not by itself. Production work still needs code review, tests, security checks, accessibility review, observability, and a maintainer who understands the system."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Andrej Karpathy: Original vibe coding post",
+        url: "https://x.com/karpathy/status/1886192184808149383"
+      },
+      {
+        label: "Y Combinator: Software Is Changing (Again)",
+        url: "https://www.youtube.com/watch?v=LCEmiRjPEtQ"
+      }
+    ]
   },
   {
     word: "Agentic",
@@ -82,16 +203,81 @@ export const slangs = [
   },
   {
     word: "GPU Rich / GPU Poor",
-    definition: "The class divide of modern AI: teams with warehouses of accelerators versus everyone else begging a quantized model to run on a hot laptop.",
-    origin: "Used by open-source AI builders and researchers to describe the compute gap between frontier labs, large platforms, academia, and indie developers.",
+    definition: "Informal labels for the AI compute divide: GPU-rich labs can use large accelerator clusters, while GPU-poor researchers and builders work with much tighter hardware, memory, or cloud-compute limits.",
+    origin: "SemiAnalysis popularized the GPU-rich and GPU-poor split in a 2023 analysis of the uneven access to accelerators used for large-model training and inference. Researchers and open-source communities then adopted the contrast more broadly.",
     examples: ["They are training on a giant cluster? Must be nice to be GPU rich.", "I am running a 3B model at two tokens per second. GPU poor lifestyle."],
     aiGrade: 2,
     trend: "MID",
     sourceType: "community",
-    sourceNote: "Community slang around AI compute access; best treated as cultural shorthand, not a precise economic category.",
-    sourceUrl: "",
-    lastChecked: "2026-07-01",
-    seoDescription: "GPU rich and GPU poor describe the compute gap between AI labs with large accelerator clusters and builders with limited hardware."
+    sourceNote: "SemiAnalysis used the labels for a sharply unequal compute landscape. They remain relative community shorthand, not audited tiers with a universal GPU-count threshold.",
+    sourceUrl: "https://semianalysis.com/2023/08/28/google-gemini-eats-the-world-gemini/",
+    lastChecked: "2026-08-26",
+    dateModified: "2026-08-26",
+    plainEnglish: "GPU rich means having unusually strong access to AI compute. GPU poor means that hardware availability, memory, cloud cost, or queue time limits what you can train or run.",
+    relatedTerms: ["Open-Weight AI", "Speculative Decoding", "Mixture of Experts (MoE)", "Prompt Caching", "Model Router", "LLM Burnout"],
+    seoTitle: "GPU Rich vs GPU Poor Meaning in AI",
+    seoDescription: "GPU rich and GPU poor describe the compute gap between AI labs with large accelerator clusters and builders with limited hardware.",
+    pageHeading: "GPU Rich vs GPU Poor: What the Terms Mean",
+    extraSections: [
+      {
+        heading: "Where GPU rich and GPU poor came from",
+        paragraphs: [
+          "SemiAnalysis used the contrast in 2023 to describe a bimodal compute market: a small group of labs could give researchers access to large accelerator clusters, while startups, academics, and open-source teams worked with far fewer resources.",
+          "The phrase spread because it turns an infrastructure constraint into an immediately understandable status label. It can describe a company, research group, country, or individual builder depending on context."
+        ]
+      },
+      {
+        heading: "There is no universal GPU-rich threshold",
+        paragraphs: [
+          "GPU rich and GPU poor are relative terms. A workstation that feels rich for local inference may be poor for pretraining a frontier model, and a lab with substantial cloud credits may still be constrained compared with a hyperscaler.",
+          "The useful questions are concrete: which accelerators are available, how much memory and interconnect capacity they provide, how long the team can use them, and what training or inference workload must fit."
+        ]
+      },
+      {
+        heading: "How GPU-poor builders adapt",
+        bullets: [
+          "Use smaller or open-weight models that fit available memory and latency limits.",
+          "Apply quantization, batching, caching, speculative decoding, or sparse architectures where the quality tradeoff is acceptable.",
+          "Rent accelerators for bounded experiments instead of owning a permanent cluster.",
+          "Focus on evaluation, data quality, applications, or systems research that does not require frontier-scale pretraining."
+        ]
+      },
+      {
+        heading: "Why the compute divide matters",
+        paragraphs: [
+          "Compute access affects which experiments are possible, how quickly teams can iterate, and who can train or serve the largest models. It can concentrate frontier-model work inside organizations with capital, chips, power, networking, and specialized infrastructure.",
+          "GPU poor does not mean technically weak, and GPU rich does not guarantee useful research. The terms describe access to a resource, not the quality of the people, data, evaluation, or product decisions around it."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does GPU rich mean?",
+        answer: "GPU rich means having unusually strong access to modern AI accelerators, memory, networking, and the budget or infrastructure required to use them at scale."
+      },
+      {
+        question: "What does GPU poor mean?",
+        answer: "GPU poor means that limited hardware, memory, cloud budget, or accelerator availability constrains which AI models a person or organization can train and run."
+      },
+      {
+        question: "How many GPUs make a company GPU rich?",
+        answer: "There is no universal cutoff. The label is relative to the workload, accelerator generation, memory, interconnect, duration of access, and the comparison group."
+      },
+      {
+        question: "Can GPU-poor teams still build useful AI systems?",
+        answer: "Yes. Smaller models, open weights, rented compute, efficient inference, strong data, careful evaluation, and focused product work can all create value without frontier-scale training clusters."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "SemiAnalysis: The GPU-Rich and the GPU-Poor",
+        url: "https://semianalysis.com/2023/08/28/google-gemini-eats-the-world-gemini/"
+      },
+      {
+        label: "MIT CSAIL: Empowering AI research beyond big budgets",
+        url: "https://www.csail.mit.edu/event/dont-panic-empowering-ai-research-scale-beyond-big-names-and-big-budgets"
+      }
+    ]
   },
   {
     word: "Hallucination",
@@ -511,11 +697,70 @@ export const slangs = [
     sourceType: "community",
     sourceNote: "Workplace AI slang with a stable HBR reference; the term is useful as a cultural label, not a precise productivity metric for every AI-assisted document.",
     sourceUrl: "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
-    lastChecked: "2026-07-11",
+    lastChecked: "2026-08-22",
+    dateModified: "2026-08-22",
     plainEnglish: "Workslop is sloppy AI work dressed up as finished work. It usually shifts the hard thinking, checking, or rewriting onto someone else.",
-    relatedTerms: ["Slop", "LLM Burnout", "Shadow AI", "Hallucination", "Eval", "Prompt Caching"],
+    relatedTerms: ["Slop", "AI Content Disclosure", "LLM Burnout", "Shadow AI", "Hallucination", "Delve"],
     seoTitle: "Workslop Meaning: AI Slang for Low-Value Work Output",
-    seoDescription: "Workslop meaning in AI slang: polished-looking AI-generated workplace output that lacks substance and creates cleanup work for other people."
+    seoDescription: "Workslop meaning in AI slang: polished-looking AI-generated workplace output that lacks substance and creates cleanup work for other people.",
+    extraSections: [
+      {
+        heading: "Why people say do not paste the AI",
+        paragraphs: [
+          "The complaint is not that a person used AI. It is that they copied a model's answer into Slack, email, a ticket, a document, or a code review without adding the context, judgment, source check, or decision the other person actually needed.",
+          "That is why the phrase \"Don't paste the AI\" fits inside workslop rather than needing a separate glossary entry. It names the etiquette failure at the handoff boundary: the sender saves time, while the recipient has to read, verify, compress, and often redo the thinking."
+        ]
+      },
+      {
+        heading: "Workslop vs AI etiquette",
+        paragraphs: [
+          "AI etiquette is the broader set of workplace norms around transparency, consent, privacy, review, and tone when people use generative AI. Workslop is one common breach of that etiquette: raw or lightly skimmed AI output presented as if it were useful finished work.",
+          "Disclosure can help, but a label alone does not fix weak work. \"I asked ChatGPT\" is still workslop if the message is long, generic, unsourced, or missing the author's actual recommendation."
+        ]
+      },
+      {
+        heading: "How to avoid sending workslop",
+        bullets: [
+          "Use AI as a drafting partner, then write the final answer in your own words.",
+          "Cut the response down to the part that answers the actual question.",
+          "Add the context only you have: trade-offs, decision, owner, caveat, or source trail.",
+          "Say when the text is an unchecked AI draft, especially if you are asking someone to review it.",
+          "Do not paste sensitive workplace data into a tool unless your organization's policy and account controls allow it."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Is workslop the same as using AI at work?",
+        answer: "No. Workslop is not ordinary AI assistance. It is AI-assisted or AI-generated work that looks polished but lacks enough judgment, context, verification, or ownership to be useful to the next person."
+      },
+      {
+        question: "Is pasting a ChatGPT answer into Slack always workslop?",
+        answer: "Not always, but it often becomes workslop when the sender has not read, checked, shortened, or connected the answer to the actual workplace context."
+      },
+      {
+        question: "Does disclosing AI use prevent workslop?",
+        answer: "Disclosure helps set expectations, but it is not enough by itself. The sender still needs to verify facts, edit for the audience, and add their own judgment."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Don't paste the AI, please",
+        url: "https://dontpastetheai.com/"
+      },
+      {
+        label: "Hacker News: Don't Paste the AI, please",
+        url: "https://news.ycombinator.com/item?id=49371857"
+      },
+      {
+        label: "Hacker News: Throwing AI-generated walls of text into conversations",
+        url: "https://news.ycombinator.com/item?id=48219992"
+      },
+      {
+        label: "HBR: AI-generated workslop is destroying productivity",
+        url: "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity"
+      }
+    ]
   },
   {
     word: "Speculative Decoding",
@@ -930,6 +1175,10 @@ export const slangs = [
     ],
     furtherReading: [
       {
+        label: "AI Slang: Best Anthropic Model by Task",
+        url: "/articles/best-anthropic-model-by-task"
+      },
+      {
         label: "Anthropic: Introducing Claude Opus 5",
         url: "https://www.anthropic.com/news/claude-opus-5"
       },
@@ -940,6 +1189,116 @@ export const slangs = [
       {
         label: "Claude Platform Docs: Pricing",
         url: "https://platform.claude.com/docs/en/about-claude/pricing"
+      }
+    ]
+  },
+  {
+    word: "GPT-5.6 Sol",
+    definition: "GPT-5.6 Sol is the flagship capability tier in OpenAI's GPT-5.6 model family, intended for complex reasoning, coding, professional work, and long-running tool-using workflows.",
+    origin: "OpenAI previewed GPT-5.6 Sol on June 26, 2026, then made the GPT-5.6 family generally available on July 9, 2026. Sol introduced the flagship tier in a naming system where the number marks the generation and Sol, Terra, and Luna mark durable capability tiers.",
+    examples: ["Use GPT-5.6 Sol for the migration plan, but route routine classification to Luna.", "The API request used gpt-5.6-sol at medium effort rather than treating Sol as a ChatGPT subscription."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Official OpenAI model term. API prices, promotional periods, product availability, model aliases, reasoning modes, and credit rules are dynamic, so this entry separates the current model-page facts from launch pricing and subscription access.",
+    sourceUrl: "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    lastChecked: "2026-08-25",
+    dateModified: "2026-08-25",
+    plainEnglish: "Sol is OpenAI's name for the high-capability GPT-5.6 tier. It is a model choice, not a ChatGPT plan, and its API token bill is separate from included subscription usage or product credits.",
+    relatedTerms: ["Frontier Model", "Reasoning Model", "Model Router", "Computer Use", "Tool Calling", "Agentic"],
+    seoTitle: "What Is GPT-5.6 Sol? Pricing, Release Date, and Models",
+    seoDescription: "GPT-5.6 Sol explained: current API pricing, release timeline, Sol vs Terra vs Luna, model aliases, long-context costs, and when to use it.",
+    pageHeading: "What Is GPT-5.6 Sol?",
+    extraSections: [
+      {
+        heading: "What Sol means in GPT-5.6",
+        paragraphs: [
+          "OpenAI describes Sol as the flagship capability tier in the GPT-5.6 family. Terra is the balanced lower-cost tier, while Luna is the fastest and most affordable tier for high-volume work.",
+          "The generation number and tier name serve different jobs: 5.6 identifies the generation, while Sol, Terra, and Luna are capability tiers that can advance on their own cadence. In the API, the `gpt-5.6` alias routes to `gpt-5.6-sol`."
+        ]
+      },
+      {
+        heading: "Preview, general availability, and price changes",
+        bullets: [
+          "June 26, 2026: OpenAI began a limited preview of Sol, Terra, and Luna.",
+          "July 9, 2026: the GPT-5.6 family became generally available across ChatGPT, Codex, and the OpenAI API.",
+          "July 30, 2026: OpenAI reduced Terra and Luna API prices.",
+          "August 21, 2026: OpenAI introduced a temporary GPT-5.6 Sol API and eligible credit-price reduction."
+        ]
+      },
+      {
+        heading: "Current GPT-5.6 Sol API pricing",
+        paragraphs: [
+          "Last checked on August 25, 2026: OpenAI's model page lists $4 per million input tokens, $0.40 per million cached input tokens, and $20 per million output tokens for GPT-5.6 Sol.",
+          "OpenAI says this promotional pricing is available at least through November 21, 2026. The launch article still contains the earlier $5 input and $30 output figures in its body, so the current model page should be checked before quoting a price."
+        ]
+      },
+      {
+        heading: "Long context and cache charges",
+        bullets: [
+          "The documented context window is 1,050,000 tokens, with up to 128,000 output tokens.",
+          "Prompts with more than 272K input tokens are billed at 2x the input rate and 1.5x the output rate for the full request.",
+          "Cache reads use the cached-input rate; explicit cache writes are billed at 1.25x the uncached input rate.",
+          "Tool-specific charges, Batch, Flex, Priority or Fast processing, regional processing, and partner platforms can follow different rules."
+        ]
+      },
+      {
+        heading: "Sol vs Terra vs Luna",
+        paragraphs: [
+          "Use Sol when the cost of a weak answer is high: complex repository work, difficult reasoning, professional analysis, research, or long-running tool coordination. Use Terra when you want a stronger price-performance balance, and Luna for high-volume work where latency and cost matter most.",
+          "Model choice and reasoning effort are separate controls. GPT-5.6 supports none, low, medium, high, xhigh, and max reasoning effort. A lower-priced tier or lower effort can be the better production choice if it passes the same representative evals."
+        ]
+      },
+      {
+        heading: "API pricing is not a ChatGPT subscription price",
+        paragraphs: [
+          "Per-token API pricing does not tell you the monthly cost of ChatGPT Plus, Pro, Business, or Enterprise. Included usage, message limits, token-based enterprise billing, product credits, and API usage are separate meters.",
+          "Sol Pro and ultra can also describe higher-compute product or reasoning modes. They should not be invented as separate API model slugs when current OpenAI guidance says to keep the selected GPT-5.6 model and configure the supported reasoning mode or effort."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Is GPT-5.6 Sol the same as GPT-5.6?",
+        answer: "The GPT-5.6 name can refer to the whole Sol, Terra, and Luna family. In the API, OpenAI says the gpt-5.6 alias currently routes to the flagship gpt-5.6-sol model."
+      },
+      {
+        question: "How much does GPT-5.6 Sol cost?",
+        answer: "As checked on August 25, 2026, OpenAI lists promotional API pricing of $4 per million input tokens, $0.40 per million cached input tokens, and $20 per million output tokens, available at least through November 21, 2026."
+      },
+      {
+        question: "When was GPT-5.6 Sol released?",
+        answer: "OpenAI began a limited preview on June 26, 2026 and announced general availability for the GPT-5.6 family on July 9, 2026."
+      },
+      {
+        question: "Should I use Sol, Terra, or Luna?",
+        answer: "Use Sol for the hardest quality-first work, Terra for a balance of capability and cost, and Luna for cost-sensitive, high-volume workloads. Confirm the choice with representative tasks and total cost per successful result."
+      },
+      {
+        question: "Does the GPT-5.6 Sol API price include ChatGPT access?",
+        answer: "No. API token charges are separate from ChatGPT subscriptions, included usage, message limits, enterprise token billing, and product credit systems."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI API: GPT-5.6 Sol model",
+        url: "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+      },
+      {
+        label: "OpenAI API: Models overview",
+        url: "https://developers.openai.com/api/docs/models"
+      },
+      {
+        label: "OpenAI: GPT-5.6 general availability",
+        url: "https://openai.com/index/gpt-5-6/"
+      },
+      {
+        label: "OpenAI: GPT-5.6 Sol preview",
+        url: "https://openai.com/index/previewing-gpt-5-6-sol/"
+      },
+      {
+        label: "OpenAI API: Pricing",
+        url: "https://platform.openai.com/pricing"
       }
     ]
   },
@@ -1125,19 +1484,83 @@ export const slangs = [
   },
   {
     word: "A2A",
-    definition: "Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.",
+    definition: "Agent2Agent protocol: an open standard that lets independent AI agents discover capabilities, exchange messages and results, and coordinate tasks without exposing all of their private internals.",
     origin: "Introduced by Google as Agent2Agent, then donated to the Linux Foundation and adopted in agent interoperability discussions alongside MCP.",
     examples: ["Use MCP for the tools and A2A when the workflow needs another agent to take a task.", "The demo said A2A, but the hard part was still deciding which agent was allowed to touch customer data."],
     aiGrade: 2,
     trend: "HIGH",
     sourceType: "product-term",
     sourceNote: "Official open protocol term with strong builder-community usage. The entry treats A2A as shorthand for agent-to-agent interoperability rather than a guarantee that two arbitrary agents will cooperate safely.",
-    sourceUrl: "https://a2a-protocol.org/v1.0.0/",
-    lastChecked: "2026-07-17",
+    sourceUrl: "https://a2a-protocol.org/latest/",
+    lastChecked: "2026-08-26",
+    dateModified: "2026-08-26",
     plainEnglish: "A2A is a communication pattern for AI agents. It gives agents a common way to discover capabilities, exchange task information, and coordinate without sharing all of their private internals.",
     relatedTerms: ["MCP", "Agentic", "Tool Calling", "Computer Use", "Prompt Injection", "Agentic RAG"],
     seoTitle: "A2A Meaning: Agent2Agent Protocol in AI",
-    seoDescription: "A2A meaning in AI builder slang: Agent2Agent protocol, why agent interoperability matters, and how A2A relates to MCP and tool calling."
+    seoDescription: "A2A means Agent2Agent protocol in AI: an open standard for agent discovery, task coordination, messages, and results across different systems.",
+    pageHeading: "What Does A2A Mean in AI?",
+    extraSections: [
+      {
+        heading: "What A2A stands for in AI",
+        paragraphs: [
+          "In AI-agent discussions, A2A stands for Agent2Agent. The protocol gives separate agent systems a shared way to describe capabilities, send tasks, provide updates, and return results.",
+          "A2A has other meanings in business and technology, so context matters. This glossary entry covers the open agent-interoperability protocol, not every expansion of the acronym."
+        ]
+      },
+      {
+        heading: "What the A2A protocol does",
+        bullets: [
+          "Publishes an Agent Card that describes an agent's identity, endpoint, skills, capabilities, and supported input or output modes.",
+          "Lets a client send messages and create or follow tasks handled by a remote agent.",
+          "Supports updates and results without requiring one agent to reveal its internal memory, prompts, or tools to another.",
+          "Provides a common interaction model for agents built with different frameworks, languages, or vendors."
+        ]
+      },
+      {
+        heading: "A2A versus MCP",
+        paragraphs: [
+          "MCP standardizes how an AI application connects to tools, resources, and context. A2A standardizes how one independent agent or agentic application communicates and collaborates with another.",
+          "They can be used together: an agent may use MCP to access its tools and A2A to delegate a task to a remote agent. Neither protocol automatically supplies trust, authorization, data governance, or a good workflow design."
+        ]
+      },
+      {
+        heading: "What A2A does not guarantee",
+        bullets: [
+          "Two arbitrary agents do not become useful collaborators merely because they speak the same protocol.",
+          "A2A interoperability does not remove the need for authentication, authorization, privacy controls, and audit logs.",
+          "An Agent Card describes capabilities; it does not prove that every claim is safe, accurate, or currently available.",
+          "Protocol compatibility does not decide which agent should own a task or whether its result can be trusted."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does A2A stand for in AI?",
+        answer: "A2A stands for Agent2Agent, an open protocol for communication and task coordination between independent AI agents or agentic applications."
+      },
+      {
+        question: "What is the A2A protocol used for?",
+        answer: "It is used for agent discovery, exchanging messages, managing collaborative tasks, sending progress updates, and returning results across different agent systems."
+      },
+      {
+        question: "What is the difference between A2A and MCP?",
+        answer: "MCP connects an AI application to tools and data. A2A connects independent agents to one another so they can communicate and delegate work."
+      },
+      {
+        question: "Does A2A make agents secure?",
+        answer: "No. A2A defines an interoperability protocol, but implementers still need authentication, authorization, privacy rules, validation, monitoring, and limits on what each agent may do."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "A2A Protocol: What is A2A?",
+        url: "https://a2a-protocol.org/latest/"
+      },
+      {
+        label: "A2A Protocol 1.0 specification",
+        url: "https://a2a-protocol.org/latest/specification/"
+      }
+    ]
   },
   {
     word: "Model Router",
@@ -1462,11 +1885,11 @@ export const slangs = [
     sourceNote: "This is a cross-platform transparency term, not one universal rule. Platforms use different labels and thresholds, so this entry describes the shared idea and uses platform-specific examples only as examples.",
     sourceUrl: "https://support.google.com/youtube/answer/14328491",
     lastChecked: "2026-07-21",
-    dateModified: "2026-07-21",
+    dateModified: "2026-08-26",
     plainEnglish: "It is a heads-up about the production process. A disclosure might be supplied by the creator, added automatically from provenance signals, or applied by a platform. By itself, it does not say the content is false, fully automated, or low quality.",
     relatedTerms: ["Slop", "Workslop", "Synthetic Data", "Model Collapse", "Hallucination", "Shadow AI"],
-    seoTitle: "What Is AI Content Disclosure? Meaning and Labels",
-    seoDescription: "AI content disclosure means a label saying content was created or modified with AI. Learn about common labels, detection, watermarks, and Content Credentials.",
+    seoTitle: "Content Disclosure Meaning: AI Labels Explained",
+    seoDescription: "Content disclosure meaning in AI: a label or notice saying content was created or meaningfully modified with artificial intelligence.",
     pageHeading: "What Is AI Content Disclosure?",
     extraSections: [
       {
@@ -1836,6 +2259,89 @@ export const slangs = [
       {
         label: "OpenAI Agents SDK: Agents and handoffs",
         url: "https://openai.github.io/openai-agents-python/agents/"
+      }
+    ]
+  },
+  {
+    word: "Agent Harness",
+    definition: "An agent harness is the runtime layer around a model that manages the agent loop, tools, permissions, context, state, execution environment, and feedback needed to turn model responses into controlled actions.",
+    origin: "The word harness already existed in software testing and control systems. It became common AI builder language as coding agents and managed agent runtimes made the software around the model as important as the model itself.",
+    examples: ["The model was unchanged, but the new agent harness added a sandbox, approvals, and reliable retries.", "Claude Code and Codex are more than model pickers because their harnesses manage tools, files, commands, and session state."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "technical-term",
+    sourceNote: "Current agent-engineering term used in official platform documentation and industry explanations. Usage is not fully standardized, so this entry separates the runtime meaning from agent frameworks, evaluation harnesses, and products named Harness.",
+    sourceUrl: "https://platform.claude.com/docs/en/managed-agents/overview",
+    lastChecked: "2026-08-25",
+    dateModified: "2026-08-25",
+    plainEnglish: "The model is the brain-like component. The harness is the surrounding software that gives it a loop, tools, memory, limits, a place to run, and a way to observe what happened.",
+    relatedTerms: ["Agentic", "Tool Calling", "MCP", "Computer Use", "Subagent", "Eval"],
+    seoTitle: "What Is an Agent Harness? AI and Coding Agent Meaning",
+    seoDescription: "Agent harness meaning in AI: the runtime around a model that manages tools, context, permissions, state, sandboxes, feedback, and the agent loop.",
+    pageHeading: "What Is an Agent Harness?",
+    extraSections: [
+      {
+        heading: "Model vs agent vs harness",
+        paragraphs: [
+          "A model predicts and generates a response. An agent is the running system that pursues a task through repeated model calls and actions. The harness is the runtime layer around a model that keeps that process moving and controlled.",
+          "A typical harness assembles context, exposes tools, executes approved calls, returns tool results to the model, preserves session state, applies limits, and records what happened. Changing the harness can change real task performance even when the underlying model stays the same."
+        ]
+      },
+      {
+        heading: "Agent harness vs agent framework",
+        paragraphs: [
+          "An agent framework is usually a library or SDK used to build agents. A harness is the configured runtime system that actually runs the loop, tools, policies, state, and environment for a task.",
+          "The boundary is not standardized. Some products call an SDK, runtime, CLI, or whole agent product a harness, so a useful explanation should name the concrete components instead of relying on the label alone."
+        ]
+      },
+      {
+        heading: "Coding agent harness",
+        bullets: [
+          "Repository and file context supplied to the model.",
+          "Shell, search, edit, test, browser, and other callable tools.",
+          "Sandboxing, network limits, approvals, and permission checks.",
+          "Planning, compaction, memory, retries, checkpoints, and session state.",
+          "Diffs, tests, graders, logs, and human review used to verify the result."
+        ]
+      },
+      {
+        heading: "Evaluation harness is a different meaning",
+        paragraphs: [
+          "In benchmarks, an evaluation harness is the scaffold that gives systems tasks, runs them under controlled conditions, and scores the outputs. It may contain an agent harness, but its main job is repeatable evaluation rather than operating a production agent.",
+          "Product names can add a third meaning. When a tool is literally named Harness, check whether the speaker means that product, an agent runtime, or a benchmark runner."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Is an agent harness the same as an AI model?",
+        answer: "No. The model generates decisions or responses. The harness is the software around it that manages the loop, context, tools, permissions, state, execution, and feedback."
+      },
+      {
+        question: "Is Claude Code or Codex an agent harness?",
+        answer: "They are complete coding-agent products that include harness behavior such as repository context, tool execution, permissions, state, and verification. Calling the whole product a harness can be useful shorthand, but the product also includes interfaces and services beyond the runtime loop."
+      },
+      {
+        question: "What belongs in a coding agent harness?",
+        answer: "Common components include an agent loop, tool definitions and execution, repository context, memory or compaction, a sandbox, permission rules, limits, logging, tests, and human approval points."
+      },
+      {
+        question: "Is an agent harness the same as a test harness?",
+        answer: "No. They share the idea of controlled execution, but an agent harness operates the agent, while a test or evaluation harness runs repeatable cases and measures results."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Claude Managed Agents overview",
+        url: "https://platform.claude.com/docs/en/managed-agents/overview"
+      },
+      {
+        label: "Microsoft Agent Framework: Agent Harness",
+        url: "https://learn.microsoft.com/en-us/agent-framework/concepts/harness"
+      },
+      {
+        label: "Salesforce: What Is an Agent Harness?",
+        url: "https://www.salesforce.com/agentforce/ai-agents/agent-harness/"
       }
     ]
   },

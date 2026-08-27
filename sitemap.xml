@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ai-slang.com/</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/slop</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/vibe-coding</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/slop</loc><lastmod>2026-08-26</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/vibe-coding</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agentic</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/delve</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/tapestry</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/stochastic-parrot</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/gpu-rich-gpu-poor</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/gpu-rich-gpu-poor</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/hallucination</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/rlhf-d-to-death</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/rag</loc><lastmod>2026-07-28</lastmod></url>
@@ -36,29 +36,31 @@
   <url><loc>https://ai-slang.com/terms/llm-as-a-judge</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/gpt-live</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/llm-burnout</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/workslop</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/workslop</loc><lastmod>2026-08-22</lastmod></url>
   <url><loc>https://ai-slang.com/terms/speculative-decoding</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/geo</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/aeo</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/chatgpt-ads</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/claude-opus-5</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/claude-opus-5</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/gpt-5-6-sol</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://ai-slang.com/terms/llm-discoverability</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/sycophancy</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agentic-rag</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/slopsquatting</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/tool-poisoning</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/memory-poisoning</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/a2a</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/a2a</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/model-router</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agent-observability</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/grok-build</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/clanker</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/synthetic-users</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/workspace-agent</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/terms/ai-content-disclosure</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/ai-content-disclosure</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/open-weight-ai</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agent-washing</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/subagent</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/agent-harness</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agent-skills</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/ai-crawler</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/browser-agent</loc><lastmod>2026-07-28</lastmod></url>
@@ -69,11 +71,12 @@
   <url><loc>https://ai-slang.com/terms/test-time-compute</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/reward-hacking</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/terms/chain-of-thought-monitoring</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://ai-slang.com/articles/what-is-ai-slang</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/articles/what-is-ai-slang</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/articles/gpt-ese-words-to-avoid</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/ai-slang-for-indie-hackers</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/gpt-live-vs-voice-mode</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/llm-burnout-ai-cost-fatigue</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://ai-slang.com/articles/best-anthropic-model-by-task</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://ai-slang.com/articles/ai-website-builder-code-export</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/lovable-vs-bolt-code-export</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/webflow-framer-wix-squarespace-code-export</loc><lastmod>2026-07-28</lastmod></url>

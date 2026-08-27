@@ -8,19 +8,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=3">
     <link rel="apple-touch-icon" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
     <title>A2A Meaning: Agent2Agent Protocol in AI</title>
-    <meta name="description" content="A2A meaning in AI builder slang: Agent2Agent protocol, why agent interoperability matters, and how A2A relates to MCP and tool calling.">
+    <meta name="description" content="A2A means Agent2Agent protocol in AI: an open standard for agent discovery, task coordination, messages, and results across different systems.">
     <link rel="canonical" href="https://ai-slang.com/terms/a2a">
     <meta property="og:title" content="A2A Meaning: Agent2Agent Protocol in AI">
-    <meta property="og:description" content="A2A meaning in AI builder slang: Agent2Agent protocol, why agent interoperability matters, and how A2A relates to MCP and tool calling.">
+    <meta property="og:description" content="A2A means Agent2Agent protocol in AI: an open standard for agent discovery, task coordination, messages, and results across different systems.">
     <meta property="og:url" content="https://ai-slang.com/terms/a2a">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="A2A Meaning: Agent2Agent Protocol in AI">
-    <meta name="twitter:description" content="A2A meaning in AI builder slang: Agent2Agent protocol, why agent interoperability matters, and how A2A relates to MCP and tool calling.">
+    <meta name="twitter:description" content="A2A means Agent2Agent protocol in AI: an open standard for agent discovery, task coordination, messages, and results across different systems.">
     <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
     <link rel="stylesheet" href="/src/styles.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"A2A","description":"Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/a2a"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"A2A","description":"Agent2Agent protocol: an open standard that lets independent AI agents discover capabilities, exchange messages and results, and coordinate tasks without exposing all of their private internals.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/a2a"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does A2A stand for in AI?","acceptedAnswer":{"@type":"Answer","text":"A2A stands for Agent2Agent, an open protocol for communication and task coordination between independent AI agents or agentic applications."}},{"@type":"Question","name":"What is the A2A protocol used for?","acceptedAnswer":{"@type":"Answer","text":"It is used for agent discovery, exchanging messages, managing collaborative tasks, sending progress updates, and returning results across different agent systems."}},{"@type":"Question","name":"What is the difference between A2A and MCP?","acceptedAnswer":{"@type":"Answer","text":"MCP connects an AI application to tools and data. A2A connects independent agents to one another so they can communicate and delegate work."}},{"@type":"Question","name":"Does A2A make agents secure?","acceptedAnswer":{"@type":"Answer","text":"No. A2A defines an interoperability protocol, but implementers still need authentication, authorization, privacy rules, validation, monitoring, and limits on what each agent may do."}}]}</script>
     <script type="module" src="/src/analytics.js"></script>
   </head>
   <body>
@@ -40,8 +40,8 @@
     <main class="static-page">
       <article class="seo-article">
         <p class="eyebrow">AI_SLANG_ENTRY</p>
-        <h1>A2A Meaning</h1>
-        <p class="article-lead">Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.</p>
+        <h1>What Does A2A Mean in AI?</h1>
+        <p class="article-lead">Agent2Agent protocol: an open standard that lets independent AI agents discover capabilities, exchange messages and results, and coordinate tasks without exposing all of their private internals.</p>
         <div class="vote-row">
           <span>AI_TASTE=2/5</span>
           <span>██░░░</span>
@@ -49,21 +49,72 @@
         </div>
         <section>
           <h2>What does A2A mean?</h2>
-          <p>Agent2Agent protocol: the builder acronym for letting one AI agent discover, contact, and delegate work to another agent instead of pretending every workflow lives inside one chat box.</p>
+          <p>Agent2Agent protocol: an open standard that lets independent AI agents discover capabilities, exchange messages and results, and coordinate tasks without exposing all of their private internals.</p>
           <p>A2A is a communication pattern for AI agents. It gives agents a common way to discover capabilities, exchange task information, and coordinate without sharing all of their private internals.</p>
         </section>
         <section>
           <h2>Origin and usage</h2>
           <p>Introduced by Google as Agent2Agent, then donated to the Linux Foundation and adopted in agent interoperability discussions alongside MCP.</p>
-          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-07-17.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-08-26.</p>
           <p>Official open protocol term with strong builder-community usage. The entry treats A2A as shorthand for agent-to-agent interoperability rather than a guarantee that two arbitrary agents will cooperate safely.</p>
-          <p><a class="source-link" href="https://a2a-protocol.org/v1.0.0/" rel="noreferrer">Primary reference</a></p>
+          <p><a class="source-link" href="https://a2a-protocol.org/latest/" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>What A2A stands for in AI</h2>
+          <p>In AI-agent discussions, A2A stands for Agent2Agent. The protocol gives separate agent systems a shared way to describe capabilities, send tasks, provide updates, and return results.</p>
+<p>A2A has other meanings in business and technology, so context matters. This glossary entry covers the open agent-interoperability protocol, not every expansion of the acronym.</p>
+        </section>
+<section>
+          <h2>What the A2A protocol does</h2>
+          <ul>
+            <li>Publishes an Agent Card that describes an agent's identity, endpoint, skills, capabilities, and supported input or output modes.</li>
+<li>Lets a client send messages and create or follow tasks handled by a remote agent.</li>
+<li>Supports updates and results without requiring one agent to reveal its internal memory, prompts, or tools to another.</li>
+<li>Provides a common interaction model for agents built with different frameworks, languages, or vendors.</li>
+          </ul>
+        </section>
+<section>
+          <h2>A2A versus MCP</h2>
+          <p>MCP standardizes how an AI application connects to tools, resources, and context. A2A standardizes how one independent agent or agentic application communicates and collaborates with another.</p>
+<p>They can be used together: an agent may use MCP to access its tools and A2A to delegate a task to a remote agent. Neither protocol automatically supplies trust, authorization, data governance, or a good workflow design.</p>
+        </section>
+<section>
+          <h2>What A2A does not guarantee</h2>
+          <ul>
+            <li>Two arbitrary agents do not become useful collaborators merely because they speak the same protocol.</li>
+<li>A2A interoperability does not remove the need for authentication, authorization, privacy controls, and audit logs.</li>
+<li>An Agent Card describes capabilities; it does not prove that every claim is safe, accurate, or currently available.</li>
+<li>Protocol compatibility does not decide which agent should own a task or whether its result can be trusted.</li>
+          </ul>
         </section>
         <section>
           <h2>Examples</h2>
           <ul>
             <li>Use MCP for the tools and A2A when the workflow needs another agent to take a task.</li>
 <li>The demo said A2A, but the hard part was still deciding which agent was allowed to touch customer data.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What does A2A stand for in AI?</h3>
+            <p>A2A stands for Agent2Agent, an open protocol for communication and task coordination between independent AI agents or agentic applications.</p>
+          </div>
+<div class="faq-item">
+            <h3>What is the A2A protocol used for?</h3>
+            <p>It is used for agent discovery, exchanging messages, managing collaborative tasks, sending progress updates, and returning results across different agent systems.</p>
+          </div>
+<div class="faq-item">
+            <h3>What is the difference between A2A and MCP?</h3>
+            <p>MCP connects an AI application to tools and data. A2A connects independent agents to one another so they can communicate and delegate work.</p>
+          </div>
+<div class="faq-item">
+            <h3>Does A2A make agents secure?</h3>
+            <p>No. A2A defines an interoperability protocol, but implementers still need authentication, authorization, privacy rules, validation, monitoring, and limits on what each agent may do.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://a2a-protocol.org/latest/" rel="noreferrer">A2A Protocol: What is A2A?</a></li>
+<li><a class="source-link" href="https://a2a-protocol.org/latest/specification/" rel="noreferrer">A2A Protocol 1.0 specification</a></li>
           </ul>
         </section>
         <section>

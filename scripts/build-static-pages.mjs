@@ -239,17 +239,18 @@ const articlePages = [
     title: "What Is AI Slang? A Field Guide to the Words Around LLMs",
     description: "Learn what AI slang means, where terms like GPT-ese and model memes come from, and how to use this source-aware dictionary of modern AI language.",
     h1: "What Is AI Slang?",
-    lead: "AI slang is the fast-moving vocabulary people use to describe model behavior, AI-written text, coding agents, synthetic content, and the culture forming around large language models.",
+    lead: "AI slang means the fast-moving vocabulary people use to describe model behavior, AI-written text, coding agents, synthetic content, and the culture forming around large language models.",
     sections: [
       ["Why AI slang moves fast", "AI tools change workflows quickly, and people invent shorthand before formal terminology catches up. Some words begin as research terms, some as product marketing, and some as jokes from developers trying to describe a new kind of annoyance."],
-      ["The main categories", "The useful split is technical terms, cultural slang, and GPT-ese. Technical terms include RAG and context window. Cultural slang includes slop and vibe coding. GPT-ese covers words that make writing feel suspiciously machine-polished."],
+      ["The main categories", "The useful split is technical terms, cultural slang, and GPT-ese. Technical terms include A2A, RAG, and context window. Cultural slang includes slop, vibe coding, and GPU rich versus GPU poor. GPT-ese covers words that make writing feel suspiciously machine-polished."],
       { heading: "Start with the glossary hub", paragraphs: [
-        "If you are new to AI slang, begin with the entries that already have search signal and clear intent: [GPU Rich / GPU Poor](/terms/gpu-rich-gpu-poor), [Jailbreak](/terms/jailbreak), [MCP](/terms/mcp), [Computer Use](/terms/computer-use), [Alignment](/terms/alignment), [Context Rot](/terms/context-rot), [Copilot](/terms/copilot), [CoT](/terms/cot), [Eval](/terms/eval), [Prompt Injection](/terms/prompt-injection), and [Reasoning Model](/terms/reasoning-model).",
+        "If you are new to AI slang, begin with the entries that currently have the clearest search demand: [GEO](/terms/geo) for generative search, [Slop](/terms/slop) for low-quality synthetic content, [Vibe Coding](/terms/vibe-coding) for building software by prompting, [A2A](/terms/a2a) for agent-to-agent communication, and [GPU Rich / GPU Poor](/terms/gpu-rich-gpu-poor) for the AI compute divide.",
+        "Then use [MCP](/terms/mcp), [Computer Use](/terms/computer-use), [Context Rot](/terms/context-rot), [Prompt Injection](/terms/prompt-injection), and [Reasoning Model](/terms/reasoning-model) to move from cultural shorthand into the technical vocabulary around modern AI systems.",
         "For GPT-ese specifically, use the dedicated [GPT-ese words to avoid](/articles/gpt-ese-words-to-avoid) guide. There is no separate `/terms/gptese` glossary entry in this cluster; legacy requests should resolve to the GPT-ese article instead."
       ] },
       ["How to read this dictionary", "Treat each entry as an editorial definition, not legal or academic authority. When a term has a stable source, the entry links to it. When a term is community slang, the entry says so instead of pretending the origin is clean."]
     ],
-    related: ["GPU Rich / GPU Poor", "Jailbreak", "MCP", "Computer Use", "Alignment", "Context Rot", "Copilot", "CoT", "Eval", "Prompt Injection", "Reasoning Model", "Tapestry"]
+    related: ["GEO", "Slop", "Vibe Coding", "A2A", "GPU Rich / GPU Poor", "MCP", "Computer Use", "Context Rot", "Prompt Injection", "Reasoning Model", "Tapestry"]
   },
   {
     file: "articles/gpt-ese-words-to-avoid.html",
@@ -301,6 +302,88 @@ const articlePages = [
       ["The work side", "The hidden work is prompt rewriting, checking hallucinations, switching tools, preserving context, and explaining why a demo failed in production. That overhead can turn enthusiasm into skepticism."],
       ["The practical alternative", "The answer is not always a bigger model. Sometimes it is prompt caching, narrower tool calling, local workflows, better evals, or deciding that a normal script is the cheaper and calmer interface."]
     ]
+  },
+  {
+    file: "articles/best-anthropic-model-by-task.html",
+    title: "Best Anthropic Model by Task: Coding, Writing, Research, and Reasoning",
+    description: "Compare Claude Fable 5, Opus 5, Sonnet 5, and Haiku 4.5 for coding, writing, research, reasoning, vision, speed, and cost.",
+    h1: "Best Anthropic Model by Task",
+    lead: "Short answer: Claude Fable 5 is Anthropic's highest-capability generally available model, Claude Opus 5 is the practical default for difficult coding and reasoning, Sonnet 5 balances speed and intelligence, and Haiku 4.5 is the low-cost choice. There is no Claude model for native image generation.",
+    checkedDate: "August 25, 2026",
+    schemaDate: "2026-08-25",
+    sections: [
+      { heading: "Quick recommendation", paragraphs: [
+        "There is no single best Anthropic model for every workload. The answer changes with task difficulty, output type, latency, price, effort setting, harness, and the cost of a wrong result.",
+        "Anthropic says to start with [Claude Opus 5](/terms/claude-opus-5) for complex agentic coding and enterprise work when you are unsure, while Fable 5 is the highest-capability generally available tier. That makes Opus the safer general recommendation and Fable the quality-first escalation."
+      ], table: {
+        headers: ["Task", "Recommended model", "Why", "Watch for"],
+        rows: [
+          ["Hardest long-running work", "Claude Fable 5", "Highest generally available capability; strongest fit for long-running agents", "Highest price and slower latency"],
+          ["Complex coding and reasoning", "Claude Opus 5", "Official recommended starting point for complex agentic coding", "Measure effort, latency, and total task cost"],
+          ["Everyday coding and writing", "Claude Sonnet 5", "Best speed-and-intelligence balance in Anthropic's lineup", "Introductory price ends August 31, 2026"],
+          ["High-volume simple work", "Claude Haiku 4.5", "Fastest and lowest-cost listed Claude model", "Lower capability and smaller context window"],
+          ["Native image generation", "None", "Current Claude models accept image input and return text output", "Vision analysis is not image generation"]
+        ]
+      } },
+      { heading: "Best Claude model for coding", paragraphs: [
+        "Claude Opus 5 is the default recommendation for complex repository work, debugging, migrations, and high-autonomy coding. Anthropic explicitly positions it for complex agentic coding and enterprise work, with a 1M-token context window and adaptive thinking.",
+        "Escalate to Fable 5 when the task is unusually long, ambiguous, or expensive to get wrong and your evaluation shows the extra capability pays for itself. Use Sonnet 5 for day-to-day implementation or high-volume agents that need lower latency and price. A model benchmark does not measure your whole coding product: tools, repository context, permissions, compaction, and verification in the [agent harness](/terms/agent-harness) also matter."
+      ] },
+      { heading: "Best Claude model for writing", paragraphs: [
+        "Anthropic does not publish one universal creative-writing winner. For high-stakes editing, long documents, nuanced synthesis, or voice analysis, start with Opus 5. For everyday drafting, rewriting, and content operations, Sonnet 5 is the practical default because it is faster and cheaper.",
+        "Writing quality is subjective, so test each candidate on your own samples. Score voice preservation, factual accuracy, structure, revision effort, and whether the model follows style constraints instead of choosing by model tier alone."
+      ] },
+      { heading: "Best Claude model for research", paragraphs: [
+        "Use Fable 5 when you need Anthropic's highest generally available capability for long-running scientific or professional research. Use Opus 5 when you need a strong research and reasoning model at half Fable's base token price, and Sonnet 5 when research volume or turnaround time matters more than the last increment of capability.",
+        "A research answer is not verified merely because it came from the largest model. Evaluate source retrieval, citation support, coverage, refusal behavior, tool use, and the final human review process."
+      ] },
+      { heading: "Best Claude model for reasoning", paragraphs: [
+        "Fable 5 is the quality-first pick for the hardest reasoning and long-horizon agent work. Opus 5 is the more practical default for difficult analysis, planning, and coding. Recent Opus and Sonnet models also expose effort controls, so tuning effort can be a better first experiment than switching model families.",
+        "Compare cost per successful task rather than token price alone. A more expensive model can finish with fewer retries, but a smaller model can still win when the task is narrow and its pass rate is already sufficient."
+      ] },
+      { heading: "Claude does not natively generate images", paragraphs: [
+        "Anthropic's current model overview lists text and image input with text output, multilingual capability, vision, and tool use. That means Claude can inspect screenshots, charts, documents, and other visual inputs, but it does not natively return a generated PNG or photograph as its model output.",
+        "Claude can help plan an image, write a prompt, analyze a reference, or call an external image-generation tool when a product supplies one. Do not describe vision input or artifact creation as proof that the underlying Claude model generates raster images."
+      ] },
+      { heading: "Current versions and API pricing", table: {
+        headers: ["Model", "Positioning", "Input / output per 1M tokens", "Context", "Release"],
+        rows: [
+          ["Claude Fable 5", "Highest generally available capability; long-running agents", "$10 / $50", "1M", "June 9, 2026"],
+          ["Claude Opus 5", "Complex agentic coding and enterprise work", "$5 / $25", "1M", "July 24, 2026"],
+          ["Claude Sonnet 5", "Speed-and-intelligence balance", "$2 / $10 through August 31, 2026; then $3 / $15", "1M", "June 30, 2026"],
+          ["Claude Haiku 4.5", "Fastest, low-cost tier", "$1 / $5", "200K", "October 15, 2025"]
+        ]
+      } },
+      { heading: "How to choose a Claude model", bullets: [
+        "Start with the output gate: Claude is appropriate for text output and visual understanding, not native image generation.",
+        "Build a small representative eval set from real coding, writing, research, or reasoning tasks.",
+        "Measure task success, human revision, latency, token use, refusals, and total cost per completed result.",
+        "Tune the supported effort level before assuming that a different model tier is required.",
+        "Use the least expensive model that clears the quality and risk threshold, with escalation for difficult failures.",
+        "Pin the intended API model ID and recheck official docs after releases, price changes, or migration notices."
+      ] },
+      { heading: "Limits of this comparison", paragraphs: [
+        "The model descriptions and prices above come from Anthropic's first-party pages checked on August 25, 2026. They are product facts, not an independent claim that Anthropic wins every benchmark or workload.",
+        "Model behavior can vary by effort, platform, system prompt, tools, safety policy, region, and version. Re-run your own evaluation when any of those inputs change."
+      ] }
+    ],
+    faqs: [
+      ["What is the best Anthropic model overall?", "Claude Fable 5 is Anthropic's highest-capability generally available model. Claude Opus 5 is the more practical starting point for many difficult coding, reasoning, and enterprise tasks because it costs half as much per token."],
+      ["Which Claude model is best for coding?", "Start with Claude Opus 5 for complex agentic coding. Test Fable 5 for the hardest long-running work and Sonnet 5 for everyday or higher-volume coding where speed and cost matter."],
+      ["Which Claude model is best for writing?", "Start with Opus 5 for high-stakes editing and long, nuanced work, or Sonnet 5 for everyday drafting. There is no universal prose winner, so compare them on your own voice and revision rubric."],
+      ["Can Claude generate images?", "Claude can analyze image input and return text, but Anthropic's current model overview does not list native image output. A product may connect Claude to a separate image-generation tool."],
+      ["Should I choose a model by token price?", "No. Compare cost per successful task, including retries, tool calls, latency, human revision, and failures. The cheapest token rate can still produce the most expensive workflow."],
+      ["Is Fable 5 always better than Opus 5?", "No. Fable is the higher-capability tier, but Opus can be faster, cheaper, and sufficient. The best choice depends on the task, effort setting, harness, safety behavior, and evaluation results."]
+    ],
+    sources: [
+      ["Anthropic: Models overview", "https://platform.claude.com/docs/en/models/overview"],
+      ["Anthropic: Choosing the right model", "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"],
+      ["Anthropic: Pricing", "https://platform.claude.com/docs/en/about-claude/pricing"],
+      ["Anthropic: Claude Fable 5 and Claude Mythos 5", "https://www.anthropic.com/news/claude-fable-5-mythos-5"],
+      ["Anthropic: Introducing Claude Sonnet 5", "https://www.anthropic.com/news/claude-sonnet-5"],
+      ["Anthropic: Introducing Claude Opus 5", "https://www.anthropic.com/news/claude-opus-5"]
+    ],
+    related: ["Claude Opus 5", "Agent Harness", "Frontier Model", "Reasoning Model", "Eval", "Model Router", "Agentic"]
   },
   {
     file: "articles/ai-website-builder-code-export.html",

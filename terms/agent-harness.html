@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/favicon.ico?v=3" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=3">
+    <link rel="apple-touch-icon" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
+    <title>What Is an Agent Harness? AI and Coding Agent Meaning</title>
+    <meta name="description" content="Agent harness meaning in AI: the runtime around a model that manages tools, context, permissions, state, sandboxes, feedback, and the agent loop.">
+    <link rel="canonical" href="https://ai-slang.com/terms/agent-harness">
+    <meta property="og:title" content="What Is an Agent Harness? AI and Coding Agent Meaning">
+    <meta property="og:description" content="Agent harness meaning in AI: the runtime around a model that manages tools, context, permissions, state, sandboxes, feedback, and the agent loop.">
+    <meta property="og:url" content="https://ai-slang.com/terms/agent-harness">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is an Agent Harness? AI and Coding Agent Meaning">
+    <meta name="twitter:description" content="Agent harness meaning in AI: the runtime around a model that manages tools, context, permissions, state, sandboxes, feedback, and the agent loop.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Agent Harness","description":"An agent harness is the runtime layer around a model that manages the agent loop, tools, permissions, context, state, execution environment, and feedback needed to turn model responses into controlled actions.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/agent-harness"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is an agent harness the same as an AI model?","acceptedAnswer":{"@type":"Answer","text":"No. The model generates decisions or responses. The harness is the software around it that manages the loop, context, tools, permissions, state, execution, and feedback."}},{"@type":"Question","name":"Is Claude Code or Codex an agent harness?","acceptedAnswer":{"@type":"Answer","text":"They are complete coding-agent products that include harness behavior such as repository context, tool execution, permissions, state, and verification. Calling the whole product a harness can be useful shorthand, but the product also includes interfaces and services beyond the runtime loop."}},{"@type":"Question","name":"What belongs in a coding agent harness?","acceptedAnswer":{"@type":"Answer","text":"Common components include an agent loop, tool definitions and execution, repository context, memory or compaction, a sandbox, permission rules, limits, logging, tests, and human approval points."}},{"@type":"Question","name":"Is an agent harness the same as a test harness?","acceptedAnswer":{"@type":"Answer","text":"No. They share the idea of controlled execution, but an agent harness operates the agent, while a test or evaluation harness runs repeatable cases and measures results."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>What Is an Agent Harness?</h1>
+        <p class="article-lead">An agent harness is the runtime layer around a model that manages the agent loop, tools, permissions, context, state, execution environment, and feedback needed to turn model responses into controlled actions.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=HIGH</span>
+        </div>
+        <section>
+          <h2>What does Agent Harness mean?</h2>
+          <p>An agent harness is the runtime layer around a model that manages the agent loop, tools, permissions, context, state, execution environment, and feedback needed to turn model responses into controlled actions.</p>
+          <p>The model is the brain-like component. The harness is the surrounding software that gives it a loop, tools, memory, limits, a place to run, and a way to observe what happened.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>The word harness already existed in software testing and control systems. It became common AI builder language as coding agents and managed agent runtimes made the software around the model as important as the model itself.</p>
+          <p><strong>Source type:</strong> technical-term. <strong>Last checked:</strong> 2026-08-25.</p>
+          <p>Current agent-engineering term used in official platform documentation and industry explanations. Usage is not fully standardized, so this entry separates the runtime meaning from agent frameworks, evaluation harnesses, and products named Harness.</p>
+          <p><a class="source-link" href="https://platform.claude.com/docs/en/managed-agents/overview" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>Model vs agent vs harness</h2>
+          <p>A model predicts and generates a response. An agent is the running system that pursues a task through repeated model calls and actions. The harness is the runtime layer around a model that keeps that process moving and controlled.</p>
+<p>A typical harness assembles context, exposes tools, executes approved calls, returns tool results to the model, preserves session state, applies limits, and records what happened. Changing the harness can change real task performance even when the underlying model stays the same.</p>
+        </section>
+<section>
+          <h2>Agent harness vs agent framework</h2>
+          <p>An agent framework is usually a library or SDK used to build agents. A harness is the configured runtime system that actually runs the loop, tools, policies, state, and environment for a task.</p>
+<p>The boundary is not standardized. Some products call an SDK, runtime, CLI, or whole agent product a harness, so a useful explanation should name the concrete components instead of relying on the label alone.</p>
+        </section>
+<section>
+          <h2>Coding agent harness</h2>
+          <ul>
+            <li>Repository and file context supplied to the model.</li>
+<li>Shell, search, edit, test, browser, and other callable tools.</li>
+<li>Sandboxing, network limits, approvals, and permission checks.</li>
+<li>Planning, compaction, memory, retries, checkpoints, and session state.</li>
+<li>Diffs, tests, graders, logs, and human review used to verify the result.</li>
+          </ul>
+        </section>
+<section>
+          <h2>Evaluation harness is a different meaning</h2>
+          <p>In benchmarks, an evaluation harness is the scaffold that gives systems tasks, runs them under controlled conditions, and scores the outputs. It may contain an agent harness, but its main job is repeatable evaluation rather than operating a production agent.</p>
+<p>Product names can add a third meaning. When a tool is literally named Harness, check whether the speaker means that product, an agent runtime, or a benchmark runner.</p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>The model was unchanged, but the new agent harness added a sandbox, approvals, and reliable retries.</li>
+<li>Claude Code and Codex are more than model pickers because their harnesses manage tools, files, commands, and session state.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>Is an agent harness the same as an AI model?</h3>
+            <p>No. The model generates decisions or responses. The harness is the software around it that manages the loop, context, tools, permissions, state, execution, and feedback.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is Claude Code or Codex an agent harness?</h3>
+            <p>They are complete coding-agent products that include harness behavior such as repository context, tool execution, permissions, state, and verification. Calling the whole product a harness can be useful shorthand, but the product also includes interfaces and services beyond the runtime loop.</p>
+          </div>
+<div class="faq-item">
+            <h3>What belongs in a coding agent harness?</h3>
+            <p>Common components include an agent loop, tool definitions and execution, repository context, memory or compaction, a sandbox, permission rules, limits, logging, tests, and human approval points.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is an agent harness the same as a test harness?</h3>
+            <p>No. They share the idea of controlled execution, but an agent harness operates the agent, while a test or evaluation harness runs repeatable cases and measures results.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://platform.claude.com/docs/en/managed-agents/overview" rel="noreferrer">Claude Managed Agents overview</a></li>
+<li><a class="source-link" href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness" rel="noreferrer">Microsoft Agent Framework: Agent Harness</a></li>
+<li><a class="source-link" href="https://www.salesforce.com/agentforce/ai-agents/agent-harness/" rel="noreferrer">Salesforce: What Is an Agent Harness?</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/agentic" data-slug="agentic" data-analytics-placement="related_terms">Agentic</a>
+<a href="/terms/tool-calling" data-slug="tool-calling" data-analytics-placement="related_terms">Tool Calling</a>
+<a href="/terms/mcp" data-slug="mcp" data-analytics-placement="related_terms">MCP</a>
+<a href="/terms/computer-use" data-slug="computer-use" data-analytics-placement="related_terms">Computer Use</a>
+<a href="/terms/subagent" data-slug="subagent" data-analytics-placement="related_terms">Subagent</a>
+<a href="/terms/eval" data-slug="eval" data-analytics-placement="related_terms">Eval</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

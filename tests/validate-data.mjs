@@ -270,6 +270,42 @@ const opportunityTerms = [
       "Being discoverable does not guarantee being cited",
       "Does ranking on Google guarantee ChatGPT citations?"
     ]
+  },
+  {
+    word: "Agent Harness",
+    file: "terms/agent-harness.html",
+    requirements: [
+      "What Is an Agent Harness?",
+      "the runtime layer around a model",
+      "Model vs agent vs harness",
+      "Agent harness vs agent framework",
+      "Coding agent harness",
+      "Evaluation harness is a different meaning",
+      "Last checked:</strong> 2026-08-25",
+      "Is an agent harness the same as an AI model?",
+      "Claude Managed Agents overview"
+    ]
+  },
+  {
+    word: "GPT-5.6 Sol",
+    file: "terms/gpt-5-6-sol.html",
+    requirements: [
+      "What Is GPT-5.6 Sol?",
+      "flagship capability tier",
+      "Preview, general availability, and price changes",
+      "June 26, 2026",
+      "July 9, 2026",
+      "$4 per million input tokens",
+      "$0.40 per million cached input tokens",
+      "$20 per million output tokens",
+      "November 21, 2026",
+      "272K input tokens",
+      "Sol vs Terra vs Luna",
+      "the `gpt-5.6` alias routes to `gpt-5.6-sol`",
+      "API pricing is not a ChatGPT subscription price",
+      "Is GPT-5.6 Sol the same as GPT-5.6?",
+      "OpenAI API: GPT-5.6 Sol model"
+    ]
   }
 ];
 
@@ -293,6 +329,92 @@ for (const term of opportunityTerms) {
   if (!sitemap.includes(`https://ai-slang.com/terms/${slug}`)) {
     throw new Error(`${term.word} sitemap URL is missing`);
   }
+}
+
+const performanceTermSpecs = [
+  { word: "Slop", file: "terms/slop.html" },
+  { word: "Vibe Coding", file: "terms/vibe-coding.html" },
+  { word: "GPU Rich / GPU Poor", file: "terms/gpu-rich-gpu-poor.html" },
+  { word: "A2A", file: "terms/a2a.html" }
+];
+
+for (const spec of performanceTermSpecs) {
+  const item = slangs.find((candidate) => candidate.word === spec.word);
+  if (!item) throw new Error(`${spec.word} performance term is missing`);
+  if (!item.pageHeading) throw new Error(`${spec.word} performance term is missing pageHeading`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(item.dateModified || "")) {
+    throw new Error(`${spec.word} performance term is missing dateModified`);
+  }
+  if (!item.sourceUrl || item.sourceUrl.includes("wikipedia.org")) {
+    throw new Error(`${spec.word} performance term needs a non-Wikipedia primary or authoritative source`);
+  }
+  if (!Array.isArray(item.extraSections) || item.extraSections.length < 3) {
+    throw new Error(`${spec.word} performance term needs at least three explanatory sections`);
+  }
+  if (!Array.isArray(item.faqItems) || item.faqItems.length < 3) {
+    throw new Error(`${spec.word} performance term needs at least three FAQs`);
+  }
+  if (!Array.isArray(item.furtherReading) || item.furtherReading.length < 2) {
+    throw new Error(`${spec.word} performance term needs at least two further-reading sources`);
+  }
+
+  const page = read(spec.file);
+  if (!page.includes('"@type":"FAQPage"')) {
+    throw new Error(`${spec.word} performance page is missing FAQ structured data`);
+  }
+  if (!page.includes("Further reading")) {
+    throw new Error(`${spec.word} performance page is missing further-reading links`);
+  }
+}
+
+const aiSlangHub = read("articles/what-is-ai-slang.html");
+for (const target of [
+  "/terms/geo",
+  "/terms/slop",
+  "/terms/vibe-coding",
+  "/terms/a2a",
+  "/terms/gpu-rich-gpu-poor"
+]) {
+  if (!aiSlangHub.includes(`href="${target}"`)) {
+    throw new Error(`AI Slang hub is missing the performance-term link: ${target}`);
+  }
+}
+
+const anthropicArticlePath = "articles/best-anthropic-model-by-task.html";
+if (!existsSync(anthropicArticlePath)) {
+  throw new Error("Best Anthropic Model article is missing");
+}
+
+const anthropicArticle = read(anthropicArticlePath);
+for (const requirement of [
+  "<title>Best Anthropic Model by Task: Coding, Writing, Research, and Reasoning</title>",
+  '<link rel="canonical" href="https://ai-slang.com/articles/best-anthropic-model-by-task">',
+  '"@type":"Article"',
+  '"@type":"FAQPage"',
+  "Best Anthropic Model by Task",
+  "Last checked:</strong> August 25, 2026",
+  "Quick recommendation",
+  "Claude Fable 5",
+  "Claude Opus 5",
+  "Claude Sonnet 5",
+  "Claude Haiku 4.5",
+  "Best Claude model for coding",
+  "Best Claude model for writing",
+  "Best Claude model for research",
+  "Best Claude model for reasoning",
+  "Claude does not natively generate images",
+  "How to choose a Claude model",
+  "$2 / $10 through August 31, 2026",
+  "/terms/claude-opus-5",
+  "Official sources"
+]) {
+  if (!anthropicArticle.includes(requirement)) {
+    throw new Error(`Best Anthropic Model article is missing: ${requirement}`);
+  }
+}
+
+if (!sitemap.includes("https://ai-slang.com/articles/best-anthropic-model-by-task")) {
+  throw new Error("Best Anthropic Model sitemap URL is missing");
 }
 
 const redirects = read("_redirects");
