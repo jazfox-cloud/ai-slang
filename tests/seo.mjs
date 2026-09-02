@@ -7,6 +7,7 @@ const targetOrphans = [
   "/terms/aeo",
   "/terms/ai-content-disclosure",
   "/terms/chatgpt-ads",
+  "/terms/claude-mythos-5-1",
   "/terms/clanker",
   "/terms/geo",
   "/terms/gpt-live",

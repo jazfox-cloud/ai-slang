@@ -191,6 +191,7 @@ for (const file of [
   "terms/aeo.html",
   "terms/chatgpt-ads.html",
   "terms/claude-opus-5.html",
+  "terms/claude-mythos-5-1.html",
   "terms/llm-discoverability.html",
   "terms/grok-build.html",
   "terms/ai-content-disclosure.html"
@@ -256,6 +257,22 @@ const opportunityTerms = [
       "claude-opus-5",
       "Is Claude Opus 5 the same as Claude 5?",
       "Is Claude Opus 5 better than GPT-5?"
+    ]
+  },
+  {
+    word: "Claude Mythos 5.1",
+    file: "terms/claude-mythos-5-1.html",
+    requirements: [
+      "What Is Claude Mythos 5.1?",
+      "same underlying model as Claude Fable 5.1",
+      "Trusted access for Claude Mythos 5.1",
+      "Life Sciences Verification Program",
+      "Cyber Verification Program",
+      "currently limited to vetted individuals and organizations",
+      "Last checked: 2026-09-02",
+      "Is Claude Mythos 5.1 available to everyone?",
+      "Anthropic: Claude Fable 5.1 and Claude Mythos 5.1",
+      "Anthropic: Fable 5.1 and Mythos 5.1 system card"
     ]
   },
   {

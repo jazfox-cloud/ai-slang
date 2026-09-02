@@ -1108,7 +1108,7 @@ export const slangs = [
     lastChecked: "2026-07-26",
     dateModified: "2026-07-26",
     plainEnglish: "Claude Opus 5 is the model name people use when they are talking about Anthropic's high-capability Opus tier in the Claude family. It is not a separate Claude app plan, not a pricing calculator, and not proof that one model wins every possible benchmark.",
-    relatedTerms: ["Frontier Model", "Reasoning Model", "Agentic", "Context Engineering", "Tool Calling", "Eval"],
+    relatedTerms: ["Claude Mythos 5.1", "Frontier Model", "Reasoning Model", "Agentic", "Context Engineering", "Tool Calling"],
     seoTitle: "What Is Claude Opus 5? Anthropic's Opus Model Explained",
     seoDescription: "What is Claude Opus 5? A plain-English explanation of Anthropic's Opus-class model, release date, API availability, pricing context, and naming.",
     pageHeading: "What Is Claude Opus 5?",
@@ -1189,6 +1189,97 @@ export const slangs = [
       {
         label: "Claude Platform Docs: Pricing",
         url: "https://platform.claude.com/docs/en/about-claude/pricing"
+      }
+    ]
+  },
+  {
+    word: "Claude Mythos 5.1",
+    definition: "Claude Mythos 5.1 is Anthropic's trusted-access configuration of the same underlying model as Claude Fable 5.1, with more permissive safeguards for vetted cybersecurity and life sciences work.",
+    origin: "Anthropic introduced Claude Fable 5.1 and Claude Mythos 5.1 together in September 2026. The Mythos name distinguishes the restricted-access configuration from the generally available Fable 5.1 configuration of the same model.",
+    examples: ["Our security team cannot select Mythos 5.1 from a public model list; access depends on Anthropic's verification programs.", "Mythos 5.1 and Fable 5.1 share a model, but the safeguards and access paths are different."],
+    aiGrade: 4,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Official Anthropic product term. Anthropic's announcement and system card describe Mythos 5.1 as the same model as Fable 5.1 with more permissive safeguards, while direct access is limited to vetted users. Program eligibility, geographic availability, and access timing can change.",
+    sourceUrl: "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    lastChecked: "2026-09-02",
+    dateModified: "2026-09-02",
+    plainEnglish: "Mythos 5.1 is not a generally available upgrade button for Claude. It is the restricted version of the Fable 5.1 model for approved cyberdefense and life sciences work where Anthropic permits fewer domain-specific restrictions.",
+    relatedTerms: ["Claude Opus 5", "Frontier Model", "Constitutional AI", "Alignment", "Agentic", "Reward Hacking"],
+    seoTitle: "What Is Claude Mythos 5.1? Access and Safeguards",
+    seoDescription: "Claude Mythos 5.1 explained: how it relates to Fable 5.1, why access is restricted, and what Anthropic's trusted access programs cover.",
+    pageHeading: "What Is Claude Mythos 5.1?",
+    extraSections: [
+      {
+        heading: "Mythos 5.1 versus Fable 5.1",
+        paragraphs: [
+          "Anthropic says Claude Mythos 5.1 is the same underlying model as Claude Fable 5.1. Its system card says the two configurations share identical model weights.",
+          "The difference is the safeguard layer and who can use it. Fable 5.1 is generally available with added restrictions for high-risk dual-use biology and cybersecurity tasks. Mythos 5.1 relaxes certain domain-specific safeguards for vetted work while keeping other safeguards in place."
+        ]
+      },
+      {
+        heading: "Trusted access for Claude Mythos 5.1",
+        paragraphs: [
+          "Direct access is currently limited to vetted individuals and organizations through Anthropic's trusted access programs. Anthropic says the Life Sciences Verification Program has enrolled its first participants and is intended to expand to a broader life sciences community.",
+          "Anthropic's Cyber Verification Program already offers some Opus- and Sonnet-class models with reduced cyber safeguards for defensive security work. The September announcement says Mythos-class access will be added in the near future, so applicants should not treat that future access as already available."
+        ]
+      },
+      {
+        heading: "Availability, pricing, and model IDs",
+        paragraphs: [
+          "Last checked: 2026-09-02. Anthropic says Mythos 5.1 is currently available only to a set of vetted US organizations and that it is working to expand access. This is not the same availability as Fable 5.1 across Claude products, cloud platforms, and the Claude API.",
+          "The announcement publishes the API ID claude-fable-5-1 and token pricing for Fable 5.1, but it does not publish a general-purpose Mythos 5.1 API ID or public token price. Do not infer either from the product name; verified participants should follow the access documentation Anthropic provides to them."
+        ]
+      },
+      {
+        heading: "Claude Security and direct Mythos access are different",
+        paragraphs: [
+          "Anthropic says Claude Security, its product for scanning codebases for vulnerabilities and suggesting patches for human review, is powered by Claude Mythos 5.1 and is available to Claude Enterprise customers.",
+          "Using a product powered by Mythos 5.1 does not mean the customer has direct access to the underlying Mythos configuration. Anthropic's system card keeps those two access paths distinct."
+        ]
+      },
+      {
+        heading: "How to read Anthropic's capability claims",
+        paragraphs: [
+          "Anthropic reports strong results for Mythos 5.1 in cybersecurity and scientific research, including evaluations run with safeguards disabled or specialized tools available. Those conditions matter when interpreting the numbers.",
+          "A vendor benchmark or research demonstration does not establish that Mythos 5.1 is the best choice for every task. Access controls, safeguards, tools, evaluation setup, cost, and the user's own acceptance tests still affect the result."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "Is Claude Mythos 5.1 available to everyone?",
+        answer: "No. Anthropic says direct access is limited to vetted individuals and organizations through trusted access programs and is currently available only to a set of US organizations."
+      },
+      {
+        question: "Is Claude Mythos 5.1 a different model from Fable 5.1?",
+        answer: "Anthropic says they are the same underlying model and share identical model weights. The configurations differ in the safeguards applied and in who can access them."
+      },
+      {
+        question: "How do people get access to Claude Mythos 5.1?",
+        answer: "Anthropic describes Life Sciences and Cyber Verification Programs for vetted work. Life sciences enrollment has begun for initial participants, while Mythos-class access through the cyber program was described as coming in the near future."
+      },
+      {
+        question: "Does Claude Mythos 5.1 have a public API model ID?",
+        answer: "Anthropic's September announcement publishes an API ID for Fable 5.1 but not a general-purpose Mythos 5.1 model ID. Do not invent one from the product name."
+      },
+      {
+        question: "Can Claude Enterprise customers use Mythos 5.1?",
+        answer: "Anthropic says Claude Security is powered by Mythos 5.1 and is available to Claude Enterprise customers. That product access is distinct from direct access to the Mythos configuration through a trusted access program."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "AI Slang: Claude Opus 5",
+        url: "/terms/claude-opus-5"
+      },
+      {
+        label: "Anthropic: Claude Fable 5.1 and Claude Mythos 5.1",
+        url: "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      },
+      {
+        label: "Anthropic: Fable 5.1 and Mythos 5.1 system card",
+        url: "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
       }
     ]
   },
