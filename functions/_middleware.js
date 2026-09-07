@@ -14,7 +14,7 @@ export async function onRequest(context) {
       lowerPath === "/terms/ai-content-disclosure.html") {
     url.pathname = "/terms/ai-content-disclosure";
     shouldRedirect = true;
-  } else if (lowerPath === "/terms.html") {
+  } else if (lowerPath === "/terms.html" || lowerPath === "/terms") {
     url.pathname = "/terms-of-use";
     shouldRedirect = true;
   } else if (lowerPath.endsWith(".html")) {

@@ -35,6 +35,16 @@ const legacyTermsPage = await run("https://ai-slang.com/terms.html");
 assert.equal(legacyTermsPage.status, 301);
 assert.equal(legacyTermsPage.headers.get("location"), "https://ai-slang.com/terms-of-use");
 
+const legacyTermsAlias = await run("https://ai-slang.com/terms?source=gsc");
+assert.equal(legacyTermsAlias.status, 301);
+assert.equal(legacyTermsAlias.headers.get("location"), "https://ai-slang.com/terms-of-use?source=gsc");
+
+const unknownTerm = await onRequest({
+  request: new Request("https://ai-slang.com/terms/not-a-published-term"),
+  next: () => new Response("not found", { status: 404 })
+});
+assert.equal(unknownTerm.status, 404);
+
 const canonical = await run("https://ai-slang.com/terms/agentic");
 assert.equal(canonical.status, 200);
 
