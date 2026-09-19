@@ -150,17 +150,67 @@ export const slangs = [
   },
   {
     word: "Agentic",
-    definition: "The enterprise-safe way to say software can make decisions, call tools, and execute workflows without sounding too much like 'we gave the bot a credit card.'",
-    origin: "Spread through AI product launches and pitch decks describing tool-using models, workflow bots, and autonomous assistants.",
-    examples: ["The deck said agentic seven times and explained nothing.", "My agentic assistant spent the afternoon retrying the same broken API call."],
+    definition: "In AI, agentic describes software that can choose steps and use tools to work toward a goal, with a degree of independence.",
+    origin: "Agentic combines agent with the adjective ending -ic. It was used outside computing before becoming common in AI discussions about systems that make decisions and take actions toward a goal.",
+    examples: ["An agentic coding assistant runs a test, reads the failure, and chooses which file to inspect next.", "The assistant can investigate a support request, but a person still approves any refund.", "The deck said agentic seven times and explained nothing."],
     aiGrade: 5,
     trend: "HIGH",
     sourceType: "product-term",
-    sourceNote: "Current AI product term; useful when tied to real tool use, vague when used as valuation perfume.",
-    sourceUrl: "https://en.wikipedia.org/wiki/Intelligent_agent",
-    lastChecked: "2026-07-01",
+    sourceNote: "Merriam-Webster documents the word's meaning, formation, and pronunciation. Anthropic distinguishes predefined workflows from agents that choose their own next steps and tools. Usage varies, so agentic does not by itself specify a system's permissions or level of autonomy.",
+    sourceUrl: "https://www.merriam-webster.com/slang/agentic",
+    lastChecked: "2026-09-19",
+    dateModified: "2026-09-19",
+    plainEnglish: "You give the software a goal, and it can decide some of the steps needed to reach it. That does not mean it can do anything it wants: people can limit its tools, require approval, or stop it.",
     relatedTerms: ["Workspace Agent", "Agent Washing", "A2A", "Tool Calling", "MCP", "Agent Observability"],
-    seoDescription: "Agentic meaning in AI: software that can plan, make decisions, call tools, and carry out multi-step workflows with limited supervision."
+    seoDescription: "Agentic meaning in AI: software that can plan, make decisions, call tools, and carry out multi-step workflows with limited supervision.",
+    extraSections: [
+      {
+        heading: "How to pronounce agentic",
+        paragraphs: ["Merriam-Webster gives the pronunciation as uh-JEN-tik, with the stress on JEN. Agentic is an adjective; agent is the related noun."]
+      },
+      {
+        heading: "Agentic AI versus a fixed workflow",
+        paragraphs: [
+          "A fixed workflow follows steps chosen in advance. An agent can use the result of one step to decide what to do next. For example, a coding assistant might inspect a different file after a test reveals a new error.",
+          "Anthropic uses agentic systems as a broad category that includes both workflows and agents, while distinguishing how they choose their steps. When evaluating a product, ask which decisions the model makes, which tools it can use, and where a person must approve an action."
+        ]
+      },
+      {
+        heading: "Similar words and their limits",
+        paragraphs: [
+          "Goal-directed is useful when you mean working toward an objective. Autonomous emphasizes independence, while tool-using describes the ability to interact with software or services. These are related descriptions, not exact substitutes in every sentence.",
+          "A tool-using assistant may still follow a fixed sequence. An agentic assistant may choose its next step but need permission before sending a message or changing a record. The word alone does not establish full autonomy."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What does agentic mean in AI?",
+        answer: "It describes software that can choose steps and use tools to pursue a goal with some independence. The practical question is what it can decide and do without a person guiding each step."
+      },
+      {
+        question: "How do you pronounce agentic?",
+        answer: "Merriam-Webster gives uh-JEN-tik, with the stress on the middle syllable."
+      },
+      {
+        question: "What is a synonym for agentic?",
+        answer: "Goal-directed or autonomous may fit, depending on the context. They are not exact equivalents: an agentic system can work toward a goal while still needing human approval for particular actions."
+      },
+      {
+        question: "Is agentic a real word or just AI slang?",
+        answer: "It is a documented adjective with uses outside AI. In technology, it describes systems acting toward goals; in marketing, it can be vague unless the actual decisions, tools, and limits are explained."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Merriam-Webster: Agentic meaning and pronunciation",
+        url: "https://www.merriam-webster.com/slang/agentic"
+      },
+      {
+        label: "Anthropic: Building effective agents",
+        url: "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ]
   },
   {
     word: "Delve",
