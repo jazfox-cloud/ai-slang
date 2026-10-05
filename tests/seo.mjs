@@ -111,6 +111,8 @@ for (const path of targetOrphans) {
 }
 
 const homepage = pages.get("/").content;
+const homepageH1s = [...homepage.matchAll(/<h1\b[^>]*>/gi)];
+if (homepageH1s.length !== 1) throw new Error(`Homepage must contain exactly one h1, found ${homepageH1s.length}`);
 for (const item of slangs) {
   const slug = item.word.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   if (!homepage.includes(`href="/terms/${slug}"`)) throw new Error(`Homepage dictionary is missing a static link to ${item.word}`);

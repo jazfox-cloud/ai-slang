@@ -735,7 +735,7 @@ textarea,
   padding-top: 60px;
 }
 
-.about-layout h1 {
+.about-layout h2 {
   margin: 0;
   max-width: 860px;
   font-size: var(--step-4);
