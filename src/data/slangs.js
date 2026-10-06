@@ -3145,5 +3145,204 @@ export const slangs = [
         url: "https://arxiv.org/abs/2503.11926"
       }
     ]
+  },
+  {
+    word: "Muse",
+    definition: "Muse is Meta's personal AI agent, designed to work toward a person's goals across connected services from a dedicated cloud environment called Muse Secure VM.",
+    origin: "Meta introduced Muse in September 2026 as a personal agent that can turn goals into plans and take approved actions, rather than only returning chat responses.",
+    examples: ["I asked Muse to organize the trip, then it came back when a booking needed my approval.", "Muse is meant to work toward a goal over time, not just answer one prompt."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Product term verified against Meta's launch material. Muse's country availability, connected services, purchasing features, and the actions it can take depend on the current product rollout and the access a person chooses to grant.",
+    sourceUrl: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    lastChecked: "2026-10-06",
+    dateModified: "2026-10-06",
+    plainEnglish: "Muse is Meta's name for a personal agent that can keep working toward an ongoing goal. It has its own controlled computer environment, but the person decides what access it receives and when an approval is needed.",
+    relatedTerms: ["Agentic", "Computer Use", "Workspace Agent", "Tool Calling", "Dots", "Grok Bot"],
+    seoTitle: "What Is Muse? Meta's Personal AI Agent Explained",
+    seoDescription: "Muse is Meta's personal AI agent: what it does, how Muse Secure VM works, and how it differs from an ordinary chat assistant.",
+    pageHeading: "What Is Muse?",
+    extraSections: [
+      {
+        heading: "Muse versus a chat assistant",
+        paragraphs: [
+          "A chat assistant mainly answers within a conversation. Meta describes Muse as a personal agent that can retain goal context, prepare a plan, and work through connected services on a person's behalf.",
+          "Muse is not the same as a general chat assistant because it is designed for continuing work, not only a single conversational response. That does not mean Muse has unlimited authority: its usefulness depends on the services a person connects and the approvals that the product requires for a particular action."
+        ]
+      },
+      {
+        heading: "What is Muse Secure VM?",
+        paragraphs: [
+          "Muse Secure VM is Meta's name for the dedicated virtual-machine environment where Muse works. Meta presents it as a separate computer for the agent, its browser activity, and the data needed for a task.",
+          "A secure VM is an implementation and permission boundary, not a guarantee that every connected account or action is risk-free. People still need to decide what access to grant and review actions that matter."
+        ]
+      },
+      {
+        heading: "What can change",
+        bullets: [
+          "Product access, availability, and connected services can change.",
+          "Which actions are automatic and which require approval.",
+          "Model names, subscription offers, and safety controls."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is Muse?",
+        answer: "Muse is Meta's personal AI agent. Meta says it can help people turn goals into plans and work through connected services from a dedicated environment called Muse Secure VM."
+      },
+      {
+        question: "Is Muse the same as a general chat assistant?",
+        answer: "No. A chat assistant is mainly a conversational interface, while Muse is designed to keep context for goals and carry out approved multi-step work across connected services."
+      },
+      {
+        question: "Does Muse act without approval?",
+        answer: "The exact approval flow depends on the task and product rollout. Meta says people control how much access Muse receives, so users should review the current product controls before connecting accounts or authorizing actions."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "Meta: Introducing Muse",
+        url: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+      },
+      {
+        label: "Meta: How We Designed Muse",
+        url: "https://introducing.muse.ai/"
+      }
+    ]
+  },
+  {
+    word: "Dots",
+    definition: "Dots are OpenAI's always-on AI agents that can learn from feedback, work toward ongoing goals, and use a cloud computer plus connected apps to complete work over time.",
+    origin: "OpenAI introduced dots in September 2026 as a product category for persistent agents that work on a person's behalf beyond one chat session.",
+    examples: ["My dot gathered the account history before the customer call and left the open questions for me.", "Instead of a one-off prompt, I gave the dot a goal and reviewed its work as it progressed."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Product term verified against OpenAI's launch announcement. Dot capabilities, availability, connected apps, work limits, pricing, and model access are product details that may change.",
+    sourceUrl: "https://openai.com/index/introducing-dots/",
+    lastChecked: "2026-10-06",
+    dateModified: "2026-10-06",
+    plainEnglish: "A dot is an OpenAI agent intended to keep working between conversations. It has a cloud computer and can use approved connected apps, while the person can check in, give feedback, and steer the result.",
+    relatedTerms: ["Agentic", "Computer Use", "Workspace Agent", "Tool Calling", "Muse", "Grok Bot"],
+    seoTitle: "What Are Dots? OpenAI's Always-On Agents Explained",
+    seoDescription: "Dots are OpenAI's always-on AI agents: how they use a cloud computer, learn from feedback, and differ from ordinary chat assistants.",
+    pageHeading: "What Are Dots?",
+    extraSections: [
+      {
+        heading: "Dots versus ordinary AI chat",
+        paragraphs: [
+          "An ordinary AI chat starts with a request and returns an answer. OpenAI describes dots as agents that can keep context, work toward an ongoing goal, and report back while the person focuses elsewhere.",
+          "The distinction is about the surrounding agent system: persistence, tools, feedback, and a cloud computer—not simply about a model being able to generate text. Dots are not a synonym for every AI assistant."
+        ]
+      },
+      {
+        heading: "Why a cloud computer matters",
+        paragraphs: [
+          "OpenAI says a dot has its own cloud computer. That gives the agent an environment in which to use approved tools and connected apps instead of only drafting instructions inside a chat window.",
+          "A cloud computer does not remove the need for access controls. The work a dot can perform depends on the connections, permissions, and review steps available in the current product."
+        ]
+      },
+      {
+        heading: "What can change",
+        bullets: [
+          "Product availability, connected apps, and limits can change.",
+          "Connected apps, plugins, and allowed actions.",
+          "Work-speed and monthly-capacity limits.",
+          "Models, pricing, and approval controls."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What are Dots?",
+        answer: "Dots are OpenAI's always-on AI agents. OpenAI says they can learn from feedback, use a cloud computer, and work toward goals over time."
+      },
+      {
+        question: "Are dots just ChatGPT conversations?",
+        answer: "No. OpenAI presents dots as persistent agents that can work through connected apps and a cloud computer, rather than only responding to a single chat prompt."
+      },
+      {
+        question: "Can a dot access every app automatically?",
+        answer: "No. Availability, connected apps, permissions, and approval controls depend on the current product and the access a person or organization chooses to grant."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "OpenAI: Introducing dots",
+        url: "https://openai.com/index/introducing-dots/"
+      },
+      {
+        label: "OpenAI: Dots product page",
+        url: "https://openai.com/dots/"
+      }
+    ]
+  },
+  {
+    word: "Grok Bot",
+    definition: "Grok Bot is xAI's product for persistent AI teammates that work on a persistent cloud computer with a browser, filesystem, and terminal, then return when a person needs to review or approve something.",
+    origin: "xAI launched Grok Bot in 2026 as a separate product category from the standard Grok assistant and from Grok Build, positioning Bots as named teammates with jobs and context that compounds over time.",
+    examples: ["I gave the Grok Bot the support backlog and reviewed the reply drafts before it sent anything.", "The Bot kept the project context on its cloud computer instead of starting from zero in every chat."],
+    aiGrade: 2,
+    trend: "HIGH",
+    sourceType: "product-term",
+    sourceNote: "Product term verified against xAI's official Grok Bot documentation. Platform support, subscription eligibility, connected tools, approval flows, and beta behavior can change.",
+    sourceUrl: "https://docs.x.ai/grok-bot/overview",
+    lastChecked: "2026-10-06",
+    dateModified: "2026-10-06",
+    plainEnglish: "Grok Bot is xAI's name for an AI teammate that can retain job context and work in a persistent cloud environment. It is more than the normal Grok chat interface, but it still needs the permissions and approvals a person gives it.",
+    relatedTerms: ["Grok Build", "Agentic", "Computer Use", "Workspace Agent", "Tool Calling", "Dots"],
+    seoTitle: "What Is Grok Bot? xAI's AI Teammates Explained",
+    seoDescription: "Grok Bot is xAI's persistent AI teammate product: cloud computers, context that compounds, approvals, and how it differs from Grok Build.",
+    pageHeading: "What Is Grok Bot?",
+    extraSections: [
+      {
+        heading: "Grok Bot versus the standard Grok assistant",
+        paragraphs: [
+          "The standard Grok assistant is a general-purpose conversational product. Grok Bot is xAI's product for named AI teammates that can retain job context and work through a persistent cloud environment.",
+          "The product distinction matters because a Bot can be assigned a continuing role and tools. It is not just another name for any Grok chat response."
+        ]
+      },
+      {
+        heading: "Grok Bot versus Grok Build",
+        paragraphs: [
+          "Grok Build is xAI's coding-agent harness and terminal-focused development tool. Grok Bot is the broader teammate product for multi-step work across a Bot's cloud computer and connected tools.",
+          "They can overlap in agentic behavior, but they are different products with different workflows. A coding task might suit Grok Build; a persistent named teammate with a broader job is the Grok Bot concept."
+        ]
+      },
+      {
+        heading: "What can change",
+        bullets: [
+          "Product platform support and subscription eligibility can change.",
+          "Connected tools, browser behavior, and approval steps.",
+          "The Bot's available model, features, and work limits."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is Grok Bot?",
+        answer: "Grok Bot is xAI's product for persistent AI teammates. xAI says each Bot can work on a cloud computer with a browser, filesystem, and terminal, then return when approval or input is needed."
+      },
+      {
+        question: "Is Grok Bot the same as Grok Build?",
+        answer: "No. Grok Build is xAI's coding-agent harness and terminal tool, while Grok Bot is the broader persistent-teammate product for multi-step work across connected tools."
+      },
+      {
+        question: "Can Grok Bot act without review?",
+        answer: "The available actions and approval flow depend on the current product, connected tools, and permissions. Review xAI's current controls before granting a Bot access to accounts or consequential actions."
+      }
+    ],
+    furtherReading: [
+      {
+        label: "xAI Docs: Grok Bot overview",
+        url: "https://docs.x.ai/grok-bot/overview"
+      },
+      {
+        label: "xAI Docs: Get started with Grok Bot",
+        url: "https://docs.x.ai/grok-bot/get-started"
+      }
+    ]
   }
 ];

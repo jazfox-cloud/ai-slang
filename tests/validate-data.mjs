@@ -206,6 +206,67 @@ if (!sitemap.includes("https://ai-slang.com/terms/grok-build")) {
   throw new Error("Grok Build sitemap URL is missing");
 }
 
+const personalAgentTerms = [
+  {
+    word: "Muse",
+    file: "terms/muse.html",
+    requirements: [
+      "What Is Muse?",
+      "personal AI agent",
+      "Muse Secure VM",
+      "not the same as a general chat assistant",
+      "access, availability, and connected services can change"
+    ]
+  },
+  {
+    word: "Dots",
+    file: "terms/dots.html",
+    requirements: [
+      "What Are Dots?",
+      "always-on AI agents",
+      "cloud computer",
+      "not a synonym for every AI assistant",
+      "availability, connected apps, and limits can change"
+    ]
+  },
+  {
+    word: "Grok Bot",
+    file: "terms/grok-bot.html",
+    requirements: [
+      "What Is Grok Bot?",
+      "persistent cloud computer",
+      "AI teammates",
+      "Grok Bot versus Grok Build",
+      "platform support and subscription eligibility can change"
+    ]
+  }
+];
+
+for (const term of personalAgentTerms) {
+  if (slangs.filter((item) => item.word === term.word).length !== 1) {
+    throw new Error(`Expected exactly one ${term.word} data entry`);
+  }
+  if (!existsSync(term.file)) {
+    throw new Error(`${term.word} page is missing`);
+  }
+  const page = read(term.file);
+  for (const requirement of [
+    '"@type":"DefinedTerm"',
+    '"@type":"FAQPage"',
+    "Further reading",
+    "Related AI slang",
+    ...term.requirements
+  ]) {
+    if (!page.includes(requirement)) {
+      throw new Error(`${term.word} page is missing: ${requirement}`);
+    }
+  }
+  const slug = term.file.replace(/^terms\//, "").replace(/\.html$/, "");
+  if (!sitemap.includes(`https://ai-slang.com/terms/${slug}`)) {
+    throw new Error(`${term.word} sitemap URL is missing`);
+  }
+}
+
 const opportunityTerms = [
   {
     word: "GEO",
