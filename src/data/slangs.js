@@ -3344,5 +3344,127 @@ export const slangs = [
         url: "https://docs.x.ai/grok-bot/get-started"
       }
     ]
+  },
+  {
+    word: "OpenSwarm",
+    definition: "OpenSwarm is an AI desktop app that brings multiple agents, their browsers, and connected tools into a shared workspace.",
+    origin: "This entry covers the AI desktop featured in the October 2026 Product Hunt launch, whose website is openswarm.com. OpenSwarm is a product name, not a standard name for every multi-agent system.",
+    examples: ["I asked OpenSwarm to split the research across agents, then reviewed the combined notes.", "A swarm adds little when each step must wait for the previous result."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Checked against the product website and maker replies on Product Hunt. Capabilities are vendor-described, not independently tested here; access and platform support can change.",
+    sourceUrl: "https://www.openswarm.com/",
+    lastChecked: "2026-10-09",
+    dateModified: "2026-10-09",
+    plainEnglish: "Think of a workspace with several AI workers: you give them work, watch their progress, and step in to steer the result.",
+    relatedTerms: ["Agentic", "Subagent", "Browser Agent", "Computer Use", "Agent Sprawl", "Workspace Agent"],
+    seoTitle: "What Is OpenSwarm? The Multi-Agent AI Desktop Explained",
+    seoDescription: "OpenSwarm meaning: an AI desktop for multiple agents. Understand its shared workspace, agent swarm language, and how it differs from a model.",
+    pageHeading: "What Is OpenSwarm?",
+    extraSections: [
+      {
+        heading: "An app, a model, or an operating system?",
+        paragraphs: ["Although the launch uses operating-system language, a maker clarifies that OpenSwarm runs on top of an existing OS. The workspace organizes agents; it is not itself a foundation model."]
+      },
+      {
+        heading: "What does swarm mean here?",
+        paragraphs: ["The product uses swarm for agents working together on separate parts of a job. The makers highlight independent tasks as the useful case for parallel work. More agents does not automatically make a dependent sequence faster."]
+      },
+      {
+        heading: "Check the product identity",
+        paragraphs: ["Do not infer licensing, installation commands, or compatibility from the word Open. Check that any repository or download belongs to this specific desktop product before treating it as the same tool."]
+      }
+    ],
+    faqItems: [
+      { question: "Is OpenSwarm a language model?", answer: "No. It is a desktop workspace for agents that use models and tools." },
+      { question: "Does OpenSwarm replace my operating system?", answer: "The maker describes an app running on your existing OS, despite the launch's operating-system wording." },
+      { question: "Is every agent swarm OpenSwarm?", answer: "No. Agent swarm describes a general multi-agent idea; OpenSwarm names this particular product." }
+    ],
+    furtherReading: [
+      { label: "OpenSwarm: Product website", url: "https://www.openswarm.com/" },
+      { label: "Product Hunt: OpenSwarm launch and maker explanations", url: "https://www.producthunt.com/products/openswarm-3" }
+    ]
+  },
+  {
+    word: "Claude Haiku 5.5",
+    definition: "Claude Haiku 5.5 is an Anthropic model aimed at fast, high-volume work where response time and cost matter.",
+    origin: "Haiku 5.5 is a versioned name in Anthropic's Claude model lineup. It identifies a model, not a subscription plan or a separate assistant app.",
+    examples: ["We evaluated Haiku 5.5 for classifying incoming requests before choosing a model.", "The coding agent delegated a small, well-defined task to Haiku 5.5."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against Anthropic's announcement. Performance descriptions are vendor claims, not results from our own evaluation. Pricing and access may change.",
+    sourceUrl: "https://www.anthropic.com/claude-haiku-5-5",
+    lastChecked: "2026-10-09",
+    dateModified: "2026-10-09",
+    plainEnglish: "Haiku 5.5 is a Claude model for work that needs quick answers at scale. Choosing it still requires checking quality on your own tasks.",
+    relatedTerms: ["Subagent", "Eval", "Tool Calling", "Test-Time Compute", "Prompt Caching", "Agent Harness"],
+    seoTitle: "What Is Claude Haiku 5.5? Model Name and Uses Explained",
+    seoDescription: "Claude Haiku 5.5 explained: Anthropic's model for fast, high-volume tasks, its API identifier, adjustable effort, and model-versus-agent distinction.",
+    pageHeading: "What Is Claude Haiku 5.5?",
+    extraSections: [
+      {
+        heading: "What Anthropic designed it for",
+        paragraphs: ["Anthropic lists summarization, classification, database queries, and coding subagent work among its uses. The model identifier is claude-haiku-5-5."]
+      },
+      {
+        heading: "What adjustable effort means",
+        paragraphs: ["Anthropic describes an adjustable effort setting that trades cost against capability. A higher setting is not a guarantee that a particular answer is correct."]
+      },
+      {
+        heading: "A model is one part of an agent",
+        paragraphs: ["A model generates responses; the surrounding application supplies tools, permissions, and the execution loop. A model name alone does not tell you whether an assistant can access files or take actions."]
+      }
+    ],
+    faqItems: [
+      { question: "What is the API model ID?", answer: "Anthropic lists claude-haiku-5-5." },
+      { question: "Is Haiku 5.5 a Claude subscription?", answer: "No. It is a model name. Subscription eligibility and API billing are separate product details." },
+      { question: "Does fast mean best for every task?", answer: "No. Compare accuracy, latency, and total cost on representative tasks before selecting a model." }
+    ],
+    furtherReading: [
+      { label: "Anthropic: Introducing Claude Haiku 5.5", url: "https://www.anthropic.com/claude-haiku-5-5" }
+    ]
+  },
+  {
+    word: "Claude for Google Workspace",
+    definition: "Claude for Google Workspace is Anthropic's add-on that puts a Claude sidebar inside Google Docs, Sheets, and Slides to work with the open file.",
+    origin: "Anthropic uses this product name for its Google Workspace integration. It names an application integration rather than a new Claude model.",
+    examples: ["I opened Claude in Sheets and asked it to explain a formula before changing it.", "The team reviewed Claude's proposed document edits inside Google Docs."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against Anthropic's product page and Help Center. The add-on is in beta; supported plans, browsers, and editing behavior may change.",
+    sourceUrl: "https://claude.com/claude-for-google-workspace",
+    lastChecked: "2026-10-09",
+    dateModified: "2026-10-09",
+    plainEnglish: "You work with Claude beside a document, spreadsheet, or presentation instead of copying its contents into a separate chat.",
+    relatedTerms: ["Workspace Agent", "Tool Calling", "MCP", "Agent Skills", "Prompt Injection", "Claude Haiku 5.5"],
+    seoTitle: "What Is Claude for Google Workspace? The Add-On Explained",
+    seoDescription: "Claude for Google Workspace explained: the sidebar in Docs, Sheets, and Slides, its access scope, and how it differs from a connector or model.",
+    pageHeading: "What Is Claude for Google Workspace?",
+    extraSections: [
+      {
+        heading: "One integration across three apps",
+        paragraphs: ["One Marketplace installation covers Docs, Sheets, and Slides. The official page describes drafting documents, working with spreadsheet data, and creating or editing slides. Installation can depend on your organization's administrator."]
+      },
+      {
+        heading: "Sidebar versus connector",
+        paragraphs: ["The sidebar brings Claude into the file already open in Google Workspace. A connector brings external context or tools into Claude. These entry points have different access scopes; enabling a connector can extend what the assistant can reach."]
+      },
+      {
+        heading: "Access and reviewing edits",
+        paragraphs: ["By default, the add-on is restricted to the open file; enabled connectors can provide additional access. The Help Center documents an Ask before edits mode and restoring changes through version history. Review edits before relying on the result."]
+      }
+    ],
+    faqItems: [
+      { question: "Is this a new Claude model?", answer: "No. It is an integration that uses Claude models inside Google's office apps." },
+      { question: "Can it automatically read my whole Drive?", answer: "Not through the add-on's default file access. Additional access depends on connectors you enable and their permissions." },
+      { question: "Is it available to every Google account?", answer: "The checked documentation lists a beta for paid Claude plans. Google Workspace installation policies can also restrict access." }
+    ],
+    furtherReading: [
+      { label: "Anthropic: Claude for Google Workspace", url: "https://claude.com/claude-for-google-workspace" },
+      { label: "Claude Help Center: Use Claude in Google Docs, Sheets, and Slides", url: "https://support.claude.com/en/articles/16951679-use-claude-in-google-docs-sheets-and-slides" }
+    ]
   }
 ];

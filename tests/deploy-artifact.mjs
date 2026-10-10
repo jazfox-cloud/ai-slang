@@ -45,8 +45,8 @@ for (const path of [
 
 assert.equal(
   readdirSync("dist/terms").filter((file) => file.endsWith(".html")).length,
-  74,
-  "Deploy artifact should contain all 74 generated term pages"
+  77,
+  "Deploy artifact should contain all 77 generated term pages"
 );
 
 assert.match(
