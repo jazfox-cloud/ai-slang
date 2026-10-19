@@ -3466,5 +3466,89 @@ export const slangs = [
       { label: "Anthropic: Claude for Google Workspace", url: "https://claude.com/claude-for-google-workspace" },
       { label: "Claude Help Center: Use Claude in Google Docs, Sheets, and Slides", url: "https://support.claude.com/en/articles/16951679-use-claude-in-google-docs-sheets-and-slides" }
     ]
+  },
+  {
+    word: "EmbeddingGemma 2",
+    definition: "EmbeddingGemma 2 is Google's 740M open model for turning text, images, audio, video, and code into vectors that can be compared in one shared embedding space.",
+    origin: "Google released EmbeddingGemma 2 on October 6, 2026 as the multimodal successor to its text-focused EmbeddingGemma model. The name identifies a model family, not a search product or a general name for every embedding system.",
+    examples: ["We used EmbeddingGemma 2 to retrieve relevant product photos from a text query.", "The app embeds the transcript and video frames before searching for similar moments."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against Google's release documentation. Google describes the model as open and designed for on-device multimodal embeddings; deployment size, hardware behavior, and quality depend on the selected build and task.",
+    sourceUrl: "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+    lastChecked: "2026-10-17",
+    dateModified: "2026-10-17",
+    plainEnglish: "Instead of writing an answer, EmbeddingGemma 2 turns content into a list of numbers. Similar text, pictures, sounds, videos, or code can end up near each other, which helps an app search, group, or retrieve them.",
+    relatedTerms: ["RAG", "Model Router", "Open-Weight AI", "Eval", "Agent Harness", "Context Window"],
+    seoTitle: "What Is EmbeddingGemma 2? Google's Multimodal Model",
+    seoDescription: "EmbeddingGemma 2 explained: Google's open 740M multimodal embedding model, what embeddings do, and how it differs from a generative model.",
+    pageHeading: "What Is EmbeddingGemma 2?",
+    extraSections: [
+      {
+        heading: "What an embedding model does",
+        paragraphs: ["An embedding model maps an input to a vector: a numeric representation that lets software compare meaning or similarity. A retrieval system can embed a question and its documents, then look for vectors that are close together.", "EmbeddingGemma 2 extends that idea across text, images, audio, video, and code. A shared space can make cross-modal retrieval possible, but whether a particular search works well still depends on the data, chunking, evaluation, and application design."]
+      },
+      {
+        heading: "EmbeddingGemma 2 versus a generative model",
+        paragraphs: ["A generative model predicts or produces new text, images, audio, or code. An embedding model normally produces a compact representation used by another system for search, ranking, clustering, recommendation, or retrieval.", "The two can work together. For example, a RAG application can use embeddings to select source material, then give that material to a generative model that drafts an answer."]
+      },
+      {
+        heading: "Open model does not settle the deployment question",
+        paragraphs: ["Google presents EmbeddingGemma 2 as an open, lightweight model for multimodal embeddings and gives on-device examples. That is not a promise that every device, modality, quantization choice, or application will have the same latency, memory use, or retrieval quality.", "Check the current model card, license, supported runtimes, and task-specific evaluation before making a product claim about privacy, speed, or accuracy."]
+      }
+    ],
+    faqItems: [
+      { question: "What is EmbeddingGemma 2?", answer: "EmbeddingGemma 2 is Google's 740M multimodal embedding model. It converts text, images, audio, video, and code into vectors that software can compare in a shared representation space." },
+      { question: "Is EmbeddingGemma 2 a chatbot?", answer: "No. It is an embedding model, so its usual job is representing and comparing inputs rather than producing a conversational answer. An application can pair it with a separate generative model." },
+      { question: "What can an embedding model be used for?", answer: "Common uses include semantic search, retrieval for RAG, clustering, recommendations, duplicate detection, and cross-modal search. Results still need evaluation on the application's own data." },
+      { question: "Does open mean it will run well on every device?", answer: "No. Hardware, model format, quantization, input modality, runtime, and application design affect memory use, latency, and quality. Check the current official documentation for the supported setup." }
+    ],
+    furtherReading: [
+      { label: "Google: EmbeddingGemma 2 release", url: "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" },
+      { label: "Google AI for Developers: Gemma releases", url: "https://ai.google.dev/gemma/docs/releases" }
+    ]
+  },
+  {
+    word: "Cekura Bench",
+    definition: "Cekura Bench is Cekura's public benchmark suite for comparing speech-to-speech models, speech-to-text systems, and voice agents on defined tests and published methodology.",
+    origin: "Cekura publishes Cekura Bench alongside its voice-agent testing and monitoring business. The benchmark name refers to that specific project, not to a neutral industry-wide standard for all voice AI evaluation.",
+    examples: ["The team checked Cekura Bench's turn-taking methodology before comparing two realtime voice models.", "A voice agent can sound natural in a demo yet fail a workflow benchmark when tool calls or interruptions are scored."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against Cekura Bench's own methodology and governance pages. Cekura both operates the benchmark and sells voice-agent testing tools, so benchmark results should be read with its disclosed conflict-of-interest controls, versioning, scenarios, and limits in view.",
+    sourceUrl: "https://benchmarks.cekura.ai/about",
+    lastChecked: "2026-10-17",
+    dateModified: "2026-10-17",
+    plainEnglish: "Cekura Bench is a published test course for voice AI. It runs systems through the same calls and scoring rules so people can inspect what was measured instead of trusting a polished demo.",
+    relatedTerms: ["Eval", "Agent Harness", "LLM-as-a-Judge", "Tool Calling", "Agentic", "Prompt Caching"],
+    seoTitle: "What Is Cekura Bench? Voice Agent Evaluation Explained",
+    seoDescription: "Cekura Bench explained: a public voice-agent benchmark for speech-to-speech, speech-to-text, workflows, and how to read its results carefully.",
+    pageHeading: "What Is Cekura Bench?",
+    extraSections: [
+      {
+        heading: "What Cekura Bench measures",
+        paragraphs: ["Cekura Bench publishes separate work for speech-to-speech models, speech-to-text systems, turn taking, and voice-agent workflows. The exact metrics and scenarios vary by board, so one score should not be treated as a universal measure of intelligence or product quality.", "A voice agent evaluation can cover more than recognition or voice quality: it may also test interruptions, latency, task completion, tool-call accuracy, handoffs, and reliability under particular line conditions."]
+      },
+      {
+        heading: "Cekura Bench versus an agent harness",
+        paragraphs: ["An agent harness runs an agent by managing its model calls, tools, state, permissions, and execution environment. Cekura Bench is an evaluation setup: it supplies controlled scenarios and scoring for systems that may each use different harnesses.", "A strong benchmark result describes performance under that benchmark's versioned setup. It does not automatically prove that a production agent will work equally well with a different prompt, telephony provider, tool contract, customer population, or safety policy."]
+      },
+      {
+        heading: "How to read a benchmark result",
+        paragraphs: ["Start with the task, test version, tested configuration, sample size, scoring rules, and conditions. Compare like with like; a speech-to-speech model score is not interchangeable with an end-to-end voice-agent workflow score.", "Cekura says it publishes methodology, public test material, recordings where available, and governance information. It also discloses that it operates the benchmark while selling into the market it measures. That disclosure is context for interpretation, not proof that a result is wrong."]
+      }
+    ],
+    faqItems: [
+      { question: "What is Cekura Bench?", answer: "Cekura Bench is Cekura's public suite of benchmarks for speech-to-speech models, speech-to-text systems, turn taking, and voice-agent workflows." },
+      { question: "Is Cekura Bench a general voice-agent standard?", answer: "No. It is a named benchmark project with its own published methodology and governance. It can be useful evidence, but it is not automatically the universal standard for every voice-agent task." },
+      { question: "What is the difference between a speech-to-speech model and a voice agent?", answer: "A speech-to-speech model turns spoken input into spoken output. A voice agent is a wider system that may combine speech models with prompts, tools, workflow logic, and a task to complete." },
+      { question: "Does a high benchmark score guarantee a good production agent?", answer: "No. Production behavior also depends on configuration, tools, integrations, real callers, policies, and conditions outside the benchmark. Use a benchmark as one input and evaluate the actual workflow too." }
+    ],
+    furtherReading: [
+      { label: "Cekura Bench: About", url: "https://benchmarks.cekura.ai/about" },
+      { label: "Cekura Bench: Governance and changelog", url: "https://benchmarks.cekura.ai/governance" }
+    ]
   }
 ];

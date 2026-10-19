@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/favicon.ico?v=3" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=3">
+    <link rel="apple-touch-icon" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
+    <title>What Is EmbeddingGemma 2? Google's Multimodal Model</title>
+    <meta name="description" content="EmbeddingGemma 2 explained: Google's open 740M multimodal embedding model, what embeddings do, and how it differs from a generative model.">
+    <link rel="canonical" href="https://ai-slang.com/terms/embeddinggemma-2">
+    <meta property="og:title" content="What Is EmbeddingGemma 2? Google's Multimodal Model">
+    <meta property="og:description" content="EmbeddingGemma 2 explained: Google's open 740M multimodal embedding model, what embeddings do, and how it differs from a generative model.">
+    <meta property="og:url" content="https://ai-slang.com/terms/embeddinggemma-2">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is EmbeddingGemma 2? Google's Multimodal Model">
+    <meta name="twitter:description" content="EmbeddingGemma 2 explained: Google's open 740M multimodal embedding model, what embeddings do, and how it differs from a generative model.">
+    <meta name="twitter:image" content="https://ai-slang.com/assets/ai-slang-social.png">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"EmbeddingGemma 2","description":"EmbeddingGemma 2 is Google's 740M open model for turning text, images, audio, video, and code into vectors that can be compared in one shared embedding space.","inDefinedTermSet":"https://ai-slang.com/","url":"https://ai-slang.com/terms/embeddinggemma-2"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is EmbeddingGemma 2?","acceptedAnswer":{"@type":"Answer","text":"EmbeddingGemma 2 is Google's 740M multimodal embedding model. It converts text, images, audio, video, and code into vectors that software can compare in a shared representation space."}},{"@type":"Question","name":"Is EmbeddingGemma 2 a chatbot?","acceptedAnswer":{"@type":"Answer","text":"No. It is an embedding model, so its usual job is representing and comparing inputs rather than producing a conversational answer. An application can pair it with a separate generative model."}},{"@type":"Question","name":"What can an embedding model be used for?","acceptedAnswer":{"@type":"Answer","text":"Common uses include semantic search, retrieval for RAG, clustering, recommendations, duplicate detection, and cross-modal search. Results still need evaluation on the application's own data."}},{"@type":"Question","name":"Does open mean it will run well on every device?","acceptedAnswer":{"@type":"Answer","text":"No. Hardware, model format, quantization, input modality, runtime, and application design affect memory use, latency, and quality. Check the current official documentation for the supported setup."}}]}</script>
+    <script type="module" src="/src/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span>AI</span> Slang</a>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab is-active" href="/"><span aria-hidden="true">⌂</span> Dictionary</a>
+          <a class="tab" href="/#humanizer"><span aria-hidden="true">✎</span> Humanizer</a>
+          <a class="tab" href="/#about"><span aria-hidden="true">?</span> About</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-swatch" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main class="static-page">
+      <article class="seo-article">
+        <p class="eyebrow">AI_SLANG_ENTRY</p>
+        <h1>What Is EmbeddingGemma 2?</h1>
+        <p class="article-lead">EmbeddingGemma 2 is Google's 740M open model for turning text, images, audio, video, and code into vectors that can be compared in one shared embedding space.</p>
+        <div class="vote-row">
+          <span>AI_TASTE=2/5</span>
+          <span>██░░░</span>
+          <span>TREND=NEW</span>
+        </div>
+        <section>
+          <h2>What does EmbeddingGemma 2 mean?</h2>
+          <p>EmbeddingGemma 2 is Google's 740M open model for turning text, images, audio, video, and code into vectors that can be compared in one shared embedding space.</p>
+          <p>Instead of writing an answer, EmbeddingGemma 2 turns content into a list of numbers. Similar text, pictures, sounds, videos, or code can end up near each other, which helps an app search, group, or retrieve them.</p>
+        </section>
+        <section>
+          <h2>Origin and usage</h2>
+          <p>Google released EmbeddingGemma 2 on October 6, 2026 as the multimodal successor to its text-focused EmbeddingGemma model. The name identifies a model family, not a search product or a general name for every embedding system.</p>
+          <p><strong>Source type:</strong> product-term. <strong>Last checked:</strong> 2026-10-17.</p>
+          <p>Verified against Google's release documentation. Google describes the model as open and designed for on-device multimodal embeddings; deployment size, hardware behavior, and quality depend on the selected build and task.</p>
+          <p><a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" rel="noreferrer">Primary reference</a></p>
+        </section><section>
+          <h2>What an embedding model does</h2>
+          <p>An embedding model maps an input to a vector: a numeric representation that lets software compare meaning or similarity. A retrieval system can embed a question and its documents, then look for vectors that are close together.</p>
+<p>EmbeddingGemma 2 extends that idea across text, images, audio, video, and code. A shared space can make cross-modal retrieval possible, but whether a particular search works well still depends on the data, chunking, evaluation, and application design.</p>
+        </section>
+<section>
+          <h2>EmbeddingGemma 2 versus a generative model</h2>
+          <p>A generative model predicts or produces new text, images, audio, or code. An embedding model normally produces a compact representation used by another system for search, ranking, clustering, recommendation, or retrieval.</p>
+<p>The two can work together. For example, a RAG application can use embeddings to select source material, then give that material to a generative model that drafts an answer.</p>
+        </section>
+<section>
+          <h2>Open model does not settle the deployment question</h2>
+          <p>Google presents EmbeddingGemma 2 as an open, lightweight model for multimodal embeddings and gives on-device examples. That is not a promise that every device, modality, quantization choice, or application will have the same latency, memory use, or retrieval quality.</p>
+<p>Check the current model card, license, supported runtimes, and task-specific evaluation before making a product claim about privacy, speed, or accuracy.</p>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>We used EmbeddingGemma 2 to retrieve relevant product photos from a text query.</li>
+<li>The app embeds the transcript and video frames before searching for similar moments.</li>
+          </ul>
+        </section><section>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is EmbeddingGemma 2?</h3>
+            <p>EmbeddingGemma 2 is Google's 740M multimodal embedding model. It converts text, images, audio, video, and code into vectors that software can compare in a shared representation space.</p>
+          </div>
+<div class="faq-item">
+            <h3>Is EmbeddingGemma 2 a chatbot?</h3>
+            <p>No. It is an embedding model, so its usual job is representing and comparing inputs rather than producing a conversational answer. An application can pair it with a separate generative model.</p>
+          </div>
+<div class="faq-item">
+            <h3>What can an embedding model be used for?</h3>
+            <p>Common uses include semantic search, retrieval for RAG, clustering, recommendations, duplicate detection, and cross-modal search. Results still need evaluation on the application's own data.</p>
+          </div>
+<div class="faq-item">
+            <h3>Does open mean it will run well on every device?</h3>
+            <p>No. Hardware, model format, quantization, input modality, runtime, and application design affect memory use, latency, and quality. Check the current official documentation for the supported setup.</p>
+          </div>
+        </section><section>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" rel="noreferrer">Google: EmbeddingGemma 2 release</a></li>
+<li><a class="source-link" href="https://ai.google.dev/gemma/docs/releases" rel="noreferrer">Google AI for Developers: Gemma releases</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Related AI slang</h2>
+          <div class="related-grid">
+            <a href="/terms/rag" data-slug="rag" data-analytics-placement="related_terms">RAG</a>
+<a href="/terms/model-router" data-slug="model-router" data-analytics-placement="related_terms">Model Router</a>
+<a href="/terms/open-weight-ai" data-slug="open-weight-ai" data-analytics-placement="related_terms">Open-Weight AI</a>
+<a href="/terms/eval" data-slug="eval" data-analytics-placement="related_terms">Eval</a>
+<a href="/terms/agent-harness" data-slug="agent-harness" data-analytics-placement="related_terms">Agent Harness</a>
+<a href="/terms/context-window" data-slug="context-window" data-analytics-placement="related_terms">Context Window</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>No legal, hiring, or investment advice. Just sharper words.</span>
+      <span><a href="/about">About</a> / <a href="/contact">Contact</a> / <a href="/privacy">Privacy</a> / <a href="#" data-privacy-choices>Privacy Choices</a> / <a href="/terms-of-use">Terms</a> / <a href="/editorial-policy">Editorial</a></span>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector("#theme-toggle");
+      document.body.dataset.theme = localStorage.getItem("theme") || "light";
+      themeToggle.setAttribute("aria-pressed", String(document.body.dataset.theme === "light"));
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        document.body.dataset.theme = nextTheme;
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>

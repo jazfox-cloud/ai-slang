@@ -6,6 +6,10 @@ const defaultSocialImage = `${siteUrl}/assets/ai-slang-social.png`;
 const articleSchemaDate = "2026-07-27";
 const exportClusterCheckedDate = "July 28, 2026";
 const sitemapLastmodDate = new Date().toISOString().slice(0, 10);
+const existingSitemapLastmods = new Map(
+  [...readFileSync("sitemap.xml", "utf8").matchAll(/<url><loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod><\/url>/g)]
+    .map(([, url, lastmod]) => [url, lastmod])
+);
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -778,9 +782,20 @@ const sitemapUrls = [
   ...policyPages.map((page) => canonicalUrl(cleanPath(page.file)))
 ];
 
+const hasTermUpdateToday = slangs.some((item) => item.dateModified === sitemapLastmodDate);
+const homepageLastmod = hasTermUpdateToday
+  ? sitemapLastmodDate
+  : existingSitemapLastmods.get(`${siteUrl}/`) || sitemapLastmodDate;
+
+function sitemapLastmod(url) {
+  if (url === `${siteUrl}/`) return homepageLastmod;
+  const term = slangs.find((item) => canonicalUrl(termPath(item)) === url);
+  return existingSitemapLastmods.get(url) || term?.dateModified || sitemapLastmodDate;
+}
+
 writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${sitemapLastmodDate}</lastmod></url>`).join("\n")}
+${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${sitemapLastmod(url)}</lastmod></url>`).join("\n")}
 </urlset>
 `);
 

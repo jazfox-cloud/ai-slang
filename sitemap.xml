@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ai-slang.com/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://ai-slang.com/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://ai-slang.com/terms/slop</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/vibe-coding</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/terms/agentic</loc><lastmod>2026-09-19</lastmod></url>
@@ -78,6 +78,8 @@
   <url><loc>https://ai-slang.com/terms/openswarm</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://ai-slang.com/terms/claude-haiku-5-5</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://ai-slang.com/terms/claude-for-google-workspace</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/embeddinggemma-2</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://ai-slang.com/terms/cekura-bench</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://ai-slang.com/articles/what-is-ai-slang</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://ai-slang.com/articles/gpt-ese-words-to-avoid</loc><lastmod>2026-07-28</lastmod></url>
   <url><loc>https://ai-slang.com/articles/ai-slang-for-indie-hackers</loc><lastmod>2026-07-28</lastmod></url>

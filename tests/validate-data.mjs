@@ -409,6 +409,69 @@ for (const term of opportunityTerms) {
   }
 }
 
+const weeklyDiscoveryTerms = [
+  {
+    word: "EmbeddingGemma 2",
+    file: "terms/embeddinggemma-2.html",
+    requirements: [
+      "What Is EmbeddingGemma 2?",
+      "multimodal embedding model",
+      "text, images, audio, video, and code",
+      "EmbeddingGemma 2 versus a generative model",
+      "Last checked:</strong> 2026-10-17",
+      "Google: EmbeddingGemma 2"
+    ]
+  },
+  {
+    word: "Cekura Bench",
+    file: "terms/cekura-bench.html",
+    requirements: [
+      "What Is Cekura Bench?",
+      "voice-agent benchmark",
+      "speech-to-speech models",
+      "Cekura Bench versus an agent harness",
+      "Last checked:</strong> 2026-10-17",
+      "Cekura Bench: About"
+    ]
+  }
+];
+
+for (const term of weeklyDiscoveryTerms) {
+  if (slangs.filter((item) => item.word === term.word).length !== 1) {
+    throw new Error(`Expected exactly one ${term.word} data entry`);
+  }
+  const page = read(term.file);
+  for (const requirement of [
+    '"@type":"DefinedTerm"',
+    '"@type":"FAQPage"',
+    "Further reading",
+    "Related AI slang",
+    ...term.requirements
+  ]) {
+    if (!page.includes(requirement)) {
+      throw new Error(`${term.word} page is missing: ${requirement}`);
+    }
+  }
+  const slug = term.file.replace(/^terms\//, "").replace(/\.html$/, "");
+  if (!sitemap.includes(`https://ai-slang.com/terms/${slug}`)) {
+    throw new Error(`${term.word} sitemap URL is missing`);
+  }
+}
+
+for (const [url, lastmod] of [
+  ["https://ai-slang.com/terms/slop", "2026-08-26"],
+  ["https://ai-slang.com/terms/agentic", "2026-09-19"],
+  ["https://ai-slang.com/terms/geo", "2026-07-28"],
+  ["https://ai-slang.com/terms/grok-build", "2026-07-28"],
+  ["https://ai-slang.com/", "2026-10-17"],
+  ["https://ai-slang.com/terms/embeddinggemma-2", "2026-10-17"],
+  ["https://ai-slang.com/terms/cekura-bench", "2026-10-17"]
+]) {
+  if (!sitemap.includes(`<url><loc>${url}</loc><lastmod>${lastmod}</lastmod></url>`)) {
+    throw new Error(`Sitemap lastmod is incorrect for ${url}`);
+  }
+}
+
 const performanceTermSpecs = [
   { word: "Slop", file: "terms/slop.html" },
   { word: "Vibe Coding", file: "terms/vibe-coding.html" },
