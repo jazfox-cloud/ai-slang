@@ -3550,5 +3550,48 @@ export const slangs = [
       { label: "Cekura Bench: About", url: "https://benchmarks.cekura.ai/about" },
       { label: "Cekura Bench: Governance and changelog", url: "https://benchmarks.cekura.ai/governance" }
     ]
+  },
+  {
+    word: "Voxtral 3",
+    definition: "Voxtral 3 is Mistral AI's family of speech-to-text and text-to-speech models for audio applications. Mistral also released a separate Voice Agents SDK that can combine those audio capabilities with an LLM and tools.",
+    origin: "Mistral announced Voxtral 3 on October 20, 2026. The name covers several specialized audio models rather than one general-purpose chatbot or a synonym for every voice agent.",
+    examples: ["The support team used Voxtral 3's realtime transcription model to caption calls.", "Voxtral 3 can provide speech input or output, but the application's agent logic still decides which tools to call."],
+    aiGrade: 2,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against Mistral's announcement and audio documentation on October 23, 2026. The Voxtral 3 family is in Public Preview, so model IDs, availability, pricing, supported languages, and individual capabilities can change.",
+    sourceUrl: "https://mistral.ai/news/voxtral-3/",
+    lastChecked: "2026-10-23",
+    dateModified: "2026-10-23",
+    plainEnglish: "Voxtral 3 is Mistral's toolkit of models for turning speech into text and text into speech. It can be one part of a voice agent, but it is not the whole agent by itself.",
+    relatedTerms: ["Cekura Bench", "Eval", "Agent Harness", "Tool Calling", "Model Router", "Open-Weight AI"],
+    seoTitle: "What Is Voxtral 3? Mistral's Audio Model Family",
+    seoDescription: "Voxtral 3 explained: Mistral's speech-to-text and text-to-speech model family, its relationship to voice agents, and why the distinction matters.",
+    pageHeading: "What Is Voxtral 3?",
+    extraSections: [
+      {
+        heading: "What Voxtral 3 includes",
+        paragraphs: ["Mistral documents separate Voxtral 3 models for recorded transcription, realtime transcription, text-to-speech, and realtime text-to-speech. Each model handles a narrower audio job, so choose it by whether an application needs speech recognition, generated speech, offline processing, or streaming.", "The family name does not mean every model has the same inputs, outputs, latency, languages, or deployment options. Check the current model card and API documentation before treating a capability as available for a particular integration."]
+      },
+      {
+        heading: "Voxtral 3 versus a voice agent",
+        paragraphs: ["A speech model converts audio to text or text to audio. A voice agent is a broader application that can add prompts, an LLM, tools, workflow rules, memory, safety controls, and a task to complete during a conversation.", "Mistral released a Voice Agents SDK alongside Voxtral 3. That SDK can connect listening, reasoning, tool calling, and speaking, but it is distinct from the individual Voxtral audio models. A product can use Voxtral 3 without being an autonomous agent."]
+      },
+      {
+        heading: "How to evaluate a voice stack",
+        paragraphs: ["Do not reduce a voice product to one model name or one demo. Test transcription accuracy for the relevant languages and accents, turn timing, speech quality, interruption handling, tool-call behavior, latency, privacy controls, and failure recovery in the actual workflow.", "Because Voxtral 3 is documented as Public Preview, recheck model IDs, pricing, availability, limits, and migration guidance before a production decision. Benchmark results and vendor claims are inputs to evaluation, not guarantees for a particular phone, browser, customer, or tool setup."]
+      }
+    ],
+    faqItems: [
+      { question: "What is Voxtral 3?", answer: "Voxtral 3 is Mistral AI's family of speech-to-text and text-to-speech models for audio applications. It includes different models for recorded or realtime transcription and for generated speech." },
+      { question: "Is Voxtral 3 a voice agent?", answer: "Not by itself. Voxtral 3 provides audio-model capabilities. A voice agent is a wider system that can combine audio models with an LLM, prompts, tools, workflow logic, and a task." },
+      { question: "What is the difference between Voxtral 3 and the Voice Agents SDK?", answer: "Voxtral 3 names the audio model family. Mistral's Voice Agents SDK is a separate application layer for connecting listening, reasoning, tool calling, and speaking in a realtime voice workflow." },
+      { question: "Can I assume every Voxtral 3 feature is generally available?", answer: "No. Mistral documents the family as Public Preview. Check the current official model card, API documentation, pricing, regional availability, and limits for the exact model and integration you plan to use." }
+    ],
+    furtherReading: [
+      { label: "Mistral AI: Voxtral 3 announcement", url: "https://mistral.ai/news/voxtral-3/" },
+      { label: "Mistral Docs: Audio overview", url: "https://docs.mistral.ai/studio/audio/overview" },
+      { label: "Mistral Docs: Migrate from Voxtral 2", url: "https://docs.mistral.ai/studio/audio/migrate-from-voxtral-2" }
+    ]
   }
 ];
