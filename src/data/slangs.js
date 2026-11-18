@@ -1346,7 +1346,7 @@ export const slangs = [
     lastChecked: "2026-08-25",
     dateModified: "2026-08-25",
     plainEnglish: "Sol is OpenAI's name for the high-capability GPT-5.6 tier. It is a model choice, not a ChatGPT plan, and its API token bill is separate from included subscription usage or product credits.",
-    relatedTerms: ["Frontier Model", "Reasoning Model", "Model Router", "Computer Use", "Tool Calling", "Agentic"],
+    relatedTerms: ["GPT-6.2", "Frontier Model", "Reasoning Model", "Model Router", "Computer Use", "Tool Calling", "Agentic"],
     seoTitle: "What Is GPT-5.6 Sol? Pricing, Release Date, and Models",
     seoDescription: "GPT-5.6 Sol explained: current API pricing, release timeline, Sol vs Terra vs Luna, model aliases, long-context costs, and when to use it.",
     pageHeading: "What Is GPT-5.6 Sol?",
@@ -3592,6 +3592,102 @@ export const slangs = [
       { label: "Mistral AI: Voxtral 3 announcement", url: "https://mistral.ai/news/voxtral-3/" },
       { label: "Mistral Docs: Audio overview", url: "https://docs.mistral.ai/studio/audio/overview" },
       { label: "Mistral Docs: Migrate from Voxtral 2", url: "https://docs.mistral.ai/studio/audio/migrate-from-voxtral-2" }
+    ]
+  },
+  {
+    word: "GPT-6.2",
+    definition: "GPT-6.2 is OpenAI's November 17, 2026 model generation, released as two models: GPT-6.2 Astra for the hardest professional projects and GPT-6.2 Sol for everyday work. Both are documented for ChatGPT Work, Codex, and the OpenAI API.",
+    origin: "OpenAI announced GPT-6.2 Astra and GPT-6.2 Sol on November 17, 2026. In this generation, Astra is the higher-capability frontier model and Sol is the lower-cost everyday model, which is a different use of the Sol name than in GPT-5.6, where Sol was the flagship tier.",
+    examples: [
+      "Use GPT-6.2 Astra for the valuation workbook and slide template; route the pull-request review to GPT-6.2 Sol.",
+      "The API request used gpt-6.2-astra, not a ChatGPT plan name, and did not set reasoning effort to none."
+    ],
+    aiGrade: 4,
+    trend: "NEW",
+    sourceType: "product-term",
+    sourceNote: "Verified against OpenAI's November 17, 2026 announcement, ChatGPT Learn notes, the official community launch post, and the current API model and pricing pages on November 17, 2026. Benchmark scores and capability claims in those documents are OpenAI's, not results from our own evaluation. API prices, processing tiers, product availability, and rollout status can change.",
+    sourceUrl: "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+    lastChecked: "2026-11-17",
+    dateModified: "2026-11-17",
+    plainEnglish: "GPT-6.2 is the model-family name. Astra is the stronger, more expensive model for hard projects; Sol is the cheaper default for everyday work. Neither name is a ChatGPT subscription plan.",
+    relatedTerms: ["GPT-5.6 Sol", "Frontier Model", "Reasoning Model", "Computer Use", "Tool Calling", "Prompt Caching"],
+    seoTitle: "What Is GPT-6.2? Astra, Sol, Pricing, and Availability",
+    seoDescription: "GPT-6.2 explained: OpenAI's November 17, 2026 Astra and Sol models, API IDs and Standard pricing, ChatGPT Work and Codex access, and how they differ.",
+    pageHeading: "What Is GPT-6.2?",
+    extraSections: [
+      {
+        heading: "Astra versus Sol",
+        paragraphs: [
+          "OpenAI positions GPT-6.2 Astra as the frontier model for complex professional work such as documents, spreadsheets, slides, coding, computer use, and 3D or web design. GPT-6.2 Sol is described as the go-to model for everyday coding, writing, and multistep work, at a lower API price than Astra.",
+          "This is easy to mix up with GPT-5.6 naming. In GPT-5.6, Sol was the flagship capability tier, with Terra and Luna below it. In GPT-6.2, Astra is the higher-capability model and Sol is the efficient everyday model. The generation number and the Astra or Sol label are not ChatGPT plan names."
+        ]
+      },
+      {
+        heading: "Where GPT-6.2 is available",
+        paragraphs: [
+          "OpenAI's November 17, 2026 product notes say GPT-6.2 Astra and Sol launch in ChatGPT Work, Codex, and the API. ChatGPT Learn says they can be used in Work on the web, desktop, or mobile with Plus, Pro, Business, Enterprise, or Edu, and that Enterprise and Edu admins must first enable the models in workspace settings.",
+          "The same notes say that using these models in ChatGPT means opening Work; the launch does not add GPT-6.2 Astra or Sol to regular Chat. Official community guidance on launch day also said availability can depend on plan, workspace permissions, and rollout progress, so a missing model picker option is not enough to conclude the product was not released.",
+          "In the API, the documented model IDs are gpt-6.2-astra and gpt-6.2-sol. Both are listed as supporting Chat Completions, Responses, and Batch. OpenAI says the API rejects requests that set reasoning effort to none."
+        ]
+      },
+      {
+        heading: "Current GPT-6.2 API pricing",
+        paragraphs: [
+          "Last checked on November 17, 2026, OpenAI's GPT-6.2 Astra and GPT-6.2 Sol model pages, and the API pricing page, list these Standard short-context prices per million tokens: GPT-6.2 Astra at $8 input, $0.40 cached input, $10 cache writes for 30-minute retention, and $40 output; GPT-6.2 Sol at $2 input, $0.10 cached input, $2.50 cache writes for 30-minute retention, and $10 output.",
+          "For requests with more than 272K input tokens, OpenAI says input and cache rates double and output costs 1.5 times the short-context rate for the full request. A 12-hour cache write is listed at $20 per million tokens for Astra and $5 for Sol on short-context Standard requests. Batch is listed at 50% of Standard rates, and Fast mode at twice the Standard rate for the same context length.",
+          "Ultrafast is documented as three times the Standard rate through February 28, 2027, and six times the Standard rate starting March 1, 2027, Pacific time. These figures are API token prices, not ChatGPT Plus, Pro, Business, or Enterprise subscription prices. Processing tiers, regional rules, tool-specific charges, and promotional periods can differ, so the current official pricing and model pages should be checked before quoting a cost."
+        ]
+      },
+      {
+        heading: "Context window and documented limits",
+        bullets: [
+          "Both model pages list a 1,050,000-token context window, a 922,000-token maximum input, and 128,000 maximum output tokens.",
+          "Documented knowledge cutoffs differ: May 18, 2026 for GPT-6.2 Astra and June 1, 2026 for GPT-6.2 Sol.",
+          "Both accept text and image input and return text. Audio and video are listed as unsupported modalities, and fine-tuning is listed as unsupported.",
+          "Reasoning effort set to none is rejected. Vendor benchmark comparisons belong in the official announcement, not as proof that one model will win a particular production task."
+        ]
+      },
+      {
+        heading: "How to choose and evaluate",
+        paragraphs: [
+          "Use Astra when the cost of a weak answer is high and the work is closer to OpenAI's hardest-project examples: long-horizon professional documents, demanding coding or computer-use workflows, or design-heavy deliverables. Use Sol when you want everyday coding, writing, or agentic work at a lower token price, including as a default in ChatGPT Work where OpenAI says new Work chats default to Sol.",
+          "OpenAI published benchmark comparisons in the launch announcement, including claims that Astra improves on earlier GPT-6 Astra results at lower cost per task and that Sol can come close to Astra on some coding evaluations at a lower cost. Treat those as vendor-reported results. Compare quality, latency, and total cost per successful result on your own representative tasks before migrating traffic."
+        ]
+      }
+    ],
+    faqItems: [
+      {
+        question: "What is GPT-6.2?",
+        answer: "GPT-6.2 is OpenAI's November 17, 2026 model generation. It was released as two models, GPT-6.2 Astra and GPT-6.2 Sol, for ChatGPT Work, Codex, and the OpenAI API."
+      },
+      {
+        question: "What is the difference between GPT-6.2 Astra and GPT-6.2 Sol?",
+        answer: "OpenAI describes Astra as the higher-capability model for the hardest projects and Sol as the efficient model for everyday work. In the API, the IDs are gpt-6.2-astra and gpt-6.2-sol, and Sol is priced lower than Astra. This is different from GPT-5.6, where Sol was the flagship tier."
+      },
+      {
+        question: "What are the API model IDs?",
+        answer: "OpenAI documents gpt-6.2-astra and gpt-6.2-sol. Those are model IDs, not ChatGPT subscription plan names."
+      },
+      {
+        question: "How much does GPT-6.2 cost?",
+        answer: "As checked on November 17, 2026, OpenAI lists Standard short-context API pricing of $8 input and $40 output per million tokens for GPT-6.2 Astra, and $2 input and $10 output per million tokens for GPT-6.2 Sol, plus separate cached-input and cache-write rates. Long-context, Batch, Fast, and Ultrafast requests use different rates. API token charges are separate from ChatGPT subscription prices."
+      },
+      {
+        question: "Can I use GPT-6.2 in regular ChatGPT Chat?",
+        answer: "OpenAI's launch notes say to use GPT-6.2 Astra or Sol in ChatGPT by opening Work. The rollout described on November 17, 2026 does not add either model to regular Chat. Access can also depend on plan, workspace settings, and rollout progress."
+      },
+      {
+        question: "When was GPT-6.2 released?",
+        answer: "OpenAI announced GPT-6.2 Astra and GPT-6.2 Sol on November 17, 2026."
+      }
+    ],
+    furtherReading: [
+      { label: "OpenAI: Introducing GPT-6.2 Astra and Sol", url: "https://openai.com/index/introducing-gpt-6-2-astra-sol" },
+      { label: "ChatGPT Learn: GPT-6.2", url: "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol" },
+      { label: "OpenAI API: GPT-6.2 Astra", url: "https://developers.openai.com/api/docs/models/gpt-6.2-astra" },
+      { label: "OpenAI API: GPT-6.2 Sol", url: "https://developers.openai.com/api/docs/models/gpt-6.2-sol" },
+      { label: "OpenAI API: Pricing", url: "https://developers.openai.com/api/docs/pricing" },
+      { label: "OpenAI Community: GPT-6.2 Astra and Sol are now available", url: "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531" }
     ]
   }
 ];
